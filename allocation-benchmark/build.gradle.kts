@@ -1,4 +1,3 @@
-val ktor_version: String by project
 val kotlin_version: String by project
 val logback_version: String by project
 val instrumenter_version: String by project
@@ -16,6 +15,12 @@ version = "0.0.1"
 repositories {
     mavenLocal()
     mavenCentral()
+}
+
+var ktor_version: String by project.extra
+
+if (project.hasProperty("ktorVersion")) {
+    ktor_version = project.property("ktorVersion") as String
 }
 
 val instrumenter by configurations.creating
