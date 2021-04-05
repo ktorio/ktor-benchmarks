@@ -2,6 +2,12 @@ package benchmarks
 
 import com.google.monitoring.runtime.instrumentation.AllocationRecorder
 import com.google.monitoring.runtime.instrumentation.Sampler
+import com.google.monitoring.runtime.instrumentation.asm.*
+
+private val IGNORED_DESCRIPTORS = mutableListOf<String>(
+    "com/google",
+    "benchmarks"
+)
 
 object AllocationTracker : Sampler {
     private val walker = StackWalker.getInstance()
@@ -34,6 +40,8 @@ object AllocationTracker : Sampler {
 
     override fun sampleAllocation(count: Int, descriptor: String, instance: Any, size: Long) {
         val type = instance::class.java
+
+        if (IGNORED_DESCRIPTORS.any { descriptor.startsWith(it) }) return
 
         val frame: StackWalker.StackFrame = walker.walk { frame ->
             frame.filter {

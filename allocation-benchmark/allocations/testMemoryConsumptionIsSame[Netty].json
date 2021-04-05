@@ -1,127 +1,116 @@
 {
     "data": {
-        "NettyResponsePipeline.kt:353": {
-            "name": "NettyResponsePipeline.kt:353",
-            "locationSize": 127752,
-            "instanceIndex": {
-                "io.netty.handler.codec.http.DefaultHttpContent": {
-                    "name": "io.netty.handler.codec.http.DefaultHttpContent",
-                    "totalCount": 5323,
-                    "totalSize": 127752
-                }
-            }
-        },
         "BufferViewJvm.kt:59": {
             "name": "BufferViewJvm.kt:59",
-            "locationSize": 347008,
+            "locationSize": 346944,
             "instanceIndex": {
                 "java.nio.DirectByteBuffer": {
                     "name": "java.nio.DirectByteBuffer",
-                    "totalCount": 5422,
-                    "totalSize": 347008
+                    "totalCount": 5421,
+                    "totalSize": 346944
                 }
             }
         },
         "NettyResponsePipeline.kt:283": {
             "name": "NettyResponsePipeline.kt:283",
-            "locationSize": 731472,
+            "locationSize": 731088,
             "instanceIndex": {
-                "io.netty.channel.DefaultChannelPromise": {
-                    "name": "io.netty.channel.DefaultChannelPromise",
-                    "totalCount": 5021,
-                    "totalSize": 200840
-                },
-                "io.netty.handler.timeout.WriteTimeoutHandler$WriteTimeoutTask": {
-                    "name": "io.netty.handler.timeout.WriteTimeoutHandler$WriteTimeoutTask",
-                    "totalCount": 5021,
-                    "totalSize": 200840
-                },
-                "io.netty.util.concurrent.ScheduledFutureTask": {
-                    "name": "io.netty.util.concurrent.ScheduledFutureTask",
-                    "totalCount": 5021,
-                    "totalSize": 321344
-                },
                 "io.netty.util.Recycler$DefaultHandle": {
                     "name": "io.netty.util.Recycler$DefaultHandle",
-                    "totalCount": 88,
-                    "totalSize": 2816
+                    "totalCount": 87,
+                    "totalSize": 2784
                 },
                 "io.netty.channel.ChannelOutboundBuffer$Entry": {
                     "name": "io.netty.channel.ChannelOutboundBuffer$Entry",
-                    "totalCount": 88,
-                    "totalSize": 5632
+                    "totalCount": 87,
+                    "totalSize": 5568
+                },
+                "io.netty.channel.DefaultChannelPromise": {
+                    "name": "io.netty.channel.DefaultChannelPromise",
+                    "totalCount": 5019,
+                    "totalSize": 200760
+                },
+                "io.netty.handler.timeout.WriteTimeoutHandler$WriteTimeoutTask": {
+                    "name": "io.netty.handler.timeout.WriteTimeoutHandler$WriteTimeoutTask",
+                    "totalCount": 5019,
+                    "totalSize": 200760
+                },
+                "io.netty.util.concurrent.ScheduledFutureTask": {
+                    "name": "io.netty.util.concurrent.ScheduledFutureTask",
+                    "totalCount": 5019,
+                    "totalSize": 321216
                 }
             }
         },
         "NettyResponsePipeline.kt:266": {
             "name": "NettyResponsePipeline.kt:266",
-            "locationSize": 21392,
+            "locationSize": 19296,
             "instanceIndex": {
                 "io.netty.util.Recycler$DefaultHandle": {
                     "name": "io.netty.util.Recycler$DefaultHandle",
-                    "totalCount": 120,
-                    "totalSize": 3840
+                    "totalCount": 119,
+                    "totalSize": 3808
                 },
                 "io.netty.buffer.PooledUnsafeDirectByteBuf": {
                     "name": "io.netty.buffer.PooledUnsafeDirectByteBuf",
-                    "totalCount": 120,
-                    "totalSize": 10560
+                    "totalCount": 119,
+                    "totalSize": 10472
                 },
                 "java.util.concurrent.ConcurrentHashMap$Node": {
                     "name": "java.util.concurrent.ConcurrentHashMap$Node",
-                    "totalCount": 46,
-                    "totalSize": 1472
+                    "totalCount": 33,
+                    "totalSize": 1056
                 },
                 "io.netty.util.ResourceLeakDetector$TraceRecord": {
                     "name": "io.netty.util.ResourceLeakDetector$TraceRecord",
-                    "totalCount": 46,
-                    "totalSize": 2208
+                    "totalCount": 33,
+                    "totalSize": 1584
                 },
                 "io.netty.util.ResourceLeakDetector$DefaultResourceLeak": {
                     "name": "io.netty.util.ResourceLeakDetector$DefaultResourceLeak",
-                    "totalCount": 46,
-                    "totalSize": 2208
+                    "totalCount": 33,
+                    "totalSize": 1584
                 },
                 "io.netty.buffer.SimpleLeakAwareByteBuf": {
                     "name": "io.netty.buffer.SimpleLeakAwareByteBuf",
-                    "totalCount": 46,
-                    "totalSize": 1104
+                    "totalCount": 33,
+                    "totalSize": 792
                 }
             }
         },
         "CancellableReusableContinuation.kt:93": {
             "name": "CancellableReusableContinuation.kt:93",
-            "locationSize": 1398888,
+            "locationSize": 1412232,
             "instanceIndex": {
                 "[B": {
                     "name": "[B",
-                    "totalCount": 17262,
-                    "totalSize": 970936
+                    "totalCount": 17418,
+                    "totalSize": 980096
                 },
                 "java.lang.StringBuilder": {
                     "name": "java.lang.StringBuilder",
-                    "totalCount": 5754,
-                    "totalSize": 138096
+                    "totalCount": 5806,
+                    "totalSize": 139344
                 },
                 "java.lang.String": {
                     "name": "java.lang.String",
-                    "totalCount": 11508,
-                    "totalSize": 276192
+                    "totalCount": 11612,
+                    "totalSize": 278688
                 },
                 "kotlinx.coroutines.JobSupport$Finishing": {
                     "name": "kotlinx.coroutines.JobSupport$Finishing",
-                    "totalCount": 91,
-                    "totalSize": 2912
+                    "totalCount": 96,
+                    "totalSize": 3072
                 },
                 "[Ljava.lang.Object;": {
                     "name": "[Ljava.lang.Object;",
-                    "totalCount": 91,
-                    "totalSize": 2912
+                    "totalCount": 96,
+                    "totalSize": 3072
                 },
                 "java.util.ArrayList": {
                     "name": "java.util.ArrayList",
-                    "totalCount": 91,
-                    "totalSize": 2184
+                    "totalCount": 96,
+                    "totalSize": 2304
                 },
                 "kotlinx.coroutines.internal.DispatchedContinuation": {
                     "name": "kotlinx.coroutines.internal.DispatchedContinuation",
@@ -171,6 +160,17 @@
                     "name": "io.ktor.http.URLBuilder",
                     "totalCount": 300,
                     "totalSize": 14400
+                }
+            }
+        },
+        "NettyResponsePipeline.kt:353": {
+            "name": "NettyResponsePipeline.kt:353",
+            "locationSize": 127704,
+            "instanceIndex": {
+                "io.netty.handler.codec.http.DefaultHttpContent": {
+                    "name": "io.netty.handler.codec.http.DefaultHttpContent",
+                    "totalCount": 5321,
+                    "totalSize": 127704
                 }
             }
         },
@@ -279,6 +279,47 @@
                     "name": "java.lang.String",
                     "totalCount": 100,
                     "totalSize": 2400
+                }
+            }
+        },
+        "NettyResponsePipeline.kt:278": {
+            "name": "NettyResponsePipeline.kt:278",
+            "locationSize": 57720,
+            "instanceIndex": {
+                "io.netty.channel.DefaultChannelPromise": {
+                    "name": "io.netty.channel.DefaultChannelPromise",
+                    "totalCount": 302,
+                    "totalSize": 12080
+                },
+                "io.netty.handler.timeout.WriteTimeoutHandler$WriteTimeoutTask": {
+                    "name": "io.netty.handler.timeout.WriteTimeoutHandler$WriteTimeoutTask",
+                    "totalCount": 302,
+                    "totalSize": 12080
+                },
+                "io.netty.util.concurrent.ScheduledFutureTask": {
+                    "name": "io.netty.util.concurrent.ScheduledFutureTask",
+                    "totalCount": 302,
+                    "totalSize": 19328
+                },
+                "io.netty.util.Recycler$DefaultHandle": {
+                    "name": "io.netty.util.Recycler$DefaultHandle",
+                    "totalCount": 184,
+                    "totalSize": 5888
+                },
+                "io.netty.channel.ChannelOutboundBuffer$Entry": {
+                    "name": "io.netty.channel.ChannelOutboundBuffer$Entry",
+                    "totalCount": 33,
+                    "totalSize": 2112
+                },
+                "io.netty.buffer.PoolThreadCache$MemoryRegionCache$Entry": {
+                    "name": "io.netty.buffer.PoolThreadCache$MemoryRegionCache$Entry",
+                    "totalCount": 151,
+                    "totalSize": 6040
+                },
+                "java.nio.DirectByteBuffer": {
+                    "name": "java.nio.DirectByteBuffer",
+                    "totalCount": 3,
+                    "totalSize": 192
                 }
             }
         },
@@ -479,47 +520,6 @@
                     "name": "kotlinx.coroutines.InvokeOnCompletion",
                     "totalCount": 100,
                     "totalSize": 3200
-                }
-            }
-        },
-        "NettyResponsePipeline.kt:278": {
-            "name": "NettyResponsePipeline.kt:278",
-            "locationSize": 57720,
-            "instanceIndex": {
-                "io.netty.channel.DefaultChannelPromise": {
-                    "name": "io.netty.channel.DefaultChannelPromise",
-                    "totalCount": 302,
-                    "totalSize": 12080
-                },
-                "io.netty.handler.timeout.WriteTimeoutHandler$WriteTimeoutTask": {
-                    "name": "io.netty.handler.timeout.WriteTimeoutHandler$WriteTimeoutTask",
-                    "totalCount": 302,
-                    "totalSize": 12080
-                },
-                "io.netty.util.concurrent.ScheduledFutureTask": {
-                    "name": "io.netty.util.concurrent.ScheduledFutureTask",
-                    "totalCount": 302,
-                    "totalSize": 19328
-                },
-                "io.netty.util.Recycler$DefaultHandle": {
-                    "name": "io.netty.util.Recycler$DefaultHandle",
-                    "totalCount": 184,
-                    "totalSize": 5888
-                },
-                "io.netty.channel.ChannelOutboundBuffer$Entry": {
-                    "name": "io.netty.channel.ChannelOutboundBuffer$Entry",
-                    "totalCount": 33,
-                    "totalSize": 2112
-                },
-                "io.netty.buffer.PoolThreadCache$MemoryRegionCache$Entry": {
-                    "name": "io.netty.buffer.PoolThreadCache$MemoryRegionCache$Entry",
-                    "totalCount": 151,
-                    "totalSize": 6040
-                },
-                "java.nio.DirectByteBuffer": {
-                    "name": "java.nio.DirectByteBuffer",
-                    "totalCount": 3,
-                    "totalSize": 192
                 }
             }
         },
@@ -1049,6 +1049,424 @@
                     "name": "kotlinx.coroutines.internal.DispatchedContinuation",
                     "totalCount": 100,
                     "totalSize": 5600
+                }
+            }
+        },
+        "ByteBufferChannel.kt:-1": {
+            "name": "ByteBufferChannel.kt:-1",
+            "locationSize": 313240,
+            "instanceIndex": {
+                "io.ktor.utils.io.ByteBufferChannel$awaitAtLeast$1": {
+                    "name": "io.ktor.utils.io.ByteBufferChannel$awaitAtLeast$1",
+                    "totalCount": 851,
+                    "totalSize": 34040
+                },
+                "io.ktor.utils.io.ByteBufferChannel$writeSuspendSession$1": {
+                    "name": "io.ktor.utils.io.ByteBufferChannel$writeSuspendSession$1",
+                    "totalCount": 100,
+                    "totalSize": 4000
+                },
+                "io.ktor.utils.io.ByteBufferChannel$copyDirect$1": {
+                    "name": "io.ktor.utils.io.ByteBufferChannel$copyDirect$1",
+                    "totalCount": 100,
+                    "totalSize": 10400
+                },
+                "io.ktor.utils.io.ByteBufferChannel$lookAheadSuspend$1": {
+                    "name": "io.ktor.utils.io.ByteBufferChannel$lookAheadSuspend$1",
+                    "totalCount": 100,
+                    "totalSize": 5600
+                },
+                "io.ktor.utils.io.ByteBufferChannel$writeSuspend$3": {
+                    "name": "io.ktor.utils.io.ByteBufferChannel$writeSuspend$3",
+                    "totalCount": 5200,
+                    "totalSize": 249600
+                },
+                "io.ktor.utils.io.ByteBufferChannel$readRemaining$1": {
+                    "name": "io.ktor.utils.io.ByteBufferChannel$readRemaining$1",
+                    "totalCount": 100,
+                    "totalSize": 4000
+                },
+                "io.ktor.utils.io.ByteBufferChannel$readRemainingSuspend$1": {
+                    "name": "io.ktor.utils.io.ByteBufferChannel$readRemainingSuspend$1",
+                    "totalCount": 100,
+                    "totalSize": 5600
+                }
+            }
+        },
+        "ByteBufferChannel.kt:2296": {
+            "name": "ByteBufferChannel.kt:2296",
+            "locationSize": 52808,
+            "instanceIndex": {
+                "kotlinx.coroutines.internal.DispatchedContinuation": {
+                    "name": "kotlinx.coroutines.internal.DispatchedContinuation",
+                    "totalCount": 943,
+                    "totalSize": 52808
+                }
+            }
+        },
+        "NettyApplicationEngine.kt:227": {
+            "name": "NettyApplicationEngine.kt:227",
+            "locationSize": 316440,
+            "instanceIndex": {
+                "[B": {
+                    "name": "[B",
+                    "totalCount": 3311,
+                    "totalSize": 171096
+                },
+                "java.lang.StringBuilder": {
+                    "name": "java.lang.StringBuilder",
+                    "totalCount": 1005,
+                    "totalSize": 24120
+                },
+                "java.lang.String": {
+                    "name": "java.lang.String",
+                    "totalCount": 2305,
+                    "totalSize": 55320
+                },
+                "java.lang.Integer": {
+                    "name": "java.lang.Integer",
+                    "totalCount": 303,
+                    "totalSize": 4848
+                },
+                "io.netty.util.internal.SocketUtils$5": {
+                    "name": "io.netty.util.internal.SocketUtils$5",
+                    "totalCount": 1,
+                    "totalSize": 16
+                },
+                "java.io.FileDescriptor": {
+                    "name": "java.io.FileDescriptor",
+                    "totalCount": 1,
+                    "totalSize": 40
+                },
+                "[Ljava.net.InetSocketAddress;": {
+                    "name": "[Ljava.net.InetSocketAddress;",
+                    "totalCount": 1,
+                    "totalSize": 24
+                },
+                "java.net.InetAddress$InetAddressHolder": {
+                    "name": "java.net.InetAddress$InetAddressHolder",
+                    "totalCount": 2,
+                    "totalSize": 64
+                },
+                "java.net.InetSocketAddress$InetSocketAddressHolder": {
+                    "name": "java.net.InetSocketAddress$InetSocketAddressHolder",
+                    "totalCount": 2,
+                    "totalSize": 48
+                },
+                "java.lang.Object": {
+                    "name": "java.lang.Object",
+                    "totalCount": 5,
+                    "totalSize": 80
+                },
+                "java.util.concurrent.locks.ReentrantLock$NonfairSync": {
+                    "name": "java.util.concurrent.locks.ReentrantLock$NonfairSync",
+                    "totalCount": 2,
+                    "totalSize": 64
+                },
+                "java.util.concurrent.locks.ReentrantLock": {
+                    "name": "java.util.concurrent.locks.ReentrantLock",
+                    "totalCount": 2,
+                    "totalSize": 32
+                },
+                "java.net.InetSocketAddress": {
+                    "name": "java.net.InetSocketAddress",
+                    "totalCount": 1,
+                    "totalSize": 16
+                },
+                "sun.nio.ch.SocketChannelImpl": {
+                    "name": "sun.nio.ch.SocketChannelImpl",
+                    "totalCount": 1,
+                    "totalSize": 112
+                },
+                "io.netty.channel.VoidChannelPromise": {
+                    "name": "io.netty.channel.VoidChannelPromise",
+                    "totalCount": 2,
+                    "totalSize": 48
+                },
+                "io.netty.channel.AbstractChannel$CloseFuture": {
+                    "name": "io.netty.channel.AbstractChannel$CloseFuture",
+                    "totalCount": 1,
+                    "totalSize": 40
+                },
+                "io.netty.channel.DefaultChannelId": {
+                    "name": "io.netty.channel.DefaultChannelId",
+                    "totalCount": 1,
+                    "totalSize": 32
+                },
+                "io.netty.channel.ChannelOutboundBuffer": {
+                    "name": "io.netty.channel.ChannelOutboundBuffer",
+                    "totalCount": 1,
+                    "totalSize": 64
+                },
+                "io.netty.channel.socket.nio.NioSocketChannel$NioSocketChannelUnsafe": {
+                    "name": "io.netty.channel.socket.nio.NioSocketChannel$NioSocketChannelUnsafe",
+                    "totalCount": 1,
+                    "totalSize": 40
+                },
+                "io.netty.channel.SucceededChannelFuture": {
+                    "name": "io.netty.channel.SucceededChannelFuture",
+                    "totalCount": 1,
+                    "totalSize": 24
+                },
+                "io.netty.channel.VoidChannelPromise$1": {
+                    "name": "io.netty.channel.VoidChannelPromise$1",
+                    "totalCount": 1,
+                    "totalSize": 16
+                },
+                "io.netty.channel.DefaultChannelPipeline$TailContext": {
+                    "name": "io.netty.channel.DefaultChannelPipeline$TailContext",
+                    "totalCount": 1,
+                    "totalSize": 56
+                },
+                "io.netty.channel.DefaultChannelPipeline$HeadContext": {
+                    "name": "io.netty.channel.DefaultChannelPipeline$HeadContext",
+                    "totalCount": 1,
+                    "totalSize": 64
+                },
+                "io.netty.channel.DefaultChannelPipeline": {
+                    "name": "io.netty.channel.DefaultChannelPipeline",
+                    "totalCount": 1,
+                    "totalSize": 48
+                },
+                "io.netty.channel.nio.AbstractNioChannel$1": {
+                    "name": "io.netty.channel.nio.AbstractNioChannel$1",
+                    "totalCount": 1,
+                    "totalSize": 16
+                },
+                "io.netty.channel.nio.AbstractNioByteChannel$1": {
+                    "name": "io.netty.channel.nio.AbstractNioByteChannel$1",
+                    "totalCount": 1,
+                    "totalSize": 16
+                },
+                "sun.nio.ch.SocketAdaptor": {
+                    "name": "sun.nio.ch.SocketAdaptor",
+                    "totalCount": 1,
+                    "totalSize": 40
+                },
+                "io.netty.channel.AdaptiveRecvByteBufAllocator": {
+                    "name": "io.netty.channel.AdaptiveRecvByteBufAllocator",
+                    "totalCount": 1,
+                    "totalSize": 32
+                },
+                "sun.nio.ch.SocketOptionRegistry$RegistryKey": {
+                    "name": "sun.nio.ch.SocketOptionRegistry$RegistryKey",
+                    "totalCount": 2,
+                    "totalSize": 48
+                },
+                "io.netty.channel.socket.nio.NioSocketChannel$NioSocketChannelConfig": {
+                    "name": "io.netty.channel.socket.nio.NioSocketChannel$NioSocketChannelConfig",
+                    "totalCount": 1,
+                    "totalSize": 64
+                },
+                "io.netty.channel.socket.nio.NioSocketChannel": {
+                    "name": "io.netty.channel.socket.nio.NioSocketChannel",
+                    "totalCount": 1,
+                    "totalSize": 112
+                },
+                "[Lio.netty.channel.ChannelHandler;": {
+                    "name": "[Lio.netty.channel.ChannelHandler;",
+                    "totalCount": 1,
+                    "totalSize": 24
+                },
+                "io.netty.channel.DefaultChannelHandlerContext": {
+                    "name": "io.netty.channel.DefaultChannelHandlerContext",
+                    "totalCount": 1,
+                    "totalSize": 56
+                },
+                "io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask": {
+                    "name": "io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask",
+                    "totalCount": 1,
+                    "totalSize": 24
+                },
+                "io.netty.bootstrap.ServerBootstrap$ServerBootstrapAcceptor$2": {
+                    "name": "io.netty.bootstrap.ServerBootstrap$ServerBootstrapAcceptor$2",
+                    "totalCount": 1,
+                    "totalSize": 24
+                },
+                "sun.nio.ch.SelectionKeyImpl": {
+                    "name": "sun.nio.ch.SelectionKeyImpl",
+                    "totalCount": 1,
+                    "totalSize": 48
+                },
+                "java.util.concurrent.ConcurrentHashMap$Node": {
+                    "name": "java.util.concurrent.ConcurrentHashMap$Node",
+                    "totalCount": 4,
+                    "totalSize": 128
+                },
+                "[Ljava.nio.channels.SelectionKey;": {
+                    "name": "[Ljava.nio.channels.SelectionKey;",
+                    "totalCount": 1,
+                    "totalSize": 24
+                },
+                "io.netty.channel.AbstractChannelHandlerContext$1": {
+                    "name": "io.netty.channel.AbstractChannelHandlerContext$1",
+                    "totalCount": 2,
+                    "totalSize": 32
+                },
+                "[Ljava.lang.Object;": {
+                    "name": "[Ljava.lang.Object;",
+                    "totalCount": 2,
+                    "totalSize": 416
+                },
+                "io.netty.util.internal.InternalThreadLocalMap": {
+                    "name": "io.netty.util.internal.InternalThreadLocalMap",
+                    "totalCount": 1,
+                    "totalSize": 136
+                },
+                "java.util.IdentityHashMap": {
+                    "name": "java.util.IdentityHashMap",
+                    "totalCount": 1,
+                    "totalSize": 40
+                },
+                "java.util.IdentityHashMap$KeySet": {
+                    "name": "java.util.IdentityHashMap$KeySet",
+                    "totalCount": 1,
+                    "totalSize": 16
+                },
+                "java.util.Collections$SetFromMap": {
+                    "name": "java.util.Collections$SetFromMap",
+                    "totalCount": 1,
+                    "totalSize": 24
+                },
+                "io.netty.channel.AbstractChannelHandlerContext$3": {
+                    "name": "io.netty.channel.AbstractChannelHandlerContext$3",
+                    "totalCount": 2,
+                    "totalSize": 32
+                },
+                "java.nio.channels.spi.AbstractSelector$1": {
+                    "name": "java.nio.channels.spi.AbstractSelector$1",
+                    "totalCount": 1,
+                    "totalSize": 16
+                },
+                "java.util.HashMap$Node": {
+                    "name": "java.util.HashMap$Node",
+                    "totalCount": 1,
+                    "totalSize": 32
+                },
+                "io.netty.channel.DefaultMaxMessagesRecvByteBufAllocator$MaxMessageHandle$1": {
+                    "name": "io.netty.channel.DefaultMaxMessagesRecvByteBufAllocator$MaxMessageHandle$1",
+                    "totalCount": 1,
+                    "totalSize": 16
+                },
+                "io.netty.channel.AdaptiveRecvByteBufAllocator$HandleImpl": {
+                    "name": "io.netty.channel.AdaptiveRecvByteBufAllocator$HandleImpl",
+                    "totalCount": 1,
+                    "totalSize": 72
+                },
+                "[Ljava.lang.String;": {
+                    "name": "[Ljava.lang.String;",
+                    "totalCount": 100,
+                    "totalSize": 3200
+                },
+                "[Lio.netty.handler.codec.DefaultHeaders$HeaderEntry;": {
+                    "name": "[Lio.netty.handler.codec.DefaultHeaders$HeaderEntry;",
+                    "totalCount": 100,
+                    "totalSize": 8000
+                },
+                "io.netty.handler.codec.DefaultHeaders$HeaderEntry": {
+                    "name": "io.netty.handler.codec.DefaultHeaders$HeaderEntry",
+                    "totalCount": 600,
+                    "totalSize": 24000
+                },
+                "io.netty.handler.codec.DefaultHeadersImpl": {
+                    "name": "io.netty.handler.codec.DefaultHeadersImpl",
+                    "totalCount": 100,
+                    "totalSize": 4000
+                },
+                "io.netty.handler.codec.http.DefaultHttpHeaders": {
+                    "name": "io.netty.handler.codec.http.DefaultHttpHeaders",
+                    "totalCount": 100,
+                    "totalSize": 1600
+                },
+                "io.netty.handler.codec.http.DefaultHttpRequest": {
+                    "name": "io.netty.handler.codec.http.DefaultHttpRequest",
+                    "totalCount": 100,
+                    "totalSize": 3200
+                },
+                "java.util.LinkedList": {
+                    "name": "java.util.LinkedList",
+                    "totalCount": 100,
+                    "totalSize": 3200
+                },
+                "io.netty.handler.codec.HeadersUtils$1": {
+                    "name": "io.netty.handler.codec.HeadersUtils$1",
+                    "totalCount": 100,
+                    "totalSize": 2400
+                },
+                "io.netty.handler.codec.DefaultHeaders$ValueIterator": {
+                    "name": "io.netty.handler.codec.DefaultHeaders$ValueIterator",
+                    "totalCount": 100,
+                    "totalSize": 4000
+                },
+                "io.netty.util.Recycler$DefaultHandle": {
+                    "name": "io.netty.util.Recycler$DefaultHandle",
+                    "totalCount": 32,
+                    "totalSize": 1024
+                },
+                "io.netty.buffer.PoolThreadCache$MemoryRegionCache$Entry": {
+                    "name": "io.netty.buffer.PoolThreadCache$MemoryRegionCache$Entry",
+                    "totalCount": 32,
+                    "totalSize": 1280
+                },
+                "io.netty.channel.AbstractChannelHandlerContext$Tasks$1": {
+                    "name": "io.netty.channel.AbstractChannelHandlerContext$Tasks$1",
+                    "totalCount": 2,
+                    "totalSize": 32
+                },
+                "io.netty.channel.AbstractChannelHandlerContext$Tasks$2": {
+                    "name": "io.netty.channel.AbstractChannelHandlerContext$Tasks$2",
+                    "totalCount": 2,
+                    "totalSize": 32
+                },
+                "io.netty.channel.AbstractChannelHandlerContext$Tasks$3": {
+                    "name": "io.netty.channel.AbstractChannelHandlerContext$Tasks$3",
+                    "totalCount": 2,
+                    "totalSize": 32
+                },
+                "io.netty.channel.AbstractChannelHandlerContext$Tasks$4": {
+                    "name": "io.netty.channel.AbstractChannelHandlerContext$Tasks$4",
+                    "totalCount": 2,
+                    "totalSize": 32
+                },
+                "io.netty.channel.AbstractChannelHandlerContext$Tasks": {
+                    "name": "io.netty.channel.AbstractChannelHandlerContext$Tasks",
+                    "totalCount": 2,
+                    "totalSize": 64
+                },
+                "java.lang.Long": {
+                    "name": "java.lang.Long",
+                    "totalCount": 12,
+                    "totalSize": 288
+                },
+                "[J": {
+                    "name": "[J",
+                    "totalCount": 6,
+                    "totalSize": 1248
+                },
+                "io.netty.buffer.PoolSubpage": {
+                    "name": "io.netty.buffer.PoolSubpage",
+                    "totalCount": 6,
+                    "totalSize": 384
+                },
+                "java.nio.DirectByteBuffer": {
+                    "name": "java.nio.DirectByteBuffer",
+                    "totalCount": 6,
+                    "totalSize": 384
+                },
+                "io.netty.util.ResourceLeakDetector$TraceRecord": {
+                    "name": "io.netty.util.ResourceLeakDetector$TraceRecord",
+                    "totalCount": 2,
+                    "totalSize": 96
+                },
+                "io.netty.util.ResourceLeakDetector$DefaultResourceLeak": {
+                    "name": "io.netty.util.ResourceLeakDetector$DefaultResourceLeak",
+                    "totalCount": 2,
+                    "totalSize": 96
+                },
+                "io.netty.buffer.SimpleLeakAwareByteBuf": {
+                    "name": "io.netty.buffer.SimpleLeakAwareByteBuf",
+                    "totalCount": 2,
+                    "totalSize": 48
                 }
             }
         },
@@ -2101,6 +2519,39 @@
                 }
             }
         },
+        "ByteBufferChannel.kt:176": {
+            "name": "ByteBufferChannel.kt:176",
+            "locationSize": 12080,
+            "instanceIndex": {
+                "io.ktor.utils.io.ClosedWriteChannelException": {
+                    "name": "io.ktor.utils.io.ClosedWriteChannelException",
+                    "totalCount": 302,
+                    "totalSize": 12080
+                }
+            }
+        },
+        "CancellableReusableContinuation.kt:24": {
+            "name": "CancellableReusableContinuation.kt:24",
+            "locationSize": 4832,
+            "instanceIndex": {
+                "kotlin.Result$Failure": {
+                    "name": "kotlin.Result$Failure",
+                    "totalCount": 302,
+                    "totalSize": 4832
+                }
+            }
+        },
+        "CancellableReusableContinuation.kt:132": {
+            "name": "CancellableReusableContinuation.kt:132",
+            "locationSize": 1072,
+            "instanceIndex": {
+                "kotlinx.coroutines.internal.Removed": {
+                    "name": "kotlinx.coroutines.internal.Removed",
+                    "totalCount": 67,
+                    "totalSize": 1072
+                }
+            }
+        },
         "ApacheResponseConsumer.kt:102": {
             "name": "ApacheResponseConsumer.kt:102",
             "locationSize": 29600,
@@ -2147,405 +2598,6 @@
                 }
             }
         },
-        "ByteBufferChannel.kt:176": {
-            "name": "ByteBufferChannel.kt:176",
-            "locationSize": 12080,
-            "instanceIndex": {
-                "io.ktor.utils.io.ClosedWriteChannelException": {
-                    "name": "io.ktor.utils.io.ClosedWriteChannelException",
-                    "totalCount": 302,
-                    "totalSize": 12080
-                }
-            }
-        },
-        "CancellableReusableContinuation.kt:24": {
-            "name": "CancellableReusableContinuation.kt:24",
-            "locationSize": 4832,
-            "instanceIndex": {
-                "kotlin.Result$Failure": {
-                    "name": "kotlin.Result$Failure",
-                    "totalCount": 302,
-                    "totalSize": 4832
-                }
-            }
-        },
-        "CancellableReusableContinuation.kt:132": {
-            "name": "CancellableReusableContinuation.kt:132",
-            "locationSize": 960,
-            "instanceIndex": {
-                "kotlinx.coroutines.internal.Removed": {
-                    "name": "kotlinx.coroutines.internal.Removed",
-                    "totalCount": 60,
-                    "totalSize": 960
-                }
-            }
-        },
-        "NettyApplicationEngine.kt:227": {
-            "name": "NettyApplicationEngine.kt:227",
-            "locationSize": 303776,
-            "instanceIndex": {
-                "java.lang.Integer": {
-                    "name": "java.lang.Integer",
-                    "totalCount": 303,
-                    "totalSize": 4848
-                },
-                "io.netty.util.internal.SocketUtils$5": {
-                    "name": "io.netty.util.internal.SocketUtils$5",
-                    "totalCount": 1,
-                    "totalSize": 16
-                },
-                "java.io.FileDescriptor": {
-                    "name": "java.io.FileDescriptor",
-                    "totalCount": 1,
-                    "totalSize": 40
-                },
-                "[Ljava.net.InetSocketAddress;": {
-                    "name": "[Ljava.net.InetSocketAddress;",
-                    "totalCount": 1,
-                    "totalSize": 24
-                },
-                "java.net.InetAddress$InetAddressHolder": {
-                    "name": "java.net.InetAddress$InetAddressHolder",
-                    "totalCount": 2,
-                    "totalSize": 64
-                },
-                "java.net.InetSocketAddress$InetSocketAddressHolder": {
-                    "name": "java.net.InetSocketAddress$InetSocketAddressHolder",
-                    "totalCount": 2,
-                    "totalSize": 48
-                },
-                "java.lang.Object": {
-                    "name": "java.lang.Object",
-                    "totalCount": 5,
-                    "totalSize": 80
-                },
-                "java.util.concurrent.locks.ReentrantLock$NonfairSync": {
-                    "name": "java.util.concurrent.locks.ReentrantLock$NonfairSync",
-                    "totalCount": 2,
-                    "totalSize": 64
-                },
-                "java.util.concurrent.locks.ReentrantLock": {
-                    "name": "java.util.concurrent.locks.ReentrantLock",
-                    "totalCount": 2,
-                    "totalSize": 32
-                },
-                "java.net.InetSocketAddress": {
-                    "name": "java.net.InetSocketAddress",
-                    "totalCount": 1,
-                    "totalSize": 16
-                },
-                "sun.nio.ch.SocketChannelImpl": {
-                    "name": "sun.nio.ch.SocketChannelImpl",
-                    "totalCount": 1,
-                    "totalSize": 112
-                },
-                "io.netty.channel.VoidChannelPromise": {
-                    "name": "io.netty.channel.VoidChannelPromise",
-                    "totalCount": 2,
-                    "totalSize": 48
-                },
-                "io.netty.channel.AbstractChannel$CloseFuture": {
-                    "name": "io.netty.channel.AbstractChannel$CloseFuture",
-                    "totalCount": 1,
-                    "totalSize": 40
-                },
-                "[B": {
-                    "name": "[B",
-                    "totalCount": 3175,
-                    "totalSize": 161848
-                },
-                "io.netty.channel.DefaultChannelId": {
-                    "name": "io.netty.channel.DefaultChannelId",
-                    "totalCount": 1,
-                    "totalSize": 32
-                },
-                "io.netty.channel.ChannelOutboundBuffer": {
-                    "name": "io.netty.channel.ChannelOutboundBuffer",
-                    "totalCount": 1,
-                    "totalSize": 64
-                },
-                "io.netty.channel.socket.nio.NioSocketChannel$NioSocketChannelUnsafe": {
-                    "name": "io.netty.channel.socket.nio.NioSocketChannel$NioSocketChannelUnsafe",
-                    "totalCount": 1,
-                    "totalSize": 40
-                },
-                "io.netty.channel.SucceededChannelFuture": {
-                    "name": "io.netty.channel.SucceededChannelFuture",
-                    "totalCount": 1,
-                    "totalSize": 24
-                },
-                "io.netty.channel.VoidChannelPromise$1": {
-                    "name": "io.netty.channel.VoidChannelPromise$1",
-                    "totalCount": 1,
-                    "totalSize": 16
-                },
-                "java.lang.StringBuilder": {
-                    "name": "java.lang.StringBuilder",
-                    "totalCount": 937,
-                    "totalSize": 22488
-                },
-                "io.netty.channel.DefaultChannelPipeline$TailContext": {
-                    "name": "io.netty.channel.DefaultChannelPipeline$TailContext",
-                    "totalCount": 1,
-                    "totalSize": 56
-                },
-                "java.lang.String": {
-                    "name": "java.lang.String",
-                    "totalCount": 2237,
-                    "totalSize": 53688
-                },
-                "io.netty.channel.DefaultChannelPipeline$HeadContext": {
-                    "name": "io.netty.channel.DefaultChannelPipeline$HeadContext",
-                    "totalCount": 1,
-                    "totalSize": 64
-                },
-                "io.netty.channel.DefaultChannelPipeline": {
-                    "name": "io.netty.channel.DefaultChannelPipeline",
-                    "totalCount": 1,
-                    "totalSize": 48
-                },
-                "io.netty.channel.nio.AbstractNioChannel$1": {
-                    "name": "io.netty.channel.nio.AbstractNioChannel$1",
-                    "totalCount": 1,
-                    "totalSize": 16
-                },
-                "io.netty.channel.nio.AbstractNioByteChannel$1": {
-                    "name": "io.netty.channel.nio.AbstractNioByteChannel$1",
-                    "totalCount": 1,
-                    "totalSize": 16
-                },
-                "sun.nio.ch.SocketAdaptor": {
-                    "name": "sun.nio.ch.SocketAdaptor",
-                    "totalCount": 1,
-                    "totalSize": 40
-                },
-                "io.netty.channel.AdaptiveRecvByteBufAllocator": {
-                    "name": "io.netty.channel.AdaptiveRecvByteBufAllocator",
-                    "totalCount": 1,
-                    "totalSize": 32
-                },
-                "sun.nio.ch.SocketOptionRegistry$RegistryKey": {
-                    "name": "sun.nio.ch.SocketOptionRegistry$RegistryKey",
-                    "totalCount": 2,
-                    "totalSize": 48
-                },
-                "io.netty.channel.socket.nio.NioSocketChannel$NioSocketChannelConfig": {
-                    "name": "io.netty.channel.socket.nio.NioSocketChannel$NioSocketChannelConfig",
-                    "totalCount": 1,
-                    "totalSize": 64
-                },
-                "io.netty.channel.socket.nio.NioSocketChannel": {
-                    "name": "io.netty.channel.socket.nio.NioSocketChannel",
-                    "totalCount": 1,
-                    "totalSize": 112
-                },
-                "[Lio.netty.channel.ChannelHandler;": {
-                    "name": "[Lio.netty.channel.ChannelHandler;",
-                    "totalCount": 1,
-                    "totalSize": 24
-                },
-                "io.netty.channel.DefaultChannelHandlerContext": {
-                    "name": "io.netty.channel.DefaultChannelHandlerContext",
-                    "totalCount": 1,
-                    "totalSize": 56
-                },
-                "io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask": {
-                    "name": "io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask",
-                    "totalCount": 1,
-                    "totalSize": 24
-                },
-                "io.netty.bootstrap.ServerBootstrap$ServerBootstrapAcceptor$2": {
-                    "name": "io.netty.bootstrap.ServerBootstrap$ServerBootstrapAcceptor$2",
-                    "totalCount": 1,
-                    "totalSize": 24
-                },
-                "sun.nio.ch.SelectionKeyImpl": {
-                    "name": "sun.nio.ch.SelectionKeyImpl",
-                    "totalCount": 1,
-                    "totalSize": 48
-                },
-                "java.util.concurrent.ConcurrentHashMap$Node": {
-                    "name": "java.util.concurrent.ConcurrentHashMap$Node",
-                    "totalCount": 3,
-                    "totalSize": 96
-                },
-                "[Ljava.nio.channels.SelectionKey;": {
-                    "name": "[Ljava.nio.channels.SelectionKey;",
-                    "totalCount": 1,
-                    "totalSize": 24
-                },
-                "io.netty.channel.AbstractChannelHandlerContext$1": {
-                    "name": "io.netty.channel.AbstractChannelHandlerContext$1",
-                    "totalCount": 2,
-                    "totalSize": 32
-                },
-                "[Ljava.lang.Object;": {
-                    "name": "[Ljava.lang.Object;",
-                    "totalCount": 2,
-                    "totalSize": 416
-                },
-                "io.netty.util.internal.InternalThreadLocalMap": {
-                    "name": "io.netty.util.internal.InternalThreadLocalMap",
-                    "totalCount": 1,
-                    "totalSize": 136
-                },
-                "java.util.IdentityHashMap": {
-                    "name": "java.util.IdentityHashMap",
-                    "totalCount": 1,
-                    "totalSize": 40
-                },
-                "java.util.IdentityHashMap$KeySet": {
-                    "name": "java.util.IdentityHashMap$KeySet",
-                    "totalCount": 1,
-                    "totalSize": 16
-                },
-                "java.util.Collections$SetFromMap": {
-                    "name": "java.util.Collections$SetFromMap",
-                    "totalCount": 1,
-                    "totalSize": 24
-                },
-                "io.netty.channel.AbstractChannelHandlerContext$3": {
-                    "name": "io.netty.channel.AbstractChannelHandlerContext$3",
-                    "totalCount": 2,
-                    "totalSize": 32
-                },
-                "java.util.HashMap$Node": {
-                    "name": "java.util.HashMap$Node",
-                    "totalCount": 1,
-                    "totalSize": 32
-                },
-                "java.nio.channels.spi.AbstractSelector$1": {
-                    "name": "java.nio.channels.spi.AbstractSelector$1",
-                    "totalCount": 1,
-                    "totalSize": 16
-                },
-                "io.netty.channel.DefaultMaxMessagesRecvByteBufAllocator$MaxMessageHandle$1": {
-                    "name": "io.netty.channel.DefaultMaxMessagesRecvByteBufAllocator$MaxMessageHandle$1",
-                    "totalCount": 1,
-                    "totalSize": 16
-                },
-                "io.netty.channel.AdaptiveRecvByteBufAllocator$HandleImpl": {
-                    "name": "io.netty.channel.AdaptiveRecvByteBufAllocator$HandleImpl",
-                    "totalCount": 1,
-                    "totalSize": 72
-                },
-                "[Ljava.lang.String;": {
-                    "name": "[Ljava.lang.String;",
-                    "totalCount": 100,
-                    "totalSize": 3200
-                },
-                "[Lio.netty.handler.codec.DefaultHeaders$HeaderEntry;": {
-                    "name": "[Lio.netty.handler.codec.DefaultHeaders$HeaderEntry;",
-                    "totalCount": 100,
-                    "totalSize": 8000
-                },
-                "io.netty.handler.codec.DefaultHeaders$HeaderEntry": {
-                    "name": "io.netty.handler.codec.DefaultHeaders$HeaderEntry",
-                    "totalCount": 600,
-                    "totalSize": 24000
-                },
-                "io.netty.handler.codec.DefaultHeadersImpl": {
-                    "name": "io.netty.handler.codec.DefaultHeadersImpl",
-                    "totalCount": 100,
-                    "totalSize": 4000
-                },
-                "io.netty.handler.codec.http.DefaultHttpHeaders": {
-                    "name": "io.netty.handler.codec.http.DefaultHttpHeaders",
-                    "totalCount": 100,
-                    "totalSize": 1600
-                },
-                "io.netty.handler.codec.http.DefaultHttpRequest": {
-                    "name": "io.netty.handler.codec.http.DefaultHttpRequest",
-                    "totalCount": 100,
-                    "totalSize": 3200
-                },
-                "java.util.LinkedList": {
-                    "name": "java.util.LinkedList",
-                    "totalCount": 100,
-                    "totalSize": 3200
-                },
-                "io.netty.handler.codec.HeadersUtils$1": {
-                    "name": "io.netty.handler.codec.HeadersUtils$1",
-                    "totalCount": 100,
-                    "totalSize": 2400
-                },
-                "io.netty.handler.codec.DefaultHeaders$ValueIterator": {
-                    "name": "io.netty.handler.codec.DefaultHeaders$ValueIterator",
-                    "totalCount": 100,
-                    "totalSize": 4000
-                },
-                "io.netty.util.Recycler$DefaultHandle": {
-                    "name": "io.netty.util.Recycler$DefaultHandle",
-                    "totalCount": 32,
-                    "totalSize": 1024
-                },
-                "io.netty.buffer.PoolThreadCache$MemoryRegionCache$Entry": {
-                    "name": "io.netty.buffer.PoolThreadCache$MemoryRegionCache$Entry",
-                    "totalCount": 32,
-                    "totalSize": 1280
-                },
-                "io.netty.channel.AbstractChannelHandlerContext$Tasks$1": {
-                    "name": "io.netty.channel.AbstractChannelHandlerContext$Tasks$1",
-                    "totalCount": 2,
-                    "totalSize": 32
-                },
-                "io.netty.channel.AbstractChannelHandlerContext$Tasks$2": {
-                    "name": "io.netty.channel.AbstractChannelHandlerContext$Tasks$2",
-                    "totalCount": 2,
-                    "totalSize": 32
-                },
-                "io.netty.channel.AbstractChannelHandlerContext$Tasks$3": {
-                    "name": "io.netty.channel.AbstractChannelHandlerContext$Tasks$3",
-                    "totalCount": 2,
-                    "totalSize": 32
-                },
-                "io.netty.channel.AbstractChannelHandlerContext$Tasks$4": {
-                    "name": "io.netty.channel.AbstractChannelHandlerContext$Tasks$4",
-                    "totalCount": 2,
-                    "totalSize": 32
-                },
-                "io.netty.channel.AbstractChannelHandlerContext$Tasks": {
-                    "name": "io.netty.channel.AbstractChannelHandlerContext$Tasks",
-                    "totalCount": 2,
-                    "totalSize": 64
-                },
-                "java.lang.Long": {
-                    "name": "java.lang.Long",
-                    "totalCount": 12,
-                    "totalSize": 288
-                },
-                "[J": {
-                    "name": "[J",
-                    "totalCount": 6,
-                    "totalSize": 1248
-                },
-                "io.netty.buffer.PoolSubpage": {
-                    "name": "io.netty.buffer.PoolSubpage",
-                    "totalCount": 6,
-                    "totalSize": 384
-                },
-                "java.nio.DirectByteBuffer": {
-                    "name": "java.nio.DirectByteBuffer",
-                    "totalCount": 6,
-                    "totalSize": 384
-                },
-                "io.netty.util.ResourceLeakDetector$TraceRecord": {
-                    "name": "io.netty.util.ResourceLeakDetector$TraceRecord",
-                    "totalCount": 1,
-                    "totalSize": 48
-                },
-                "io.netty.util.ResourceLeakDetector$DefaultResourceLeak": {
-                    "name": "io.netty.util.ResourceLeakDetector$DefaultResourceLeak",
-                    "totalCount": 1,
-                    "totalSize": 48
-                },
-                "io.netty.buffer.SimpleLeakAwareByteBuf": {
-                    "name": "io.netty.buffer.SimpleLeakAwareByteBuf",
-                    "totalCount": 1,
-                    "totalSize": 24
-                }
-            }
-        },
         "ByteBufferChannel.kt:1307": {
             "name": "ByteBufferChannel.kt:1307",
             "locationSize": 2424,
@@ -2554,58 +2606,6 @@
                     "name": "java.lang.Long",
                     "totalCount": 101,
                     "totalSize": 2424
-                }
-            }
-        },
-        "ByteBufferChannel.kt:-1": {
-            "name": "ByteBufferChannel.kt:-1",
-            "locationSize": 310800,
-            "instanceIndex": {
-                "io.ktor.utils.io.ByteBufferChannel$awaitAtLeast$1": {
-                    "name": "io.ktor.utils.io.ByteBufferChannel$awaitAtLeast$1",
-                    "totalCount": 790,
-                    "totalSize": 31600
-                },
-                "io.ktor.utils.io.ByteBufferChannel$writeSuspendSession$1": {
-                    "name": "io.ktor.utils.io.ByteBufferChannel$writeSuspendSession$1",
-                    "totalCount": 100,
-                    "totalSize": 4000
-                },
-                "io.ktor.utils.io.ByteBufferChannel$copyDirect$1": {
-                    "name": "io.ktor.utils.io.ByteBufferChannel$copyDirect$1",
-                    "totalCount": 100,
-                    "totalSize": 10400
-                },
-                "io.ktor.utils.io.ByteBufferChannel$lookAheadSuspend$1": {
-                    "name": "io.ktor.utils.io.ByteBufferChannel$lookAheadSuspend$1",
-                    "totalCount": 100,
-                    "totalSize": 5600
-                },
-                "io.ktor.utils.io.ByteBufferChannel$writeSuspend$3": {
-                    "name": "io.ktor.utils.io.ByteBufferChannel$writeSuspend$3",
-                    "totalCount": 5200,
-                    "totalSize": 249600
-                },
-                "io.ktor.utils.io.ByteBufferChannel$readRemaining$1": {
-                    "name": "io.ktor.utils.io.ByteBufferChannel$readRemaining$1",
-                    "totalCount": 100,
-                    "totalSize": 4000
-                },
-                "io.ktor.utils.io.ByteBufferChannel$readRemainingSuspend$1": {
-                    "name": "io.ktor.utils.io.ByteBufferChannel$readRemainingSuspend$1",
-                    "totalCount": 100,
-                    "totalSize": 5600
-                }
-            }
-        },
-        "ByteBufferChannel.kt:2296": {
-            "name": "ByteBufferChannel.kt:2296",
-            "locationSize": 48664,
-            "instanceIndex": {
-                "kotlinx.coroutines.internal.DispatchedContinuation": {
-                    "name": "kotlinx.coroutines.internal.DispatchedContinuation",
-                    "totalCount": 869,
-                    "totalSize": 48664
                 }
             }
         },
@@ -2738,7 +2738,7 @@
         },
         "NettyResponsePipeline.kt:484": {
             "name": "NettyResponsePipeline.kt:484",
-            "locationSize": 26744,
+            "locationSize": 26664,
             "instanceIndex": {
                 "kotlinx.coroutines.JobCancellationException": {
                     "name": "kotlinx.coroutines.JobCancellationException",
@@ -2747,18 +2747,18 @@
                 },
                 "kotlinx.coroutines.CompletedExceptionally": {
                     "name": "kotlinx.coroutines.CompletedExceptionally",
-                    "totalCount": 203,
-                    "totalSize": 4872
+                    "totalCount": 202,
+                    "totalSize": 4848
                 },
                 "kotlinx.coroutines.NodeList": {
                     "name": "kotlinx.coroutines.NodeList",
-                    "totalCount": 102,
-                    "totalSize": 2448
+                    "totalCount": 101,
+                    "totalSize": 2424
                 },
                 "kotlinx.coroutines.JobSupport$Finishing": {
                     "name": "kotlinx.coroutines.JobSupport$Finishing",
-                    "totalCount": 102,
-                    "totalSize": 3264
+                    "totalCount": 101,
+                    "totalSize": 3232
                 },
                 "[Ljava.lang.Object;": {
                     "name": "[Ljava.lang.Object;",
@@ -2779,6 +2779,79 @@
                     "name": "kotlinx.coroutines.CompletedContinuation",
                     "totalCount": 101,
                     "totalSize": 3232
+                }
+            }
+        },
+        "NettyResponsePipeline.kt:-1": {
+            "name": "NettyResponsePipeline.kt:-1",
+            "locationSize": 15384,
+            "instanceIndex": {
+                "io.ktor.server.netty.cio.NettyResponsePipeline$fillSuspend$1": {
+                    "name": "io.ktor.server.netty.cio.NettyResponsePipeline$fillSuspend$1",
+                    "totalCount": 102,
+                    "totalSize": 4080
+                },
+                "io.ktor.server.netty.cio.NettyResponsePipeline$responses$1": {
+                    "name": "io.ktor.server.netty.cio.NettyResponsePipeline$responses$1",
+                    "totalCount": 1,
+                    "totalSize": 40
+                },
+                "io.ktor.server.netty.cio.NettyResponsePipeline$processJobs$1": {
+                    "name": "io.ktor.server.netty.cio.NettyResponsePipeline$processJobs$1",
+                    "totalCount": 1,
+                    "totalSize": 64
+                },
+                "io.ktor.server.netty.cio.NettyResponsePipeline$processBodyGeneral$1": {
+                    "name": "io.ktor.server.netty.cio.NettyResponsePipeline$processBodyGeneral$1",
+                    "totalCount": 100,
+                    "totalSize": 5600
+                },
+                "io.ktor.server.netty.cio.NettyResponsePipeline$processBodyGeneral$2": {
+                    "name": "io.ktor.server.netty.cio.NettyResponsePipeline$processBodyGeneral$2",
+                    "totalCount": 100,
+                    "totalSize": 5600
+                }
+            }
+        },
+        "NettyResponsePipeline.kt:95": {
+            "name": "NettyResponsePipeline.kt:95",
+            "locationSize": 19584,
+            "instanceIndex": {
+                "kotlinx.coroutines.internal.DispatchedContinuation": {
+                    "name": "kotlinx.coroutines.internal.DispatchedContinuation",
+                    "totalCount": 102,
+                    "totalSize": 5712
+                },
+                "kotlinx.coroutines.CancellableContinuationImpl": {
+                    "name": "kotlinx.coroutines.CancellableContinuationImpl",
+                    "totalCount": 102,
+                    "totalSize": 4896
+                },
+                "kotlinx.coroutines.channels.AbstractChannel$ReceiveElement": {
+                    "name": "kotlinx.coroutines.channels.AbstractChannel$ReceiveElement",
+                    "totalCount": 102,
+                    "totalSize": 3264
+                },
+                "kotlinx.coroutines.channels.AbstractChannel$RemoveReceiveOnCancel": {
+                    "name": "kotlinx.coroutines.channels.AbstractChannel$RemoveReceiveOnCancel",
+                    "totalCount": 102,
+                    "totalSize": 2448
+                },
+                "kotlinx.coroutines.ChildContinuation": {
+                    "name": "kotlinx.coroutines.ChildContinuation",
+                    "totalCount": 102,
+                    "totalSize": 3264
+                }
+            }
+        },
+        "NettyApplicationCall.kt:54": {
+            "name": "NettyApplicationCall.kt:54",
+            "locationSize": 4040,
+            "instanceIndex": {
+                "kotlinx.coroutines.JobCancellationException": {
+                    "name": "kotlinx.coroutines.JobCancellationException",
+                    "totalCount": 101,
+                    "totalSize": 4040
                 }
             }
         },
@@ -2882,68 +2955,6 @@
                 }
             }
         },
-        "NettyResponsePipeline.kt:-1": {
-            "name": "NettyResponsePipeline.kt:-1",
-            "locationSize": 15384,
-            "instanceIndex": {
-                "io.ktor.server.netty.cio.NettyResponsePipeline$fillSuspend$1": {
-                    "name": "io.ktor.server.netty.cio.NettyResponsePipeline$fillSuspend$1",
-                    "totalCount": 102,
-                    "totalSize": 4080
-                },
-                "io.ktor.server.netty.cio.NettyResponsePipeline$responses$1": {
-                    "name": "io.ktor.server.netty.cio.NettyResponsePipeline$responses$1",
-                    "totalCount": 1,
-                    "totalSize": 40
-                },
-                "io.ktor.server.netty.cio.NettyResponsePipeline$processJobs$1": {
-                    "name": "io.ktor.server.netty.cio.NettyResponsePipeline$processJobs$1",
-                    "totalCount": 1,
-                    "totalSize": 64
-                },
-                "io.ktor.server.netty.cio.NettyResponsePipeline$processBodyGeneral$1": {
-                    "name": "io.ktor.server.netty.cio.NettyResponsePipeline$processBodyGeneral$1",
-                    "totalCount": 100,
-                    "totalSize": 5600
-                },
-                "io.ktor.server.netty.cio.NettyResponsePipeline$processBodyGeneral$2": {
-                    "name": "io.ktor.server.netty.cio.NettyResponsePipeline$processBodyGeneral$2",
-                    "totalCount": 100,
-                    "totalSize": 5600
-                }
-            }
-        },
-        "NettyResponsePipeline.kt:95": {
-            "name": "NettyResponsePipeline.kt:95",
-            "locationSize": 19584,
-            "instanceIndex": {
-                "kotlinx.coroutines.internal.DispatchedContinuation": {
-                    "name": "kotlinx.coroutines.internal.DispatchedContinuation",
-                    "totalCount": 102,
-                    "totalSize": 5712
-                },
-                "kotlinx.coroutines.CancellableContinuationImpl": {
-                    "name": "kotlinx.coroutines.CancellableContinuationImpl",
-                    "totalCount": 102,
-                    "totalSize": 4896
-                },
-                "kotlinx.coroutines.channels.AbstractChannel$ReceiveElement": {
-                    "name": "kotlinx.coroutines.channels.AbstractChannel$ReceiveElement",
-                    "totalCount": 102,
-                    "totalSize": 3264
-                },
-                "kotlinx.coroutines.channels.AbstractChannel$RemoveReceiveOnCancel": {
-                    "name": "kotlinx.coroutines.channels.AbstractChannel$RemoveReceiveOnCancel",
-                    "totalCount": 102,
-                    "totalSize": 2448
-                },
-                "kotlinx.coroutines.ChildContinuation": {
-                    "name": "kotlinx.coroutines.ChildContinuation",
-                    "totalCount": 102,
-                    "totalSize": 3264
-                }
-            }
-        },
         "NettyChannelInitializer.kt:119": {
             "name": "NettyChannelInitializer.kt:119",
             "locationSize": 112,
@@ -3005,17 +3016,6 @@
                     "name": "io.netty.channel.DefaultChannelHandlerContext",
                     "totalCount": 1,
                     "totalSize": 56
-                }
-            }
-        },
-        "NettyApplicationCall.kt:54": {
-            "name": "NettyApplicationCall.kt:54",
-            "locationSize": 4040,
-            "instanceIndex": {
-                "kotlinx.coroutines.JobCancellationException": {
-                    "name": "kotlinx.coroutines.JobCancellationException",
-                    "totalCount": 101,
-                    "totalSize": 4040
                 }
             }
         },
@@ -3478,6 +3478,17 @@
                     "name": "java.util.ArrayList",
                     "totalCount": 700,
                     "totalSize": 16800
+                }
+            }
+        },
+        "ApplicationEngineEnvironmentReloading.kt:438": {
+            "name": "ApplicationEngineEnvironmentReloading.kt:438",
+            "locationSize": 2240,
+            "instanceIndex": {
+                "[Ljava.lang.Object;": {
+                    "name": "[Ljava.lang.Object;",
+                    "totalCount": 140,
+                    "totalSize": 2240
                 }
             }
         },
@@ -4306,7 +4317,7 @@
         },
         "StaticContentResolution.kt:31": {
             "name": "StaticContentResolution.kt:31",
-            "locationSize": 28800,
+            "locationSize": 29760,
             "instanceIndex": {
                 "[C": {
                     "name": "[C",
@@ -4330,8 +4341,8 @@
                 },
                 "[Ljava.lang.Object;": {
                     "name": "[Ljava.lang.Object;",
-                    "totalCount": 200,
-                    "totalSize": 8000
+                    "totalCount": 240,
+                    "totalSize": 8960
                 },
                 "java.util.ArrayList": {
                     "name": "java.util.ArrayList",
@@ -5015,17 +5026,6 @@
                 }
             }
         },
-        "Coroutines.kt:129": {
-            "name": "Coroutines.kt:129",
-            "locationSize": 2400,
-            "instanceIndex": {
-                "io.ktor.utils.io.ChannelScope": {
-                    "name": "io.ktor.utils.io.ChannelScope",
-                    "totalCount": 100,
-                    "totalSize": 2400
-                }
-            }
-        },
         "HeaderValueWithParameters.kt:46": {
             "name": "HeaderValueWithParameters.kt:46",
             "locationSize": 6400,
@@ -5037,6 +5037,17 @@
                 },
                 "java.lang.String": {
                     "name": "java.lang.String",
+                    "totalCount": 100,
+                    "totalSize": 2400
+                }
+            }
+        },
+        "Coroutines.kt:129": {
+            "name": "Coroutines.kt:129",
+            "locationSize": 2400,
+            "instanceIndex": {
+                "io.ktor.utils.io.ChannelScope": {
+                    "name": "io.ktor.utils.io.ChannelScope",
                     "totalCount": 100,
                     "totalSize": 2400
                 }
@@ -5089,17 +5100,6 @@
                 }
             }
         },
-        "NettyHttp1ApplicationResponse.kt:55": {
-            "name": "NettyHttp1ApplicationResponse.kt:55",
-            "locationSize": 3200,
-            "instanceIndex": {
-                "io.netty.handler.codec.http.DefaultHttpResponse": {
-                    "name": "io.netty.handler.codec.http.DefaultHttpResponse",
-                    "totalCount": 100,
-                    "totalSize": 3200
-                }
-            }
-        },
         "FileChannels.kt:48": {
             "name": "FileChannels.kt:48",
             "locationSize": 4800,
@@ -5111,12 +5111,12 @@
                 }
             }
         },
-        "NettyApplicationResponse.kt:81": {
-            "name": "NettyApplicationResponse.kt:81",
+        "NettyHttp1ApplicationResponse.kt:55": {
+            "name": "NettyHttp1ApplicationResponse.kt:55",
             "locationSize": 3200,
             "instanceIndex": {
-                "kotlinx.coroutines.CompletedContinuation": {
-                    "name": "kotlinx.coroutines.CompletedContinuation",
+                "io.netty.handler.codec.http.DefaultHttpResponse": {
+                    "name": "io.netty.handler.codec.http.DefaultHttpResponse",
                     "totalCount": 100,
                     "totalSize": 3200
                 }
@@ -5144,22 +5144,6 @@
                 }
             }
         },
-        "BaseApplicationResponse.kt:201": {
-            "name": "BaseApplicationResponse.kt:201",
-            "locationSize": 4000,
-            "instanceIndex": {
-                "kotlin.jvm.internal.Ref$ObjectRef": {
-                    "name": "kotlin.jvm.internal.Ref$ObjectRef",
-                    "totalCount": 100,
-                    "totalSize": 1600
-                },
-                "java.lang.Long": {
-                    "name": "java.lang.Long",
-                    "totalCount": 100,
-                    "totalSize": 2400
-                }
-            }
-        },
         "ChunkBuffer.kt:240": {
             "name": "ChunkBuffer.kt:240",
             "locationSize": 2400,
@@ -5179,6 +5163,55 @@
                     "name": "io.ktor.utils.io.core.IoBuffer",
                     "totalCount": 100,
                     "totalSize": 4000
+                }
+            }
+        },
+        "NettyApplicationResponse.kt:81": {
+            "name": "NettyApplicationResponse.kt:81",
+            "locationSize": 3200,
+            "instanceIndex": {
+                "kotlinx.coroutines.CompletedContinuation": {
+                    "name": "kotlinx.coroutines.CompletedContinuation",
+                    "totalCount": 100,
+                    "totalSize": 3200
+                }
+            }
+        },
+        "BufferViewJvm.kt:21": {
+            "name": "BufferViewJvm.kt:21",
+            "locationSize": 1600,
+            "instanceIndex": {
+                "java.nio.channels.spi.AbstractInterruptibleChannel$1": {
+                    "name": "java.nio.channels.spi.AbstractInterruptibleChannel$1",
+                    "totalCount": 100,
+                    "totalSize": 1600
+                }
+            }
+        },
+        "BaseApplicationResponse.kt:201": {
+            "name": "BaseApplicationResponse.kt:201",
+            "locationSize": 4000,
+            "instanceIndex": {
+                "kotlin.jvm.internal.Ref$ObjectRef": {
+                    "name": "kotlin.jvm.internal.Ref$ObjectRef",
+                    "totalCount": 100,
+                    "totalSize": 1600
+                },
+                "java.lang.Long": {
+                    "name": "java.lang.Long",
+                    "totalCount": 100,
+                    "totalSize": 2400
+                }
+            }
+        },
+        "ByteBufferChannel.kt:2331": {
+            "name": "ByteBufferChannel.kt:2331",
+            "locationSize": 5600,
+            "instanceIndex": {
+                "kotlinx.coroutines.internal.DispatchedContinuation": {
+                    "name": "kotlinx.coroutines.internal.DispatchedContinuation",
+                    "totalCount": 100,
+                    "totalSize": 5600
                 }
             }
         },
@@ -5233,31 +5266,9 @@
                 }
             }
         },
-        "BufferViewJvm.kt:21": {
-            "name": "BufferViewJvm.kt:21",
-            "locationSize": 1600,
-            "instanceIndex": {
-                "java.nio.channels.spi.AbstractInterruptibleChannel$1": {
-                    "name": "java.nio.channels.spi.AbstractInterruptibleChannel$1",
-                    "totalCount": 100,
-                    "totalSize": 1600
-                }
-            }
-        },
-        "ByteBufferChannel.kt:2331": {
-            "name": "ByteBufferChannel.kt:2331",
-            "locationSize": 5600,
-            "instanceIndex": {
-                "kotlinx.coroutines.internal.DispatchedContinuation": {
-                    "name": "kotlinx.coroutines.internal.DispatchedContinuation",
-                    "totalCount": 100,
-                    "totalSize": 5600
-                }
-            }
-        },
         "NettyResponsePipeline.kt:410": {
             "name": "NettyResponsePipeline.kt:410",
-            "locationSize": 22448,
+            "locationSize": 22296,
             "instanceIndex": {
                 "io.netty.channel.DefaultChannelPromise": {
                     "name": "io.netty.channel.DefaultChannelPromise",
@@ -5301,23 +5312,23 @@
                 },
                 "java.util.concurrent.ConcurrentHashMap$Node": {
                     "name": "java.util.concurrent.ConcurrentHashMap$Node",
-                    "totalCount": 2,
-                    "totalSize": 64
+                    "totalCount": 1,
+                    "totalSize": 32
                 },
                 "io.netty.util.ResourceLeakDetector$TraceRecord": {
                     "name": "io.netty.util.ResourceLeakDetector$TraceRecord",
-                    "totalCount": 2,
-                    "totalSize": 96
+                    "totalCount": 1,
+                    "totalSize": 48
                 },
                 "io.netty.util.ResourceLeakDetector$DefaultResourceLeak": {
                     "name": "io.netty.util.ResourceLeakDetector$DefaultResourceLeak",
-                    "totalCount": 2,
-                    "totalSize": 96
+                    "totalCount": 1,
+                    "totalSize": 48
                 },
                 "io.netty.buffer.SimpleLeakAwareByteBuf": {
                     "name": "io.netty.buffer.SimpleLeakAwareByteBuf",
-                    "totalCount": 2,
-                    "totalSize": 48
+                    "totalCount": 1,
+                    "totalSize": 24
                 }
             }
         },
@@ -5345,33 +5356,33 @@
         },
         "CancellableReusableContinuation.kt:113": {
             "name": "CancellableReusableContinuation.kt:113",
-            "locationSize": 25360,
+            "locationSize": 25880,
             "instanceIndex": {
                 "kotlinx.coroutines.InvokeOnCancelling": {
                     "name": "kotlinx.coroutines.InvokeOnCancelling",
-                    "totalCount": 390,
-                    "totalSize": 15600
+                    "totalCount": 395,
+                    "totalSize": 15800
                 },
                 "kotlinx.coroutines.JobSupport$addLastAtomic$$inlined$addLastIf$1": {
                     "name": "kotlinx.coroutines.JobSupport$addLastAtomic$$inlined$addLastIf$1",
-                    "totalCount": 190,
-                    "totalSize": 7600
+                    "totalCount": 195,
+                    "totalSize": 7800
                 },
                 "kotlinx.coroutines.NodeList": {
                     "name": "kotlinx.coroutines.NodeList",
-                    "totalCount": 90,
-                    "totalSize": 2160
+                    "totalCount": 95,
+                    "totalSize": 2280
                 }
             }
         },
         "CancellableReusableContinuation.kt:59": {
             "name": "CancellableReusableContinuation.kt:59",
-            "locationSize": 9360,
+            "locationSize": 9480,
             "instanceIndex": {
                 "io.ktor.utils.io.internal.CancellableReusableContinuation$JobRelation": {
                     "name": "io.ktor.utils.io.internal.CancellableReusableContinuation$JobRelation",
-                    "totalCount": 390,
-                    "totalSize": 9360
+                    "totalCount": 395,
+                    "totalSize": 9480
                 }
             }
         },
@@ -5657,28 +5668,17 @@
         },
         "ByteBufferChannel.kt:3783": {
             "name": "ByteBufferChannel.kt:3783",
-            "locationSize": 539864,
+            "locationSize": 540384,
             "instanceIndex": {
                 "kotlinx.coroutines.internal.DispatchedContinuation": {
                     "name": "kotlinx.coroutines.internal.DispatchedContinuation",
-                    "totalCount": 5191,
-                    "totalSize": 290696
+                    "totalCount": 5196,
+                    "totalSize": 290976
                 },
                 "kotlinx.coroutines.CancellableContinuationImpl": {
                     "name": "kotlinx.coroutines.CancellableContinuationImpl",
-                    "totalCount": 5191,
-                    "totalSize": 249168
-                }
-            }
-        },
-        "ByteBufferChannel.kt:3789": {
-            "name": "ByteBufferChannel.kt:3789",
-            "locationSize": 166112,
-            "instanceIndex": {
-                "kotlinx.coroutines.ChildContinuation": {
-                    "name": "kotlinx.coroutines.ChildContinuation",
-                    "totalCount": 5191,
-                    "totalSize": 166112
+                    "totalCount": 5196,
+                    "totalSize": 249408
                 }
             }
         },
@@ -5690,6 +5690,17 @@
                     "name": "io.ktor.client.request.HttpResponseData",
                     "totalCount": 100,
                     "totalSize": 4000
+                }
+            }
+        },
+        "ByteBufferChannel.kt:3789": {
+            "name": "ByteBufferChannel.kt:3789",
+            "locationSize": 166272,
+            "instanceIndex": {
+                "kotlinx.coroutines.ChildContinuation": {
+                    "name": "kotlinx.coroutines.ChildContinuation",
+                    "totalCount": 5196,
+                    "totalSize": 166272
                 }
             }
         },
@@ -5886,22 +5897,22 @@
         },
         "ByteBufferChannel.kt:2190": {
             "name": "ByteBufferChannel.kt:2190",
-            "locationSize": 1080080,
+            "locationSize": 1080912,
             "instanceIndex": {
                 "[B": {
                     "name": "[B",
-                    "totalCount": 15555,
-                    "totalSize": 705160
+                    "totalCount": 15567,
+                    "totalSize": 705704
                 },
                 "java.lang.StringBuilder": {
                     "name": "java.lang.StringBuilder",
-                    "totalCount": 5185,
-                    "totalSize": 124440
+                    "totalCount": 5189,
+                    "totalSize": 124536
                 },
                 "java.lang.String": {
                     "name": "java.lang.String",
-                    "totalCount": 10370,
-                    "totalSize": 248880
+                    "totalCount": 10378,
+                    "totalSize": 249072
                 },
                 "kotlinx.coroutines.internal.Removed": {
                     "name": "kotlinx.coroutines.internal.Removed",

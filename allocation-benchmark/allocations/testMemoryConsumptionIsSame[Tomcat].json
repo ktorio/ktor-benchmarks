@@ -1,79 +1,90 @@
 {
     "data": {
-        "ServletWriter.kt:89": {
-            "name": "ServletWriter.kt:89",
-            "locationSize": 438992,
+        "BaseApplicationResponse.kt:202": {
+            "name": "BaseApplicationResponse.kt:202",
+            "locationSize": 2212656,
             "instanceIndex": {
-                "java.util.concurrent.atomic.AtomicBoolean": {
-                    "name": "java.util.concurrent.atomic.AtomicBoolean",
-                    "totalCount": 10681,
-                    "totalSize": 170896
+                "[B": {
+                    "name": "[B",
+                    "totalCount": 31692,
+                    "totalSize": 1416032
                 },
-                "java.nio.HeapByteBuffer": {
-                    "name": "java.nio.HeapByteBuffer",
-                    "totalCount": 5340,
-                    "totalSize": 256320
+                "java.lang.StringBuilder": {
+                    "name": "java.lang.StringBuilder",
+                    "totalCount": 10564,
+                    "totalSize": 253536
                 },
-                "java.nio.DirectByteBuffer$Deallocator": {
-                    "name": "java.nio.DirectByteBuffer$Deallocator",
-                    "totalCount": 55,
-                    "totalSize": 1760
+                "java.lang.String": {
+                    "name": "java.lang.String",
+                    "totalCount": 21128,
+                    "totalSize": 507072
                 },
-                "jdk.internal.ref.Cleaner": {
-                    "name": "jdk.internal.ref.Cleaner",
-                    "totalCount": 55,
-                    "totalSize": 2200
+                "kotlinx.coroutines.internal.Removed": {
+                    "name": "kotlinx.coroutines.internal.Removed",
+                    "totalCount": 101,
+                    "totalSize": 1616
                 },
+                "io.ktor.server.engine.BaseApplicationResponse$respondFromChannel$$inlined$use$lambda$1": {
+                    "name": "io.ktor.server.engine.BaseApplicationResponse$respondFromChannel$$inlined$use$lambda$1",
+                    "totalCount": 100,
+                    "totalSize": 5600
+                },
+                "kotlin.coroutines.CombinedContext": {
+                    "name": "kotlin.coroutines.CombinedContext",
+                    "totalCount": 400,
+                    "totalSize": 9600
+                },
+                "kotlinx.coroutines.DispatchedCoroutine": {
+                    "name": "kotlinx.coroutines.DispatchedCoroutine",
+                    "totalCount": 100,
+                    "totalSize": 4000
+                },
+                "kotlinx.coroutines.ChildHandleNode": {
+                    "name": "kotlinx.coroutines.ChildHandleNode",
+                    "totalCount": 100,
+                    "totalSize": 3200
+                },
+                "kotlinx.coroutines.NodeList": {
+                    "name": "kotlinx.coroutines.NodeList",
+                    "totalCount": 100,
+                    "totalSize": 2400
+                },
+                "kotlinx.coroutines.JobSupport$addLastAtomic$$inlined$addLastIf$1": {
+                    "name": "kotlinx.coroutines.JobSupport$addLastAtomic$$inlined$addLastIf$1",
+                    "totalCount": 100,
+                    "totalSize": 4000
+                },
+                "kotlinx.coroutines.internal.DispatchedContinuation": {
+                    "name": "kotlinx.coroutines.internal.DispatchedContinuation",
+                    "totalCount": 100,
+                    "totalSize": 5600
+                }
+            }
+        },
+        "BufferViewJvm.kt:59": {
+            "name": "BufferViewJvm.kt:59",
+            "locationSize": 347712,
+            "instanceIndex": {
                 "java.nio.DirectByteBuffer": {
                     "name": "java.nio.DirectByteBuffer",
-                    "totalCount": 55,
-                    "totalSize": 3520
-                },
-                "[Ljava.nio.ByteBuffer;": {
-                    "name": "[Ljava.nio.ByteBuffer;",
-                    "totalCount": 1,
-                    "totalSize": 4112
-                },
-                "sun.nio.ch.Util$BufferCache": {
-                    "name": "sun.nio.ch.Util$BufferCache",
-                    "totalCount": 1,
-                    "totalSize": 24
-                },
-                "[Ljava.lang.Object;": {
-                    "name": "[Ljava.lang.Object;",
-                    "totalCount": 1,
-                    "totalSize": 80
-                },
-                "java.util.IdentityHashMap": {
-                    "name": "java.util.IdentityHashMap",
-                    "totalCount": 1,
-                    "totalSize": 40
-                },
-                "java.util.IdentityHashMap$KeySet": {
-                    "name": "java.util.IdentityHashMap$KeySet",
-                    "totalCount": 1,
-                    "totalSize": 16
-                },
-                "java.util.Collections$SetFromMap": {
-                    "name": "java.util.Collections$SetFromMap",
-                    "totalCount": 1,
-                    "totalSize": 24
+                    "totalCount": 5433,
+                    "totalSize": 347712
                 }
             }
         },
         "ByteBufferChannel.kt:-1": {
             "name": "ByteBufferChannel.kt:-1",
-            "locationSize": 1004024,
+            "locationSize": 1002928,
             "instanceIndex": {
                 "io.ktor.utils.io.ByteBufferChannel$readAvailable$3": {
                     "name": "io.ktor.utils.io.ByteBufferChannel$readAvailable$3",
-                    "totalCount": 10781,
-                    "totalSize": 431240
+                    "totalCount": 10766,
+                    "totalSize": 430640
                 },
                 "io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$1": {
                     "name": "io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$1",
-                    "totalCount": 5340,
-                    "totalSize": 299040
+                    "totalCount": 5332,
+                    "totalSize": 298592
                 },
                 "io.ktor.utils.io.ByteBufferChannel$writeSuspendSession$1": {
                     "name": "io.ktor.utils.io.ByteBufferChannel$writeSuspendSession$1",
@@ -87,8 +98,8 @@
                 },
                 "io.ktor.utils.io.ByteBufferChannel$writeSuspend$3": {
                     "name": "io.ktor.utils.io.ByteBufferChannel$writeSuspend$3",
-                    "totalCount": 5203,
-                    "totalSize": 249744
+                    "totalCount": 5202,
+                    "totalSize": 249696
                 },
                 "io.ktor.utils.io.ByteBufferChannel$readRemaining$1": {
                     "name": "io.ktor.utils.io.ByteBufferChannel$readRemaining$1",
@@ -102,92 +113,14 @@
                 }
             }
         },
-        "ByteBufferChannel.kt:2296": {
-            "name": "ByteBufferChannel.kt:2296",
-            "locationSize": 304640,
-            "instanceIndex": {
-                "kotlinx.coroutines.internal.DispatchedContinuation": {
-                    "name": "kotlinx.coroutines.internal.DispatchedContinuation",
-                    "totalCount": 5440,
-                    "totalSize": 304640
-                }
-            }
-        },
-        "CancellableReusableContinuation.kt:93": {
-            "name": "CancellableReusableContinuation.kt:93",
-            "locationSize": 64904,
-            "instanceIndex": {
-                "[B": {
-                    "name": "[B",
-                    "totalCount": 666,
-                    "totalSize": 33888
-                },
-                "java.lang.StringBuilder": {
-                    "name": "java.lang.StringBuilder",
-                    "totalCount": 222,
-                    "totalSize": 5328
-                },
-                "java.lang.String": {
-                    "name": "java.lang.String",
-                    "totalCount": 444,
-                    "totalSize": 10656
-                },
-                "kotlinx.coroutines.JobSupport$Finishing": {
-                    "name": "kotlinx.coroutines.JobSupport$Finishing",
-                    "totalCount": 104,
-                    "totalSize": 3328
-                },
-                "[Ljava.lang.Object;": {
-                    "name": "[Ljava.lang.Object;",
-                    "totalCount": 158,
-                    "totalSize": 7648
-                },
-                "java.util.ArrayList": {
-                    "name": "java.util.ArrayList",
-                    "totalCount": 104,
-                    "totalSize": 2496
-                },
-                "kotlinx.coroutines.internal.Removed": {
-                    "name": "kotlinx.coroutines.internal.Removed",
-                    "totalCount": 3,
-                    "totalSize": 48
-                },
-                "kotlinx.coroutines.internal.DispatchedContinuation": {
-                    "name": "kotlinx.coroutines.internal.DispatchedContinuation",
-                    "totalCount": 3,
-                    "totalSize": 168
-                },
-                "kotlinx.coroutines.internal.ArrayQueue": {
-                    "name": "kotlinx.coroutines.internal.ArrayQueue",
-                    "totalCount": 54,
-                    "totalSize": 1296
-                },
-                "kotlinx.coroutines.BlockingEventLoop": {
-                    "name": "kotlinx.coroutines.BlockingEventLoop",
-                    "totalCount": 1,
-                    "totalSize": 48
-                }
-            }
-        },
-        "BufferViewJvm.kt:59": {
-            "name": "BufferViewJvm.kt:59",
-            "locationSize": 348224,
-            "instanceIndex": {
-                "java.nio.DirectByteBuffer": {
-                    "name": "java.nio.DirectByteBuffer",
-                    "totalCount": 5441,
-                    "totalSize": 348224
-                }
-            }
-        },
         "ByteBufferChannel.kt:689": {
             "name": "ByteBufferChannel.kt:689",
-            "locationSize": 172496,
+            "locationSize": 172272,
             "instanceIndex": {
                 "java.lang.Integer": {
                     "name": "java.lang.Integer",
-                    "totalCount": 10781,
-                    "totalSize": 172496
+                    "totalCount": 10767,
+                    "totalSize": 172272
                 }
             }
         },
@@ -204,12 +137,12 @@
         },
         "ServletWriter.kt:94": {
             "name": "ServletWriter.kt:94",
-            "locationSize": 175712,
+            "locationSize": 175488,
             "instanceIndex": {
                 "java.util.concurrent.atomic.AtomicBoolean": {
                     "name": "java.util.concurrent.atomic.AtomicBoolean",
-                    "totalCount": 10982,
-                    "totalSize": 175712
+                    "totalCount": 10968,
+                    "totalSize": 175488
                 }
             }
         },
@@ -224,17 +157,6 @@
                 }
             }
         },
-        "ServletWriter.kt:86": {
-            "name": "ServletWriter.kt:86",
-            "locationSize": 170880,
-            "instanceIndex": {
-                "java.util.concurrent.atomic.AtomicBoolean": {
-                    "name": "java.util.concurrent.atomic.AtomicBoolean",
-                    "totalCount": 10680,
-                    "totalSize": 170880
-                }
-            }
-        },
         "URLBuilder.kt:32": {
             "name": "URLBuilder.kt:32",
             "locationSize": 7200,
@@ -243,6 +165,17 @@
                     "name": "io.ktor.http.ParametersBuilder",
                     "totalCount": 300,
                     "totalSize": 7200
+                }
+            }
+        },
+        "ServletWriter.kt:86": {
+            "name": "ServletWriter.kt:86",
+            "locationSize": 170656,
+            "instanceIndex": {
+                "java.util.concurrent.atomic.AtomicBoolean": {
+                    "name": "java.util.concurrent.atomic.AtomicBoolean",
+                    "totalCount": 10666,
+                    "totalSize": 170656
                 }
             }
         },
@@ -279,6 +212,37 @@
                 }
             }
         },
+        "ServletWriter.kt:89": {
+            "name": "ServletWriter.kt:89",
+            "locationSize": 433848,
+            "instanceIndex": {
+                "java.util.concurrent.atomic.AtomicBoolean": {
+                    "name": "java.util.concurrent.atomic.AtomicBoolean",
+                    "totalCount": 10666,
+                    "totalSize": 170656
+                },
+                "java.nio.HeapByteBuffer": {
+                    "name": "java.nio.HeapByteBuffer",
+                    "totalCount": 5333,
+                    "totalSize": 255984
+                },
+                "java.nio.DirectByteBuffer$Deallocator": {
+                    "name": "java.nio.DirectByteBuffer$Deallocator",
+                    "totalCount": 53,
+                    "totalSize": 1696
+                },
+                "jdk.internal.ref.Cleaner": {
+                    "name": "jdk.internal.ref.Cleaner",
+                    "totalCount": 53,
+                    "totalSize": 2120
+                },
+                "java.nio.DirectByteBuffer": {
+                    "name": "java.nio.DirectByteBuffer",
+                    "totalCount": 53,
+                    "totalSize": 3392
+                }
+            }
+        },
         "AttributesJvm.kt:36": {
             "name": "AttributesJvm.kt:36",
             "locationSize": 32000,
@@ -303,6 +267,17 @@
                     "name": "io.ktor.util.HashMapAttributes",
                     "totalCount": 200,
                     "totalSize": 3200
+                }
+            }
+        },
+        "ByteBufferChannel.kt:2296": {
+            "name": "ByteBufferChannel.kt:2296",
+            "locationSize": 304192,
+            "instanceIndex": {
+                "kotlinx.coroutines.internal.DispatchedContinuation": {
+                    "name": "kotlinx.coroutines.internal.DispatchedContinuation",
+                    "totalCount": 5432,
+                    "totalSize": 304192
                 }
             }
         },
@@ -2273,57 +2248,62 @@
         },
         "DispatcherWithShutdown.kt:50": {
             "name": "DispatcherWithShutdown.kt:50",
-            "locationSize": 90440,
+            "locationSize": 89424,
             "instanceIndex": {
                 "java.util.concurrent.Executors$RunnableAdapter": {
                     "name": "java.util.concurrent.Executors$RunnableAdapter",
-                    "totalCount": 103,
-                    "totalSize": 2472
+                    "totalCount": 100,
+                    "totalSize": 2400
                 },
                 "java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask": {
                     "name": "java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask",
-                    "totalCount": 103,
-                    "totalSize": 7416
+                    "totalCount": 100,
+                    "totalSize": 7200
                 },
                 "[B": {
                     "name": "[B",
-                    "totalCount": 229,
-                    "totalSize": 8064
+                    "totalCount": 219,
+                    "totalSize": 7616
                 },
                 "java.lang.StringBuilder": {
                     "name": "java.lang.StringBuilder",
-                    "totalCount": 103,
-                    "totalSize": 2472
+                    "totalCount": 100,
+                    "totalSize": 2400
                 },
                 "java.lang.String": {
                     "name": "java.lang.String",
-                    "totalCount": 103,
-                    "totalSize": 2472
+                    "totalCount": 100,
+                    "totalSize": 2400
                 },
                 "java.lang.Object": {
                     "name": "java.lang.Object",
-                    "totalCount": 103,
-                    "totalSize": 1648
+                    "totalCount": 100,
+                    "totalSize": 1600
                 },
                 "[Ljava.security.ProtectionDomain;": {
                     "name": "[Ljava.security.ProtectionDomain;",
-                    "totalCount": 203,
-                    "totalSize": 22032
+                    "totalCount": 200,
+                    "totalSize": 21600
                 },
                 "java.lang.Thread": {
                     "name": "java.lang.Thread",
-                    "totalCount": 103,
-                    "totalSize": 38728
+                    "totalCount": 100,
+                    "totalSize": 37600
                 },
                 "java.util.HashMap$Node": {
                     "name": "java.util.HashMap$Node",
-                    "totalCount": 103,
-                    "totalSize": 3296
+                    "totalCount": 100,
+                    "totalSize": 3200
                 },
                 "[Ljava.util.HashMap$Node;": {
                     "name": "[Ljava.util.HashMap$Node;",
                     "totalCount": 3,
                     "totalSize": 1840
+                },
+                "[Ljava.lang.Thread;": {
+                    "name": "[Ljava.lang.Thread;",
+                    "totalCount": 2,
+                    "totalSize": 1568
                 }
             }
         },
@@ -2362,12 +2342,12 @@
         },
         "ApplicationEngineEnvironmentReloading.kt:438": {
             "name": "ApplicationEngineEnvironmentReloading.kt:438",
-            "locationSize": 9968,
+            "locationSize": 11200,
             "instanceIndex": {
                 "[Ljava.lang.Object;": {
                     "name": "[Ljava.lang.Object;",
-                    "totalCount": 623,
-                    "totalSize": 9968
+                    "totalCount": 700,
+                    "totalSize": 11200
                 }
             }
         },
@@ -2515,22 +2495,12 @@
         },
         "ServletConnectionPoint.kt:13": {
             "name": "ServletConnectionPoint.kt:13",
-            "locationSize": 20688,
+            "locationSize": 20616,
             "instanceIndex": {
                 "java.nio.HeapByteBuffer": {
                     "name": "java.nio.HeapByteBuffer",
                     "totalCount": 100,
                     "totalSize": 4800
-                },
-                "[Ljava.lang.Object;": {
-                    "name": "[Ljava.lang.Object;",
-                    "totalCount": 54,
-                    "totalSize": 1728
-                },
-                "sun.nio.cs.ISO_8859_1$Decoder": {
-                    "name": "sun.nio.cs.ISO_8859_1$Decoder",
-                    "totalCount": 54,
-                    "totalSize": 2160
                 },
                 "[C": {
                     "name": "[C",
@@ -2551,6 +2521,16 @@
                     "name": "java.lang.String",
                     "totalCount": 100,
                     "totalSize": 2400
+                },
+                "[Ljava.lang.Object;": {
+                    "name": "[Ljava.lang.Object;",
+                    "totalCount": 53,
+                    "totalSize": 1696
+                },
+                "sun.nio.cs.ISO_8859_1$Decoder": {
+                    "name": "sun.nio.cs.ISO_8859_1$Decoder",
+                    "totalCount": 53,
+                    "totalSize": 2120
                 }
             }
         },
@@ -3148,12 +3128,12 @@
         },
         "PhaseContent.kt:73": {
             "name": "PhaseContent.kt:73",
-            "locationSize": 4272,
+            "locationSize": 4800,
             "instanceIndex": {
                 "[Ljava.lang.Object;": {
                     "name": "[Ljava.lang.Object;",
-                    "totalCount": 178,
-                    "totalSize": 4272
+                    "totalCount": 200,
+                    "totalSize": 4800
                 }
             }
         },
@@ -3252,7 +3232,7 @@
         },
         "StaticContentResolution.kt:31": {
             "name": "StaticContentResolution.kt:31",
-            "locationSize": 33072,
+            "locationSize": 33600,
             "instanceIndex": {
                 "[C": {
                     "name": "[C",
@@ -3276,8 +3256,8 @@
                 },
                 "[Ljava.lang.Object;": {
                     "name": "[Ljava.lang.Object;",
-                    "totalCount": 378,
-                    "totalSize": 12272
+                    "totalCount": 400,
+                    "totalSize": 12800
                 },
                 "java.util.ArrayList": {
                     "name": "java.util.ArrayList",
@@ -3496,6 +3476,28 @@
                 }
             }
         },
+        "ByteBufferChannel.kt:176": {
+            "name": "ByteBufferChannel.kt:176",
+            "locationSize": 16120,
+            "instanceIndex": {
+                "io.ktor.utils.io.ClosedWriteChannelException": {
+                    "name": "io.ktor.utils.io.ClosedWriteChannelException",
+                    "totalCount": 403,
+                    "totalSize": 16120
+                }
+            }
+        },
+        "CancellableReusableContinuation.kt:24": {
+            "name": "CancellableReusableContinuation.kt:24",
+            "locationSize": 6448,
+            "instanceIndex": {
+                "kotlin.Result$Failure": {
+                    "name": "kotlin.Result$Failure",
+                    "totalCount": 403,
+                    "totalSize": 6448
+                }
+            }
+        },
         "ByteBufferChannel.kt:1307": {
             "name": "ByteBufferChannel.kt:1307",
             "locationSize": 2424,
@@ -3518,25 +3520,44 @@
                 }
             }
         },
-        "ByteBufferChannel.kt:176": {
-            "name": "ByteBufferChannel.kt:176",
-            "locationSize": 16120,
+        "CancellableReusableContinuation.kt:93": {
+            "name": "CancellableReusableContinuation.kt:93",
+            "locationSize": 35208,
             "instanceIndex": {
-                "io.ktor.utils.io.ClosedWriteChannelException": {
-                    "name": "io.ktor.utils.io.ClosedWriteChannelException",
-                    "totalCount": 403,
-                    "totalSize": 16120
-                }
-            }
-        },
-        "CancellableReusableContinuation.kt:24": {
-            "name": "CancellableReusableContinuation.kt:24",
-            "locationSize": 6448,
-            "instanceIndex": {
-                "kotlin.Result$Failure": {
-                    "name": "kotlin.Result$Failure",
-                    "totalCount": 403,
-                    "totalSize": 6448
+                "[B": {
+                    "name": "[B",
+                    "totalCount": 303,
+                    "totalSize": 13536
+                },
+                "java.lang.StringBuilder": {
+                    "name": "java.lang.StringBuilder",
+                    "totalCount": 101,
+                    "totalSize": 2424
+                },
+                "java.lang.String": {
+                    "name": "java.lang.String",
+                    "totalCount": 202,
+                    "totalSize": 4848
+                },
+                "kotlinx.coroutines.JobSupport$Finishing": {
+                    "name": "kotlinx.coroutines.JobSupport$Finishing",
+                    "totalCount": 101,
+                    "totalSize": 3232
+                },
+                "[Ljava.lang.Object;": {
+                    "name": "[Ljava.lang.Object;",
+                    "totalCount": 154,
+                    "totalSize": 7472
+                },
+                "java.util.ArrayList": {
+                    "name": "java.util.ArrayList",
+                    "totalCount": 101,
+                    "totalSize": 2424
+                },
+                "kotlinx.coroutines.internal.ArrayQueue": {
+                    "name": "kotlinx.coroutines.internal.ArrayQueue",
+                    "totalCount": 53,
+                    "totalSize": 1272
                 }
             }
         },
@@ -3671,7 +3692,7 @@
         },
         "Coroutines.kt:123": {
             "name": "Coroutines.kt:123",
-            "locationSize": 173104,
+            "locationSize": 173024,
             "instanceIndex": {
                 "io.ktor.utils.io.CoroutinesKt$launchChannel$job$1": {
                     "name": "io.ktor.utils.io.CoroutinesKt$launchChannel$job$1",
@@ -3711,7 +3732,7 @@
                 "[B": {
                     "name": "[B",
                     "totalCount": 603,
-                    "totalSize": 26976
+                    "totalSize": 26944
                 },
                 "java.lang.StringBuilder": {
                     "name": "java.lang.StringBuilder",
@@ -3725,8 +3746,8 @@
                 },
                 "kotlinx.coroutines.BlockingEventLoop": {
                     "name": "kotlinx.coroutines.BlockingEventLoop",
-                    "totalCount": 50,
-                    "totalSize": 2400
+                    "totalCount": 49,
+                    "totalSize": 2352
                 }
             }
         },
@@ -3854,32 +3875,6 @@
                 }
             }
         },
-        "SuspendFunctionGun.kt:191": {
-            "name": "SuspendFunctionGun.kt:191",
-            "locationSize": 280,
-            "instanceIndex": {
-                "kotlinx.coroutines.JobSupport$Finishing": {
-                    "name": "kotlinx.coroutines.JobSupport$Finishing",
-                    "totalCount": 3,
-                    "totalSize": 96
-                },
-                "[Ljava.lang.Object;": {
-                    "name": "[Ljava.lang.Object;",
-                    "totalCount": 3,
-                    "totalSize": 96
-                },
-                "java.util.ArrayList": {
-                    "name": "java.util.ArrayList",
-                    "totalCount": 3,
-                    "totalSize": 72
-                },
-                "kotlinx.coroutines.internal.Removed": {
-                    "name": "kotlinx.coroutines.internal.Removed",
-                    "totalCount": 1,
-                    "totalSize": 16
-                }
-            }
-        },
         "StaticContentResolution.kt:54": {
             "name": "StaticContentResolution.kt:54",
             "locationSize": 3200,
@@ -3940,32 +3935,22 @@
         },
         "LocalFileContent.kt:27": {
             "name": "LocalFileContent.kt:27",
-            "locationSize": 125088,
+            "locationSize": 124656,
             "instanceIndex": {
                 "[Ljava.lang.String;": {
                     "name": "[Ljava.lang.String;",
                     "totalCount": 100,
                     "totalSize": 1600
                 },
-                "[B": {
-                    "name": "[B",
-                    "totalCount": 308,
-                    "totalSize": 43392
-                },
-                "sun.nio.cs.UTF_8$Encoder": {
-                    "name": "sun.nio.cs.UTF_8$Encoder",
-                    "totalCount": 54,
-                    "totalSize": 2592
-                },
-                "java.lang.ref.SoftReference": {
-                    "name": "java.lang.ref.SoftReference",
-                    "totalCount": 54,
-                    "totalSize": 2160
-                },
                 "[C": {
                     "name": "[C",
                     "totalCount": 100,
                     "totalSize": 20800
+                },
+                "[B": {
+                    "name": "[B",
+                    "totalCount": 306,
+                    "totalSize": 43344
                 },
                 "java.nio.HeapByteBuffer": {
                     "name": "java.nio.HeapByteBuffer",
@@ -3997,46 +3982,6 @@
                     "totalCount": 100,
                     "totalSize": 12800
                 },
-                "[Ljava.lang.Object;": {
-                    "name": "[Ljava.lang.Object;",
-                    "totalCount": 150,
-                    "totalSize": 6400
-                },
-                "java.util.IdentityHashMap": {
-                    "name": "java.util.IdentityHashMap",
-                    "totalCount": 50,
-                    "totalSize": 2000
-                },
-                "java.util.IdentityHashMap$KeySet": {
-                    "name": "java.util.IdentityHashMap$KeySet",
-                    "totalCount": 50,
-                    "totalSize": 800
-                },
-                "java.util.Collections$SetFromMap": {
-                    "name": "java.util.Collections$SetFromMap",
-                    "totalCount": 50,
-                    "totalSize": 1200
-                },
-                "sun.nio.fs.NativeBuffer$Deallocator": {
-                    "name": "sun.nio.fs.NativeBuffer$Deallocator",
-                    "totalCount": 54,
-                    "totalSize": 1296
-                },
-                "jdk.internal.ref.CleanerImpl$PhantomCleanableRef": {
-                    "name": "jdk.internal.ref.CleanerImpl$PhantomCleanableRef",
-                    "totalCount": 54,
-                    "totalSize": 2592
-                },
-                "sun.nio.fs.NativeBuffer": {
-                    "name": "sun.nio.fs.NativeBuffer",
-                    "totalCount": 54,
-                    "totalSize": 1728
-                },
-                "[Lsun.nio.fs.NativeBuffer;": {
-                    "name": "[Lsun.nio.fs.NativeBuffer;",
-                    "totalCount": 54,
-                    "totalSize": 1728
-                },
                 "sun.nio.fs.UnixFileAttributes$UnixAsBasicFileAttributes": {
                     "name": "sun.nio.fs.UnixFileAttributes$UnixAsBasicFileAttributes",
                     "totalCount": 100,
@@ -4047,10 +3992,60 @@
                     "totalCount": 100,
                     "totalSize": 3200
                 },
+                "[Ljava.lang.Object;": {
+                    "name": "[Ljava.lang.Object;",
+                    "totalCount": 149,
+                    "totalSize": 6320
+                },
                 "java.util.ArrayList": {
                     "name": "java.util.ArrayList",
                     "totalCount": 100,
                     "totalSize": 2400
+                },
+                "sun.nio.cs.UTF_8$Encoder": {
+                    "name": "sun.nio.cs.UTF_8$Encoder",
+                    "totalCount": 53,
+                    "totalSize": 2544
+                },
+                "java.lang.ref.SoftReference": {
+                    "name": "java.lang.ref.SoftReference",
+                    "totalCount": 53,
+                    "totalSize": 2120
+                },
+                "java.util.IdentityHashMap": {
+                    "name": "java.util.IdentityHashMap",
+                    "totalCount": 49,
+                    "totalSize": 1960
+                },
+                "java.util.IdentityHashMap$KeySet": {
+                    "name": "java.util.IdentityHashMap$KeySet",
+                    "totalCount": 49,
+                    "totalSize": 784
+                },
+                "java.util.Collections$SetFromMap": {
+                    "name": "java.util.Collections$SetFromMap",
+                    "totalCount": 49,
+                    "totalSize": 1176
+                },
+                "sun.nio.fs.NativeBuffer$Deallocator": {
+                    "name": "sun.nio.fs.NativeBuffer$Deallocator",
+                    "totalCount": 53,
+                    "totalSize": 1272
+                },
+                "jdk.internal.ref.CleanerImpl$PhantomCleanableRef": {
+                    "name": "jdk.internal.ref.CleanerImpl$PhantomCleanableRef",
+                    "totalCount": 53,
+                    "totalSize": 2544
+                },
+                "sun.nio.fs.NativeBuffer": {
+                    "name": "sun.nio.fs.NativeBuffer",
+                    "totalCount": 53,
+                    "totalSize": 1696
+                },
+                "[Lsun.nio.fs.NativeBuffer;": {
+                    "name": "[Lsun.nio.fs.NativeBuffer;",
+                    "totalCount": 53,
+                    "totalSize": 1696
                 }
             }
         },
@@ -4298,22 +4293,6 @@
                 }
             }
         },
-        "ServletApplicationResponse.kt:27": {
-            "name": "ServletApplicationResponse.kt:27",
-            "locationSize": 4800,
-            "instanceIndex": {
-                "[B": {
-                    "name": "[B",
-                    "totalCount": 100,
-                    "totalSize": 2400
-                },
-                "java.lang.String": {
-                    "name": "java.lang.String",
-                    "totalCount": 100,
-                    "totalSize": 2400
-                }
-            }
-        },
         "FileChannels.kt:-1": {
             "name": "FileChannels.kt:-1",
             "locationSize": 12000,
@@ -4327,6 +4306,22 @@
                     "name": "io.ktor.util.cio.FileChannelsKt$readChannel$1$invokeSuspend$$inlined$use$lambda$1",
                     "totalCount": 100,
                     "totalSize": 4800
+                }
+            }
+        },
+        "ServletApplicationResponse.kt:27": {
+            "name": "ServletApplicationResponse.kt:27",
+            "locationSize": 4800,
+            "instanceIndex": {
+                "[B": {
+                    "name": "[B",
+                    "totalCount": 100,
+                    "totalSize": 2400
+                },
+                "java.lang.String": {
+                    "name": "java.lang.String",
+                    "totalCount": 100,
+                    "totalSize": 2400
                 }
             }
         },
@@ -4372,6 +4367,28 @@
                 }
             }
         },
+        "IoBufferJVM.kt:583": {
+            "name": "IoBufferJVM.kt:583",
+            "locationSize": 6400,
+            "instanceIndex": {
+                "java.nio.DirectByteBuffer": {
+                    "name": "java.nio.DirectByteBuffer",
+                    "totalCount": 100,
+                    "totalSize": 6400
+                }
+            }
+        },
+        "Buffer.kt:19": {
+            "name": "Buffer.kt:19",
+            "locationSize": 3200,
+            "instanceIndex": {
+                "io.ktor.utils.io.core.BufferSharedState": {
+                    "name": "io.ktor.utils.io.core.BufferSharedState",
+                    "totalCount": 100,
+                    "totalSize": 3200
+                }
+            }
+        },
         "ServletWriter.kt:37": {
             "name": "ServletWriter.kt:37",
             "locationSize": 11200,
@@ -4398,25 +4415,25 @@
                 }
             }
         },
-        "IoBufferJVM.kt:583": {
-            "name": "IoBufferJVM.kt:583",
-            "locationSize": 6400,
+        "ChunkBuffer.kt:240": {
+            "name": "ChunkBuffer.kt:240",
+            "locationSize": 2400,
             "instanceIndex": {
-                "java.nio.DirectByteBuffer": {
-                    "name": "java.nio.DirectByteBuffer",
+                "io.ktor.utils.io.concurrent.SharedJvmKt$shared$1": {
+                    "name": "io.ktor.utils.io.concurrent.SharedJvmKt$shared$1",
                     "totalCount": 100,
-                    "totalSize": 6400
+                    "totalSize": 2400
                 }
             }
         },
-        "Buffer.kt:19": {
-            "name": "Buffer.kt:19",
-            "locationSize": 3200,
+        "WriteSessionImpl.kt:19": {
+            "name": "WriteSessionImpl.kt:19",
+            "locationSize": 4000,
             "instanceIndex": {
-                "io.ktor.utils.io.core.BufferSharedState": {
-                    "name": "io.ktor.utils.io.core.BufferSharedState",
+                "io.ktor.utils.io.core.IoBuffer": {
+                    "name": "io.ktor.utils.io.core.IoBuffer",
                     "totalCount": 100,
-                    "totalSize": 3200
+                    "totalSize": 4000
                 }
             }
         },
@@ -4431,34 +4448,12 @@
                 }
             }
         },
-        "ChunkBuffer.kt:240": {
-            "name": "ChunkBuffer.kt:240",
-            "locationSize": 2400,
-            "instanceIndex": {
-                "io.ktor.utils.io.concurrent.SharedJvmKt$shared$1": {
-                    "name": "io.ktor.utils.io.concurrent.SharedJvmKt$shared$1",
-                    "totalCount": 100,
-                    "totalSize": 2400
-                }
-            }
-        },
         "ServletWriter.kt:18": {
             "name": "ServletWriter.kt:18",
             "locationSize": 4000,
             "instanceIndex": {
                 "io.ktor.server.servlet.ServletWriterKt$servletWriter$1": {
                     "name": "io.ktor.server.servlet.ServletWriterKt$servletWriter$1",
-                    "totalCount": 100,
-                    "totalSize": 4000
-                }
-            }
-        },
-        "WriteSessionImpl.kt:19": {
-            "name": "WriteSessionImpl.kt:19",
-            "locationSize": 4000,
-            "instanceIndex": {
-                "io.ktor.utils.io.core.IoBuffer": {
-                    "name": "io.ktor.utils.io.core.IoBuffer",
                     "totalCount": 100,
                     "totalSize": 4000
                 }
@@ -4488,22 +4483,22 @@
         },
         "ServletWriter.kt:42": {
             "name": "ServletWriter.kt:42",
-            "locationSize": 30400,
+            "locationSize": 32800,
             "instanceIndex": {
                 "java.util.concurrent.atomic.AtomicBoolean": {
                     "name": "java.util.concurrent.atomic.AtomicBoolean",
                     "totalCount": 1300,
                     "totalSize": 20800
                 },
+                "[Ljava.lang.Object;": {
+                    "name": "[Ljava.lang.Object;",
+                    "totalCount": 200,
+                    "totalSize": 4000
+                },
                 "java.util.concurrent.CopyOnWriteArrayList$COWIterator": {
                     "name": "java.util.concurrent.CopyOnWriteArrayList$COWIterator",
                     "totalCount": 200,
                     "totalSize": 4800
-                },
-                "[Ljava.lang.Object;": {
-                    "name": "[Ljava.lang.Object;",
-                    "totalCount": 100,
-                    "totalSize": 1600
                 },
                 "java.util.concurrent.ConcurrentHashMap$Node": {
                     "name": "java.util.concurrent.ConcurrentHashMap$Node",
@@ -4514,7 +4509,7 @@
         },
         "ServletWriter.kt:71": {
             "name": "ServletWriter.kt:71",
-            "locationSize": 476384,
+            "locationSize": 476832,
             "instanceIndex": {
                 "java.util.concurrent.atomic.AtomicBoolean": {
                     "name": "java.util.concurrent.atomic.AtomicBoolean",
@@ -4523,8 +4518,8 @@
                 },
                 "[B": {
                     "name": "[B",
-                    "totalCount": 2329,
-                    "totalSize": 82744
+                    "totalCount": 2327,
+                    "totalSize": 82696
                 },
                 "java.lang.StringBuilder": {
                     "name": "java.lang.StringBuilder",
@@ -4571,50 +4566,50 @@
                     "totalCount": 900,
                     "totalSize": 50400
                 },
-                "[Ljava.lang.Object;": {
-                    "name": "[Ljava.lang.Object;",
-                    "totalCount": 54,
-                    "totalSize": 1728
-                },
-                "sun.nio.cs.Surrogate$Parser": {
-                    "name": "sun.nio.cs.Surrogate$Parser",
-                    "totalCount": 54,
-                    "totalSize": 1296
-                },
-                "sun.nio.cs.ISO_8859_1$Encoder": {
-                    "name": "sun.nio.cs.ISO_8859_1$Encoder",
-                    "totalCount": 54,
-                    "totalSize": 2592
-                },
                 "java.nio.HeapByteBuffer": {
                     "name": "java.nio.HeapByteBuffer",
                     "totalCount": 900,
                     "totalSize": 43200
                 },
+                "[Ljava.lang.Object;": {
+                    "name": "[Ljava.lang.Object;",
+                    "totalCount": 53,
+                    "totalSize": 1696
+                },
+                "sun.nio.cs.Surrogate$Parser": {
+                    "name": "sun.nio.cs.Surrogate$Parser",
+                    "totalCount": 53,
+                    "totalSize": 1272
+                },
+                "sun.nio.cs.ISO_8859_1$Encoder": {
+                    "name": "sun.nio.cs.ISO_8859_1$Encoder",
+                    "totalCount": 53,
+                    "totalSize": 2544
+                },
                 "[Ljava.nio.ByteBuffer;": {
                     "name": "[Ljava.nio.ByteBuffer;",
-                    "totalCount": 50,
-                    "totalSize": 205600
+                    "totalCount": 49,
+                    "totalSize": 201488
                 },
                 "sun.nio.ch.Util$BufferCache": {
                     "name": "sun.nio.ch.Util$BufferCache",
-                    "totalCount": 50,
-                    "totalSize": 1200
+                    "totalCount": 49,
+                    "totalSize": 1176
                 },
                 "java.nio.DirectByteBuffer$Deallocator": {
                     "name": "java.nio.DirectByteBuffer$Deallocator",
-                    "totalCount": 50,
-                    "totalSize": 1600
+                    "totalCount": 49,
+                    "totalSize": 1568
                 },
                 "jdk.internal.ref.Cleaner": {
                     "name": "jdk.internal.ref.Cleaner",
-                    "totalCount": 50,
-                    "totalSize": 2000
+                    "totalCount": 49,
+                    "totalSize": 1960
                 },
                 "java.nio.DirectByteBuffer": {
                     "name": "java.nio.DirectByteBuffer",
-                    "totalCount": 50,
-                    "totalSize": 3200
+                    "totalCount": 49,
+                    "totalSize": 3136
                 },
                 "java.util.Date": {
                     "name": "java.util.Date",
@@ -4625,6 +4620,11 @@
                     "name": "java.lang.StringBuffer",
                     "totalCount": 7,
                     "totalSize": 224
+                },
+                "[Ljava.lang.String;": {
+                    "name": "[Ljava.lang.String;",
+                    "totalCount": 98,
+                    "totalSize": 4872
                 },
                 "java.text.DateFormatSymbols": {
                     "name": "java.text.DateFormatSymbols",
@@ -4640,33 +4640,28 @@
         },
         "CancellableReusableContinuation.kt:113": {
             "name": "CancellableReusableContinuation.kt:113",
-            "locationSize": 16208,
+            "locationSize": 16000,
             "instanceIndex": {
                 "kotlinx.coroutines.InvokeOnCancelling": {
                     "name": "kotlinx.coroutines.InvokeOnCancelling",
-                    "totalCount": 302,
-                    "totalSize": 12080
+                    "totalCount": 300,
+                    "totalSize": 12000
                 },
                 "kotlinx.coroutines.JobSupport$addLastAtomic$$inlined$addLastIf$1": {
                     "name": "kotlinx.coroutines.JobSupport$addLastAtomic$$inlined$addLastIf$1",
-                    "totalCount": 102,
-                    "totalSize": 4080
-                },
-                "kotlinx.coroutines.NodeList": {
-                    "name": "kotlinx.coroutines.NodeList",
-                    "totalCount": 2,
-                    "totalSize": 48
+                    "totalCount": 100,
+                    "totalSize": 4000
                 }
             }
         },
         "CancellableReusableContinuation.kt:59": {
             "name": "CancellableReusableContinuation.kt:59",
-            "locationSize": 7248,
+            "locationSize": 7200,
             "instanceIndex": {
                 "io.ktor.utils.io.internal.CancellableReusableContinuation$JobRelation": {
                     "name": "io.ktor.utils.io.internal.CancellableReusableContinuation$JobRelation",
-                    "totalCount": 302,
-                    "totalSize": 7248
+                    "totalCount": 300,
+                    "totalSize": 7200
                 }
             }
         },
@@ -4752,67 +4747,6 @@
                 }
             }
         },
-        "BaseApplicationResponse.kt:202": {
-            "name": "BaseApplicationResponse.kt:202",
-            "locationSize": 2201488,
-            "instanceIndex": {
-                "io.ktor.server.engine.BaseApplicationResponse$respondFromChannel$$inlined$use$lambda$1": {
-                    "name": "io.ktor.server.engine.BaseApplicationResponse$respondFromChannel$$inlined$use$lambda$1",
-                    "totalCount": 100,
-                    "totalSize": 5600
-                },
-                "kotlin.coroutines.CombinedContext": {
-                    "name": "kotlin.coroutines.CombinedContext",
-                    "totalCount": 400,
-                    "totalSize": 9600
-                },
-                "kotlinx.coroutines.DispatchedCoroutine": {
-                    "name": "kotlinx.coroutines.DispatchedCoroutine",
-                    "totalCount": 100,
-                    "totalSize": 4000
-                },
-                "kotlinx.coroutines.ChildHandleNode": {
-                    "name": "kotlinx.coroutines.ChildHandleNode",
-                    "totalCount": 100,
-                    "totalSize": 3200
-                },
-                "kotlinx.coroutines.NodeList": {
-                    "name": "kotlinx.coroutines.NodeList",
-                    "totalCount": 100,
-                    "totalSize": 2400
-                },
-                "kotlinx.coroutines.JobSupport$addLastAtomic$$inlined$addLastIf$1": {
-                    "name": "kotlinx.coroutines.JobSupport$addLastAtomic$$inlined$addLastIf$1",
-                    "totalCount": 100,
-                    "totalSize": 4000
-                },
-                "kotlinx.coroutines.internal.DispatchedContinuation": {
-                    "name": "kotlinx.coroutines.internal.DispatchedContinuation",
-                    "totalCount": 100,
-                    "totalSize": 5600
-                },
-                "[B": {
-                    "name": "[B",
-                    "totalCount": 31500,
-                    "totalSize": 1409520
-                },
-                "java.lang.StringBuilder": {
-                    "name": "java.lang.StringBuilder",
-                    "totalCount": 10500,
-                    "totalSize": 252000
-                },
-                "java.lang.String": {
-                    "name": "java.lang.String",
-                    "totalCount": 21000,
-                    "totalSize": 504000
-                },
-                "kotlinx.coroutines.internal.Removed": {
-                    "name": "kotlinx.coroutines.internal.Removed",
-                    "totalCount": 98,
-                    "totalSize": 1568
-                }
-            }
-        },
         "ByteBufferChannel.kt:1214": {
             "name": "ByteBufferChannel.kt:1214",
             "locationSize": 2400,
@@ -4853,84 +4787,84 @@
         },
         "ApacheResponseConsumer.kt:48": {
             "name": "ApacheResponseConsumer.kt:48",
-            "locationSize": 84848,
+            "locationSize": 84832,
             "instanceIndex": {
                 "kotlin.jvm.internal.Ref$IntRef": {
                     "name": "kotlin.jvm.internal.Ref$IntRef",
-                    "totalCount": 5303,
-                    "totalSize": 84848
+                    "totalCount": 5302,
+                    "totalSize": 84832
                 }
             }
         },
         "ApacheResponseConsumer.kt:51": {
             "name": "ApacheResponseConsumer.kt:51",
-            "locationSize": 254472,
+            "locationSize": 254448,
             "instanceIndex": {
                 "io.ktor.client.engine.apache.ApacheResponseConsumer$consumeContent$1": {
                     "name": "io.ktor.client.engine.apache.ApacheResponseConsumer$consumeContent$1",
-                    "totalCount": 10603,
-                    "totalSize": 254472
+                    "totalCount": 10602,
+                    "totalSize": 254448
                 }
             }
         },
         "ApacheResponseConsumer.kt:63": {
             "name": "ApacheResponseConsumer.kt:63",
-            "locationSize": 2872104,
+            "locationSize": 2871536,
             "instanceIndex": {
                 "io.ktor.client.engine.apache.ApacheResponseConsumer$consumeContent$2": {
                     "name": "io.ktor.client.engine.apache.ApacheResponseConsumer$consumeContent$2",
-                    "totalCount": 5203,
-                    "totalSize": 208120
+                    "totalCount": 5202,
+                    "totalSize": 208080
                 },
                 "kotlin.coroutines.CombinedContext": {
                     "name": "kotlin.coroutines.CombinedContext",
-                    "totalCount": 36421,
-                    "totalSize": 874104
+                    "totalCount": 36414,
+                    "totalSize": 873936
                 },
                 "kotlinx.coroutines.CoroutineId": {
                     "name": "kotlinx.coroutines.CoroutineId",
-                    "totalCount": 5203,
-                    "totalSize": 124872
+                    "totalCount": 5202,
+                    "totalSize": 124848
                 },
                 "kotlinx.coroutines.StandaloneCoroutine": {
                     "name": "kotlinx.coroutines.StandaloneCoroutine",
-                    "totalCount": 5203,
-                    "totalSize": 166496
+                    "totalCount": 5202,
+                    "totalSize": 166464
                 },
                 "kotlinx.coroutines.ChildHandleNode": {
                     "name": "kotlinx.coroutines.ChildHandleNode",
-                    "totalCount": 5203,
-                    "totalSize": 166496
+                    "totalCount": 5202,
+                    "totalSize": 166464
                 },
                 "kotlinx.coroutines.JobSupport$addLastAtomic$$inlined$addLastIf$1": {
                     "name": "kotlinx.coroutines.JobSupport$addLastAtomic$$inlined$addLastIf$1",
-                    "totalCount": 5203,
-                    "totalSize": 208120
+                    "totalCount": 5202,
+                    "totalSize": 208080
                 },
                 "kotlinx.coroutines.internal.DispatchedContinuation": {
                     "name": "kotlinx.coroutines.internal.DispatchedContinuation",
-                    "totalCount": 5203,
-                    "totalSize": 291368
+                    "totalCount": 5202,
+                    "totalSize": 291312
                 },
                 "[B": {
                     "name": "[B",
-                    "totalCount": 10406,
-                    "totalSize": 582736
+                    "totalCount": 10404,
+                    "totalSize": 582624
                 },
                 "java.lang.StringBuilder": {
                     "name": "java.lang.StringBuilder",
-                    "totalCount": 5203,
-                    "totalSize": 124872
+                    "totalCount": 5202,
+                    "totalSize": 124848
                 },
                 "java.lang.String": {
                     "name": "java.lang.String",
-                    "totalCount": 5203,
-                    "totalSize": 124872
+                    "totalCount": 5202,
+                    "totalSize": 124848
                 },
                 "kotlinx.coroutines.internal.Removed": {
                     "name": "kotlinx.coroutines.internal.Removed",
-                    "totalCount": 3,
-                    "totalSize": 48
+                    "totalCount": 2,
+                    "totalSize": 32
                 }
             }
         },
@@ -5034,39 +4968,12 @@
         },
         "ApacheResponseConsumer.kt:-1": {
             "name": "ApacheResponseConsumer.kt:-1",
-            "locationSize": 208120,
+            "locationSize": 208080,
             "instanceIndex": {
                 "io.ktor.client.engine.apache.ApacheResponseConsumer$consumeContent$2": {
                     "name": "io.ktor.client.engine.apache.ApacheResponseConsumer$consumeContent$2",
-                    "totalCount": 5203,
-                    "totalSize": 208120
-                }
-            }
-        },
-        "ByteBufferChannel.kt:3783": {
-            "name": "ByteBufferChannel.kt:3783",
-            "locationSize": 536744,
-            "instanceIndex": {
-                "kotlinx.coroutines.internal.DispatchedContinuation": {
-                    "name": "kotlinx.coroutines.internal.DispatchedContinuation",
-                    "totalCount": 5161,
-                    "totalSize": 289016
-                },
-                "kotlinx.coroutines.CancellableContinuationImpl": {
-                    "name": "kotlinx.coroutines.CancellableContinuationImpl",
-                    "totalCount": 5161,
-                    "totalSize": 247728
-                }
-            }
-        },
-        "ByteBufferChannel.kt:3789": {
-            "name": "ByteBufferChannel.kt:3789",
-            "locationSize": 165152,
-            "instanceIndex": {
-                "kotlinx.coroutines.ChildContinuation": {
-                    "name": "kotlinx.coroutines.ChildContinuation",
-                    "totalCount": 5161,
-                    "totalSize": 165152
+                    "totalCount": 5202,
+                    "totalSize": 208080
                 }
             }
         },
@@ -5078,6 +4985,33 @@
                     "name": "io.ktor.http.HeadersImpl",
                     "totalCount": 100,
                     "totalSize": 2400
+                }
+            }
+        },
+        "ByteBufferChannel.kt:3783": {
+            "name": "ByteBufferChannel.kt:3783",
+            "locationSize": 531856,
+            "instanceIndex": {
+                "kotlinx.coroutines.internal.DispatchedContinuation": {
+                    "name": "kotlinx.coroutines.internal.DispatchedContinuation",
+                    "totalCount": 5114,
+                    "totalSize": 286384
+                },
+                "kotlinx.coroutines.CancellableContinuationImpl": {
+                    "name": "kotlinx.coroutines.CancellableContinuationImpl",
+                    "totalCount": 5114,
+                    "totalSize": 245472
+                }
+            }
+        },
+        "ByteBufferChannel.kt:3789": {
+            "name": "ByteBufferChannel.kt:3789",
+            "locationSize": 163648,
+            "instanceIndex": {
+                "kotlinx.coroutines.ChildContinuation": {
+                    "name": "kotlinx.coroutines.ChildContinuation",
+                    "totalCount": 5114,
+                    "totalSize": 163648
                 }
             }
         },
@@ -5285,27 +5219,27 @@
         },
         "ByteBufferChannel.kt:2190": {
             "name": "ByteBufferChannel.kt:2190",
-            "locationSize": 1068384,
+            "locationSize": 1056128,
             "instanceIndex": {
                 "[B": {
                     "name": "[B",
-                    "totalCount": 15387,
-                    "totalSize": 697544
+                    "totalCount": 15210,
+                    "totalSize": 689520
                 },
                 "java.lang.StringBuilder": {
                     "name": "java.lang.StringBuilder",
-                    "totalCount": 5129,
-                    "totalSize": 123096
+                    "totalCount": 5070,
+                    "totalSize": 121680
                 },
                 "java.lang.String": {
                     "name": "java.lang.String",
-                    "totalCount": 10258,
-                    "totalSize": 246192
+                    "totalCount": 10140,
+                    "totalSize": 243360
                 },
                 "kotlinx.coroutines.internal.Removed": {
                     "name": "kotlinx.coroutines.internal.Removed",
-                    "totalCount": 97,
-                    "totalSize": 1552
+                    "totalCount": 98,
+                    "totalSize": 1568
                 }
             }
         },
@@ -5682,12 +5616,12 @@
         },
         "ApacheHttpRequest.kt:44": {
             "name": "ApacheHttpRequest.kt:44",
-            "locationSize": 5152,
+            "locationSize": 1568,
             "instanceIndex": {
                 "[Ljava.lang.Object;": {
                     "name": "[Ljava.lang.Object;",
-                    "totalCount": 92,
-                    "totalSize": 5152
+                    "totalCount": 28,
+                    "totalSize": 1568
                 }
             }
         }
