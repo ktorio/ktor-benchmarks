@@ -32,7 +32,17 @@ fun server(engineName: String): BaseApplicationEngine {
         else -> error("Unknown engine provided: $engineName")
     }
 
-    val server = embeddedServer(engine, port = 8080, module = Application::main)
+    val environment = applicationEngineEnvironment {
+        connector {
+            host = "0.0.0.0"
+            port = 8080
+        }
+
+        developmentMode = false
+        module(Application::main)
+    }
+
+    val server = embeddedServer(engine, environment)
     server.start()
     return server
 }

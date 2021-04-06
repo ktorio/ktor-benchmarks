@@ -55,11 +55,13 @@ check(agentPath != null) { "Instrumentation agent is not found. Please check the
 
 tasks.test {
     jvmArgs = listOf("-javaagent:$agentPath")
+    systemProperty("kotlinx.coroutines.debug", "off")
     useJUnitPlatform()
 }
 
 tasks.register<Test>("dumpAllocations") {
     systemProperty("SAVE_REPORT", "true")
+    systemProperty("kotlinx.coroutines.debug", "off")
     jvmArgs = listOf("-javaagent:$agentPath")
     useJUnitPlatform()
 }

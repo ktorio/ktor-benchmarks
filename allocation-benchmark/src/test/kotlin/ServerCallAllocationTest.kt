@@ -3,15 +3,16 @@ package benchmarks
 import io.ktor.client.*
 import io.ktor.client.engine.apache.*
 import io.ktor.client.request.*
-import kotlinx.coroutines.runBlocking
-import org.junit.jupiter.api.AfterAll
-import org.junit.jupiter.params.ParameterizedTest
-import org.junit.jupiter.params.provider.ValueSource
+import kotlinx.coroutines.*
+import org.junit.jupiter.params.*
+import org.junit.jupiter.params.provider.*
 
 const val SERVER_PORT = 8080
 const val TEST_SIZE = 100
 const val WARMUP_SIZE = 10
 val client = HttpClient(Apache) {
+    developmentMode = false
+
     engine {
         socketTimeout = 0
         connectTimeout = 0
