@@ -4,18 +4,36 @@ import kotlinx.serialization.Serializable
 import kotlin.math.round
 
 @Serializable
-class InstanceData(val name: String) {
-    var totalCount = 0L
-        private set
-    var totalSize = 0L
-        private set
+private class SiteStatistic(val lineNumber: Int) {
+    private var totalCount: Long = 0L
+    private var totalSize: Long = 0L
 
-    fun add(size: Long) = synchronized(this) {
-        totalSize += (size)
+    fun add(size: Long) {
         totalCount += 1
+        totalSize += size
     }
 
-    override fun toString(): String = "$name[Count: $totalCount, Size: ${totalSize.formatSize()}]"
+    override fun toString(): String = "Line: $lineNumber, Size: $totalSize, Count: $totalCount"
+}
+
+@Serializable
+class InstanceData(val name: String) {
+    private val sites = mutableMapOf<Int, SiteStatistic>()
+    var totalSize: Long = 0L
+
+    fun add(size: Long, lineNumber: Int) = synchronized(this) {
+        totalSize += size
+
+        val stats = sites.computeIfAbsent(lineNumber) { SiteStatistic(lineNumber) }
+        stats.add(size)
+    }
+
+    override fun toString(): String = buildString {
+        appendLine(name)
+        sites.values.forEach { value ->
+            appendLine("  $value")
+        }
+    }
 }
 
 fun Long.formatSize(): String = when {

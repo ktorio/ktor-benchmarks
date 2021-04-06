@@ -9,11 +9,11 @@ class LocationInfo(val name: String) {
 
     private val instanceIndex = mutableMapOf<String, InstanceData>()
 
-    fun add(instanceClass: Class<*>, size: Long) = synchronized(this) {
+    fun add(instanceClass: Class<*>, size: Long, lineNumber: Int) = synchronized(this) {
         locationSize += size
 
         val instance = instanceIndex.computeIfAbsent(instanceClass.name) { InstanceData(instanceClass.name) }
-        instance.add(size)
+        instance.add(size, lineNumber)
     }
 
     override fun toString(): String = buildString {
