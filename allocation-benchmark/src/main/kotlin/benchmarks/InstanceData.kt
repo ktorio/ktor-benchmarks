@@ -4,7 +4,7 @@ import kotlinx.serialization.Serializable
 import kotlin.math.round
 
 @Serializable
-private class SiteStatistic(val lineNumber: Int) {
+private class SiteStatistic(val stackTrace: String) {
     private var totalCount: Long = 0L
     private var totalSize: Long = 0L
 
@@ -13,18 +13,19 @@ private class SiteStatistic(val lineNumber: Int) {
         totalSize += size
     }
 
-    override fun toString(): String = "Line: $lineNumber, Size: $totalSize, Count: $totalCount"
+    override fun toString(): String = "Size: $totalSize, Count: $totalCount, Stack: $stackTrace"
 }
 
 @Serializable
 class InstanceData(val name: String) {
-    private val sites = mutableMapOf<Int, SiteStatistic>()
+    private val sites = mutableMapOf<String, SiteStatistic>()
     var totalSize: Long = 0L
 
-    fun add(size: Long, lineNumber: Int) = synchronized(this) {
+    fun add(size: Long, stackTrace: List<String>) = synchronized(this) {
         totalSize += size
 
-        val stats = sites.computeIfAbsent(lineNumber) { SiteStatistic(lineNumber) }
+        val trace = stackTrace.joinToString()
+        val stats = sites.computeIfAbsent(trace) { SiteStatistic(trace) }
         stats.add(size)
     }
 
