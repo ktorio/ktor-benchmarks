@@ -3,6 +3,7 @@ package benchmarks
 import com.google.monitoring.runtime.instrumentation.AllocationRecorder
 import com.google.monitoring.runtime.instrumentation.Sampler
 import com.google.monitoring.runtime.instrumentation.asm.*
+import kotlin.streams.*
 
 private val IGNORED_DESCRIPTORS = mutableListOf<String>(
     "com/google",
@@ -43,14 +44,16 @@ object AllocationTracker : Sampler {
 
         if (IGNORED_DESCRIPTORS.any { descriptor.startsWith(it) }) return
 
-        val frame: StackWalker.StackFrame = walker.walk { frame ->
-            frame.filter {
+        val frames = walker.walk { frames ->
+            frames.filter {
                 it.toStackTraceElement().className.startsWith("io.ktor")
-            }.findFirst()
-        }.takeIf { it.isPresent }?.get() ?: return
+            }.toList()
+        }.takeIf { it.isNotEmpty() } ?: return
 
+        val frame = frames.first()
+        val stackTrace = frames.map { "${it.fileName}:${it.lineNumber}" }
         val fileName = frame.fileName
         val packageData = data.add(fileName) { LocationInfo(fileName) }
-        packageData.add(type, size, frame.lineNumber)
+        packageData.add(type, size, stackTrace)
     }
 }
