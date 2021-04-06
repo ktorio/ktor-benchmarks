@@ -49,8 +49,8 @@ object AllocationTracker : Sampler {
             }.findFirst()
         }.takeIf { it.isPresent }?.get() ?: return
 
-        val fileName = "${frame.fileName}:${frame.lineNumber}"
+        val fileName = frame.fileName
         val packageData = data.add(fileName) { LocationInfo(fileName) }
-        packageData.add(type, size)
+        packageData.add(type, size, frame.lineNumber)
     }
 }
