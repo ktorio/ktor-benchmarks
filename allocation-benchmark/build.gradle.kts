@@ -27,7 +27,6 @@ val instrumenter by configurations.creating
 val instrumenterName = "java-allocation-instrumenter"
 
 dependencies {
-    implementation("io.ktor:ktor-client-apache:$ktor_version")
     implementation("io.ktor:ktor-server-core:$ktor_version")
     implementation("io.ktor:ktor-server-netty:$ktor_version")
     implementation("io.ktor:ktor-server-jetty:$ktor_version")
