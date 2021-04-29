@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Allocations Inspector</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+<div class="dropdown">
+    Select Engine:
+    <button onclick="selectEngine('Netty')">Netty</button>
+    <button onclick="selectEngine('Jetty')">Jetty</button>
+    <button onclick="selectEngine('Tomcat')">Tomcat</button>
+</div>
+<svg width="800"></svg>
+<div id="info" style="float: right; width: 40%"></div>
+<script src="https://d3js.org/d3.v5.js"></script>
+<script>
+    const width = 800
+    const height = 900
+
+    const formatSize = (size) => Math.round(size / 1024 / 1024 * 1000) / 1000 + "Mb"
+
+    const displaySites = (name, index) => {
+        const info = d3.select("#info")
+        info.html("")
+
+        info.append("h3")
+            .text(name)
+
+        const sites = info.append("div")
+            .attr("class", "sites")
+
+        index.sort((first, second) => second.totalSize - first.totalSize)
+        index.forEach(item => {
+            const site = sites.append("div")
+                .attr("class", "site")
+
+            site.append("div")
+                .text("Size: " + formatSize(item.totalSize) + ", Count: " + item.totalCount)
+
+            const stack = site.append("ul")
+                .attr("class", "stacktrace")
+                .style("list-style-type", "none")
+
+            item.stackTrace.split(",").forEach((stackItem) => {
+                stack.append("li")
+                    .text(stackItem)
+            })
+        })
+    }
+
+    const chart = (data) => {
+        const barHeight = 25
+        const margin = ({top: 30, right: 100, bottom: 10, left: 200})
+        const height = Math.ceil((data.length + 0.1) * barHeight) + margin.top + margin.bottom
+
+        const x = d3.scaleLinear()
+            .domain([0, d3.max(data, d => d.totalSize)])
+            .range([margin.left, width - margin.right])
+
+        const y = d3.scaleBand()
+            .domain(d3.range(data.length))
+            .rangeRound([margin.top, height - margin.bottom])
+            .padding(0.1)
+
+        const yAxis = g => g
+            .attr("transform", `translate(${margin.left},0)`)
+            .call(d3.axisLeft(y).tickFormat(i => data[i].name).tickSizeOuter(0))
+
+        const svg = d3.select("svg")
+            .html("")
+            .attr("viewBox", [0, 0, width, height]);
+
+        svg.append("g")
+            .attr("fill", "steelblue")
+            .selectAll("rect")
+            .data(data)
+            .join("rect")
+            .attr("x", x(0))
+            .attr("y", (d, i) => y(i))
+            .attr("width", d => x(d.totalSize) - x(0))
+            .attr("height", y.bandwidth())
+            .on("mouseover", function (d) {
+                d3.select(this)
+                    .attr("fill", "orange")
+            })
+            .on("mouseout", function (d) {
+                d3.select(this)
+                    .attr("fill", "steelblue")
+            })
+            .on("click", function (d, i) {
+                displaySites(d.name, Object.values(d.sites))
+            })
+
+        svg.append("g")
+            .attr("fill", "black")
+            .attr("text-anchor", "start")
+            .attr("font-family", "sans-serif")
+            .attr("font-size", 12)
+            .selectAll("text")
+            .data(data)
+            .join("text")
+            .attr("x", d => x(d.totalSize))
+            .attr("y", (d, i) => y(i) + y.bandwidth() / 2)
+            .attr("dy", "0.35em")
+            .attr("dx", +4)
+            .text(d => formatSize(d.totalSize))
+
+        svg.append("g")
+            .call(yAxis);
+
+        return svg
+    }
+
+    const mergeIndexes = (indexes) => {
+        const result = {}
+
+        indexes.forEach(index => {
+            Object.values(index).forEach(instance => {
+                if (result[instance.name] === undefined) {
+                    result[instance.name] = instance
+                } else {
+                    result[instance.name].totalSize += instance.totalSize
+
+                    Object.values(instance.sites).forEach(site => {
+                        result[instance.name].sites[site.stackTrace] = site
+                    })
+                }
+            })
+        })
+
+        return result
+    }
+
+    function drawAllocations(data) {
+        const indexes = Object.values(Object.values(data).map(site => site.instanceIndex))
+        const globalIndex = mergeIndexes(indexes)
+        const source = Object.values(globalIndex)
+
+        source.sort((first, second) => second.totalSize - first.totalSize)
+        chart(source)
+    }
+
+    d3.json("testMemoryConsumptionIsSame[Netty].json")
+        .then(result => {
+            drawAllocations(result.data)
+        })
+
+    const selectEngine = (engine) => {
+        d3.json(`testMemoryConsumptionIsSame[${engine}].json`).then(result => {
+            drawAllocations(result.data)
+        })
+    }
+
+</script>
+
+</body>
+</html>
