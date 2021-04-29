@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Allocations Inspector</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+<div class="dropdown">
+    Select Engine:
+    <button onclick="selectEngine('Netty')">Netty</button>
+    <button onclick="selectEngine('Jetty')">Jetty</button>
+    <button onclick="selectEngine('Tomcat')">Tomcat</button>
+</div>
+<svg width="800"></svg>
+<div id="info" style="float: right"></div>
+<script src="https://d3js.org/d3.v5.js"></script>
+<script>
+    const width = 800
+    const height = 900
+
+    const formatSize = (size) => Math.round(size / 1024 / 1024 * 1000) / 1000 + "Mb"
+
+    const displaySites = (index) => {
+        const info = d3.select("#info")
+        info.html("")
+
+        index.sort((first, second) => second.totalSize - first.totalSize)
+        index.forEach(item => {
+            info.append("h3")
+                .text(item.name)
+
+            const sites = info.append("div")
+                .attr("class", "sites")
+
+            const sitesArray = Object.values(item.sites)
+            sitesArray.sort((first, second) => second.totalSize - first.totalSize)
+
+            sitesArray.forEach(siteInfo => {
+                const site = sites.append("div")
+                    .attr("class", "site")
+
+                site.append("div")
+                    .text("Size: " + formatSize(siteInfo.totalSize) + ", Count: " + siteInfo.totalCount)
+
+                const stack = site.append("ul")
+                    .attr("class", "stacktrace")
+
+                siteInfo.stackTrace.split(",").forEach((stackItem) => {
+                    stack.append("li")
+                        .text(stackItem)
+                })
+            })
+        })
+    }
+
+    const chart = (data) => {
+        const barHeight = 25
+        const margin = ({top: 30, right: 100, bottom: 10, left: 200})
+        const height = Math.ceil((data.length + 0.1) * barHeight) + margin.top + margin.bottom
+
+        const x = d3.scaleLinear()
+            .domain([0, d3.max(data, d => d.locationSize)])
+            .range([margin.left, width - margin.right])
+
+        const y = d3.scaleBand()
+            .domain(d3.range(data.length))
+            .rangeRound([margin.top, height - margin.bottom])
+            .padding(0.1)
+
+        const yAxis = g => g
+            .attr("transform", `translate(${margin.left},0)`)
+            .call(d3.axisLeft(y).tickFormat(i => data[i].name).tickSizeOuter(0))
+
+        const svg = d3.select("svg")
+            .html("")
+            .attr("viewBox", [0, 0, width, height]);
+
+        svg.append("g")
+            .attr("fill", "steelblue")
+            .selectAll("rect")
+            .data(data)
+            .join("rect")
+            .attr("x", x(0))
+            .attr("y", (d, i) => y(i))
+            .attr("width", d => x(d.locationSize) - x(0))
+            .attr("height", y.bandwidth())
+            .on("mouseover", function (d) {
+                d3.select(this)
+                    .attr("fill", "orange")
+            })
+            .on("mouseout", function (d) {
+                d3.select(this)
+                    .attr("fill", "steelblue")
+            })
+            .on("click", function (d, i) {
+                displaySites(Object.values(d.instanceIndex))
+            })
+
+        svg.append("g")
+            .attr("fill", "black")
+            .attr("text-anchor", "start")
+            .attr("font-family", "sans-serif")
+            .attr("font-size", 12)
+            .selectAll("text")
+            .data(data)
+            .join("text")
+            .attr("x", d => x(d.locationSize))
+            .attr("y", (d, i) => y(i) + y.bandwidth() / 2)
+            .attr("dy", "0.35em")
+            .attr("dx", +4)
+            .text(d => formatSize(d.locationSize))
+
+        svg.append("g")
+            .call(yAxis);
+
+        return svg
+    }
+
+    function drawAllocations(data) {
+        const values = Object.values(data)
+
+        values.sort((first, second) => second.locationSize - first.locationSize)
+        chart(values)
+    }
+
+    d3.json("testMemoryConsumptionIsSame[Netty].json")
+        .then(result => {
+            drawAllocations(result.data)
+        })
+
+    const selectEngine = (engine) => {
+        d3.json(`testMemoryConsumptionIsSame[${engine}].json`).then(result => {
+            drawAllocations(result.data)
+        })
+    }
+</script>
+
+</body>
+</html>
