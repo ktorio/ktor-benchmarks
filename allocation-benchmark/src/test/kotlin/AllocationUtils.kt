@@ -2,12 +2,11 @@
 
 package benchmarks
 
-import io.ktor.client.request.*
 import io.ktor.server.engine.*
 
 private val SAVE_REPORT: Boolean = System.getProperty("SAVE_REPORT") == "true"
 
-suspend fun measureMemory(testName: String, engine: String, block: suspend () -> Unit) {
+fun measureMemory(testName: String, engine: String, block: () -> Unit) {
     AllocationTracker.clear()
     val server = startServer(engine)
     try {
@@ -29,9 +28,9 @@ suspend fun measureMemory(testName: String, engine: String, block: suspend () ->
     checkAllocationDataIsSame(loadReport(reportName), AllocationTracker.stats())
 }
 
-private suspend fun warmup() {
+private fun warmup() {
     repeat(WARMUP_SIZE) {
-        client.get<Unit>("http://127.0.0.1:$SERVER_PORT")
+        makeRequest()
     }
 }
 
