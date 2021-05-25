@@ -5,8 +5,8 @@ val junit_version: String by project
 val serialization_version: String by project
 
 plugins {
-    kotlin("jvm") version "1.4.32"
-    kotlin("plugin.serialization") version "1.4.32"
+    kotlin("jvm") version "1.5.10"
+    kotlin("plugin.serialization") version "1.5.10"
 }
 
 group = "com.example"
@@ -33,9 +33,7 @@ dependencies {
     implementation("io.ktor:ktor-server-cio:$ktor_version")
     implementation("io.ktor:ktor-server-tomcat:$ktor_version")
     implementation("ch.qos.logback:logback-classic:$logback_version")
-    testImplementation("io.ktor:ktor-server-tests:$ktor_version")
 
-    testImplementation(platform("org.junit:junit-bom:$junit_version"))
     testImplementation("org.junit.jupiter:junit-jupiter-params:$junit_version")
 
     testImplementation("org.junit.jupiter:junit-jupiter")
