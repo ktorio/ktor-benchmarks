@@ -1,0 +1,2057 @@
+--- Execution profile ---
+Total samples       : 30134
+unknown_Java        : 206 (0.68%)
+not_walkable_Java   : 1 (0.00%)
+deoptimization      : 1 (0.00%)
+
+--- 33790000000 ns (11.21%), 3379 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 20950000000 ns (6.95%), 2095 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 20630000000 ns (6.85%), 2063 samples
+  [ 0] kotlinx.atomicfu.AtomicArray.get
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 18330000000 ns (6.08%), 1833 samples
+  [ 0] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 8170000000 ns (2.71%), 817 samples
+  [ 0] java.util.concurrent.ConcurrentLinkedQueue.poll
+  [ 1] io.ktor.benchmarks.dispatchers.SimpleDispatcher.thread$lambda-0
+  [ 2] io.ktor.benchmarks.dispatchers.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 3] java.lang.Thread.run
+
+--- 6930000000 ns (2.30%), 693 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 6170000000 ns (2.05%), 617 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 6030000000 ns (2.00%), 603 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 4480000000 ns (1.49%), 448 samples
+  [ 0] java.util.concurrent.ConcurrentLinkedQueue.poll
+  [ 1] io.ktor.benchmarks.dispatchers.SimpleDispatcher.thread$lambda-0
+  [ 2] io.ktor.benchmarks.dispatchers.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 3] java.lang.Thread.run
+
+--- 4230000000 ns (1.40%), 423 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 3940000000 ns (1.31%), 394 samples
+  [ 0] semaphore_wait_trap
+  [ 1] GenericWaitBarrier::wait(int)
+  [ 2] SafepointSynchronize::block(JavaThread*)
+  [ 3] SafepointMechanism::process_if_requested_slow(JavaThread*)
+  [ 4] ThreadSafepointState::handle_polling_page_exception()
+  [ 5] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 6] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 8] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 9] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [10] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [11] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 3770000000 ns (1.25%), 377 samples
+  [ 0] kotlinx.atomicfu.AtomicArray.get
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 3600000000 ns (1.19%), 360 samples
+  [ 0] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 3380000000 ns (1.12%), 338 samples
+  [ 0] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 3310000000 ns (1.10%), 331 samples
+  [ 0] read
+  [ 1] sun.nio.ch.FileDispatcherImpl.read0
+  [ 2] sun.nio.ch.FileDispatcherImpl.read
+  [ 3] sun.nio.ch.IOUtil.readIntoNativeBuffer
+  [ 4] sun.nio.ch.IOUtil.read
+  [ 5] sun.nio.ch.FileChannelImpl.read
+  [ 6] io.ktor.util.BufferViewJvmKt.read
+  [ 7] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.TaskImpl.run
+  [11] io.ktor.benchmarks.dispatchers.HighThroughputScheduler.runSafely
+  [12] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.executeTask
+  [13] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [14] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 3210000000 ns (1.07%), 321 samples
+  [ 0] kotlinx.atomicfu.AtomicArray.get
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 3180000000 ns (1.06%), 318 samples
+  [ 0] java.util.concurrent.ConcurrentLinkedQueue.poll
+  [ 1] io.ktor.benchmarks.dispatchers.SimpleDispatcher.thread$lambda-0
+  [ 2] io.ktor.benchmarks.dispatchers.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 3] java.lang.Thread.run
+
+--- 3130000000 ns (1.04%), 313 samples
+  [ 0] kotlin.jvm.internal.Intrinsics.checkNotNullParameter
+  [ 1] kotlinx.atomicfu.AtomicOperationInterceptor.afterSet
+  [ 2] kotlinx.atomicfu.AtomicRef.setValue
+  [ 3] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 4] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 8] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 9] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 3130000000 ns (1.04%), 313 samples
+  [ 0] kotlinx.atomicfu.AtomicOperationInterceptor.afterSet
+  [ 1] kotlinx.atomicfu.AtomicRef.setValue
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 8] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 3060000000 ns (1.02%), 306 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 3050000000 ns (1.01%), 305 samples
+  [ 0] swtch_pri
+  [ 1] GenericWaitBarrier::disarm()
+  [ 2] SafepointSynchronize::disarm_safepoint()
+  [ 3] SafepointSynchronize::end()
+  [ 4] VMThread::inner_execute(VM_Operation*)
+  [ 5] VMThread::run()
+  [ 6] Thread::call_run()
+  [ 7] thread_native_entry(Thread*)
+  [ 8] __os_ch_md_redzone_cookie
+  [ 9] internal_catch_exc_subsystem
+
+--- 2900000000 ns (0.96%), 290 samples
+  [ 0] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.tryAcquireCpuPermit
+  [ 1] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 2880000000 ns (0.96%), 288 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 2610000000 ns (0.87%), 261 samples
+  [ 0] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 1] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 2580000000 ns (0.86%), 258 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 2570000000 ns (0.85%), 257 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 2560000000 ns (0.85%), 256 samples
+  [ 0] kotlinx.atomicfu.AtomicOperationInterceptor.afterSet
+  [ 1] kotlinx.atomicfu.AtomicRef.setValue
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 8] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 2340000000 ns (0.78%), 234 samples
+  [ 0] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 1] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 2180000000 ns (0.72%), 218 samples
+  [ 0] kotlinx.atomicfu.AtomicArray.get
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 2060000000 ns (0.68%), 206 samples
+  [ 0] java.util.concurrent.atomic.AtomicLongFieldUpdater$CASUpdater.compareAndSet
+  [ 1] kotlinx.atomicfu.AtomicLong.compareAndSet
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 8] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 2040000000 ns (0.68%), 204 samples
+  [ 0] java.util.concurrent.ConcurrentLinkedQueue.poll
+  [ 1] io.ktor.benchmarks.dispatchers.SimpleDispatcher.thread$lambda-0
+  [ 2] io.ktor.benchmarks.dispatchers.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 3] java.lang.Thread.run
+
+--- 1960000000 ns (0.65%), 196 samples
+  [ 0] io.ktor.benchmarks.dispatchers.SimpleDispatcher.getQueue
+  [ 1] io.ktor.benchmarks.dispatchers.SimpleDispatcher.thread$lambda-0
+  [ 2] io.ktor.benchmarks.dispatchers.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 3] java.lang.Thread.run
+
+--- 1900000000 ns (0.63%), 190 samples
+  [ 0] kotlinx.atomicfu.AtomicArray.get
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 1900000000 ns (0.63%), 190 samples
+  [ 0] io.ktor.util.internal.LockFreeLinkedListNode.getNext
+  [ 1] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 1870000000 ns (0.62%), 187 samples
+  [ 0] read
+  [ 1] sun.nio.ch.FileDispatcherImpl.read0
+  [ 2] sun.nio.ch.FileDispatcherImpl.read
+  [ 3] sun.nio.ch.IOUtil.readIntoNativeBuffer
+  [ 4] sun.nio.ch.IOUtil.read
+  [ 5] sun.nio.ch.FileChannelImpl.read
+  [ 6] io.ktor.util.BufferViewJvmKt.read
+  [ 7] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.TaskImpl.run
+  [11] io.ktor.benchmarks.dispatchers.HighThroughputScheduler.runSafely
+  [12] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.executeTask
+  [13] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [14] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 1750000000 ns (0.58%), 175 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 1730000000 ns (0.57%), 173 samples
+  [ 0] kotlinx.atomicfu.AtomicLong.compareAndSet
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 1660000000 ns (0.55%), 166 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 1650000000 ns (0.55%), 165 samples
+  [ 0] kotlinx.atomicfu.AtomicArray.get
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 1630000000 ns (0.54%), 163 samples
+  [ 0] java.util.concurrent.ConcurrentLinkedQueue.poll
+  [ 1] io.ktor.benchmarks.dispatchers.SimpleDispatcher.thread$lambda-0
+  [ 2] io.ktor.benchmarks.dispatchers.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 3] java.lang.Thread.run
+
+--- 1610000000 ns (0.53%), 161 samples
+  [ 0] SafepointBlob
+  [ 1] [unknown_Java]
+
+--- 1600000000 ns (0.53%), 160 samples
+  [ 0] io.ktor.benchmarks.dispatchers.SimpleDispatcher.thread$lambda-0
+  [ 1] io.ktor.benchmarks.dispatchers.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 2] java.lang.Thread.run
+
+--- 1350000000 ns (0.45%), 135 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 1310000000 ns (0.43%), 131 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 1290000000 ns (0.43%), 129 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 1280000000 ns (0.42%), 128 samples
+  [ 0] semaphore_wait_trap
+  [ 1] GenericWaitBarrier::wait(int)
+  [ 2] SafepointSynchronize::block(JavaThread*)
+  [ 3] SafepointMechanism::process_if_requested_slow(JavaThread*)
+  [ 4] ThreadSafepointState::handle_polling_page_exception()
+  [ 5] io.ktor.benchmarks.dispatchers.SimpleDispatcher.thread$lambda-0
+  [ 6] io.ktor.benchmarks.dispatchers.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 7] java.lang.Thread.run
+
+--- 1260000000 ns (0.42%), 126 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 1260000000 ns (0.42%), 126 samples
+  [ 0] kotlinx.atomicfu.AtomicRef.setValue
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 1180000000 ns (0.39%), 118 samples
+  [ 0] semaphore_wait_trap
+  [ 1] GenericWaitBarrier::wait(int)
+  [ 2] SafepointSynchronize::block(JavaThread*)
+  [ 3] SafepointMechanism::process_if_requested_slow(JavaThread*)
+  [ 4] ThreadSafepointState::handle_polling_page_exception()
+  [ 5] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 1170000000 ns (0.39%), 117 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 1150000000 ns (0.38%), 115 samples
+  [ 0] kotlinx.atomicfu.AtomicLong.getValue
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 1130000000 ns (0.37%), 113 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 1070000000 ns (0.36%), 107 samples
+  [ 0] io.ktor.benchmarks.dispatchers.SimpleDispatcher.getQueue
+  [ 1] io.ktor.benchmarks.dispatchers.SimpleDispatcher.thread$lambda-0
+  [ 2] io.ktor.benchmarks.dispatchers.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 3] java.lang.Thread.run
+
+--- 1000000000 ns (0.33%), 100 samples
+  [ 0] kotlinx.atomicfu.AtomicRef.setValue
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 980000000 ns (0.33%), 98 samples
+  [ 0] java.util.concurrent.ConcurrentLinkedQueue.poll
+  [ 1] io.ktor.benchmarks.dispatchers.SimpleDispatcher.thread$lambda-0
+  [ 2] io.ktor.benchmarks.dispatchers.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 3] java.lang.Thread.run
+
+--- 950000000 ns (0.32%), 95 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 920000000 ns (0.31%), 92 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 910000000 ns (0.30%), 91 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 910000000 ns (0.30%), 91 samples
+  [ 0] kotlinx.atomicfu.AtomicRef.setValue
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 890000000 ns (0.30%), 89 samples
+  [ 0] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 890000000 ns (0.30%), 89 samples
+  [ 0] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.trySteal
+  [ 1] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 860000000 ns (0.29%), 86 samples
+  [ 0] java.util.concurrent.ConcurrentLinkedQueue.poll
+  [ 1] io.ktor.benchmarks.dispatchers.SimpleDispatcher.thread$lambda-0
+  [ 2] io.ktor.benchmarks.dispatchers.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 3] java.lang.Thread.run
+
+--- 860000000 ns (0.29%), 86 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 850000000 ns (0.28%), 85 samples
+  [ 0] kotlinx.atomicfu.AtomicOperationInterceptor.afterRMW
+  [ 1] kotlinx.atomicfu.AtomicLong.compareAndSet
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 8] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 850000000 ns (0.28%), 85 samples
+  [ 0] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 1] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 800000000 ns (0.27%), 80 samples
+  [ 0] io.ktor.benchmarks.dispatchers.SimpleDispatcher.thread$lambda-0
+  [ 1] io.ktor.benchmarks.dispatchers.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 2] java.lang.Thread.run
+
+--- 770000000 ns (0.26%), 77 samples
+  [ 0] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 1] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 750000000 ns (0.25%), 75 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 670000000 ns (0.22%), 67 samples
+  [ 0] kotlinx.atomicfu.AtomicLong.getValue
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 650000000 ns (0.22%), 65 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 650000000 ns (0.22%), 65 samples
+  [ 0] semaphore_wait_trap
+  [ 1] GenericWaitBarrier::wait(int)
+  [ 2] SafepointSynchronize::block(JavaThread*)
+  [ 3] SafepointMechanism::process_if_requested_slow(JavaThread*)
+  [ 4] ThreadSafepointState::handle_polling_page_exception()
+  [ 5] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 6] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 8] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 9] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [10] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [11] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 630000000 ns (0.21%), 63 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 620000000 ns (0.21%), 62 samples
+  [ 0] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 600000000 ns (0.20%), 60 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 590000000 ns (0.20%), 59 samples
+  [ 0] kotlinx.atomicfu.InterceptorKt.getInterceptor
+  [ 1] kotlinx.atomicfu.AtomicLong.compareAndSet
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 8] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 580000000 ns (0.19%), 58 samples
+  [ 0] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 1] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 580000000 ns (0.19%), 58 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 580000000 ns (0.19%), 58 samples
+  [ 0] kotlinx.atomicfu.AtomicRef.setValue
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 560000000 ns (0.19%), 56 samples
+  [ 0] kotlinx.atomicfu.AtomicRef.setValue
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 550000000 ns (0.18%), 55 samples
+  [ 0] kotlinx.atomicfu.AtomicLong.compareAndSet
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 540000000 ns (0.18%), 54 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 510000000 ns (0.17%), 51 samples
+  [ 0] semaphore_wait_trap
+  [ 1] GenericWaitBarrier::wait(int)
+  [ 2] SafepointSynchronize::block(JavaThread*)
+  [ 3] SafepointMechanism::process_if_requested_slow(JavaThread*)
+  [ 4] ThreadSafepointState::handle_polling_page_exception()
+  [ 5] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 6] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 8] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 9] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [10] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [11] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 510000000 ns (0.17%), 51 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 500000000 ns (0.17%), 50 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 480000000 ns (0.16%), 48 samples
+  [ 0] read
+  [ 1] sun.nio.ch.FileDispatcherImpl.read0
+  [ 2] sun.nio.ch.FileDispatcherImpl.read
+  [ 3] sun.nio.ch.IOUtil.readIntoNativeBuffer
+  [ 4] sun.nio.ch.IOUtil.read
+  [ 5] sun.nio.ch.FileChannelImpl.read
+  [ 6] io.ktor.util.BufferViewJvmKt.read
+  [ 7] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.TaskImpl.run
+  [11] io.ktor.benchmarks.dispatchers.HighThroughputScheduler.runSafely
+  [12] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.executeTask
+  [13] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [14] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 470000000 ns (0.16%), 47 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 460000000 ns (0.15%), 46 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 460000000 ns (0.15%), 46 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 460000000 ns (0.15%), 46 samples
+  [ 0] kotlinx.atomicfu.AtomicOperationInterceptor.afterSet
+  [ 1] kotlinx.atomicfu.AtomicRef.setValue
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 8] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 450000000 ns (0.15%), 45 samples
+  [ 0] kotlinx.atomicfu.AtomicOperationInterceptor.afterSet
+  [ 1] kotlinx.atomicfu.AtomicRef.setValue
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 8] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 450000000 ns (0.15%), 45 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 440000000 ns (0.15%), 44 samples
+  [ 0] kotlinx.atomicfu.AtomicLong.getValue
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 440000000 ns (0.15%), 44 samples
+  [ 0] kotlinx.atomicfu.AtomicArray.get
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 440000000 ns (0.15%), 44 samples
+  [ 0] read
+  [ 1] sun.nio.ch.FileDispatcherImpl.read0
+  [ 2] sun.nio.ch.FileDispatcherImpl.read
+  [ 3] sun.nio.ch.IOUtil.readIntoNativeBuffer
+  [ 4] sun.nio.ch.IOUtil.read
+  [ 5] sun.nio.ch.FileChannelImpl.read
+  [ 6] io.ktor.util.BufferViewJvmKt.read
+  [ 7] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.TaskImpl.run
+  [11] io.ktor.benchmarks.dispatchers.HighThroughputScheduler.runSafely
+  [12] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.executeTask
+  [13] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [14] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 440000000 ns (0.15%), 44 samples
+  [ 0] java.util.concurrent.atomic.AtomicLongFieldUpdater$CASUpdater.compareAndSet
+  [ 1] kotlinx.atomicfu.AtomicLong.compareAndSet
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 8] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 440000000 ns (0.15%), 44 samples
+  [ 0] kotlin.jvm.internal.Intrinsics.checkNotNullParameter
+  [ 1] kotlinx.atomicfu.AtomicOperationInterceptor.afterSet
+  [ 2] kotlinx.atomicfu.AtomicRef.setValue
+  [ 3] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 4] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 8] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 9] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 430000000 ns (0.14%), 43 samples
+  [ 0] jlong_disjoint_arraycopy
+  [ 1] java.nio.Buffer.limit
+  [ 2] java.nio.ByteBuffer.limit
+  [ 3] java.nio.MappedByteBuffer.limit
+  [ 4] java.nio.MappedByteBuffer.limit
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 8] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 9] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [10] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [11] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [12] kotlinx.coroutines.DispatchedTask.run
+  [13] io.ktor.benchmarks.dispatchers.TaskImpl.run
+  [14] io.ktor.benchmarks.dispatchers.HighThroughputScheduler.runSafely
+  [15] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.executeTask
+  [16] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [17] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 430000000 ns (0.14%), 43 samples
+  [ 0] java.util.concurrent.ConcurrentLinkedQueue.poll
+  [ 1] io.ktor.benchmarks.dispatchers.SimpleDispatcher.thread$lambda-0
+  [ 2] io.ktor.benchmarks.dispatchers.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 3] java.lang.Thread.run
+
+--- 430000000 ns (0.14%), 43 samples
+  [ 0] java.util.concurrent.atomic.AtomicLongFieldUpdater$CASUpdater.compareAndSet
+  [ 1] kotlinx.atomicfu.AtomicLong.compareAndSet
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 8] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 430000000 ns (0.14%), 43 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 410000000 ns (0.14%), 41 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 410000000 ns (0.14%), 41 samples
+  [ 0] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.nextInt
+  [ 1] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 410000000 ns (0.14%), 41 samples
+  [ 0] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.trySteal
+  [ 1] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 400000000 ns (0.13%), 40 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 400000000 ns (0.13%), 40 samples
+  [ 0] kotlinx.atomicfu.AtomicArray.get
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 390000000 ns (0.13%), 39 samples
+  [ 0] semaphore_wait_trap
+  [ 1] GangWorker::loop()
+  [ 2] Thread::call_run()
+  [ 3] thread_native_entry(Thread*)
+  [ 4] __os_ch_md_redzone_cookie
+  [ 5] internal_catch_exc_subsystem
+
+--- 390000000 ns (0.13%), 39 samples
+  [ 0] kotlinx.atomicfu.AtomicArray.get
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 380000000 ns (0.13%), 38 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 380000000 ns (0.13%), 38 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 370000000 ns (0.12%), 37 samples
+  [ 0] kotlinx.atomicfu.AtomicLong.compareAndSet
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 370000000 ns (0.12%), 37 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [ 1] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 2] io.ktor.utils.io.ByteBufferChannel.flush
+  [ 3] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 4] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 5] kotlinx.coroutines.DispatchedTask.run
+  [ 6] io.ktor.benchmarks.dispatchers.TaskImpl.run
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler.runSafely
+  [ 8] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.executeTask
+  [ 9] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [10] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 370000000 ns (0.12%), 37 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 370000000 ns (0.12%), 37 samples
+  [ 0] kotlin.jvm.internal.Intrinsics.checkNotNullParameter
+  [ 1] kotlinx.atomicfu.AtomicOperationInterceptor.afterSet
+  [ 2] kotlinx.atomicfu.AtomicRef.setValue
+  [ 3] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 4] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 8] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 9] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 370000000 ns (0.12%), 37 samples
+  [ 0] jlong_disjoint_arraycopy
+  [ 1] java.util.concurrent.atomic.AtomicIntegerFieldUpdater$AtomicIntegerFieldUpdaterImpl.compareAndSet
+  [ 2] io.ktor.utils.io.internal.RingBufferCapacity.tryReadAtMost
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 7] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 8] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 9] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [10] kotlinx.coroutines.DispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.TaskImpl.run
+  [12] io.ktor.benchmarks.dispatchers.HighThroughputScheduler.runSafely
+  [13] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.executeTask
+  [14] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [15] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 370000000 ns (0.12%), 37 samples
+  [ 0] kotlinx.atomicfu.AtomicOperationInterceptor.afterSet
+  [ 1] kotlinx.atomicfu.AtomicRef.setValue
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 8] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 360000000 ns (0.12%), 36 samples
+  [ 0] kotlinx.atomicfu.AtomicArray.get
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 350000000 ns (0.12%), 35 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 350000000 ns (0.12%), 35 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 350000000 ns (0.12%), 35 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 350000000 ns (0.12%), 35 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 340000000 ns (0.11%), 34 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 330000000 ns (0.11%), 33 samples
+  [ 0] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 1] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 330000000 ns (0.11%), 33 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 330000000 ns (0.11%), 33 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 320000000 ns (0.11%), 32 samples
+  [ 0] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 1] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 320000000 ns (0.11%), 32 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 320000000 ns (0.11%), 32 samples
+  [ 0] kotlinx.atomicfu.AtomicRef.getValue
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 310000000 ns (0.10%), 31 samples
+  [ 0] kotlinx.atomicfu.AtomicArray.get
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 300000000 ns (0.10%), 30 samples
+  [ 0] java.util.concurrent.ConcurrentLinkedQueue.poll
+  [ 1] io.ktor.benchmarks.dispatchers.SimpleDispatcher.thread$lambda-0
+  [ 2] io.ktor.benchmarks.dispatchers.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 3] java.lang.Thread.run
+
+--- 300000000 ns (0.10%), 30 samples
+  [ 0] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 1] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 300000000 ns (0.10%), 30 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 290000000 ns (0.10%), 29 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 290000000 ns (0.10%), 29 samples
+  [ 0] Interpreter
+  [ 1] [unknown_Java]
+
+--- 290000000 ns (0.10%), 29 samples
+  [ 0] kotlinx.atomicfu.AtomicOperationInterceptor.afterSet
+  [ 1] kotlinx.atomicfu.AtomicRef.setValue
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 8] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 280000000 ns (0.09%), 28 samples
+  [ 0] kotlinx.atomicfu.AtomicOperationInterceptor.afterSet
+  [ 1] kotlinx.atomicfu.AtomicRef.setValue
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 8] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 270000000 ns (0.09%), 27 samples
+  [ 0] io.ktor.benchmarks.dispatchers.SimpleDispatcher.thread$lambda-0
+  [ 1] io.ktor.benchmarks.dispatchers.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 2] java.lang.Thread.run
+
+--- 270000000 ns (0.09%), 27 samples
+  [ 0] read
+  [ 1] sun.nio.ch.FileDispatcherImpl.read0
+  [ 2] sun.nio.ch.FileDispatcherImpl.read
+  [ 3] sun.nio.ch.IOUtil.readIntoNativeBuffer
+  [ 4] sun.nio.ch.IOUtil.read
+  [ 5] sun.nio.ch.FileChannelImpl.read
+  [ 6] io.ktor.util.BufferViewJvmKt.read
+  [ 7] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.TaskImpl.run
+  [11] io.ktor.benchmarks.dispatchers.HighThroughputScheduler.runSafely
+  [12] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.executeTask
+  [13] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [14] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 270000000 ns (0.09%), 27 samples
+  [ 0] kotlinx.atomicfu.AtomicOperationInterceptor.afterSet
+  [ 1] kotlinx.atomicfu.AtomicRef.setValue
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 8] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 270000000 ns (0.09%), 27 samples
+  [ 0] kotlin.coroutines.jvm.internal.Boxing.boxBoolean
+  [ 1] io.ktor.utils.io.ByteBufferChannel.readSuspend
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 5] io.ktor.benchmarks.FileBenchmarks$testKtorFileReadInExp2ExpDispatcher$1.invokeSuspend
+  [ 6] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 7] kotlinx.coroutines.DispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.TaskImpl.run
+  [ 9] io.ktor.benchmarks.dispatchers.HighThroughputScheduler.runSafely
+  [10] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.executeTask
+  [11] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [12] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 260000000 ns (0.09%), 26 samples
+  [ 0] kotlinx.atomicfu.AtomicRef.setValue
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 260000000 ns (0.09%), 26 samples
+  [ 0] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 1] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 250000000 ns (0.08%), 25 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 250000000 ns (0.08%), 25 samples
+  [ 0] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.tryAcquireCpuPermit
+  [ 1] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 240000000 ns (0.08%), 24 samples
+  [ 0] kotlinx.atomicfu.AtomicArray.get
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 240000000 ns (0.08%), 24 samples
+  [ 0] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.trySteal
+  [ 1] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 240000000 ns (0.08%), 24 samples
+  [ 0] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 1] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 240000000 ns (0.08%), 24 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 240000000 ns (0.08%), 24 samples
+  [ 0] java.util.concurrent.ConcurrentLinkedQueue.poll
+  [ 1] io.ktor.benchmarks.dispatchers.SimpleDispatcher.thread$lambda-0
+  [ 2] io.ktor.benchmarks.dispatchers.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 3] java.lang.Thread.run
+
+--- 240000000 ns (0.08%), 24 samples
+  [ 0] read
+  [ 1] sun.nio.ch.FileDispatcherImpl.read0
+  [ 2] sun.nio.ch.FileDispatcherImpl.read
+  [ 3] sun.nio.ch.IOUtil.readIntoNativeBuffer
+  [ 4] sun.nio.ch.IOUtil.read
+  [ 5] sun.nio.ch.FileChannelImpl.read
+  [ 6] io.ktor.util.BufferViewJvmKt.read
+  [ 7] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.TaskImpl.run
+  [11] io.ktor.benchmarks.dispatchers.HighThroughputScheduler.runSafely
+  [12] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.executeTask
+  [13] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [14] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 230000000 ns (0.08%), 23 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 230000000 ns (0.08%), 23 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 230000000 ns (0.08%), 23 samples
+  [ 0] kotlinx.atomicfu.AtomicOperationInterceptor.afterSet
+  [ 1] kotlinx.atomicfu.AtomicRef.setValue
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 8] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 230000000 ns (0.08%), 23 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore$Companion.wo
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore$Companion.updateHead
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 8] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 230000000 ns (0.08%), 23 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 220000000 ns (0.07%), 22 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 210000000 ns (0.07%), 21 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 210000000 ns (0.07%), 21 samples
+  [ 0] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.tryAcquireCpuPermit
+  [ 1] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 210000000 ns (0.07%), 21 samples
+  [ 0] java.util.concurrent.atomic.AtomicReferenceArray.get
+  [ 1] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.trySteal
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 210000000 ns (0.07%), 21 samples
+  [ 0] kotlinx.atomicfu.AtomicLong.compareAndSet
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 200000000 ns (0.07%), 20 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 190000000 ns (0.06%), 19 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore$Companion.updateHead
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 190000000 ns (0.06%), 19 samples
+  [ 0] java.util.concurrent.atomic.AtomicLongFieldUpdater$CASUpdater.compareAndSet
+  [ 1] kotlinx.atomicfu.AtomicLong.compareAndSet
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 8] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 190000000 ns (0.06%), 19 samples
+  [ 0] kotlinx.atomicfu.AtomicArray.get
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 180000000 ns (0.06%), 18 samples
+  [ 0] kotlinx.atomicfu.AtomicLong.compareAndSet
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 180000000 ns (0.06%), 18 samples
+  [ 0] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.nextInt
+  [ 1] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 180000000 ns (0.06%), 18 samples
+  [ 0] java.util.concurrent.atomic.AtomicLongFieldUpdater$CASUpdater.compareAndSet
+  [ 1] kotlinx.atomicfu.AtomicLong.compareAndSet
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 8] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 180000000 ns (0.06%), 18 samples
+  [ 0] __semwait_signal
+  [ 1] os::naked_short_nanosleep(long)
+  [ 2] SafepointSynchronize::synchronize_threads(long, int, int*)
+  [ 3] SafepointSynchronize::begin()
+  [ 4] VMThread::inner_execute(VM_Operation*)
+  [ 5] VMThread::run()
+  [ 6] Thread::call_run()
+  [ 7] thread_native_entry(Thread*)
+  [ 8] __os_ch_md_redzone_cookie
+  [ 9] internal_catch_exc_subsystem
+
+--- 180000000 ns (0.06%), 18 samples
+  [ 0] java.util.concurrent.atomic.AtomicLongFieldUpdater$CASUpdater.accessCheck
+  [ 1] java.util.concurrent.atomic.AtomicLongFieldUpdater$CASUpdater.compareAndSet
+  [ 2] kotlinx.atomicfu.AtomicLong.compareAndSet
+  [ 3] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 4] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 8] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 9] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 170000000 ns (0.06%), 17 samples
+  [ 0] java.util.concurrent.atomic.AtomicLongFieldUpdater$CASUpdater.compareAndSet
+  [ 1] kotlinx.atomicfu.AtomicLong.compareAndSet
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 8] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 170000000 ns (0.06%), 17 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 170000000 ns (0.06%), 17 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 170000000 ns (0.06%), 17 samples
+  [ 0] kotlinx.atomicfu.AtomicRef.setValue
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 170000000 ns (0.06%), 17 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 170000000 ns (0.06%), 17 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 160000000 ns (0.05%), 16 samples
+  [ 0] kotlinx.atomicfu.AtomicRef.setValue
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 160000000 ns (0.05%), 16 samples
+  [ 0] kotlin.jvm.internal.Intrinsics.checkNotNullParameter
+  [ 1] kotlinx.atomicfu.AtomicOperationInterceptor.afterSet
+  [ 2] kotlinx.atomicfu.AtomicRef.setValue
+  [ 3] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 4] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 8] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 9] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 160000000 ns (0.05%), 16 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 160000000 ns (0.05%), 16 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 160000000 ns (0.05%), 16 samples
+  [ 0] kotlinx.atomicfu.AtomicRef.setValue
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 160000000 ns (0.05%), 16 samples
+  [ 0] io.ktor.benchmarks.dispatchers.SimpleDispatcher.thread$lambda-0
+  [ 1] io.ktor.benchmarks.dispatchers.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 2] java.lang.Thread.run
+
+--- 150000000 ns (0.05%), 15 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 150000000 ns (0.05%), 15 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 150000000 ns (0.05%), 15 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 150000000 ns (0.05%), 15 samples
+  [ 0] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.nextInt
+  [ 1] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 150000000 ns (0.05%), 15 samples
+  [ 0] kotlinx.atomicfu.AtomicOperationInterceptor.afterRMW
+  [ 1] kotlinx.atomicfu.AtomicLong.compareAndSet
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 8] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 140000000 ns (0.05%), 14 samples
+  [ 0] kotlinx.atomicfu.AtomicOperationInterceptor.beforeUpdate
+  [ 1] kotlinx.atomicfu.AtomicLong.compareAndSet
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 8] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 140000000 ns (0.05%), 14 samples
+  [ 0] kotlinx.atomicfu.AtomicLong.compareAndSet
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 140000000 ns (0.05%), 14 samples
+  [ 0] semaphore_wait_trap
+  [ 1] GenericWaitBarrier::wait(int)
+  [ 2] SafepointSynchronize::block(JavaThread*)
+  [ 3] SafepointMechanism::process_if_requested_slow(JavaThread*)
+  [ 4] ThreadSafepointState::handle_polling_page_exception()
+  [ 5] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 6] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 8] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 9] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [10] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [11] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 140000000 ns (0.05%), 14 samples
+  [ 0] kotlinx.atomicfu.AtomicLong.getValue
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 140000000 ns (0.05%), 14 samples
+  [ 0] kotlinx.atomicfu.AtomicRef.setValue
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 140000000 ns (0.05%), 14 samples
+  [ 0] jlong_disjoint_arraycopy
+  [ 1] java.util.concurrent.atomic.AtomicIntegerFieldUpdater$AtomicIntegerFieldUpdaterImpl.compareAndSet
+  [ 2] io.ktor.utils.io.internal.RingBufferCapacity.tryReadAtMost
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 7] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 8] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 9] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [10] kotlinx.coroutines.DispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.TaskImpl.run
+  [12] io.ktor.benchmarks.dispatchers.HighThroughputScheduler.runSafely
+  [13] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.executeTask
+  [14] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [15] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 140000000 ns (0.05%), 14 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 130000000 ns (0.04%), 13 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 130000000 ns (0.04%), 13 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 130000000 ns (0.04%), 13 samples
+  [ 0] io.ktor.benchmarks.dispatchers.SimpleDispatcher.thread$lambda-0
+  [ 1] io.ktor.benchmarks.dispatchers.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 2] java.lang.Thread.run
+
+--- 130000000 ns (0.04%), 13 samples
+  [ 0] kotlinx.atomicfu.AtomicOperationInterceptor.beforeUpdate
+  [ 1] kotlinx.atomicfu.AtomicRef.setValue
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 8] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 130000000 ns (0.04%), 13 samples
+  [ 0] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 130000000 ns (0.04%), 13 samples
+  [ 0] kotlinx.atomicfu.AtomicLong.getValue
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 130000000 ns (0.04%), 13 samples
+  [ 0] kotlinx.atomicfu.AtomicRef.setValue
+  [ 1] io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  [ 4] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  [ 5] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+  [ 6] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+  [ 7] io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.run
+
+--- 130000000 ns (0.04%), 13 samples
+  [ 0] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+          ns  percent  samples  top
+  ----------  -------  -------  ---
+ 96930000000   32.17%     9693  io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.removeFirstOrNull
+ 36110000000   11.98%     3611  kotlinx.atomicfu.AtomicArray.get
+ 28440000000    9.44%     2844  io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.removeFirstOrNull
+ 26950000000    8.94%     2695  io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+ 22440000000    7.45%     2244  java.util.concurrent.ConcurrentLinkedQueue.poll
+  8560000000    2.84%      856  semaphore_wait_trap
+  8100000000    2.69%      810  kotlinx.atomicfu.AtomicOperationInterceptor.afterSet
+  7790000000    2.59%      779  io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.pollGlobalQueues
+  6620000000    2.20%      662  read
+  6490000000    2.15%      649  kotlinx.atomicfu.AtomicRef.setValue
+  4260000000    1.41%      426  kotlin.jvm.internal.Intrinsics.checkNotNullParameter
+  3900000000    1.29%      390  java.util.concurrent.atomic.AtomicLongFieldUpdater$CASUpdater.compareAndSet
+  3720000000    1.23%      372  kotlinx.atomicfu.AtomicLong.compareAndSet
+  3410000000    1.13%      341  io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.tryAcquireCpuPermit
+  3160000000    1.05%      316  io.ktor.benchmarks.dispatchers.SimpleDispatcher.thread$lambda-0
+  3050000000    1.01%      305  swtch_pri
+  3030000000    1.01%      303  io.ktor.benchmarks.dispatchers.SimpleDispatcher.getQueue
+  3000000000    1.00%      300  kotlinx.atomicfu.AtomicLong.getValue
+  2110000000    0.70%      211  io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.trySteal
+  2040000000    0.68%      204  io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findAnyTask
+  1910000000    0.63%      191  io.ktor.util.internal.LockFreeLinkedListNode.getNext
+  1810000000    0.60%      181  SafepointBlob
+  1150000000    0.38%      115  kotlinx.atomicfu.AtomicOperationInterceptor.afterRMW
+  1110000000    0.37%      111  jlong_disjoint_arraycopy
+  1030000000    0.34%      103  io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.nextInt
+   940000000    0.31%       94  kotlinx.atomicfu.InterceptorKt.getInterceptor
+   680000000    0.23%       68  kotlinx.atomicfu.AtomicRef.getValue
+   560000000    0.19%       56  io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+   540000000    0.18%       54  kotlin.coroutines.jvm.internal.Boxing.boxBoolean
+   490000000    0.16%       49  io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore$Companion.wo
+   360000000    0.12%       36  os::javaTimeNanos()
+   360000000    0.12%       36  Interpreter
+   340000000    0.11%       34  kotlinx.atomicfu.AtomicOperationInterceptor.beforeUpdate
+   340000000    0.11%       34  io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore$Companion.updateHead
+   290000000    0.10%       29  io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.runWorker
+   280000000    0.09%       28  java.util.concurrent.atomic.AtomicLongFieldUpdater$CASUpdater.accessCheck
+   260000000    0.09%       26  io.ktor.benchmarks.dispatchers.HighThroughputScheduler.isTerminated
+   230000000    0.08%       23  java.util.concurrent.atomic.AtomicReferenceArray.get
+   220000000    0.07%       22  io.ktor.benchmarks.dispatchers.HighThroughputScheduler$Worker.findTask
+   200000000    0.07%       20  io.ktor.utils.io.ByteBufferChannel.setupStateForRead
+   180000000    0.06%       18  __semwait_signal
+   180000000    0.06%       18  sun.nio.ch.FileChannelImpl.read
+   160000000    0.05%       16  java.nio.channels.spi.AbstractInterruptibleChannel.begin
+   160000000    0.05%       16  sun.nio.ch.FileChannelImpl.beginBlocking
+   150000000    0.05%       15  kotlinx.coroutines.internal.ThreadContextKt.updateThreadContext
+   150000000    0.05%       15  kotlinx.atomicfu.AtomicBoolean.getValue
+   140000000    0.05%       14  kotlinx.atomicfu.AtomicInt.getValue
+   130000000    0.04%       13  [unknown]
+   130000000    0.04%       13  mach_absolute_time
+   120000000    0.04%       12  java.lang.invoke.VarHandleReferences$Array.getVolatile
+   120000000    0.04%       12  io.ktor.utils.io.ByteBufferChannel.suspensionForSize
+   120000000    0.04%       12  _platform_memmove$VARIANT$Haswell
+   120000000    0.04%       12  io.ktor.benchmarks.dispatchers.WorkQueue.pollBuffer
+   110000000    0.04%       11  io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+   110000000    0.04%       11  kotlin.coroutines.jvm.internal.ContinuationImpl.releaseIntercepted
+   100000000    0.03%       10  itable stub
+   100000000    0.03%       10  java.lang.Thread.blockedOn
+   100000000    0.03%       10  __psynch_cvwait
+    90000000    0.03%        9  __psynch_mutexwait
+    90000000    0.03%        9  io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+    80000000    0.03%        8  semaphore_signal_trap
+    80000000    0.03%        8  kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+    70000000    0.02%        7  java.nio.channels.spi.AbstractInterruptibleChannel.blockedOn
+    70000000    0.02%        7  io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+    70000000    0.02%        7  sun.nio.ch.FileDispatcherImpl.read0
+    60000000    0.02%        6  java.nio.Buffer.position
+    60000000    0.02%        6  err_codes_mach_rcv
+    60000000    0.02%        6  io.ktor.utils.io.internal.WriteSessionImpl.request
+    60000000    0.02%        6  jdk.internal.misc.ScopedMemoryAccess.copyMemoryInternal
+    60000000    0.02%        6  sun.nio.ch.NativeThreadSet.add
+    60000000    0.02%        6  kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+    60000000    0.02%        6  jdk.internal.misc.Unsafe.checkSize
+    60000000    0.02%        6  DB::getStatistics()
+    50000000    0.02%        5  io.ktor.utils.io.core.Buffer.commitWritten
+    50000000    0.02%        5  mach_msg_trap
+    50000000    0.02%        5  java.util.concurrent.atomic.AtomicReferenceFieldUpdater$AtomicReferenceFieldUpdaterImpl.compareAndSet
+    50000000    0.02%        5  CodeHeap::find_blob_unsafe(void*) const
+    50000000    0.02%        5  _kernelrpc_mach_port_deallocate_trap
+    50000000    0.02%        5  OopMapSet::update_register_map(frame const*, RegisterMap*)
+    50000000    0.02%        5  _platform_bzero$VARIANT$Haswell
+    50000000    0.02%        5  io.ktor.utils.io.ByteBufferChannel.prepareBuffer
+    50000000    0.02%        5  io.ktor.utils.io.ByteBufferChannel.getTotalBytesRead
+    50000000    0.02%        5  java.nio.MappedByteBuffer.position
+    50000000    0.02%        5  IndexSetIterator::advance_and_next()
+    50000000    0.02%        5  java.util.concurrent.ConcurrentLinkedQueue.updateHead
+    50000000    0.02%        5  Java_sun_nio_ch_FileDispatcherImpl_read0
+    50000000    0.02%        5  jvmti_GetPhase(_jvmtiEnv*, jvmtiPhase*)
+    50000000    0.02%        5  thread_self_trap
+    50000000    0.02%        5  jvmti_GetTag(_jvmtiEnv*, _jobject*, long*)
+    40000000    0.01%        4  PhaseChaitin::gather_lrg_masks(bool)
+    40000000    0.01%        4  io.ktor.benchmarks.FileBenchmarks$testKtorFileReadInExp2ExpDispatcher$1.invokeSuspend
+    40000000    0.01%        4  io.ktor.benchmarks.dispatchers.WorkQueue.tryStealLastScheduled
+    40000000    0.01%        4  I2C/C2I adapters
+    40000000    0.01%        4  io.ktor.utils.io.ByteBufferChannel.getClosed
+    40000000    0.01%        4  kotlin.coroutines.jvm.internal.ContinuationImpl.getContext
+    40000000    0.01%        4  com.yourkit.runtime.Callback.objectMapGet
+    40000000    0.01%        4  frame::sender_raw(RegisterMap*) const
+    40000000    0.01%        4  YNodeTree::getMethodById(JNIEnv_*, _jmethodID*)
+    30000000    0.01%        3  io.ktor.benchmarks.dispatchers.HighThroughputScheduler.access$getControlState$p
+    30000000    0.01%        3  io.ktor.utils.io.core.IoBuffer.resetFromContentToWrite
+    30000000    0.01%        3  PhaseLive::add_liveout(Block*, IndexSet*, VectorSet&)
+    30000000    0.01%        3  io.ktor.utils.io.internal.WriteSessionImpl.written
+    30000000    0.01%        3  Method::invocation_count()
+    30000000    0.01%        3  JvmtiEnv::GetThreadLocalStorage(_jobject*, void**)
+    30000000    0.01%        3  Java_com_yourkit_runtime_Callback_objectMapGet
+    30000000    0.01%        3  jni_GetObjectField
+    30000000    0.01%        3  Probes::isProbeApplicable(YStringImpl<char> const&, YStringImpl<char> const&)
+    30000000    0.01%        3  InterpreterRuntime::frequency_counter_overflow_inner(JavaThread*, unsigned char*)
+    30000000    0.01%        3  PhaseChaitin::elide_copy(Node*, int, Block*, Node_List&, Node_List&, bool)
+    30000000    0.01%        3  getThreadInfoJvmti(JNIEnv_*, _jobject*)
+    30000000    0.01%        3  io.ktor.utils.io.core.Buffer.getLimit
+    30000000    0.01%        3  findOrCreateEventRecord(DB*, int, EventTable*, int)
+    30000000    0.01%        3  jvmti_GetThreadLocalStorage(_jvmtiEnv*, _jobject*, void**)
+    30000000    0.01%        3  err_codes_iokit_fw
+    30000000    0.01%        3  com.yourkit.runtime.Callback.shouldSkipThread
+    30000000    0.01%        3  kotlin.coroutines.CombinedContext.get
+    30000000    0.01%        3  Method::jmethod_id()
+    30000000    0.01%        3  com.yourkit.probes.ResourceRegistry.getOrCreate
+    30000000    0.01%        3  io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+    30000000    0.01%        3  kotlin.jvm.internal.Intrinsics.areEqual
+    30000000    0.01%        3  SpinPause
+    30000000    0.01%        3  io.ktor.benchmarks.dispatchers.LockFreeTaskQueueCore.addLast
+    30000000    0.01%        3  kotlinx.coroutines.DispatchedTask.run
+    30000000    0.01%        3  Compile::final_graph_reshaping_walk(Node_Stack&, Node*, Final_Reshape_Counts&)
+    30000000    0.01%        3  resource_allocate_bytes(unsigned long, AllocFailStrategy::AllocFailEnum)
+    30000000    0.01%        3  sun.nio.ch.NativeThread.current
+    30000000    0.01%        3  internal_catch_exc_subsystem
+    20000000    0.01%        2  AccessInternal::PostRuntimeDispatch<G1BarrierSet::AccessBarrier<401510ull, G1BarrierSet>, (AccessInternal::BarrierType)3, 401510ull>::oop_access_barrier(oopDesc*, long)
+    20000000    0.01%        2  CautiouslyPreserveExceptionMark::CautiouslyPreserveExceptionMark(Thread*)
+    20000000    0.01%        2  CodeBlob::is_zombie() const
+    20000000    0.01%        2  CodeCache::find_blob(void*)
+    20000000    0.01%        2  playSetEventTableInt32Column(LockHolder const&, int, int, int, int)
+    20000000    0.01%        2  YNodeTree::getChildNode(int, int)
+    20000000    0.01%        2  madvise
+    20000000    0.01%        2  kotlinx.coroutines.internal.DispatchedContinuation.takeState$kotlinx_coroutines_core
+    20000000    0.01%        2  GenericWaitBarrier::wait(int)
+    20000000    0.01%        2  kotlin.coroutines.jvm.internal.ContinuationImpl.<init>
+    20000000    0.01%        2  kotlin.coroutines.jvm.internal.Boxing.boxInt
+    20000000    0.01%        2  kotlin.Result.exceptionOrNull-impl
+    20000000    0.01%        2  JNI_OnLoad
+    20000000    0.01%        2  JavaThread::is_Java_thread() const
+    20000000    0.01%        2  JvmtiEnvBase::is_valid()
+    20000000    0.01%        2  java.util.concurrent.atomic.AtomicIntegerFieldUpdater$AtomicIntegerFieldUpdaterImpl.accessCheck
+    20000000    0.01%        2  JvmtiTagMapTable::find(int, unsigned int, oopDesc*)
+    20000000    0.01%        2  java.nio.MappedByteBuffer.<init>
+    20000000    0.01%        2  java.nio.ByteBuffer.putBuffer
+    20000000    0.01%        2  java.nio.Buffer.limit
+    20000000    0.01%        2  java.lang.Thread.isInterrupted
+    20000000    0.01%        2  io.ktor.utils.io.internal.RingBufferCapacity.tryReadAtMost
+    20000000    0.01%        2  io.ktor.utils.io.internal.RingBufferCapacity.completeRead
+    20000000    0.01%        2  OSXSemaphore::signal(unsigned int)
+    20000000    0.01%        2  io.ktor.utils.io.ByteBufferChannel.flushImpl
+    20000000    0.01%        2  io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.<init>
+    20000000    0.01%        2  io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+    20000000    0.01%        2  io.ktor.benchmarks.dispatchers.TaskImpl.run
+    20000000    0.01%        2  com.yourkit.probes.ReflectionUtilImpl$MemberIdCache.getLastMap
+    20000000    0.01%        2  PhaseChaitin::build_ifg_physical(ResourceArea*)
+    20000000    0.01%        2  PhaseChaitin::interfere_with_live(unsigned int, IndexSet*)
+    20000000    0.01%        2  PhaseChaitin::remove_bound_register_from_interfering_live_ranges(LRG&, IndexSet*, unsigned int&)
+    20000000    0.01%        2  PhaseIFG::SquareUp()
+    20000000    0.01%        2  io.ktor.benchmarks.dispatchers.LockFreeTaskQueue.addLast
+    20000000    0.01%        2  PhaseIdealLoop::build_loop_late(VectorSet&, Node_List&, Node_Stack&)
+    20000000    0.01%        2  io.ktor.benchmarks.dispatchers.HighThroughputScheduler.runSafely
+    20000000    0.01%        2  compiledVFrame::method() const
+    20000000    0.01%        2  PhaseIdealLoop::build_loop_late_post_work(Node*, bool)
+    20000000    0.01%        2  PhaseOutput::BuildOopMaps()
+    20000000    0.01%        2  PhaseOutput::shorten_branches(unsigned int*)
+    20000000    0.01%        2  PlayerEventAdding::createTableRow(JNIEnv_*, int)
+    20000000    0.01%        2  fdval
+    10000000    0.00%        1  err_codes_iokit_usb
+    10000000    0.00%        1  RegionNode::is_unreachable_from_root(PhaseGVN const*) const
+    10000000    0.00%        1  RegisterMap::pd_location(VMRegImpl*) const
+    10000000    0.00%        1  fillRow(LockHolder const&, EventRecord*, int, int)
+    10000000    0.00%        1  RegMask::clear_to_sets(unsigned int)
+    10000000    0.00%        1  frame::interpreter_frame_method() const
+    10000000    0.00%        1  ProtectionDomainEntry::object_no_keepalive()
+    10000000    0.00%        1  ProjNode::is_CFG() const
+    10000000    0.00%        1  TieredThresholdPolicy::loop_predicate(int, int, CompLevel, methodHandle const&)
+    10000000    0.00%        1  io.ktor.benchmarks.FileBenchmarks$testKtorFileReadInExp2ExpDispatcher$1.<init>
+    10000000    0.00%        1  ProjNode::Value(PhaseGVN*) const
+    10000000    0.00%        1  ProjNode::Opcode() const
+    10000000    0.00%        1  edge_order(CFGEdge**, CFGEdge**)
+    10000000    0.00%        1  PhiNode::Opcode() const
+    10000000    0.00%        1  createYSPtr(JNIEnv_*, _jstring*)
+    10000000    0.00%        1  constantTag::non_error_value() const
+    10000000    0.00%        1  PhaseLive::compute(unsigned int)
+    10000000    0.00%        1  PhaseIterGVN::add_users_to_worklist(Node*)
+    10000000    0.00%        1  PhaseIdealLoop::build_loop_tree()
+    10000000    0.00%        1  compiledVFrame::sender() const
+    10000000    0.00%        1  compiledVFrame::compiledVFrame(frame const*, RegisterMap const*, JavaThread*, CompiledMethod*)
+    10000000    0.00%        1  RelocIterator::initialize(CompiledMethod*, unsigned char*, unsigned char*)
+    10000000    0.00%        1  SafepointMechanism::process_if_requested_slow(JavaThread*)
+    10000000    0.00%        1  PhaseIFG::re_insert(unsigned int)
+    10000000    0.00%        1  com.yourkit.probes.builtin.Files.getOrCreateFileRowByChannel
+    10000000    0.00%        1  com.yourkit.probes.builtin.Files.channelReadOnEnter
+    10000000    0.00%        1  PhaseChaitin::possibly_merge_multidef(Node*, unsigned int, Block*, GrowableArray<PhaseChaitin::RegDefUse>&)
+    10000000    0.00%        1  PhaseChaitin::merge_multidefs()
+    10000000    0.00%        1  io.ktor.benchmarks.dispatchers.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+    10000000    0.00%        1  com.yourkit.probes.Table.createRow
+    10000000    0.00%        1  SafepointSynchronize::do_cleanup_tasks()
+

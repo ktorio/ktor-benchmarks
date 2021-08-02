@@ -1,0 +1,2901 @@
+--- Execution profile ---
+Total samples       : 15407
+skipped             : 1 (0.01%)
+
+--- 25770000000 ns (16.73%), 2577 samples
+  [ 0] __psynch_cvwait
+  [ 1] Parker::park(bool, long)
+  [ 2] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 3] jdk.internal.misc.Unsafe.park
+  [ 4] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 14530000000 ns (9.43%), 1453 samples
+  [ 0] java.util.concurrent.ConcurrentLinkedQueue.poll
+  [ 1] io.ktor.benchmarks.SimpleDispatcher.thread$lambda-0
+  [ 2] io.ktor.benchmarks.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 3] java.lang.Thread.run
+
+--- 14420000000 ns (9.36%), 1442 samples
+  [ 0] java.util.concurrent.ConcurrentLinkedQueue.poll
+  [ 1] io.ktor.benchmarks.SimpleDispatcher.thread$lambda-0
+  [ 2] io.ktor.benchmarks.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 3] java.lang.Thread.run
+
+--- 11620000000 ns (7.54%), 1162 samples
+  [ 0] java.util.concurrent.ConcurrentLinkedQueue.poll
+  [ 1] io.ktor.benchmarks.SimpleDispatcher.thread$lambda-0
+  [ 2] io.ktor.benchmarks.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 3] java.lang.Thread.run
+
+--- 11070000000 ns (7.19%), 1107 samples
+  [ 0] java.util.concurrent.ConcurrentLinkedQueue.poll
+  [ 1] io.ktor.benchmarks.SimpleDispatcher.thread$lambda-0
+  [ 2] io.ktor.benchmarks.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 3] java.lang.Thread.run
+
+--- 8620000000 ns (5.60%), 862 samples
+  [ 0] io.ktor.benchmarks.SimpleDispatcher.getQueue
+  [ 1] io.ktor.benchmarks.SimpleDispatcher.thread$lambda-0
+  [ 2] io.ktor.benchmarks.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 3] java.lang.Thread.run
+
+--- 8590000000 ns (5.58%), 859 samples
+  [ 0] io.ktor.benchmarks.SimpleDispatcher.getQueue
+  [ 1] io.ktor.benchmarks.SimpleDispatcher.thread$lambda-0
+  [ 2] io.ktor.benchmarks.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 3] java.lang.Thread.run
+
+--- 4190000000 ns (2.72%), 419 samples
+  [ 0] __psynch_cvsignal
+  [ 1] Unsafe_Unpark(JNIEnv_*, _jobject*, _jobject*)
+  [ 2] jdk.internal.misc.Unsafe.unpark
+  [ 3] java.util.concurrent.locks.LockSupport.unpark
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler.tryUnpark
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.signalCpuWork
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 8] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 9] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [10] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [11] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [12] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [13] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [14] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [15] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [16] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [17] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [18] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [19] kotlinx.coroutines.DispatchedTask.run
+  [20] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [21] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [22] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [23] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 3840000000 ns (2.49%), 384 samples
+  [ 0] java.util.concurrent.ConcurrentLinkedQueue.poll
+  [ 1] io.ktor.benchmarks.SimpleDispatcher.thread$lambda-0
+  [ 2] io.ktor.benchmarks.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 3] java.lang.Thread.run
+
+--- 3680000000 ns (2.39%), 368 samples
+  [ 0] java.util.concurrent.ConcurrentLinkedQueue.poll
+  [ 1] io.ktor.benchmarks.SimpleDispatcher.thread$lambda-0
+  [ 2] io.ktor.benchmarks.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 3] java.lang.Thread.run
+
+--- 3670000000 ns (2.38%), 367 samples
+  [ 0] read
+  [ 1] sun.nio.ch.FileDispatcherImpl.read0
+  [ 2] sun.nio.ch.FileDispatcherImpl.read
+  [ 3] sun.nio.ch.IOUtil.readIntoNativeBuffer
+  [ 4] sun.nio.ch.IOUtil.read
+  [ 5] sun.nio.ch.FileChannelImpl.read
+  [ 6] io.ktor.util.BufferViewJvmKt.read
+  [ 7] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [11] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [12] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [13] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 3410000000 ns (2.21%), 341 samples
+  [ 0] io.ktor.benchmarks.SimpleDispatcher.thread$lambda-0
+  [ 1] io.ktor.benchmarks.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 2] java.lang.Thread.run
+
+--- 3280000000 ns (2.13%), 328 samples
+  [ 0] io.ktor.benchmarks.SimpleDispatcher.thread$lambda-0
+  [ 1] io.ktor.benchmarks.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 2] java.lang.Thread.run
+
+--- 3070000000 ns (1.99%), 307 samples
+  [ 0] __psynch_cvwait
+  [ 1] Parker::park(bool, long)
+  [ 2] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 3] jdk.internal.misc.Unsafe.park
+  [ 4] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 2900000000 ns (1.88%), 290 samples
+  [ 0] __gettimeofday
+  [ 1] Parker::park(bool, long)
+  [ 2] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 3] jdk.internal.misc.Unsafe.park
+  [ 4] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 2430000000 ns (1.58%), 243 samples
+  [ 0] java.util.concurrent.ConcurrentLinkedQueue.poll
+  [ 1] io.ktor.benchmarks.SimpleDispatcher.thread$lambda-0
+  [ 2] io.ktor.benchmarks.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 3] java.lang.Thread.run
+
+--- 2260000000 ns (1.47%), 226 samples
+  [ 0] java.util.concurrent.ConcurrentLinkedQueue.poll
+  [ 1] io.ktor.benchmarks.SimpleDispatcher.thread$lambda-0
+  [ 2] io.ktor.benchmarks.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 3] java.lang.Thread.run
+
+--- 2210000000 ns (1.43%), 221 samples
+  [ 0] __psynch_cvsignal
+  [ 1] Unsafe_Unpark(JNIEnv_*, _jobject*, _jobject*)
+  [ 2] jdk.internal.misc.Unsafe.unpark
+  [ 3] java.util.concurrent.locks.LockSupport.unpark
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler.tryUnpark
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.signalCpuWork
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 8] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 9] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [10] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [11] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [12] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [13] io.ktor.utils.io.ByteBufferChannel.flush
+  [14] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [15] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [16] kotlinx.coroutines.DispatchedTask.run
+  [17] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [18] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [19] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [20] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 2200000000 ns (1.43%), 220 samples
+  [ 0] io.ktor.benchmarks.SimpleDispatcher.thread$lambda-0
+  [ 1] io.ktor.benchmarks.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 2] java.lang.Thread.run
+
+--- 1850000000 ns (1.20%), 185 samples
+  [ 0] jdk.internal.misc.Unsafe.park
+  [ 1] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 1820000000 ns (1.18%), 182 samples
+  [ 0] io.ktor.benchmarks.SimpleDispatcher.thread$lambda-0
+  [ 1] io.ktor.benchmarks.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 2] java.lang.Thread.run
+
+--- 1480000000 ns (0.96%), 148 samples
+  [ 0] read
+  [ 1] sun.nio.ch.FileDispatcherImpl.read0
+  [ 2] sun.nio.ch.FileDispatcherImpl.read
+  [ 3] sun.nio.ch.IOUtil.readIntoNativeBuffer
+  [ 4] sun.nio.ch.IOUtil.read
+  [ 5] sun.nio.ch.FileChannelImpl.read
+  [ 6] io.ktor.util.BufferViewJvmKt.read
+  [ 7] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [11] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [12] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [13] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 1080000000 ns (0.70%), 108 samples
+  [ 0] __psynch_cvsignal
+  [ 1] Unsafe_Unpark(JNIEnv_*, _jobject*, _jobject*)
+  [ 2] jdk.internal.misc.Unsafe.unpark
+  [ 3] java.util.concurrent.locks.LockSupport.unpark
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler.tryUnpark
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.signalCpuWork
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 8] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 9] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [10] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [11] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [12] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [13] io.ktor.utils.io.ByteBufferChannel.flush
+  [14] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [15] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [16] kotlinx.coroutines.DispatchedTask.run
+  [17] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [18] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [19] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [20] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 900000000 ns (0.58%), 90 samples
+  [ 0] __psynch_mutexwait
+  [ 1] err_codes_iokit_usb
+  [ 2] Parker::unpark()
+  [ 3] Unsafe_Unpark(JNIEnv_*, _jobject*, _jobject*)
+  [ 4] jdk.internal.misc.Unsafe.unpark
+  [ 5] java.util.concurrent.locks.LockSupport.unpark
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.tryUnpark
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler.signalCpuWork
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [10] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [11] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [12] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [13] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [14] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [15] io.ktor.utils.io.ByteBufferChannel.flush
+  [16] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [17] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [18] kotlinx.coroutines.DispatchedTask.run
+  [19] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [20] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [21] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [22] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 850000000 ns (0.55%), 85 samples
+  [ 0] jlong_disjoint_arraycopy
+  [ 1] java.util.concurrent.atomic.AtomicIntegerFieldUpdater$AtomicIntegerFieldUpdaterImpl.compareAndSet
+  [ 2] io.ktor.utils.io.internal.RingBufferCapacity.tryReadAtMost
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 7] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 8] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 9] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [10] kotlinx.coroutines.DispatchedTask.run
+  [11] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [12] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [13] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [14] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 730000000 ns (0.47%), 73 samples
+  [ 0] java.util.concurrent.ConcurrentLinkedQueue.poll
+  [ 1] io.ktor.benchmarks.SimpleDispatcher.thread$lambda-0
+  [ 2] io.ktor.benchmarks.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 3] java.lang.Thread.run
+
+--- 630000000 ns (0.41%), 63 samples
+  [ 0] java.util.concurrent.ConcurrentLinkedQueue.poll
+  [ 1] io.ktor.benchmarks.SimpleDispatcher.thread$lambda-0
+  [ 2] io.ktor.benchmarks.SimpleDispatcher$$Lambda$45.0x0000000800c2a2f0.run
+  [ 3] java.lang.Thread.run
+
+--- 500000000 ns (0.32%), 50 samples
+  [ 0] __os_ch_md_redzone_cookie
+  [ 1] Parker::park(bool, long)
+  [ 2] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 3] jdk.internal.misc.Unsafe.park
+  [ 4] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 470000000 ns (0.31%), 47 samples
+  [ 0] __gettimeofday
+  [ 1] Parker::park(bool, long)
+  [ 2] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 3] jdk.internal.misc.Unsafe.park
+  [ 4] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 420000000 ns (0.27%), 42 samples
+  [ 0] kotlin.coroutines.jvm.internal.Boxing.boxBoolean
+  [ 1] io.ktor.utils.io.ByteBufferChannel.readSuspend
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 5] io.ktor.benchmarks.FileBenchmarks$testKtorFileReadInHugeExp2HugeExpDispatcher$1.invokeSuspend
+  [ 6] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 7] kotlinx.coroutines.DispatchedTask.run
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [10] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [11] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 320000000 ns (0.21%), 32 samples
+  [ 0] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 1] jdk.internal.misc.Unsafe.park
+  [ 2] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 280000000 ns (0.18%), 28 samples
+  [ 0] jdk.internal.misc.Unsafe.park
+  [ 1] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 260000000 ns (0.17%), 26 samples
+  [ 0] Parker::park(bool, long)
+  [ 1] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 2] jdk.internal.misc.Unsafe.park
+  [ 3] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 240000000 ns (0.16%), 24 samples
+  [ 0] err_codes_mach_rcv
+  [ 1] Parker::unpark()
+  [ 2] Unsafe_Unpark(JNIEnv_*, _jobject*, _jobject*)
+  [ 3] jdk.internal.misc.Unsafe.unpark
+  [ 4] java.util.concurrent.locks.LockSupport.unpark
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.tryUnpark
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.signalCpuWork
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 9] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [10] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [11] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [12] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [13] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [14] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [15] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [16] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [17] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [18] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [19] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [20] kotlinx.coroutines.DispatchedTask.run
+  [21] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [22] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [23] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [24] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 230000000 ns (0.15%), 23 samples
+  [ 0] err_codes_mach_rcv
+  [ 1] __os_ch_md_redzone_cookie
+  [ 2] Parker::park(bool, long)
+  [ 3] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 4] jdk.internal.misc.Unsafe.park
+  [ 5] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 190000000 ns (0.12%), 19 samples
+  [ 0] kotlin.coroutines.jvm.internal.Boxing.boxBoolean
+  [ 1] io.ktor.utils.io.ByteBufferChannel.readSuspend
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 3] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 4] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 5] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 6] kotlinx.coroutines.DispatchedTask.run
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [10] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 180000000 ns (0.12%), 18 samples
+  [ 0] kotlinx.coroutines.scheduling.CoroutineScheduler.createTask
+  [ 1] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 3] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 4] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 5] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [ 6] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 8] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 9] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [10] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [11] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [12] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [13] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [14] kotlinx.coroutines.DispatchedTask.run
+  [15] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [16] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [17] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [18] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 160000000 ns (0.10%), 16 samples
+  [ 0] Unsafe_Unpark(JNIEnv_*, _jobject*, _jobject*)
+  [ 1] jdk.internal.misc.Unsafe.unpark
+  [ 2] java.util.concurrent.locks.LockSupport.unpark
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler.tryUnpark
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler.signalCpuWork
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 7] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 8] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 9] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [10] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [11] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [12] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [13] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [14] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [15] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [16] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [17] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [18] kotlinx.coroutines.DispatchedTask.run
+  [19] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [20] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [21] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [22] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 160000000 ns (0.10%), 16 samples
+  [ 0] __psynch_mutexwait
+  [ 1] err_codes_iokit_usb
+  [ 2] Parker::unpark()
+  [ 3] Unsafe_Unpark(JNIEnv_*, _jobject*, _jobject*)
+  [ 4] jdk.internal.misc.Unsafe.unpark
+  [ 5] java.util.concurrent.locks.LockSupport.unpark
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.tryUnpark
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler.signalCpuWork
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [10] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [11] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [12] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [13] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [14] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [15] io.ktor.utils.io.ByteBufferChannel.flush
+  [16] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [17] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [18] kotlinx.coroutines.DispatchedTask.run
+  [19] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [20] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [21] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [22] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 140000000 ns (0.09%), 14 samples
+  [ 0] __psynch_mutexwait
+  [ 1] err_codes_iokit_usb
+  [ 2] Parker::unpark()
+  [ 3] Unsafe_Unpark(JNIEnv_*, _jobject*, _jobject*)
+  [ 4] jdk.internal.misc.Unsafe.unpark
+  [ 5] java.util.concurrent.locks.LockSupport.unpark
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.tryUnpark
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler.signalCpuWork
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [10] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [11] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [12] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [13] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [14] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [15] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [16] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [17] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [18] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [19] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [20] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [21] kotlinx.coroutines.DispatchedTask.run
+  [22] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [23] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [24] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [25] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 130000000 ns (0.08%), 13 samples
+  [ 0] os::javaTimeNanos()
+  [ 1] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 130000000 ns (0.08%), 13 samples
+  [ 0] java.nio.MappedByteBuffer.position
+  [ 1] java.nio.ByteBuffer.put
+  [ 2] java.nio.HeapByteBuffer.put
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 7] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 8] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 9] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [10] kotlinx.coroutines.DispatchedTask.run
+  [11] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [12] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [13] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [14] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 120000000 ns (0.08%), 12 samples
+  [ 0] itable stub
+  [ 1] kotlinx.coroutines.internal.ThreadContextKt.updateThreadContext
+  [ 2] kotlinx.coroutines.DispatchedTask.run
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 120000000 ns (0.08%), 12 samples
+  [ 0] kotlinx.coroutines.internal.ThreadContextKt.threadContextElements
+  [ 1] kotlinx.coroutines.internal.DispatchedContinuation.<init>
+  [ 2] kotlinx.coroutines.CoroutineDispatcher.interceptContinuation
+  [ 3] kotlin.coroutines.jvm.internal.ContinuationImpl.intercepted
+  [ 4] kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt.intercepted
+  [ 5] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 6] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 7] io.ktor.utils.io.ByteBufferChannel.tryWriteSuspend$ktor_io
+  [ 8] io.ktor.utils.io.internal.WriteSessionImpl.tryAwait
+  [ 9] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [10] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [11] kotlinx.coroutines.DispatchedTask.run
+  [12] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [13] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [14] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [15] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 110000000 ns (0.07%), 11 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 1] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 2] kotlinx.coroutines.DispatchedTask.run
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 110000000 ns (0.07%), 11 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [ 1] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 2] io.ktor.utils.io.ByteBufferChannel.flush
+  [ 3] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 4] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 5] kotlinx.coroutines.DispatchedTask.run
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 110000000 ns (0.07%), 11 samples
+  [ 0] __commpage_gettimeofday_internal
+  [ 1] [unknown]
+  [ 2] [unknown]
+  [ 3] to_abstime(timespec*, long, bool, bool)
+  [ 4] Parker::park(bool, long)
+  [ 5] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 6] jdk.internal.misc.Unsafe.park
+  [ 7] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [10] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [11] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 110000000 ns (0.07%), 11 samples
+  [ 0] internal_catch_exc_subsystem
+  [ 1] __os_ch_md_redzone_cookie
+  [ 2] Parker::park(bool, long)
+  [ 3] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 4] jdk.internal.misc.Unsafe.park
+  [ 5] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 100000000 ns (0.06%), 10 samples
+  [ 0] internal_catch_exc_subsystem
+  [ 1] Parker::park(bool, long)
+  [ 2] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 3] jdk.internal.misc.Unsafe.park
+  [ 4] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 100000000 ns (0.06%), 10 samples
+  [ 0] err_codes_iokit_usb
+  [ 1] Parker::park(bool, long)
+  [ 2] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 3] jdk.internal.misc.Unsafe.park
+  [ 4] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 100000000 ns (0.06%), 10 samples
+  [ 0] kotlin.coroutines.jvm.internal.ContinuationImpl.getContext
+  [ 1] kotlinx.coroutines.internal.ThreadContextKt.updateThreadContext
+  [ 2] kotlinx.coroutines.DispatchedTask.run
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 100000000 ns (0.06%), 10 samples
+  [ 0] mach_absolute_time
+  [ 1] os::javaTimeNanos()
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 90000000 ns (0.06%), 9 samples
+  [ 0] to_abstime(timespec*, long, bool, bool)
+  [ 1] Parker::park(bool, long)
+  [ 2] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 3] jdk.internal.misc.Unsafe.park
+  [ 4] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 90000000 ns (0.06%), 9 samples
+  [ 0] err_codes_iokit_usb
+  [ 1] Parker::unpark()
+  [ 2] Unsafe_Unpark(JNIEnv_*, _jobject*, _jobject*)
+  [ 3] jdk.internal.misc.Unsafe.unpark
+  [ 4] java.util.concurrent.locks.LockSupport.unpark
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.tryUnpark
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.signalCpuWork
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 9] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [10] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [11] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [12] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [13] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [14] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [15] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [16] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [17] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [18] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [19] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [20] kotlinx.coroutines.DispatchedTask.run
+  [21] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [22] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [23] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [24] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 90000000 ns (0.06%), 9 samples
+  [ 0] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 1] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 90000000 ns (0.06%), 9 samples
+  [ 0] Unsafe_Unpark(JNIEnv_*, _jobject*, _jobject*)
+  [ 1] jdk.internal.misc.Unsafe.unpark
+  [ 2] java.util.concurrent.locks.LockSupport.unpark
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler.tryUnpark
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler.signalCpuWork
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 7] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 8] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 9] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [10] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [11] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [12] io.ktor.utils.io.ByteBufferChannel.flush
+  [13] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [14] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [15] kotlinx.coroutines.DispatchedTask.run
+  [16] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [17] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [18] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [19] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 90000000 ns (0.06%), 9 samples
+  [ 0] ThreadsListHandle::ThreadsListHandle(Thread*)
+  [ 1] Unsafe_Unpark(JNIEnv_*, _jobject*, _jobject*)
+  [ 2] jdk.internal.misc.Unsafe.unpark
+  [ 3] java.util.concurrent.locks.LockSupport.unpark
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler.tryUnpark
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.signalCpuWork
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 8] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 9] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [10] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [11] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [12] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [13] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [14] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [15] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [16] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [17] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [18] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [19] kotlinx.coroutines.DispatchedTask.run
+  [20] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [21] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [22] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [23] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 90000000 ns (0.06%), 9 samples
+  [ 0] kotlinx.coroutines.internal.ThreadContextKt.updateThreadContext
+  [ 1] kotlinx.coroutines.DispatchedTask.run
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 90000000 ns (0.06%), 9 samples
+  [ 0] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 1] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 90000000 ns (0.06%), 9 samples
+  [ 0] Mutex::lock_without_safepoint_check()
+  [ 1] Parker::park(bool, long)
+  [ 2] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 3] jdk.internal.misc.Unsafe.park
+  [ 4] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 80000000 ns (0.05%), 8 samples
+  [ 0] [unknown]
+  [ 1] Parker::park(bool, long)
+  [ 2] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 3] jdk.internal.misc.Unsafe.park
+  [ 4] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 80000000 ns (0.05%), 8 samples
+  [ 0] __commpage_gettimeofday
+  [ 1] [unknown]
+  [ 2] to_abstime(timespec*, long, bool, bool)
+  [ 3] Parker::park(bool, long)
+  [ 4] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 5] jdk.internal.misc.Unsafe.park
+  [ 6] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [10] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 80000000 ns (0.05%), 8 samples
+  [ 0] java_lang_Thread::set_thread_status(oopDesc*, JavaThreadStatus)
+  [ 1] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 2] jdk.internal.misc.Unsafe.park
+  [ 3] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 80000000 ns (0.05%), 8 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.flush
+  [ 1] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 2] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 3] kotlinx.coroutines.DispatchedTask.run
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 80000000 ns (0.05%), 8 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.setupStateForRead
+  [ 1] io.ktor.utils.io.ByteBufferChannel.access$setupStateForRead
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 6] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 7] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [11] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [12] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [13] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 80000000 ns (0.05%), 8 samples
+  [ 0] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 1] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 2] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 3] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 4] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [ 5] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 8] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 9] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [10] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [11] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [12] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [13] kotlinx.coroutines.DispatchedTask.run
+  [14] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [15] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [16] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [17] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 80000000 ns (0.05%), 8 samples
+  [ 0] err_codes_mach_rcv
+  [ 1] Parker::unpark()
+  [ 2] Unsafe_Unpark(JNIEnv_*, _jobject*, _jobject*)
+  [ 3] jdk.internal.misc.Unsafe.unpark
+  [ 4] java.util.concurrent.locks.LockSupport.unpark
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.tryUnpark
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.signalCpuWork
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 9] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [10] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [11] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [12] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [13] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [14] io.ktor.utils.io.ByteBufferChannel.flush
+  [15] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [16] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [17] kotlinx.coroutines.DispatchedTask.run
+  [18] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [19] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [20] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [21] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 70000000 ns (0.05%), 7 samples
+  [ 0] mach_absolute_time
+  [ 1] os::javaTimeNanos()
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 70000000 ns (0.05%), 7 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [ 1] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 2] io.ktor.utils.io.ByteBufferChannel.flush
+  [ 3] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 4] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 5] kotlinx.coroutines.DispatchedTask.run
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 70000000 ns (0.05%), 7 samples
+  [ 0] err_codes_mach_rcv
+  [ 1] Mutex::lock_without_safepoint_check()
+  [ 2] Parker::park(bool, long)
+  [ 3] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 4] jdk.internal.misc.Unsafe.park
+  [ 5] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 70000000 ns (0.05%), 7 samples
+  [ 0] jdk.internal.misc.Unsafe.unpark
+  [ 1] java.util.concurrent.locks.LockSupport.unpark
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler.tryUnpark
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler.signalCpuWork
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 6] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 7] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 8] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [ 9] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [10] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [11] io.ktor.utils.io.ByteBufferChannel.flush
+  [12] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [13] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [14] kotlinx.coroutines.DispatchedTask.run
+  [15] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [16] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [17] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [18] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 70000000 ns (0.05%), 7 samples
+  [ 0] java.lang.invoke.VarHandleGuards.guard_LIL_V
+  [ 1] java.util.concurrent.atomic.AtomicReferenceArray.set
+  [ 2] kotlinx.coroutines.internal.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 3] kotlinx.coroutines.internal.LockFreeTaskQueue.removeFirstOrNull
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.pollGlobalQueues
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findAnyTask
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findTask
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 70000000 ns (0.05%), 7 samples
+  [ 0] kotlin.coroutines.jvm.internal.ContinuationImpl.<init>
+  [ 1] kotlin.coroutines.jvm.internal.ContinuationImpl.<init>
+  [ 2] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.<init>
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 6] io.ktor.benchmarks.FileBenchmarks$testKtorFileReadInHugeExp2HugeExpDispatcher$1.invokeSuspend
+  [ 7] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 8] kotlinx.coroutines.DispatchedTask.run
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [10] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [11] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [12] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 70000000 ns (0.05%), 7 samples
+  [ 0] os::javaTimeNanos()
+  [ 1] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 70000000 ns (0.05%), 7 samples
+  [ 0] JavaThreadParkedState::JavaThreadParkedState(JavaThread*, bool)
+  [ 1] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 2] jdk.internal.misc.Unsafe.park
+  [ 3] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 70000000 ns (0.05%), 7 samples
+  [ 0] sun.nio.ch.FileDispatcherImpl.read0
+  [ 1] sun.nio.ch.FileDispatcherImpl.read
+  [ 2] sun.nio.ch.IOUtil.readIntoNativeBuffer
+  [ 3] sun.nio.ch.IOUtil.read
+  [ 4] sun.nio.ch.FileChannelImpl.read
+  [ 5] io.ktor.util.BufferViewJvmKt.read
+  [ 6] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 7] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 8] kotlinx.coroutines.DispatchedTask.run
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [10] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [11] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [12] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 70000000 ns (0.05%), 7 samples
+  [ 0] ThreadsListHandle::cv_internal_thread_to_JavaThread(_jobject*, JavaThread**, oopDesc**)
+  [ 1] Unsafe_Unpark(JNIEnv_*, _jobject*, _jobject*)
+  [ 2] jdk.internal.misc.Unsafe.unpark
+  [ 3] java.util.concurrent.locks.LockSupport.unpark
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler.tryUnpark
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.signalCpuWork
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 8] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 9] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [10] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [11] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [12] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [13] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [14] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [15] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [16] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [17] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [18] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [19] kotlinx.coroutines.DispatchedTask.run
+  [20] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [21] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [22] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [23] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 70000000 ns (0.05%), 7 samples
+  [ 0] jdk.internal.misc.Unsafe.unpark
+  [ 1] java.util.concurrent.locks.LockSupport.unpark
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler.tryUnpark
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler.signalCpuWork
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 6] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 7] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 8] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [ 9] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [10] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [11] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [12] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [13] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [14] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [15] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [16] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [17] kotlinx.coroutines.DispatchedTask.run
+  [18] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [19] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [20] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [21] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 70000000 ns (0.05%), 7 samples
+  [ 0] kotlinx.coroutines.scheduling.CoroutineScheduler.createTask
+  [ 1] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 3] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 4] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 5] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [ 6] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [ 7] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 8] io.ktor.utils.io.ByteBufferChannel.flush
+  [ 9] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [10] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [11] kotlinx.coroutines.DispatchedTask.run
+  [12] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [13] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [14] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [15] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 60000000 ns (0.04%), 6 samples
+  [ 0] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 1] kotlinx.coroutines.DispatchedTask.run
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 60000000 ns (0.04%), 6 samples
+  [ 0] Java_sun_nio_ch_FileDispatcherImpl_read0
+  [ 1] sun.nio.ch.FileDispatcherImpl.read0
+  [ 2] sun.nio.ch.FileDispatcherImpl.read
+  [ 3] sun.nio.ch.IOUtil.readIntoNativeBuffer
+  [ 4] sun.nio.ch.IOUtil.read
+  [ 5] sun.nio.ch.FileChannelImpl.read
+  [ 6] io.ktor.util.BufferViewJvmKt.read
+  [ 7] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [11] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [12] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [13] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 60000000 ns (0.04%), 6 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.setupStateForRead
+  [ 1] io.ktor.utils.io.ByteBufferChannel.access$setupStateForRead
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 6] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 7] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [11] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [12] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [13] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 60000000 ns (0.04%), 6 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.suspensionForSize
+  [ 1] io.ktor.utils.io.ByteBufferChannel.readSuspendImpl
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readSuspend
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 6] io.ktor.benchmarks.FileBenchmarks$testKtorFileReadInHugeExp2HugeExpDispatcher$1.invokeSuspend
+  [ 7] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 8] kotlinx.coroutines.DispatchedTask.run
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [10] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [11] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [12] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 60000000 ns (0.04%), 6 samples
+  [ 0] java.lang.invoke.VarHandleGuards.guard_LI_L
+  [ 1] java.util.concurrent.atomic.AtomicReferenceArray.get
+  [ 2] kotlinx.coroutines.internal.LockFreeTaskQueueCore.addLast
+  [ 3] kotlinx.coroutines.internal.LockFreeTaskQueue.addLast
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler.addToGlobalQueue
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 7] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 8] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 9] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [10] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [11] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [12] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [13] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [14] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [15] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [16] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [17] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [18] kotlinx.coroutines.DispatchedTask.run
+  [19] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [20] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [21] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [22] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 60000000 ns (0.04%), 6 samples
+  [ 0] [unknown]
+  [ 1] to_abstime(timespec*, long, bool, bool)
+  [ 2] Parker::park(bool, long)
+  [ 3] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 4] jdk.internal.misc.Unsafe.park
+  [ 5] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 60000000 ns (0.04%), 6 samples
+  [ 0] mach_absolute_time
+  [ 1] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 60000000 ns (0.04%), 6 samples
+  [ 0] kotlinx.coroutines.internal.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] kotlinx.coroutines.internal.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.pollGlobalQueues
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findAnyTask
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findTask
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 50000000 ns (0.03%), 5 samples
+  [ 0] kotlinx.coroutines.internal.ThreadContextKt.updateThreadContext
+  [ 1] kotlinx.coroutines.DispatchedTask.run
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 50000000 ns (0.03%), 5 samples
+  [ 0] kotlinx.coroutines.scheduling.CoroutineScheduler.createTask
+  [ 1] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 3] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 4] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 5] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [ 6] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [ 7] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 8] io.ktor.utils.io.ByteBufferChannel.flush
+  [ 9] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [10] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [11] kotlinx.coroutines.DispatchedTask.run
+  [12] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [13] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [14] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [15] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 50000000 ns (0.03%), 5 samples
+  [ 0] AccessInternal::PostRuntimeDispatch<G1BarrierSet::AccessBarrier<548964ull, G1BarrierSet>, (AccessInternal::BarrierType)2, 548964ull>::oop_access_barrier(void*)
+  [ 1] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 2] jdk.internal.misc.Unsafe.park
+  [ 3] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 50000000 ns (0.03%), 5 samples
+  [ 0] vtable stub
+  [ 1] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 2] kotlinx.coroutines.DispatchedTask.run
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 50000000 ns (0.03%), 5 samples
+  [ 0] jdk.internal.misc.Unsafe.checkNativeAddress
+  [ 1] jdk.internal.misc.Unsafe.checkPointer
+  [ 2] jdk.internal.misc.Unsafe.checkPrimitivePointer
+  [ 3] jdk.internal.misc.Unsafe.copyMemoryChecks
+  [ 4] jdk.internal.misc.Unsafe.copyMemory
+  [ 5] jdk.internal.misc.ScopedMemoryAccess.copyMemoryInternal
+  [ 6] jdk.internal.misc.ScopedMemoryAccess.copyMemory
+  [ 7] java.nio.ByteBuffer.putBuffer
+  [ 8] java.nio.ByteBuffer.put
+  [ 9] java.nio.HeapByteBuffer.put
+  [10] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [11] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [12] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [13] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [14] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [15] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [16] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [17] kotlinx.coroutines.DispatchedTask.run
+  [18] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [19] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [20] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [21] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 50000000 ns (0.03%), 5 samples
+  [ 0] kotlinx.coroutines.AbstractTimeSourceKt.getTimeSource
+  [ 1] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 50000000 ns (0.03%), 5 samples
+  [ 0] mach_absolute_time
+  [ 1] __commpage_gettimeofday_internal
+  [ 2] [unknown]
+  [ 3] [unknown]
+  [ 4] to_abstime(timespec*, long, bool, bool)
+  [ 5] Parker::park(bool, long)
+  [ 6] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 7] jdk.internal.misc.Unsafe.park
+  [ 8] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [10] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [11] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [12] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 50000000 ns (0.03%), 5 samples
+  [ 0] io.ktor.utils.io.internal.RingBufferCapacity.tryReadAtMost
+  [ 1] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 5] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 6] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 7] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 8] kotlinx.coroutines.DispatchedTask.run
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [10] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [11] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [12] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 50000000 ns (0.03%), 5 samples
+  [ 0] __os_ch_md_redzone_cookie
+  [ 1] Parker::park(bool, long)
+  [ 2] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 3] jdk.internal.misc.Unsafe.park
+  [ 4] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 50000000 ns (0.03%), 5 samples
+  [ 0] [unknown]
+  [ 1] [unknown]
+  [ 2] to_abstime(timespec*, long, bool, bool)
+  [ 3] Parker::park(bool, long)
+  [ 4] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 5] jdk.internal.misc.Unsafe.park
+  [ 6] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [10] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 50000000 ns (0.03%), 5 samples
+  [ 0] java.util.concurrent.atomic.AtomicLongFieldUpdater$CASUpdater.compareAndSet
+  [ 1] kotlinx.coroutines.scheduling.CoroutineScheduler.parkedWorkersStackPush
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 50000000 ns (0.03%), 5 samples
+  [ 0] java.util.concurrent.atomic.AtomicReferenceArray.set
+  [ 1] kotlinx.coroutines.internal.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] kotlinx.coroutines.internal.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.pollGlobalQueues
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findAnyTask
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findTask
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 50000000 ns (0.03%), 5 samples
+  [ 0] SafeThreadsListPtr::release_stable_list()
+  [ 1] Unsafe_Unpark(JNIEnv_*, _jobject*, _jobject*)
+  [ 2] jdk.internal.misc.Unsafe.unpark
+  [ 3] java.util.concurrent.locks.LockSupport.unpark
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler.tryUnpark
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.signalCpuWork
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 8] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 9] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [10] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [11] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [12] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [13] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [14] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [15] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [16] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [17] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [18] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [19] kotlinx.coroutines.DispatchedTask.run
+  [20] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [21] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [22] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [23] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 50000000 ns (0.03%), 5 samples
+  [ 0] __os_ch_md_redzone_cookie
+  [ 1] Unsafe_Unpark(JNIEnv_*, _jobject*, _jobject*)
+  [ 2] jdk.internal.misc.Unsafe.unpark
+  [ 3] java.util.concurrent.locks.LockSupport.unpark
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler.tryUnpark
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.signalCpuWork
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 8] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 9] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [10] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [11] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [12] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [13] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [14] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [15] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [16] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [17] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [18] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [19] kotlinx.coroutines.DispatchedTask.run
+  [20] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [21] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [22] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [23] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 50000000 ns (0.03%), 5 samples
+  [ 0] io.ktor.utils.io.internal.RingBufferCapacity.tryWriteAtLeast
+  [ 1] io.ktor.utils.io.internal.WriteSessionImpl.request
+  [ 2] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 3] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 4] kotlinx.coroutines.DispatchedTask.run
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 50000000 ns (0.03%), 5 samples
+  [ 0] java.nio.Buffer.position
+  [ 1] java.nio.ByteBuffer.position
+  [ 2] java.nio.ByteBuffer.put
+  [ 3] java.nio.HeapByteBuffer.put
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 8] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 9] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [10] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [11] kotlinx.coroutines.DispatchedTask.run
+  [12] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [13] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [14] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [15] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 40000000 ns (0.03%), 4 samples
+  [ 0] itable stub
+  [ 1] kotlinx.coroutines.internal.ThreadContextKt.updateThreadContext
+  [ 2] kotlinx.coroutines.DispatchedTask.run
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 40000000 ns (0.03%), 4 samples
+  [ 0] os::javaTimeNanos()
+  [ 1] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 40000000 ns (0.03%), 4 samples
+  [ 0] kotlinx.coroutines.scheduling.CoroutineScheduler.isTerminated
+  [ 1] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 40000000 ns (0.03%), 4 samples
+  [ 0] kotlin.coroutines.jvm.internal.ContinuationImpl.releaseIntercepted
+  [ 1] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 2] kotlinx.coroutines.DispatchedTask.run
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 40000000 ns (0.03%), 4 samples
+  [ 0] sun.nio.ch.FileChannelImpl.read
+  [ 1] io.ktor.util.BufferViewJvmKt.read
+  [ 2] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 3] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 4] kotlinx.coroutines.DispatchedTask.run
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 40000000 ns (0.03%), 4 samples
+  [ 0] JavaFrameAnchor::make_walkable(JavaThread*)
+  [ 1] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 2] jdk.internal.misc.Unsafe.park
+  [ 3] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 40000000 ns (0.03%), 4 samples
+  [ 0] os::javaTimeNanos()
+  [ 1] java.lang.invoke.VarHandleGuards.guard_LI_L
+  [ 2] java.util.concurrent.atomic.AtomicReferenceArray.get
+  [ 3] kotlinx.coroutines.internal.LockFreeTaskQueueCore.addLast
+  [ 4] kotlinx.coroutines.internal.LockFreeTaskQueue.addLast
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.addToGlobalQueue
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 8] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 9] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [10] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [11] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [12] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [13] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [14] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [15] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [16] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [17] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [18] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [19] kotlinx.coroutines.DispatchedTask.run
+  [20] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [21] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [22] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [23] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 40000000 ns (0.03%), 4 samples
+  [ 0] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 1] kotlinx.coroutines.internal.ThreadContextKt.updateThreadContext
+  [ 2] kotlinx.coroutines.DispatchedTask.run
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 40000000 ns (0.03%), 4 samples
+  [ 0] __os_ch_md_redzone_cookie
+  [ 1] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 2] jdk.internal.misc.Unsafe.park
+  [ 3] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 40000000 ns (0.03%), 4 samples
+  [ 0] kotlinx.coroutines.internal.ThreadContextKt.updateThreadContext
+  [ 1] kotlinx.coroutines.DispatchedTask.run
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 40000000 ns (0.03%), 4 samples
+  [ 0] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 1] jdk.internal.misc.Unsafe.park
+  [ 2] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 40000000 ns (0.03%), 4 samples
+  [ 0] java.lang.invoke.VarHandleGuards.guard_LI_L
+  [ 1] java.util.concurrent.atomic.AtomicReferenceArray.get
+  [ 2] kotlinx.coroutines.internal.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 3] kotlinx.coroutines.internal.LockFreeTaskQueue.removeFirstOrNull
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.pollGlobalQueues
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findAnyTask
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findTask
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 40000000 ns (0.03%), 4 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.prepareWriteBuffer$ktor_io
+  [ 1] io.ktor.utils.io.internal.WriteSessionImpl.request
+  [ 2] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 3] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 4] kotlinx.coroutines.DispatchedTask.run
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 40000000 ns (0.03%), 4 samples
+  [ 0] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 1] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 40000000 ns (0.03%), 4 samples
+  [ 0] io.ktor.benchmarks.FileBenchmarks$testKtorFileReadInHugeExp2HugeExpDispatcher$1.invokeSuspend
+  [ 1] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 2] kotlinx.coroutines.DispatchedTask.run
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 40000000 ns (0.03%), 4 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [ 1] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 6] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 7] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [11] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [12] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [13] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 40000000 ns (0.03%), 4 samples
+  [ 0] java_lang_Thread::interrupted(oopDesc*)
+  [ 1] Parker::park(bool, long)
+  [ 2] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 3] jdk.internal.misc.Unsafe.park
+  [ 4] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 40000000 ns (0.03%), 4 samples
+  [ 0] mach_absolute_time
+  [ 1] os::javaTimeNanos()
+  [ 2] java.lang.invoke.VarHandleGuards.guard_LI_L
+  [ 3] java.util.concurrent.atomic.AtomicReferenceArray.get
+  [ 4] kotlinx.coroutines.internal.LockFreeTaskQueueCore.addLast
+  [ 5] kotlinx.coroutines.internal.LockFreeTaskQueue.addLast
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.addToGlobalQueue
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 9] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [10] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [11] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [12] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [13] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [14] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [15] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [16] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [17] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [18] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [19] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [20] kotlinx.coroutines.DispatchedTask.run
+  [21] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [22] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [23] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [24] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 40000000 ns (0.03%), 4 samples
+  [ 0] io.ktor.benchmarks.FileBenchmarks$testKtorFileReadInHugeExp2HugeExpDispatcher$1.invokeSuspend
+  [ 1] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 2] kotlinx.coroutines.DispatchedTask.run
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 40000000 ns (0.03%), 4 samples
+  [ 0] java.lang.Integer.intValue
+  [ 1] io.ktor.benchmarks.FileBenchmarks$testKtorFileReadInHugeExp2HugeExpDispatcher$1.invokeSuspend
+  [ 2] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 3] kotlinx.coroutines.DispatchedTask.run
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 40000000 ns (0.03%), 4 samples
+  [ 0] Unsafe_Unpark(JNIEnv_*, _jobject*, _jobject*)
+  [ 1] jdk.internal.misc.Unsafe.unpark
+  [ 2] java.util.concurrent.locks.LockSupport.unpark
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler.tryUnpark
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler.signalCpuWork
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 7] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 8] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 9] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [10] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [11] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [12] io.ktor.utils.io.ByteBufferChannel.flush
+  [13] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [14] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [15] kotlinx.coroutines.DispatchedTask.run
+  [16] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [17] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [18] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [19] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 40000000 ns (0.03%), 4 samples
+  [ 0] kotlinx.coroutines.internal.LockFreeTaskQueue.removeFirstOrNull
+  [ 1] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.pollGlobalQueues
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findAnyTask
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findTask
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 30000000 ns (0.02%), 3 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.prepareWriteBuffer$ktor_io
+  [ 1] io.ktor.utils.io.internal.WriteSessionImpl.request
+  [ 2] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 3] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 4] kotlinx.coroutines.DispatchedTask.run
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 30000000 ns (0.02%), 3 samples
+  [ 0] java.nio.channels.spi.AbstractInterruptibleChannel.blockedOn
+  [ 1] java.nio.channels.spi.AbstractInterruptibleChannel.begin
+  [ 2] sun.nio.ch.FileChannelImpl.beginBlocking
+  [ 3] sun.nio.ch.FileChannelImpl.read
+  [ 4] io.ktor.util.BufferViewJvmKt.read
+  [ 5] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 6] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 7] kotlinx.coroutines.DispatchedTask.run
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [10] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [11] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 30000000 ns (0.02%), 3 samples
+  [ 0] SafeThreadsListPtr::release_stable_list()
+  [ 1] Unsafe_Unpark(JNIEnv_*, _jobject*, _jobject*)
+  [ 2] jdk.internal.misc.Unsafe.unpark
+  [ 3] java.util.concurrent.locks.LockSupport.unpark
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler.tryUnpark
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.signalCpuWork
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 8] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 9] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [10] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [11] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [12] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [13] io.ktor.utils.io.ByteBufferChannel.flush
+  [14] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [15] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [16] kotlinx.coroutines.DispatchedTask.run
+  [17] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [18] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [19] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [20] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 30000000 ns (0.02%), 3 samples
+  [ 0] jdk.internal.misc.Unsafe.checkOffset
+  [ 1] jdk.internal.misc.Unsafe.checkPointer
+  [ 2] jdk.internal.misc.Unsafe.checkPrimitivePointer
+  [ 3] jdk.internal.misc.Unsafe.copyMemoryChecks
+  [ 4] jdk.internal.misc.Unsafe.copyMemory
+  [ 5] jdk.internal.misc.ScopedMemoryAccess.copyMemoryInternal
+  [ 6] jdk.internal.misc.ScopedMemoryAccess.copyMemory
+  [ 7] java.nio.ByteBuffer.putBuffer
+  [ 8] java.nio.ByteBuffer.put
+  [ 9] java.nio.HeapByteBuffer.put
+  [10] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [11] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [12] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [13] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [14] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [15] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [16] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [17] kotlinx.coroutines.DispatchedTask.run
+  [18] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [19] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [20] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [21] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 30000000 ns (0.02%), 3 samples
+  [ 0] Parker::park(bool, long)
+  [ 1] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 2] jdk.internal.misc.Unsafe.park
+  [ 3] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 30000000 ns (0.02%), 3 samples
+  [ 0] err_codes_iokit_usb
+  [ 1] Parker::unpark()
+  [ 2] Unsafe_Unpark(JNIEnv_*, _jobject*, _jobject*)
+  [ 3] jdk.internal.misc.Unsafe.unpark
+  [ 4] java.util.concurrent.locks.LockSupport.unpark
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.tryUnpark
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.signalCpuWork
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 9] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [10] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [11] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [12] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [13] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [14] io.ktor.utils.io.ByteBufferChannel.flush
+  [15] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [16] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [17] kotlinx.coroutines.DispatchedTask.run
+  [18] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [19] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [20] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [21] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 30000000 ns (0.02%), 3 samples
+  [ 0] unsafe_arraycopy
+  [ 1] java.util.concurrent.atomic.AtomicIntegerFieldUpdater$AtomicIntegerFieldUpdaterImpl.compareAndSet
+  [ 2] io.ktor.utils.io.internal.RingBufferCapacity.tryReadAtMost
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 7] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 8] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 9] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [10] kotlinx.coroutines.DispatchedTask.run
+  [11] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [12] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [13] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [14] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 30000000 ns (0.02%), 3 samples
+  [ 0] kotlinx.coroutines.internal.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] kotlinx.coroutines.internal.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.pollGlobalQueues
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findAnyTask
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findTask
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 30000000 ns (0.02%), 3 samples
+  [ 0] AccessInternal::PostRuntimeDispatch<G1BarrierSet::AccessBarrier<548964ull, G1BarrierSet>, (AccessInternal::BarrierType)2, 548964ull>::oop_access_barrier(void*)
+  [ 1] JavaThreadParkedState::JavaThreadParkedState(JavaThread*, bool)
+  [ 2] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 3] jdk.internal.misc.Unsafe.park
+  [ 4] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 30000000 ns (0.02%), 3 samples
+  [ 0] jdk.internal.misc.Unsafe.checkPrimitiveArray
+  [ 1] jdk.internal.misc.Unsafe.checkPrimitivePointer
+  [ 2] jdk.internal.misc.Unsafe.copyMemoryChecks
+  [ 3] jdk.internal.misc.Unsafe.copyMemory
+  [ 4] jdk.internal.misc.ScopedMemoryAccess.copyMemoryInternal
+  [ 5] jdk.internal.misc.ScopedMemoryAccess.copyMemory
+  [ 6] java.nio.ByteBuffer.putBuffer
+  [ 7] java.nio.ByteBuffer.put
+  [ 8] java.nio.HeapByteBuffer.put
+  [ 9] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [10] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [11] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [12] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [13] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [14] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [15] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [16] kotlinx.coroutines.DispatchedTask.run
+  [17] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [18] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [19] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [20] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 30000000 ns (0.02%), 3 samples
+  [ 0] internal_catch_exc_subsystem
+  [ 1] sun.nio.ch.NativeThread.current
+  [ 2] sun.nio.ch.NativeThreadSet.add
+  [ 3] sun.nio.ch.FileChannelImpl.read
+  [ 4] io.ktor.util.BufferViewJvmKt.read
+  [ 5] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 6] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 7] kotlinx.coroutines.DispatchedTask.run
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [10] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [11] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 30000000 ns (0.02%), 3 samples
+  [ 0] ThreadsListHandle::ThreadsListHandle(Thread*)
+  [ 1] Unsafe_Unpark(JNIEnv_*, _jobject*, _jobject*)
+  [ 2] jdk.internal.misc.Unsafe.unpark
+  [ 3] java.util.concurrent.locks.LockSupport.unpark
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler.tryUnpark
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.signalCpuWork
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 8] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 9] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [10] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [11] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [12] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [13] io.ktor.utils.io.ByteBufferChannel.flush
+  [14] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [15] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [16] kotlinx.coroutines.DispatchedTask.run
+  [17] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [18] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [19] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [20] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 30000000 ns (0.02%), 3 samples
+  [ 0] kotlinx.coroutines.internal.LockFreeTaskQueueCore.addLast
+  [ 1] kotlinx.coroutines.internal.LockFreeTaskQueue.addLast
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler.addToGlobalQueue
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 5] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 6] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 7] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [ 8] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [ 9] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [10] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [11] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [12] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [13] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [14] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [15] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [16] kotlinx.coroutines.DispatchedTask.run
+  [17] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [18] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [19] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [20] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 30000000 ns (0.02%), 3 samples
+  [ 0] SystemDictionaryShared::validate_before_archiving(InstanceKlass*) (.cold.1)
+  [ 1] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 2] jdk.internal.misc.Unsafe.park
+  [ 3] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 30000000 ns (0.02%), 3 samples
+  [ 0] AccessInternal::PostRuntimeDispatch<G1BarrierSet::AccessBarrier<544868ull, G1BarrierSet>, (AccessInternal::BarrierType)2, 544868ull>::oop_access_barrier(void*)
+  [ 1] Parker::park(bool, long)
+  [ 2] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 3] jdk.internal.misc.Unsafe.park
+  [ 4] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 30000000 ns (0.02%), 3 samples
+  [ 0] Parker::unpark()
+  [ 1] Unsafe_Unpark(JNIEnv_*, _jobject*, _jobject*)
+  [ 2] jdk.internal.misc.Unsafe.unpark
+  [ 3] java.util.concurrent.locks.LockSupport.unpark
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler.tryUnpark
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.signalCpuWork
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 8] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 9] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [10] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [11] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [12] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [13] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [14] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [15] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [16] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [17] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [18] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [19] kotlinx.coroutines.DispatchedTask.run
+  [20] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [21] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [22] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [23] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 30000000 ns (0.02%), 3 samples
+  [ 0] JavaThread::threadObj() const
+  [ 1] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 2] jdk.internal.misc.Unsafe.park
+  [ 3] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 30000000 ns (0.02%), 3 samples
+  [ 0] ThreadsListHandle::cv_internal_thread_to_JavaThread(_jobject*, JavaThread**, oopDesc**)
+  [ 1] Unsafe_Unpark(JNIEnv_*, _jobject*, _jobject*)
+  [ 2] jdk.internal.misc.Unsafe.unpark
+  [ 3] java.util.concurrent.locks.LockSupport.unpark
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler.tryUnpark
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.signalCpuWork
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 8] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 9] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [10] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [11] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [12] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [13] io.ktor.utils.io.ByteBufferChannel.flush
+  [14] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [15] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [16] kotlinx.coroutines.DispatchedTask.run
+  [17] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [18] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [19] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [20] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 30000000 ns (0.02%), 3 samples
+  [ 0] JavaThread::threadObj() const
+  [ 1] jdk.internal.misc.Unsafe.park
+  [ 2] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 30000000 ns (0.02%), 3 samples
+  [ 0] err_codes_mach_rcv
+  [ 1] Parker::park(bool, long)
+  [ 2] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 3] jdk.internal.misc.Unsafe.park
+  [ 4] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 30000000 ns (0.02%), 3 samples
+  [ 0] __os_ch_md_redzone_cookie
+  [ 1] Unsafe_Unpark(JNIEnv_*, _jobject*, _jobject*)
+  [ 2] jdk.internal.misc.Unsafe.unpark
+  [ 3] java.util.concurrent.locks.LockSupport.unpark
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler.tryUnpark
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.signalCpuWork
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 8] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 9] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [10] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [11] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [12] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [13] io.ktor.utils.io.ByteBufferChannel.flush
+  [14] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [15] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [16] kotlinx.coroutines.DispatchedTask.run
+  [17] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [18] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [19] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [20] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 30000000 ns (0.02%), 3 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 1] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 2] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 3] kotlinx.coroutines.DispatchedTask.run
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 30000000 ns (0.02%), 3 samples
+  [ 0] kotlinx.coroutines.scheduling.CoroutineScheduler.addToGlobalQueue
+  [ 1] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 3] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 4] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 5] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [ 6] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 8] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 9] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [10] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [11] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [12] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [13] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [14] kotlinx.coroutines.DispatchedTask.run
+  [15] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [16] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [17] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [18] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 30000000 ns (0.02%), 3 samples
+  [ 0] mach_task_special_port_for_id.tsp_ids
+  [ 1] __os_ch_md_redzone_cookie
+  [ 2] Unsafe_Unpark(JNIEnv_*, _jobject*, _jobject*)
+  [ 3] jdk.internal.misc.Unsafe.unpark
+  [ 4] java.util.concurrent.locks.LockSupport.unpark
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.tryUnpark
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.signalCpuWork
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 9] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [10] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [11] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [12] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [13] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [14] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [15] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [16] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [17] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [18] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [19] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [20] kotlinx.coroutines.DispatchedTask.run
+  [21] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [22] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [23] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [24] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 30000000 ns (0.02%), 3 samples
+  [ 0] kotlinx.coroutines.scheduling.CoroutineScheduler.addToGlobalQueue
+  [ 1] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 3] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 4] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 5] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [ 6] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 8] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 9] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [10] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [11] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [12] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [13] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [14] kotlinx.coroutines.DispatchedTask.run
+  [15] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [16] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [17] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [18] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 30000000 ns (0.02%), 3 samples
+  [ 0] java.lang.invoke.VarHandleReferences$Array.runtimeTypeCheck
+  [ 1] java.lang.invoke.VarHandleReferences$Array.setVolatile
+  [ 2] java.lang.invoke.VarHandleGuards.guard_LIL_V
+  [ 3] java.util.concurrent.atomic.AtomicReferenceArray.set
+  [ 4] kotlinx.coroutines.internal.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 5] kotlinx.coroutines.internal.LockFreeTaskQueue.removeFirstOrNull
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.pollGlobalQueues
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findAnyTask
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findTask
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [10] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 30000000 ns (0.02%), 3 samples
+  [ 0] err_codes_mach_rcv
+  [ 1] Parker::unpark()
+  [ 2] Unsafe_Unpark(JNIEnv_*, _jobject*, _jobject*)
+  [ 3] jdk.internal.misc.Unsafe.unpark
+  [ 4] java.util.concurrent.locks.LockSupport.unpark
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.tryUnpark
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.signalCpuWork
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 9] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [10] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [11] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [12] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [13] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [14] io.ktor.utils.io.ByteBufferChannel.flush
+  [15] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [16] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [17] kotlinx.coroutines.DispatchedTask.run
+  [18] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [19] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [20] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [21] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 30000000 ns (0.02%), 3 samples
+  [ 0] [unknown]
+  [ 1] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 2] jdk.internal.misc.Unsafe.park
+  [ 3] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] java.lang.invoke.VarHandleGuards.guard_LIL_V
+  [ 1] java.util.concurrent.atomic.AtomicReferenceArray.set
+  [ 2] kotlinx.coroutines.internal.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 3] kotlinx.coroutines.internal.LockFreeTaskQueue.removeFirstOrNull
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.pollGlobalQueues
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findAnyTask
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findTask
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] ThreadsListHandle::cv_internal_thread_to_JavaThread(_jobject*, JavaThread**, oopDesc**)
+  [ 1] Unsafe_Unpark(JNIEnv_*, _jobject*, _jobject*)
+  [ 2] jdk.internal.misc.Unsafe.unpark
+  [ 3] java.util.concurrent.locks.LockSupport.unpark
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler.tryUnpark
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.signalCpuWork
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 8] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 9] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [10] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [11] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [12] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [13] io.ktor.utils.io.ByteBufferChannel.flush
+  [14] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [15] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [16] kotlinx.coroutines.DispatchedTask.run
+  [17] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [18] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [19] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [20] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 1] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 4] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 5] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 6] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 7] kotlinx.coroutines.DispatchedTask.run
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [10] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [11] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] java.util.concurrent.atomic.AtomicLongFieldUpdater$CASUpdater.compareAndSet
+  [ 1] kotlinx.coroutines.internal.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] kotlinx.coroutines.internal.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.pollGlobalQueues
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findAnyTask
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findTask
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] Java_sun_nio_ch_NativeThread_current
+  [ 1] sun.nio.ch.NativeThread.current
+  [ 2] sun.nio.ch.NativeThreadSet.add
+  [ 3] sun.nio.ch.FileChannelImpl.read
+  [ 4] io.ktor.util.BufferViewJvmKt.read
+  [ 5] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 6] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 7] kotlinx.coroutines.DispatchedTask.run
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [10] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [11] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] java.nio.channels.spi.AbstractInterruptibleChannel.begin
+  [ 1] sun.nio.ch.FileChannelImpl.beginBlocking
+  [ 2] sun.nio.ch.FileChannelImpl.read
+  [ 3] io.ktor.util.BufferViewJvmKt.read
+  [ 4] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 5] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 6] kotlinx.coroutines.DispatchedTask.run
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [10] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] Java_sun_nio_ch_FileDispatcherImpl_read0
+  [ 1] sun.nio.ch.FileDispatcherImpl.read0
+  [ 2] sun.nio.ch.FileDispatcherImpl.read
+  [ 3] sun.nio.ch.IOUtil.readIntoNativeBuffer
+  [ 4] sun.nio.ch.IOUtil.read
+  [ 5] sun.nio.ch.FileChannelImpl.read
+  [ 6] io.ktor.util.BufferViewJvmKt.read
+  [ 7] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [11] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [12] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [13] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] fdval
+  [ 1] Java_sun_nio_ch_FileDispatcherImpl_read0
+  [ 2] sun.nio.ch.FileDispatcherImpl.read0
+  [ 3] sun.nio.ch.FileDispatcherImpl.read
+  [ 4] sun.nio.ch.IOUtil.readIntoNativeBuffer
+  [ 5] sun.nio.ch.IOUtil.read
+  [ 6] sun.nio.ch.FileChannelImpl.read
+  [ 7] io.ktor.util.BufferViewJvmKt.read
+  [ 8] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 9] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [10] kotlinx.coroutines.DispatchedTask.run
+  [11] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [12] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [13] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [14] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] gCRAnnotations
+  [ 1] __os_ch_md_redzone_cookie
+  [ 2] Parker::park(bool, long)
+  [ 3] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 4] jdk.internal.misc.Unsafe.park
+  [ 5] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] JavaThread::threadObj() const
+  [ 1] JavaThreadParkedState::JavaThreadParkedState(JavaThread*, bool)
+  [ 2] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 3] jdk.internal.misc.Unsafe.park
+  [ 4] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] java_lang_Thread::set_thread_status(oopDesc*, JavaThreadStatus)
+  [ 1] jdk.internal.misc.Unsafe.park
+  [ 2] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] java.nio.ByteBuffer.order
+  [ 1] io.ktor.utils.io.ByteBufferChannel.prepareBuffer
+  [ 2] io.ktor.utils.io.ByteBufferChannel.prepareWriteBuffer$ktor_io
+  [ 3] io.ktor.utils.io.internal.WriteSessionImpl.request
+  [ 4] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 5] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 6] kotlinx.coroutines.DispatchedTask.run
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [10] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] kotlin.coroutines.CombinedContext.get
+  [ 1] kotlin.coroutines.jvm.internal.ContinuationImpl.releaseIntercepted
+  [ 2] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 3] kotlinx.coroutines.DispatchedTask.run
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] java.lang.Thread.blockedOn
+  [ 1] java.lang.System$2.blockedOn
+  [ 2] java.nio.channels.spi.AbstractInterruptibleChannel.blockedOn
+  [ 3] java.nio.channels.spi.AbstractInterruptibleChannel.begin
+  [ 4] sun.nio.ch.FileChannelImpl.beginBlocking
+  [ 5] sun.nio.ch.FileChannelImpl.read
+  [ 6] io.ktor.util.BufferViewJvmKt.read
+  [ 7] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [11] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [12] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [13] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] __commpage_gettimeofday
+  [ 1] [unknown]
+  [ 2] to_abstime(timespec*, long, bool, bool)
+  [ 3] Parker::park(bool, long)
+  [ 4] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 5] jdk.internal.misc.Unsafe.park
+  [ 6] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [10] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] java.util.concurrent.atomic.AtomicLongFieldUpdater$CASUpdater.compareAndSet
+  [ 1] kotlinx.coroutines.internal.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] kotlinx.coroutines.internal.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.pollGlobalQueues
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findAnyTask
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findTask
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] java.nio.channels.spi.AbstractInterruptibleChannel.blockedOn
+  [ 1] java.nio.channels.spi.AbstractInterruptibleChannel.begin
+  [ 2] sun.nio.ch.FileChannelImpl.beginBlocking
+  [ 3] sun.nio.ch.FileChannelImpl.read
+  [ 4] io.ktor.util.BufferViewJvmKt.read
+  [ 5] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 6] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 7] kotlinx.coroutines.DispatchedTask.run
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [10] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [11] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] os::javaTimeNanos()
+  [ 1] java.lang.invoke.VarHandleGuards.guard_LI_L
+  [ 2] java.util.concurrent.atomic.AtomicReferenceArray.get
+  [ 3] kotlinx.coroutines.internal.LockFreeTaskQueueCore.addLast
+  [ 4] kotlinx.coroutines.internal.LockFreeTaskQueue.addLast
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.addToGlobalQueue
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 8] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 9] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [10] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [11] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [12] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [13] io.ktor.utils.io.ByteBufferChannel.flush
+  [14] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [15] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [16] kotlinx.coroutines.DispatchedTask.run
+  [17] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [18] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [19] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [20] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] kotlinx.coroutines.AbstractTimeSourceKt.getTimeSource
+  [ 1] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] java.util.concurrent.atomic.AtomicReferenceArray.get
+  [ 1] kotlinx.coroutines.internal.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] kotlinx.coroutines.internal.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.pollGlobalQueues
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findAnyTask
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findTask
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] jdk.internal.misc.Unsafe.copyMemory
+  [ 1] jdk.internal.misc.ScopedMemoryAccess.copyMemoryInternal
+  [ 2] jdk.internal.misc.ScopedMemoryAccess.copyMemory
+  [ 3] java.nio.ByteBuffer.putBuffer
+  [ 4] java.nio.ByteBuffer.put
+  [ 5] java.nio.HeapByteBuffer.put
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 8] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 9] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [10] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [11] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [12] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [13] kotlinx.coroutines.DispatchedTask.run
+  [14] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [15] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [16] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [17] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] io.ktor.utils.io.internal.RingBufferCapacity.tryReadAtMost
+  [ 1] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 5] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 6] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 7] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 8] kotlinx.coroutines.DispatchedTask.run
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [10] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [11] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [12] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] JavaThread::is_interrupted(bool)
+  [ 1] Parker::park(bool, long)
+  [ 2] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 3] jdk.internal.misc.Unsafe.park
+  [ 4] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] err_codes_mach_rcv
+  [ 1] __os_ch_md_redzone_cookie
+  [ 2] Parker::park(bool, long)
+  [ 3] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 4] jdk.internal.misc.Unsafe.park
+  [ 5] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 1] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 2] kotlinx.coroutines.DispatchedTask.run
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] err_codes_mach_rcv
+  [ 1] Unsafe_Unpark(JNIEnv_*, _jobject*, _jobject*)
+  [ 2] jdk.internal.misc.Unsafe.unpark
+  [ 3] java.util.concurrent.locks.LockSupport.unpark
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler.tryUnpark
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.signalCpuWork
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 8] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 9] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [10] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [11] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [12] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [13] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [14] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [15] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [16] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [17] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [18] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [19] kotlinx.coroutines.DispatchedTask.run
+  [20] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [21] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [22] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [23] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] itable stub
+  [ 1] kotlinx.coroutines.internal.ThreadContextKt.updateThreadContext
+  [ 2] kotlinx.coroutines.DispatchedTask.run
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] internal_catch_exc_subsystem
+  [ 1] __os_ch_md_redzone_cookie
+  [ 2] Parker::park(bool, long)
+  [ 3] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 4] jdk.internal.misc.Unsafe.park
+  [ 5] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 9] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] java.lang.invoke.VarHandleGuards.guard_LIL_V
+  [ 1] java.util.concurrent.atomic.AtomicReferenceArray.set
+  [ 2] kotlinx.coroutines.internal.LockFreeTaskQueueCore.addLast
+  [ 3] kotlinx.coroutines.internal.LockFreeTaskQueue.addLast
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler.addToGlobalQueue
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 7] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 8] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 9] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [10] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [11] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [12] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [13] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [14] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [15] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [16] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [17] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [18] kotlinx.coroutines.DispatchedTask.run
+  [19] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [20] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [21] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [22] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] JavaThread::is_interrupted(bool)
+  [ 1] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 2] jdk.internal.misc.Unsafe.park
+  [ 3] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] mach_host_special_port_for_id.hsp_ids
+  [ 1] __os_ch_md_redzone_cookie
+  [ 2] Unsafe_Unpark(JNIEnv_*, _jobject*, _jobject*)
+  [ 3] jdk.internal.misc.Unsafe.unpark
+  [ 4] java.util.concurrent.locks.LockSupport.unpark
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.tryUnpark
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.signalCpuWork
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 9] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [10] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [11] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [12] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [13] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [14] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [15] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [16] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [17] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [18] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [19] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [20] kotlinx.coroutines.DispatchedTask.run
+  [21] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [22] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [23] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [24] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] semaphore_wait_trap
+  [ 1] GangWorker::loop()
+  [ 2] Thread::call_run()
+  [ 3] thread_native_entry(Thread*)
+  [ 4] __os_ch_md_redzone_cookie
+  [ 5] internal_catch_exc_subsystem
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] java.util.concurrent.atomic.AtomicReferenceArray.get
+  [ 1] kotlinx.coroutines.internal.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 2] kotlinx.coroutines.internal.LockFreeTaskQueue.removeFirstOrNull
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.pollGlobalQueues
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findAnyTask
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findTask
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 1] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 2] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 3] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 4] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [ 5] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [ 6] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 7] io.ktor.utils.io.ByteBufferChannel.flush
+  [ 8] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 9] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [10] kotlinx.coroutines.DispatchedTask.run
+  [11] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [12] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [13] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [14] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] kotlin.coroutines.jvm.internal.ContinuationImpl.getContext
+  [ 1] kotlinx.coroutines.internal.ThreadContextKt.updateThreadContext
+  [ 2] kotlinx.coroutines.DispatchedTask.run
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] kotlinx.coroutines.internal.LockFreeTaskQueue.addLast
+  [ 1] kotlinx.coroutines.scheduling.CoroutineScheduler.addToGlobalQueue
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 4] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 5] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 6] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [ 7] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [ 8] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 9] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [10] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [11] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [12] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [13] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [14] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [15] kotlinx.coroutines.DispatchedTask.run
+  [16] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [17] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [18] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [19] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findTask
+  [ 1] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] kotlinx.coroutines.internal.LockFreeTaskQueue.addLast
+  [ 1] kotlinx.coroutines.scheduling.CoroutineScheduler.addToGlobalQueue
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 4] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 5] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 6] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [ 7] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [ 8] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 9] io.ktor.utils.io.ByteBufferChannel.flush
+  [10] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [11] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [12] kotlinx.coroutines.DispatchedTask.run
+  [13] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [14] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [15] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [16] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findTask
+  [ 1] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findAnyTask
+  [ 1] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryAcquireCpuPermit
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findTask
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] java.util.concurrent.atomic.AtomicLongFieldUpdater$CASUpdater.compareAndSet
+  [ 1] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryAcquireCpuPermit
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findTask
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] JavaThreadParkedState::JavaThreadParkedState(JavaThread*, bool)
+  [ 1] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 2] jdk.internal.misc.Unsafe.park
+  [ 3] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] pthread_dependency_wait_np.cold.3
+  [ 1] Parker::park(bool, long)
+  [ 2] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+  [ 3] jdk.internal.misc.Unsafe.park
+  [ 4] java.util.concurrent.locks.LockSupport.parkNanos
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] java.util.concurrent.atomic.AtomicLongFieldUpdater$CASUpdater.accessCheck
+  [ 1] java.util.concurrent.atomic.AtomicLongFieldUpdater$CASUpdater.compareAndSet
+  [ 2] kotlinx.coroutines.internal.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 3] kotlinx.coroutines.internal.LockFreeTaskQueue.removeFirstOrNull
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.pollGlobalQueues
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findAnyTask
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findTask
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] [unknown]
+  [ 1] jdk.internal.misc.Unsafe.unpark
+  [ 2] java.util.concurrent.locks.LockSupport.unpark
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler.tryUnpark
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler.signalCpuWork
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 7] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [ 8] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 9] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [10] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [11] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [12] io.ktor.utils.io.ByteBufferChannel.flush
+  [13] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [14] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [15] kotlinx.coroutines.DispatchedTask.run
+  [16] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [17] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [18] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [19] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] kotlinx.coroutines.internal.LockFreeTaskQueueCore.removeFirstOrNull
+  [ 1] kotlinx.coroutines.internal.LockFreeTaskQueue.removeFirstOrNull
+  [ 2] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.pollGlobalQueues
+  [ 3] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findAnyTask
+  [ 4] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findTask
+  [ 5] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+--- 20000000 ns (0.01%), 2 samples
+  [ 0] mach_absolute_time
+  [ 1] os::javaTimeNanos()
+  [ 2] java.lang.invoke.VarHandleGuards.guard_LI_L
+  [ 3] java.util.concurrent.atomic.AtomicReferenceArray.get
+  [ 4] kotlinx.coroutines.internal.LockFreeTaskQueueCore.addLast
+  [ 5] kotlinx.coroutines.internal.LockFreeTaskQueue.addLast
+  [ 6] kotlinx.coroutines.scheduling.CoroutineScheduler.addToGlobalQueue
+  [ 7] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+  [ 8] kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+  [ 9] kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+  [10] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [11] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [12] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [13] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [14] io.ktor.utils.io.ByteBufferChannel.flush
+  [15] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [16] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [17] kotlinx.coroutines.DispatchedTask.run
+  [18] kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+  [19] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask
+  [20] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+  [21] kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run
+
+          ns  percent  samples  top
+  ----------  -------  -------  ---
+ 65210000000   42.33%     6521  java.util.concurrent.ConcurrentLinkedQueue.poll
+ 28840000000   18.72%     2884  __psynch_cvwait
+ 17210000000   11.17%     1721  io.ktor.benchmarks.SimpleDispatcher.getQueue
+ 10710000000    6.95%     1071  io.ktor.benchmarks.SimpleDispatcher.thread$lambda-0
+  7480000000    4.86%      748  __psynch_cvsignal
+  5150000000    3.34%      515  read
+  3370000000    2.19%      337  __gettimeofday
+  2140000000    1.39%      214  jdk.internal.misc.Unsafe.park
+  1200000000    0.78%      120  __psynch_mutexwait
+   850000000    0.55%       85  jlong_disjoint_arraycopy
+   750000000    0.49%       75  err_codes_mach_rcv
+   670000000    0.43%       67  __os_ch_md_redzone_cookie
+   610000000    0.40%       61  kotlin.coroutines.jvm.internal.Boxing.boxBoolean
+   380000000    0.25%       38  mach_absolute_time
+   360000000    0.23%       36  Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
+   330000000    0.21%       33  os::javaTimeNanos()
+   300000000    0.19%       30  kotlinx.coroutines.scheduling.CoroutineScheduler.createTask
+   290000000    0.19%       29  Parker::park(bool, long)
+   290000000    0.19%       29  Unsafe_Unpark(JNIEnv_*, _jobject*, _jobject*)
+   270000000    0.18%       27  [unknown]
+   270000000    0.18%       27  internal_catch_exc_subsystem
+   260000000    0.17%       26  err_codes_iokit_usb
+   190000000    0.12%       19  java.lang.invoke.VarHandleGuards.guard_LIL_V
+   180000000    0.12%       18  itable stub
+   180000000    0.12%       18  kotlinx.coroutines.internal.ThreadContextKt.updateThreadContext
+   180000000    0.12%       18  io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+   170000000    0.11%       17  io.ktor.utils.io.ByteBufferChannel.setupStateForRead
+   160000000    0.10%       16  kotlinx.coroutines.internal.LockFreeTaskQueueCore.removeFirstOrNull
+   160000000    0.10%       16  jdk.internal.misc.Unsafe.unpark
+   160000000    0.10%       16  kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+   140000000    0.09%       14  java.util.concurrent.atomic.AtomicLongFieldUpdater$CASUpdater.compareAndSet
+   140000000    0.09%       14  ThreadsListHandle::ThreadsListHandle(Thread*)
+   130000000    0.08%       13  kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker
+   130000000    0.08%       13  __commpage_gettimeofday_internal
+   130000000    0.08%       13  kotlin.coroutines.jvm.internal.ContinuationImpl.getContext
+   130000000    0.08%       13  java.nio.MappedByteBuffer.position
+   120000000    0.08%       12  kotlinx.coroutines.internal.ThreadContextKt.threadContextElements
+   120000000    0.08%       12  kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch
+   120000000    0.08%       12  ThreadsListHandle::cv_internal_thread_to_JavaThread(_jobject*, JavaThread**, oopDesc**)
+   120000000    0.08%       12  java_lang_Thread::set_thread_status(oopDesc*, JavaThreadStatus)
+   120000000    0.08%       12  java.lang.invoke.VarHandleGuards.guard_LI_L
+   120000000    0.08%       12  io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+   110000000    0.07%       11  to_abstime(timespec*, long, bool, bool)
+   110000000    0.07%       11  AccessInternal::PostRuntimeDispatch<G1BarrierSet::AccessBarrier<548964ull, G1BarrierSet>, (AccessInternal::BarrierType)2, 548964ull>::oop_access_barrier(void*)
+   100000000    0.06%       10  SafeThreadsListPtr::release_stable_list()
+   100000000    0.06%       10  __commpage_gettimeofday
+   100000000    0.06%       10  JavaThreadParkedState::JavaThreadParkedState(JavaThread*, bool)
+   100000000    0.06%       10  kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park
+    90000000    0.06%        9  io.ktor.benchmarks.FileBenchmarks$testKtorFileReadInHugeExp2HugeExpDispatcher$1.invokeSuspend
+    90000000    0.06%        9  JavaThread::threadObj() const
+    90000000    0.06%        9  Mutex::lock_without_safepoint_check()
+    90000000    0.06%        9  io.ktor.utils.io.ByteBufferChannel.flush
+    80000000    0.05%        8  kotlin.coroutines.jvm.internal.ContinuationImpl.<init>
+    80000000    0.05%        8  Java_sun_nio_ch_FileDispatcherImpl_read0
+    80000000    0.05%        8  sun.nio.ch.FileDispatcherImpl.read0
+    80000000    0.05%        8  io.ktor.utils.io.ByteBufferChannel.prepareWriteBuffer$ktor_io
+    80000000    0.05%        8  kotlinx.coroutines.scheduling.CoroutineScheduler.addToGlobalQueue
+    70000000    0.05%        7  JavaFrameAnchor::make_walkable(JavaThread*)
+    70000000    0.05%        7  sun.nio.ch.FileChannelImpl.read
+    70000000    0.05%        7  io.ktor.utils.io.internal.RingBufferCapacity.tryReadAtMost
+    70000000    0.05%        7  kotlinx.coroutines.AbstractTimeSourceKt.getTimeSource
+    60000000    0.04%        6  java.nio.Buffer.position
+    60000000    0.04%        6  io.ktor.utils.io.internal.RingBufferCapacity.tryWriteAtLeast
+    60000000    0.04%        6  io.ktor.utils.io.ByteBufferChannel.suspensionForSize
+    60000000    0.04%        6  java.util.concurrent.atomic.AtomicReferenceArray.set
+    60000000    0.04%        6  kotlinx.coroutines.internal.LockFreeTaskQueue.removeFirstOrNull
+    50000000    0.03%        5  java.util.concurrent.atomic.AtomicReferenceArray.get
+    50000000    0.03%        5  kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely
+    50000000    0.03%        5  java_lang_Thread::interrupted(oopDesc*)
+    50000000    0.03%        5  jdk.internal.misc.Unsafe.checkNativeAddress
+    50000000    0.03%        5  kotlinx.coroutines.scheduling.CoroutineScheduler.isTerminated
+    50000000    0.03%        5  java.nio.channels.spi.AbstractInterruptibleChannel.blockedOn
+    50000000    0.03%        5  io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+    50000000    0.03%        5  java.nio.ByteBuffer.order
+    50000000    0.03%        5  kotlin.coroutines.jvm.internal.ContinuationImpl.releaseIntercepted
+    50000000    0.03%        5  SystemDictionaryShared::validate_before_archiving(InstanceKlass*) (.cold.1)
+    50000000    0.03%        5  vtable stub
+    40000000    0.03%        4  AccessInternal::PostRuntimeDispatch<G1BarrierSet::AccessBarrier<544868ull, G1BarrierSet>, (AccessInternal::BarrierType)2, 544868ull>::oop_access_barrier(void*)
+    40000000    0.03%        4  kotlinx.coroutines.internal.LockFreeTaskQueue.addLast
+    40000000    0.03%        4  kotlinx.coroutines.internal.LockFreeTaskQueueCore.addLast
+    40000000    0.03%        4  java.lang.invoke.VarHandleReferences$Array.getVolatile
+    40000000    0.03%        4  kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findTask
+    40000000    0.03%        4  java.lang.invoke.VarHandleReferences$Array.setVolatile
+    40000000    0.03%        4  io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+    40000000    0.03%        4  java.lang.Integer.intValue
+    40000000    0.03%        4  JavaThread::is_interrupted(bool)
+    40000000    0.03%        4  semaphore_wait_trap
+    30000000    0.02%        3  java.lang.Thread.blockedOn
+    30000000    0.02%        3  sun.nio.ch.NativeThread.current
+    30000000    0.02%        3  java.nio.channels.spi.AbstractInterruptibleChannel.begin
+    30000000    0.02%        3  unsafe_arraycopy
+    30000000    0.02%        3  gCRAnnotations
+    30000000    0.02%        3  fdval
+    30000000    0.02%        3  java.util.concurrent.atomic.AtomicLongFieldUpdater$CASUpdater.accessCheck
+    30000000    0.02%        3  java.lang.invoke.VarHandleReferences$Array.runtimeTypeCheck
+    30000000    0.02%        3  kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.inStack
+    30000000    0.02%        3  mach_task_special_port_for_id.tsp_ids
+    30000000    0.02%        3  io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+    30000000    0.02%        3  jdk.internal.misc.Unsafe.checkPrimitiveArray
+    30000000    0.02%        3  jdk.internal.misc.Unsafe.checkOffset
+    30000000    0.02%        3  Parker::unpark()
+    30000000    0.02%        3  io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+    20000000    0.01%        2  kotlinx.coroutines.scheduling.CoroutineScheduler.dispatch$default
+    20000000    0.01%        2  kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher.dispatch
+    20000000    0.01%        2  sun.nio.ch.NativeThreadSet.add
+    20000000    0.01%        2  java_lang_Thread::get_thread_status(oopDesc*)
+    20000000    0.01%        2  jdk.internal.misc.Unsafe.copyMemory
+    20000000    0.01%        2  kotlinx.coroutines.scheduling.CoroutineScheduler.currentWorker
+    20000000    0.01%        2  mach_host_special_port_for_id.hsp_ids
+    20000000    0.01%        2  kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark
+    20000000    0.01%        2  io.ktor.utils.io.core.IoBuffer.resetFromContentToWrite
+    20000000    0.01%        2  kotlin.coroutines.CombinedContext.get
+    20000000    0.01%        2  io.ktor.utils.io.ByteBufferChannel.getState
+    20000000    0.01%        2  oopDesc::address_field(int) const
+    20000000    0.01%        2  kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.findAnyTask
+    20000000    0.01%        2  io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+    20000000    0.01%        2  convertReturnVal
+    20000000    0.01%        2  io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+    20000000    0.01%        2  kotlinx.coroutines.internal.ThreadContextKt$countAll$1.invoke
+    20000000    0.01%        2  Java_sun_nio_ch_NativeThread_current
+    20000000    0.01%        2  java.nio.channels.spi.AbstractInterruptibleChannel.isOpen
+    20000000    0.01%        2  pthread_dependency_wait_np.cold.3
+    20000000    0.01%        2  java.lang.Thread.isInterrupted
+    10000000    0.01%        1  kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+    10000000    0.01%        1  kotlinx.coroutines.internal.DispatchedContinuation.takeState$kotlinx_coroutines_core
+    10000000    0.01%        1  kotlinx.coroutines.internal.DispatchedContinuation.<init>
+    10000000    0.01%        1  fstat64
+    10000000    0.01%        1  kotlinx.coroutines.Job$DefaultImpls.get
+    10000000    0.01%        1  kotlin.ranges.RangesKt___RangesKt.coerceAtMost
+    10000000    0.01%        1  kotlin.jvm.internal.Intrinsics.checkNotNull
+    10000000    0.01%        1  kotlin.coroutines.jvm.internal.ContinuationImpl.intercepted
+    10000000    0.01%        1  __unlink
+    10000000    0.01%        1  io.ktor.utils.io.ByteBufferChannel.bytesRead
+    10000000    0.01%        1  io.ktor.utils.io.ByteBufferChannel.getClosed
+    10000000    0.01%        1  io.ktor.utils.io.ByteBufferChannel.isClosedForRead
+    10000000    0.01%        1  __semwait_signal
+    10000000    0.01%        1  __open
+    10000000    0.01%        1  kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryAcquireCpuPermit
+    10000000    0.01%        1  jlong_arraycopy
+    10000000    0.01%        1  PhaseOutput::BuildOopMaps()
+    10000000    0.01%        1  PhaseIdealLoop::build_loop_late(VectorSet&, Node_List&, Node_Stack&)
+    10000000    0.01%        1  io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+    10000000    0.01%        1  PhaseIdealLoop::Dominators()
+    10000000    0.01%        1  jdk.internal.misc.ScopedMemoryAccess.copyMemoryInternal
+    10000000    0.01%        1  PhaseChaitin::remove_node_if_not_used(Block*, unsigned int, Node*, unsigned int, IndexSet*)
+    10000000    0.01%        1  kotlinx.coroutines.scheduling.CoroutineScheduler.parkedWorkersStackPush
+    10000000    0.01%        1  PhaseChaitin::elide_copy(Node*, int, Block*, Node_List&, Node_List&, bool)
+    10000000    0.01%        1  java_lang_Thread::thread(oopDesc*)
+    10000000    0.01%        1  io.ktor.utils.io.ByteBufferChannel.readSuspendImpl
+    10000000    0.01%        1  java.util.concurrent.atomic.AtomicReferenceFieldUpdater$AtomicReferenceFieldUpdaterImpl.compareAndSet
+    10000000    0.01%        1  io.ktor.utils.io.core.Buffer.setReadPosition
+    10000000    0.01%        1  io.ktor.utils.io.internal.CancellableReusableContinuation.completeSuspendBlock
+    10000000    0.01%        1  io.ktor.utils.io.internal.ObjectPoolKt.getBufferObjectPool
+    10000000    0.01%        1  java.io.RandomAccessFile$1.close
+    10000000    0.01%        1  java.nio.ByteBuffer.position
+    10000000    0.01%        1  semaphore_signal_trap
+    10000000    0.01%        1  java.lang.Object.equals
+    10000000    0.01%        1  stat$INODE64
+    10000000    0.01%        1  JavaThread::is_Java_thread() const
+    10000000    0.01%        1  G1CollectedHeap::unsafe_max_tlab_alloc(Thread*) const
+    10000000    0.01%        1  sun.nio.ch.IOUtil.readIntoNativeBuffer
+    10000000    0.01%        1  java.nio.Buffer.limit
+    10000000    0.01%        1  java.lang.invoke.VarForm.getMemberName
+    10000000    0.01%        1  sun.nio.ch.NativeThreadSet.remove
+    10000000    0.01%        1  Canonicalizer::set_constant(int)
+    10000000    0.01%        1  java.lang.Thread.interrupted
+    10000000    0.01%        1  java.lang.ref.Reference.reachabilityFence
+
