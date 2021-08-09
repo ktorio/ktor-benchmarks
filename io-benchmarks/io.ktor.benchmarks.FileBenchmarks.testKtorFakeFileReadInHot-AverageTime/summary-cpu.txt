@@ -1,0 +1,2313 @@
+--- Execution profile ---
+Total samples       : 18480
+
+--- 44181149963 ns (22.00%), 3733 samples
+  [ 0] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 36811263634 ns (18.33%), 3679 samples
+  [ 0] java.util.concurrent.ConcurrentLinkedQueue.poll
+  [ 1] io.ktor.benchmarks.dispatchers.HotLoopDispatcher.thread$lambda-0
+  [ 2] io.ktor.benchmarks.dispatchers.HotLoopDispatcher$$Lambda$35.539335468.run
+  [ 3] java.lang.Thread.run
+
+--- 29530907040 ns (14.71%), 2953 samples
+  [ 0] java.util.concurrent.ConcurrentLinkedQueue.poll
+  [ 1] io.ktor.benchmarks.dispatchers.HotLoopDispatcher.thread$lambda-0
+  [ 2] io.ktor.benchmarks.dispatchers.HotLoopDispatcher$$Lambda$35.539335468.run
+  [ 3] java.lang.Thread.run
+
+--- 27850501918 ns (13.87%), 2783 samples
+  [ 0] io.ktor.benchmarks.dispatchers.HotLoopDispatcher.getQueue
+  [ 1] io.ktor.benchmarks.dispatchers.HotLoopDispatcher.thread$lambda-0
+  [ 2] io.ktor.benchmarks.dispatchers.HotLoopDispatcher$$Lambda$35.539335468.run
+  [ 3] java.lang.Thread.run
+
+--- 8950375755 ns (4.46%), 895 samples
+  [ 0] jlong_disjoint_arraycopy
+  [ 1] java.nio.Buffer.limit
+  [ 2] java.nio.ByteBuffer.limit
+  [ 3] java.nio.MappedByteBuffer.limit
+  [ 4] java.nio.MappedByteBuffer.limit
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 8] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 9] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [10] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [11] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [12] kotlinx.coroutines.DispatchedTask.run
+  [13] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [14] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 7620426828 ns (3.79%), 525 samples
+  [ 0] read
+  [ 1] sun.nio.ch.FileDispatcherImpl.read0
+  [ 2] sun.nio.ch.FileDispatcherImpl.read
+  [ 3] sun.nio.ch.IOUtil.readIntoNativeBuffer
+  [ 4] sun.nio.ch.IOUtil.read
+  [ 5] sun.nio.ch.FileChannelImpl.read
+  [ 6] io.ktor.util.BufferViewJvmKt.read
+  [ 7] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 6620144605 ns (3.30%), 542 samples
+  [ 0] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 3340135129 ns (1.66%), 287 samples
+  [ 0] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 2950224555 ns (1.47%), 295 samples
+  [ 0] java.util.concurrent.ConcurrentLinkedQueue.poll
+  [ 1] io.ktor.benchmarks.dispatchers.HotLoopDispatcher.thread$lambda-0
+  [ 2] io.ktor.benchmarks.dispatchers.HotLoopDispatcher$$Lambda$35.539335468.run
+  [ 3] java.lang.Thread.run
+
+--- 2690311215 ns (1.34%), 269 samples
+  [ 0] io.ktor.benchmarks.dispatchers.HotLoopDispatcher.thread$lambda-0
+  [ 1] io.ktor.benchmarks.dispatchers.HotLoopDispatcher$$Lambda$35.539335468.run
+  [ 2] java.lang.Thread.run
+
+--- 1780033362 ns (0.89%), 147 samples
+  [ 0] io.ktor.util.internal.LockFreeLinkedListNode.getNext
+  [ 1] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 1690052335 ns (0.84%), 153 samples
+  [ 0] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 1120037760 ns (0.56%), 77 samples
+  [ 0] java.nio.ByteBuffer.limit
+  [ 1] java.nio.MappedByteBuffer.limit
+  [ 2] java.nio.MappedByteBuffer.limit
+  [ 3] io.ktor.utils.io.ByteBufferChannel.prepareBuffer
+  [ 4] io.ktor.utils.io.ByteBufferChannel.prepareWriteBuffer$ktor_io
+  [ 5] io.ktor.utils.io.internal.WriteSessionImpl.request
+  [ 6] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 7] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 8] kotlinx.coroutines.DispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 1110029062 ns (0.55%), 85 samples
+  [ 0] java.util.concurrent.atomic.AtomicReferenceFieldUpdater$AtomicReferenceFieldUpdaterImpl.compareAndSet
+  [ 1] io.ktor.util.internal.LockFreeLinkedListNode.markPrev
+  [ 2] io.ktor.util.internal.LockFreeLinkedListNode.helpDelete
+  [ 3] io.ktor.util.internal.LockFreeLinkedListNode.finishRemove
+  [ 4] io.ktor.util.internal.LockFreeLinkedListNode.remove
+  [ 5] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 1090043479 ns (0.54%), 74 samples
+  [ 0] java.nio.channels.spi.AbstractInterruptibleChannel.begin
+  [ 1] sun.nio.ch.FileChannelImpl.beginBlocking
+  [ 2] sun.nio.ch.FileChannelImpl.read
+  [ 3] io.ktor.util.BufferViewJvmKt.read
+  [ 4] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 5] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 6] kotlinx.coroutines.DispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 870028945 ns (0.43%), 63 samples
+  [ 0] io.ktor.utils.io.core.Buffer.setLimit
+  [ 1] io.ktor.utils.io.core.Buffer.resetForWrite
+  [ 2] io.ktor.utils.io.core.IoBuffer.resetFromContentToWrite
+  [ 3] io.ktor.utils.io.internal.WriteSessionImpl.request
+  [ 4] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 5] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 6] kotlinx.coroutines.DispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 760011623 ns (0.38%), 55 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 1] io.ktor.utils.io.ByteBufferChannel.flush
+  [ 2] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 3] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 4] kotlinx.coroutines.DispatchedTask.run
+  [ 5] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 6] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 730017655 ns (0.36%), 53 samples
+  [ 0] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [ 1] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [ 2] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 3] io.ktor.utils.io.ByteBufferChannel.flush
+  [ 4] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 5] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 6] kotlinx.coroutines.DispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 650013897 ns (0.32%), 65 samples
+  [ 0] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 1] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [ 2] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 7] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 8] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 9] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [10] kotlinx.coroutines.DispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [12] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 640035105 ns (0.32%), 64 samples
+  [ 0] kotlin.coroutines.CombinedContext.fold
+  [ 1] kotlinx.coroutines.internal.ThreadContextKt.threadContextElements
+  [ 2] kotlinx.coroutines.internal.DispatchedContinuation.<init>
+  [ 3] kotlinx.coroutines.CoroutineDispatcher.interceptContinuation
+  [ 4] kotlin.coroutines.jvm.internal.ContinuationImpl.intercepted
+  [ 5] kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt.intercepted
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readSuspendImpl
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readSuspend
+  [ 8] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 9] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [10] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [11] io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+  [12] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [13] kotlinx.coroutines.DispatchedTask.run
+  [14] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [15] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 599980381 ns (0.30%), 60 samples
+  [ 0] io.ktor.util.internal.LockFreeLinkedListNode.<init>
+  [ 1] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.<init>
+  [ 2] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher.dispatch
+  [ 3] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 4] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [ 5] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 8] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 9] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [10] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [11] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [12] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [13] kotlinx.coroutines.DispatchedTask.run
+  [14] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [15] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 580015374 ns (0.29%), 58 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.setupStateForRead
+  [ 1] io.ktor.utils.io.ByteBufferChannel.access$setupStateForRead
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 6] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 7] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 470004322 ns (0.23%), 34 samples
+  [ 0] kotlinx.coroutines.CompletionStateKt.toState$default
+  [ 1] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 2] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [ 3] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [ 4] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 5] io.ktor.utils.io.ByteBufferChannel.flush
+  [ 6] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 7] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 8] kotlinx.coroutines.DispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 450037866 ns (0.22%), 31 samples
+  [ 0] /usr/lib/x86_64-linux-gnu/libc-2.33.so
+  [ 1] sun.nio.ch.FileDispatcherImpl.read0
+  [ 2] sun.nio.ch.FileDispatcherImpl.read
+  [ 3] sun.nio.ch.IOUtil.readIntoNativeBuffer
+  [ 4] sun.nio.ch.IOUtil.read
+  [ 5] sun.nio.ch.FileChannelImpl.read
+  [ 6] io.ktor.util.BufferViewJvmKt.read
+  [ 7] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 450005225 ns (0.22%), 27 samples
+  [ 0] java.util.concurrent.atomic.AtomicIntegerFieldUpdater$AtomicIntegerFieldUpdaterImpl.accessCheck
+  [ 1] java.util.concurrent.atomic.AtomicIntegerFieldUpdater$AtomicIntegerFieldUpdaterImpl.compareAndSet
+  [ 2] io.ktor.utils.io.internal.RingBufferCapacity.tryWriteAtLeast
+  [ 3] io.ktor.utils.io.internal.WriteSessionImpl.request
+  [ 4] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 5] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 6] kotlinx.coroutines.DispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 440025021 ns (0.22%), 34 samples
+  [ 0] itable stub
+  [ 1] kotlinx.coroutines.internal.ThreadContextKt.updateThreadContext
+  [ 2] kotlinx.coroutines.DispatchedTask.run
+  [ 3] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 4] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 430012124 ns (0.21%), 43 samples
+  [ 0] kotlin.jvm.internal.Intrinsics.areEqual
+  [ 1] kotlin.coroutines.CoroutineContext$Element$DefaultImpls.get
+  [ 2] kotlinx.coroutines.Job$DefaultImpls.get
+  [ 3] kotlinx.coroutines.JobSupport.get
+  [ 4] kotlin.coroutines.CombinedContext.get
+  [ 5] kotlin.coroutines.jvm.internal.ContinuationImpl.intercepted
+  [ 6] kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt.intercepted
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readSuspendImpl
+  [ 8] io.ktor.utils.io.ByteBufferChannel.readSuspend
+  [ 9] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [10] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [11] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [12] io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+  [13] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [14] kotlinx.coroutines.DispatchedTask.run
+  [15] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [16] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 410016410 ns (0.20%), 41 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 1] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 2] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 3] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 4] kotlinx.coroutines.DispatchedTask.run
+  [ 5] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 6] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 390018136 ns (0.19%), 39 samples
+  [ 0] kotlin.coroutines.jvm.internal.ContinuationImpl.<init>
+  [ 1] kotlin.coroutines.jvm.internal.ContinuationImpl.<init>
+  [ 2] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.<init>
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 6] io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+  [ 7] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 8] kotlinx.coroutines.DispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 370013869 ns (0.18%), 37 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 1] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 4] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 5] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 6] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 7] kotlinx.coroutines.DispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 370001816 ns (0.18%), 37 samples
+  [ 0] java.util.concurrent.atomic.AtomicReferenceFieldUpdater$AtomicReferenceFieldUpdaterImpl.compareAndSet
+  [ 1] io.ktor.utils.io.ByteBufferChannel.suspensionForSize
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readSuspendImpl
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readSuspend
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 7] io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 360007254 ns (0.18%), 24 samples
+  [ 0] sun.nio.ch.FileDispatcherImpl.read0
+  [ 1] sun.nio.ch.FileDispatcherImpl.read
+  [ 2] sun.nio.ch.IOUtil.readIntoNativeBuffer
+  [ 3] sun.nio.ch.IOUtil.read
+  [ 4] sun.nio.ch.FileChannelImpl.read
+  [ 5] io.ktor.util.BufferViewJvmKt.read
+  [ 6] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 7] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 8] kotlinx.coroutines.DispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 320012030 ns (0.16%), 24 samples
+  [ 0] kotlinx.coroutines.CompletionStateKt.toState
+  [ 1] kotlinx.coroutines.CompletionStateKt.toState$default
+  [ 2] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 3] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [ 4] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [ 5] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 6] io.ktor.utils.io.ByteBufferChannel.flush
+  [ 7] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 320003488 ns (0.16%), 22 samples
+  [ 0] java.util.concurrent.atomic.AtomicReferenceFieldUpdater$AtomicReferenceFieldUpdaterImpl.compareAndSet
+  [ 1] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [ 2] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [ 3] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 4] io.ktor.utils.io.ByteBufferChannel.flush
+  [ 5] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 6] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 7] kotlinx.coroutines.DispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 300004158 ns (0.15%), 24 samples
+  [ 0] io.ktor.util.internal.LockFreeLinkedListNode.markPrev
+  [ 1] io.ktor.util.internal.LockFreeLinkedListNode.helpDelete
+  [ 2] io.ktor.util.internal.LockFreeLinkedListNode.finishRemove
+  [ 3] io.ktor.util.internal.LockFreeLinkedListNode.remove
+  [ 4] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 290001475 ns (0.14%), 29 samples
+  [ 0] io.ktor.util.internal.LockFreeLinkedListNode.<init>
+  [ 1] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.<init>
+  [ 2] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher.dispatch
+  [ 3] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 4] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [ 5] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 8] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 9] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [10] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [11] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [12] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [13] kotlinx.coroutines.DispatchedTask.run
+  [14] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [15] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 280018561 ns (0.14%), 21 samples
+  [ 0] kotlinx.coroutines.DispatchedTask.run
+  [ 1] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 280006719 ns (0.14%), 24 samples
+  [ 0] java.util.concurrent.atomic.AtomicReferenceFieldUpdater$AtomicReferenceFieldUpdaterImpl.compareAndSet
+  [ 1] io.ktor.util.internal.LockFreeLinkedListNode.markPrev
+  [ 2] io.ktor.util.internal.LockFreeLinkedListNode.correctPrev
+  [ 3] io.ktor.util.internal.LockFreeLinkedListNode.finishRemove
+  [ 4] io.ktor.util.internal.LockFreeLinkedListNode.remove
+  [ 5] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 260017078 ns (0.13%), 17 samples
+  [ 0] sun.nio.ch.NativeThread.current
+  [ 1] sun.nio.ch.NativeThreadSet.add
+  [ 2] sun.nio.ch.FileChannelImpl.read
+  [ 3] io.ktor.util.BufferViewJvmKt.read
+  [ 4] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 5] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 6] kotlinx.coroutines.DispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 259994914 ns (0.13%), 26 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.setupStateForRead
+  [ 1] io.ktor.utils.io.ByteBufferChannel.access$setupStateForRead
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 6] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 7] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 240024084 ns (0.12%), 23 samples
+  [ 0] java.util.concurrent.ConcurrentLinkedQueue.poll
+  [ 1] io.ktor.benchmarks.dispatchers.HotLoopDispatcher.thread$lambda-0
+  [ 2] io.ktor.benchmarks.dispatchers.HotLoopDispatcher$$Lambda$35.539335468.run
+  [ 3] java.lang.Thread.run
+
+--- 240013596 ns (0.12%), 17 samples
+  [ 0] io.ktor.utils.io.internal.RingBufferCapacity.flush
+  [ 1] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 2] io.ktor.utils.io.ByteBufferChannel.flush
+  [ 3] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 4] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 5] kotlinx.coroutines.DispatchedTask.run
+  [ 6] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 240005399 ns (0.12%), 18 samples
+  [ 0] io.ktor.util.internal.LockFreeLinkedListNode.correctPrev
+  [ 1] io.ktor.util.internal.LockFreeLinkedListNode.finishRemove
+  [ 2] io.ktor.util.internal.LockFreeLinkedListNode.remove
+  [ 3] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 240000090 ns (0.12%), 17 samples
+  [ 0] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 1] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [ 2] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [ 3] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 4] io.ktor.utils.io.ByteBufferChannel.flush
+  [ 5] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 6] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 7] kotlinx.coroutines.DispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 230009847 ns (0.11%), 19 samples
+  [ 0] kotlin.coroutines.jvm.internal.ContinuationImpl.getContext
+  [ 1] kotlinx.coroutines.internal.ThreadContextKt.updateThreadContext
+  [ 2] kotlinx.coroutines.DispatchedTask.run
+  [ 3] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 4] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 230008958 ns (0.11%), 13 samples
+  [ 0] kotlin.coroutines.jvm.internal.ContinuationImpl.releaseIntercepted
+  [ 1] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 2] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 3] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 4] io.ktor.utils.io.ByteBufferChannel.tryWriteSuspend$ktor_io
+  [ 5] io.ktor.utils.io.internal.WriteSessionImpl.tryAwait
+  [ 6] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 7] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 8] kotlinx.coroutines.DispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 230002515 ns (0.11%), 15 samples
+  [ 0] io.ktor.utils.io.internal.WriteSessionImpl.request
+  [ 1] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 2] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 3] kotlinx.coroutines.DispatchedTask.run
+  [ 4] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 5] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 210011250 ns (0.10%), 16 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.prepareBuffer
+  [ 1] io.ktor.utils.io.ByteBufferChannel.prepareWriteBuffer$ktor_io
+  [ 2] io.ktor.utils.io.internal.WriteSessionImpl.request
+  [ 3] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 4] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 5] kotlinx.coroutines.DispatchedTask.run
+  [ 6] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 200003809 ns (0.10%), 20 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.readSuspendImpl
+  [ 1] io.ktor.utils.io.ByteBufferChannel.readSuspend
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 8] io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+  [ 9] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [10] kotlinx.coroutines.DispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [12] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 199978060 ns (0.10%), 16 samples
+  [ 0] io.ktor.util.internal.LockFreeLinkedListNode.remove
+  [ 1] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 190009873 ns (0.09%), 19 samples
+  [ 0] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.<init>
+  [ 1] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher.dispatch
+  [ 2] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 3] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [ 4] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 8] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 9] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [10] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [11] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [12] kotlinx.coroutines.DispatchedTask.run
+  [13] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [14] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 190006390 ns (0.09%), 12 samples
+  [ 0] io.ktor.utils.io.internal.RingBufferCapacity.flush
+  [ 1] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 2] io.ktor.utils.io.ByteBufferChannel.access$flushImpl
+  [ 3] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 4] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 5] io.ktor.utils.io.ByteBufferChannel.tryWriteSuspend$ktor_io
+  [ 6] io.ktor.utils.io.internal.WriteSessionImpl.tryAwait
+  [ 7] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 180005009 ns (0.09%), 11 samples
+  [ 0] kotlin.coroutines.jvm.internal.ContinuationImpl.getContext
+  [ 1] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 2] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [ 3] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [ 4] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 5] io.ktor.utils.io.ByteBufferChannel.flush
+  [ 6] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 7] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 8] kotlinx.coroutines.DispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 170008862 ns (0.08%), 17 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 1] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 2] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 3] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 4] kotlinx.coroutines.DispatchedTask.run
+  [ 5] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 6] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 169990138 ns (0.08%), 12 samples
+  [ 0] io.ktor.util.internal.LockFreeLinkedListNode.remove
+  [ 1] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 160002840 ns (0.08%), 16 samples
+  [ 0] jdk.internal.misc.Unsafe.copyMemory
+  [ 1] java.nio.DirectByteBuffer.get
+  [ 2] java.nio.HeapByteBuffer.put
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 7] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 8] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 9] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [10] kotlinx.coroutines.DispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [12] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 150012452 ns (0.07%), 15 samples
+  [ 0] java.util.concurrent.ConcurrentLinkedQueue.poll
+  [ 1] io.ktor.benchmarks.dispatchers.HotLoopDispatcher.thread$lambda-0
+  [ 2] io.ktor.benchmarks.dispatchers.HotLoopDispatcher$$Lambda$35.539335468.run
+  [ 3] java.lang.Thread.run
+
+--- 150011306 ns (0.07%), 15 samples
+  [ 0] kotlinx.coroutines.internal.DispatchedContinuation.getContext
+  [ 1] kotlinx.coroutines.internal.DispatchedContinuation.<init>
+  [ 2] kotlinx.coroutines.CoroutineDispatcher.interceptContinuation
+  [ 3] kotlin.coroutines.jvm.internal.ContinuationImpl.intercepted
+  [ 4] kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt.intercepted
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readSuspendImpl
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readSuspend
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 8] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 9] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [10] io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+  [11] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [12] kotlinx.coroutines.DispatchedTask.run
+  [13] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [14] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 150006372 ns (0.07%), 9 samples
+  [ 0] java.nio.channels.spi.AbstractInterruptibleChannel.end
+  [ 1] sun.nio.ch.FileChannelImpl.endBlocking
+  [ 2] sun.nio.ch.FileChannelImpl.read
+  [ 3] io.ktor.util.BufferViewJvmKt.read
+  [ 4] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 5] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 6] kotlinx.coroutines.DispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 150002393 ns (0.07%), 15 samples
+  [ 0] java.lang.Object.equals
+  [ 1] kotlin.jvm.internal.Intrinsics.areEqual
+  [ 2] kotlin.coroutines.CoroutineContext$Element$DefaultImpls.get
+  [ 3] kotlinx.coroutines.Job$DefaultImpls.get
+  [ 4] kotlinx.coroutines.JobSupport.get
+  [ 5] kotlin.coroutines.CombinedContext.get
+  [ 6] kotlin.coroutines.jvm.internal.ContinuationImpl.intercepted
+  [ 7] kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt.intercepted
+  [ 8] io.ktor.utils.io.ByteBufferChannel.readSuspendImpl
+  [ 9] io.ktor.utils.io.ByteBufferChannel.readSuspend
+  [10] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [11] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [12] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [13] io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+  [14] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [15] kotlinx.coroutines.DispatchedTask.run
+  [16] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [17] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 140007135 ns (0.07%), 14 samples
+  [ 0] io.ktor.util.internal.LockFreeLinkedListNode.<init>
+  [ 1] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.<init>
+  [ 2] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher.dispatch
+  [ 3] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 4] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [ 5] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 8] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 9] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [10] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [11] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [12] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [13] kotlinx.coroutines.DispatchedTask.run
+  [14] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [15] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 140001803 ns (0.07%), 13 samples
+  [ 0] kotlinx.coroutines.DispatchedTask.run
+  [ 1] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 2] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 130006643 ns (0.06%), 10 samples
+  [ 0] itable stub
+  [ 1] kotlinx.coroutines.internal.DispatchedContinuation.takeState$kotlinx_coroutines_core
+  [ 2] kotlinx.coroutines.DispatchedTask.run
+  [ 3] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 4] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 120002841 ns (0.06%), 12 samples
+  [ 0] io.ktor.utils.io.internal.RingBufferCapacity.tryReadAtMost
+  [ 1] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 5] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 6] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 7] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 8] kotlinx.coroutines.DispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 120002533 ns (0.06%), 9 samples
+  [ 0] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 1] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 2] kotlinx.coroutines.DispatchedTask.run
+  [ 3] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 4] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 120001673 ns (0.06%), 10 samples
+  [ 0] io.ktor.utils.io.core.Buffer.setLimit
+  [ 1] io.ktor.utils.io.core.Buffer.resetForWrite
+  [ 2] io.ktor.utils.io.core.IoBuffer.resetFromContentToWrite
+  [ 3] io.ktor.utils.io.internal.WriteSessionImpl.request
+  [ 4] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 5] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 6] kotlinx.coroutines.DispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 110006127 ns (0.05%), 7 samples
+  [ 0] io.ktor.util.internal.LockFreeLinkedListNode.finishRemove
+  [ 1] io.ktor.util.internal.LockFreeLinkedListNode.remove
+  [ 2] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 110005855 ns (0.05%), 7 samples
+  [ 0] io.ktor.util.internal.LockFreeLinkedListNode.helpDelete
+  [ 1] io.ktor.util.internal.LockFreeLinkedListNode.finishRemove
+  [ 2] io.ktor.util.internal.LockFreeLinkedListNode.remove
+  [ 3] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 100009940 ns (0.05%), 10 samples
+  [ 0] java.lang.Integer.valueOf
+  [ 1] kotlinx.coroutines.internal.ThreadContextKt.threadContextElements
+  [ 2] kotlinx.coroutines.internal.DispatchedContinuation.<init>
+  [ 3] kotlinx.coroutines.CoroutineDispatcher.interceptContinuation
+  [ 4] kotlin.coroutines.jvm.internal.ContinuationImpl.intercepted
+  [ 5] kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt.intercepted
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readSuspendImpl
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readSuspend
+  [ 8] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 9] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [10] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [11] io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+  [12] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [13] kotlinx.coroutines.DispatchedTask.run
+  [14] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [15] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 100005303 ns (0.05%), 4 samples
+  [ 0] io.ktor.utils.io.core.IoBuffer.resetFromContentToWrite
+  [ 1] io.ktor.utils.io.internal.WriteSessionImpl.request
+  [ 2] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 3] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 4] kotlinx.coroutines.DispatchedTask.run
+  [ 5] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 6] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 100003306 ns (0.05%), 10 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.carryIndex
+  [ 1] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 6] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 7] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 99997170 ns (0.05%), 10 samples
+  [ 0] java.nio.HeapByteBuffer.put
+  [ 1] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 5] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 6] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 7] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 8] kotlinx.coroutines.DispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 90004105 ns (0.04%), 9 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.setupStateForRead
+  [ 1] io.ktor.utils.io.ByteBufferChannel.access$setupStateForRead
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 6] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 7] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 90003790 ns (0.04%), 9 samples
+  [ 0] io.ktor.utils.io.internal.CancellableReusableContinuation$JobRelation.<init>
+  [ 1] io.ktor.utils.io.internal.CancellableReusableContinuation.parent
+  [ 2] io.ktor.utils.io.internal.CancellableReusableContinuation.completeSuspendBlock
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readSuspendImpl
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readSuspend
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 8] io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+  [ 9] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [10] kotlinx.coroutines.DispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [12] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 90001160 ns (0.04%), 9 samples
+  [ 0] java.lang.Object.equals
+  [ 1] kotlin.jvm.internal.Intrinsics.areEqual
+  [ 2] kotlin.coroutines.CoroutineContext$Element$DefaultImpls.get
+  [ 3] kotlinx.coroutines.Job$DefaultImpls.get
+  [ 4] kotlinx.coroutines.JobSupport.get
+  [ 5] kotlin.coroutines.CombinedContext.get
+  [ 6] kotlin.coroutines.jvm.internal.ContinuationImpl.intercepted
+  [ 7] kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt.intercepted
+  [ 8] io.ktor.utils.io.ByteBufferChannel.readSuspendImpl
+  [ 9] io.ktor.utils.io.ByteBufferChannel.readSuspend
+  [10] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [11] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [12] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [13] io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+  [14] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [15] kotlinx.coroutines.DispatchedTask.run
+  [16] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [17] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 89999422 ns (0.04%), 8 samples
+  [ 0] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [ 1] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [ 2] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 3] io.ktor.utils.io.ByteBufferChannel.flush
+  [ 4] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 5] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 6] kotlinx.coroutines.DispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 80012931 ns (0.04%), 8 samples
+  [ 0] io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+  [ 1] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 2] kotlinx.coroutines.DispatchedTask.run
+  [ 3] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 4] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 80011111 ns (0.04%), 8 samples
+  [ 0] io.ktor.utils.io.core.ByteOrder.getNioOrder
+  [ 1] io.ktor.utils.io.ByteBufferChannel.prepareBuffer
+  [ 2] io.ktor.utils.io.ByteBufferChannel.setupStateForRead
+  [ 3] io.ktor.utils.io.ByteBufferChannel.access$setupStateForRead
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 8] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 9] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [10] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [11] kotlinx.coroutines.DispatchedTask.run
+  [12] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [13] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 80005341 ns (0.04%), 4 samples
+  [ 0] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 1] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 2] kotlinx.coroutines.DispatchedTask.run
+  [ 3] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 4] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 79999702 ns (0.04%), 7 samples
+  [ 0] io.ktor.utils.io.internal.RingBufferCapacity.flush
+  [ 1] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 2] io.ktor.utils.io.ByteBufferChannel.flush
+  [ 3] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 4] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 5] kotlinx.coroutines.DispatchedTask.run
+  [ 6] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 79996041 ns (0.04%), 7 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.getClosed
+  [ 1] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [ 2] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 3] io.ktor.utils.io.ByteBufferChannel.access$flushImpl
+  [ 4] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 5] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 6] io.ktor.utils.io.ByteBufferChannel.tryWriteSuspend$ktor_io
+  [ 7] io.ktor.utils.io.internal.WriteSessionImpl.tryAwait
+  [ 8] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 9] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [10] kotlinx.coroutines.DispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [12] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 79994971 ns (0.04%), 7 samples
+  [ 0] io.ktor.util.internal.LockFreeLinkedListNode.removed
+  [ 1] io.ktor.util.internal.LockFreeLinkedListNode.remove
+  [ 2] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 70008703 ns (0.03%), 7 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.readSuspend
+  [ 1] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 7] io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 70007971 ns (0.03%), 7 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 1] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 4] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 5] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 6] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 7] kotlinx.coroutines.DispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 70004310 ns (0.03%), 5 samples
+  [ 0] io.ktor.util.internal.LockFreeLinkedListNode.getNext
+  [ 1] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 70004296 ns (0.03%), 4 samples
+  [ 0] sun.nio.ch.NativeThread.current
+  [ 1] sun.nio.ch.NativeThreadSet.add
+  [ 2] sun.nio.ch.FileChannelImpl.read
+  [ 3] io.ktor.util.BufferViewJvmKt.read
+  [ 4] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 5] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 6] kotlinx.coroutines.DispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 70003691 ns (0.03%), 7 samples
+  [ 0] kotlin.coroutines.CombinedContext.get
+  [ 1] kotlin.coroutines.jvm.internal.ContinuationImpl.releaseIntercepted
+  [ 2] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 3] kotlinx.coroutines.DispatchedTask.run
+  [ 4] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 5] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 70003576 ns (0.03%), 7 samples
+  [ 0] kotlinx.coroutines.internal.DispatchedContinuation.<init>
+  [ 1] kotlinx.coroutines.CoroutineDispatcher.interceptContinuation
+  [ 2] kotlin.coroutines.jvm.internal.ContinuationImpl.intercepted
+  [ 3] kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt.intercepted
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readSuspendImpl
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readSuspend
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 8] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 9] io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+  [10] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [11] kotlinx.coroutines.DispatchedTask.run
+  [12] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [13] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 70002319 ns (0.03%), 5 samples
+  [ 0] Java_sun_nio_ch_FileDispatcherImpl_read0
+  [ 1] sun.nio.ch.FileDispatcherImpl.read0
+  [ 2] sun.nio.ch.FileDispatcherImpl.read
+  [ 3] sun.nio.ch.IOUtil.readIntoNativeBuffer
+  [ 4] sun.nio.ch.IOUtil.read
+  [ 5] sun.nio.ch.FileChannelImpl.read
+  [ 6] io.ktor.util.BufferViewJvmKt.read
+  [ 7] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 70002202 ns (0.03%), 2 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.access$flushImpl
+  [ 1] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 2] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 3] io.ktor.utils.io.ByteBufferChannel.tryWriteSuspend$ktor_io
+  [ 4] io.ktor.utils.io.internal.WriteSessionImpl.tryAwait
+  [ 5] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 6] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 7] kotlinx.coroutines.DispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 69999925 ns (0.03%), 4 samples
+  [ 0] io.ktor.util.internal.LockFreeLinkedListNode.finishRemove
+  [ 1] io.ktor.util.internal.LockFreeLinkedListNode.remove
+  [ 2] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 69999848 ns (0.03%), 6 samples
+  [ 0] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 1] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 60007181 ns (0.03%), 6 samples
+  [ 0] kotlinx.coroutines.internal.DispatchedContinuation.takeState$kotlinx_coroutines_core
+  [ 1] kotlinx.coroutines.DispatchedTask.run
+  [ 2] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 3] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 60006531 ns (0.03%), 6 samples
+  [ 0] io.ktor.benchmarks.dispatchers.HotLoopDispatcher.thread$lambda-0
+  [ 1] io.ktor.benchmarks.dispatchers.HotLoopDispatcher$$Lambda$35.539335468.run
+  [ 2] java.lang.Thread.run
+
+--- 60001920 ns (0.03%), 3 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.getState
+  [ 1] io.ktor.utils.io.ByteBufferChannel.writeSuspendPredicate
+  [ 2] io.ktor.utils.io.ByteBufferChannel.access$writeSuspendPredicate
+  [ 3] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 4] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 5] io.ktor.utils.io.ByteBufferChannel.tryWriteSuspend$ktor_io
+  [ 6] io.ktor.utils.io.internal.WriteSessionImpl.tryAwait
+  [ 7] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 60001903 ns (0.03%), 2 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 1] io.ktor.utils.io.ByteBufferChannel.flush
+  [ 2] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 3] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 4] kotlinx.coroutines.DispatchedTask.run
+  [ 5] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 6] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 60000421 ns (0.03%), 6 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 1] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 3] io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+  [ 4] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 5] kotlinx.coroutines.DispatchedTask.run
+  [ 6] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 59997593 ns (0.03%), 4 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.getClosed
+  [ 1] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [ 2] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 3] io.ktor.utils.io.ByteBufferChannel.flush
+  [ 4] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 5] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 6] kotlinx.coroutines.DispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 50002591 ns (0.02%), 3 samples
+  [ 0] /usr/lib/jvm/java-11-openjdk-amd64/lib/libnio.so
+  [ 1] sun.nio.ch.FileDispatcherImpl.read0
+  [ 2] sun.nio.ch.FileDispatcherImpl.read
+  [ 3] sun.nio.ch.IOUtil.readIntoNativeBuffer
+  [ 4] sun.nio.ch.IOUtil.read
+  [ 5] sun.nio.ch.FileChannelImpl.read
+  [ 6] io.ktor.util.BufferViewJvmKt.read
+  [ 7] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 50002381 ns (0.02%), 5 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.readSuspendImpl
+  [ 1] io.ktor.utils.io.ByteBufferChannel.readSuspend
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 8] io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+  [ 9] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [10] kotlinx.coroutines.DispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [12] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 50002247 ns (0.02%), 5 samples
+  [ 0] kotlin.coroutines.CombinedContext.fold
+  [ 1] kotlinx.coroutines.internal.ThreadContextKt.threadContextElements
+  [ 2] kotlinx.coroutines.internal.DispatchedContinuation.<init>
+  [ 3] kotlinx.coroutines.CoroutineDispatcher.interceptContinuation
+  [ 4] kotlin.coroutines.jvm.internal.ContinuationImpl.intercepted
+  [ 5] kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt.intercepted
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readSuspendImpl
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readSuspend
+  [ 8] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 9] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [10] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [11] io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+  [12] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [13] kotlinx.coroutines.DispatchedTask.run
+  [14] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [15] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 50001614 ns (0.02%), 2 samples
+  [ 0] io.ktor.util.internal.LockFreeLinkedListNode.correctPrev
+  [ 1] io.ktor.util.internal.LockFreeLinkedListNode.finishRemove
+  [ 2] io.ktor.util.internal.LockFreeLinkedListNode.remove
+  [ 3] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 50001566 ns (0.02%), 5 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.carryIndex
+  [ 1] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 6] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 7] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 50001321 ns (0.02%), 5 samples
+  [ 0] kotlin.coroutines.jvm.internal.ContinuationImpl.intercepted
+  [ 1] kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt.intercepted
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readSuspendImpl
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readSuspend
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 7] io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 50000857 ns (0.02%), 5 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.getClosed
+  [ 1] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [ 2] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 3] io.ktor.utils.io.ByteBufferChannel.flush
+  [ 4] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 5] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 6] kotlinx.coroutines.DispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 40024302 ns (0.02%), 4 samples
+  [ 0] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 1] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 2] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 3] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 4] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 5] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 6] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 7] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 8] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 9] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [10] start_thread
+
+--- 40005131 ns (0.02%), 4 samples
+  [ 0] kotlinx.coroutines.internal.DispatchedContinuation.takeState$kotlinx_coroutines_core
+  [ 1] kotlinx.coroutines.DispatchedTask.run
+  [ 2] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 3] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 40004394 ns (0.02%), 4 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 1] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 4] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 5] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 6] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 7] kotlinx.coroutines.DispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 40003407 ns (0.02%), 4 samples
+  [ 0] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 40003024 ns (0.02%), 4 samples
+  [ 0] kotlinx.coroutines.internal.DispatchedContinuation.<init>
+  [ 1] kotlinx.coroutines.CoroutineDispatcher.interceptContinuation
+  [ 2] kotlin.coroutines.jvm.internal.ContinuationImpl.intercepted
+  [ 3] kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt.intercepted
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readSuspendImpl
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readSuspend
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 8] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 9] io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+  [10] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [11] kotlinx.coroutines.DispatchedTask.run
+  [12] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [13] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 40002618 ns (0.02%), 4 samples
+  [ 0] java.nio.MappedByteBuffer.limit
+  [ 1] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 5] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 6] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 7] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 8] kotlinx.coroutines.DispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 40001560 ns (0.02%), 2 samples
+  [ 0] sun.nio.ch.IOUtil.read
+  [ 1] sun.nio.ch.FileChannelImpl.read
+  [ 2] io.ktor.util.BufferViewJvmKt.read
+  [ 3] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 4] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 5] kotlinx.coroutines.DispatchedTask.run
+  [ 6] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 40001229 ns (0.02%), 3 samples
+  [ 0] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 1] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [ 2] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [ 3] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 4] io.ktor.utils.io.ByteBufferChannel.flush
+  [ 5] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 6] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 7] kotlinx.coroutines.DispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 40000869 ns (0.02%), 3 samples
+  [ 0] kotlinx.coroutines.DispatchedTask.run
+  [ 1] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 2] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 40000767 ns (0.02%), 4 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 1] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 3] io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+  [ 4] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 5] kotlinx.coroutines.DispatchedTask.run
+  [ 6] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 40000712 ns (0.02%), 4 samples
+  [ 0] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 1] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 2] kotlinx.coroutines.DispatchedTask.run
+  [ 3] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 4] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 40000690 ns (0.02%), 2 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.getState
+  [ 1] io.ktor.utils.io.ByteBufferChannel.writeSuspendPredicate
+  [ 2] io.ktor.utils.io.ByteBufferChannel.access$writeSuspendPredicate
+  [ 3] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 4] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 5] io.ktor.utils.io.ByteBufferChannel.tryWriteSuspend$ktor_io
+  [ 6] io.ktor.utils.io.internal.WriteSessionImpl.tryAwait
+  [ 7] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 40000596 ns (0.02%), 4 samples
+  [ 0] itable stub
+  [ 1] kotlinx.coroutines.DispatchedTask.run
+  [ 2] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 3] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 40000406 ns (0.02%), 2 samples
+  [ 0] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [ 1] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [ 2] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 3] io.ktor.utils.io.ByteBufferChannel.flush
+  [ 4] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 5] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 6] kotlinx.coroutines.DispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 39999992 ns (0.02%), 2 samples
+  [ 0] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 1] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [ 2] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [ 3] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 4] io.ktor.utils.io.ByteBufferChannel.flush
+  [ 5] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 6] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 7] kotlinx.coroutines.DispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 39999985 ns (0.02%), 4 samples
+  [ 0] io.ktor.util.internal.LockFreeLinkedListNode.markPrev
+  [ 1] io.ktor.util.internal.LockFreeLinkedListNode.helpDelete
+
+--- 39999445 ns (0.02%), 4 samples
+  [ 0] kotlin.coroutines.jvm.internal.ContinuationImpl.getContext
+  [ 1] kotlinx.coroutines.internal.DispatchedContinuation.takeState$kotlinx_coroutines_core
+  [ 2] kotlinx.coroutines.DispatchedTask.run
+  [ 3] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 4] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 39998619 ns (0.02%), 4 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.getState
+  [ 1] io.ktor.utils.io.ByteBufferChannel.access$getState
+  [ 2] io.ktor.utils.io.ByteBufferChannel.suspensionForSize
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readSuspendImpl
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readSuspend
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 8] io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+  [ 9] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [10] kotlinx.coroutines.DispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [12] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 30022984 ns (0.01%), 3 samples
+  [ 0] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 1] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 2] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 3] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 4] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 5] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 6] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 7] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 8] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 9] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [10] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [11] start_thread
+
+--- 30009967 ns (0.01%), 2 samples
+  [ 0] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 1] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 2] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 3] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 4] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 5] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 6] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 7] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 8] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 9] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [10] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [11] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [12] start_thread
+
+--- 30008001 ns (0.01%), 3 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.readSuspendImpl
+  [ 1] io.ktor.utils.io.ByteBufferChannel.readSuspend
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 8] io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+  [ 9] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [10] kotlinx.coroutines.DispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [12] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 30004233 ns (0.01%), 3 samples
+  [ 0] kotlinx.coroutines.internal.DispatchedContinuation.<init>
+  [ 1] kotlinx.coroutines.CoroutineDispatcher.interceptContinuation
+  [ 2] kotlin.coroutines.jvm.internal.ContinuationImpl.intercepted
+  [ 3] kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt.intercepted
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readSuspendImpl
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readSuspend
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 8] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 9] io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+  [10] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [11] kotlinx.coroutines.DispatchedTask.run
+  [12] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [13] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 30004206 ns (0.01%), 2 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 1] io.ktor.utils.io.ByteBufferChannel.access$flushImpl
+  [ 2] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 3] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 4] io.ktor.utils.io.ByteBufferChannel.tryWriteSuspend$ktor_io
+  [ 5] io.ktor.utils.io.internal.WriteSessionImpl.tryAwait
+  [ 6] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 7] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 8] kotlinx.coroutines.DispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 30003607 ns (0.01%), 3 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.getState
+  [ 1] io.ktor.utils.io.ByteBufferChannel.access$getState
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readSuspendImpl
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readSuspend
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 5] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 6] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 7] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 8] kotlinx.coroutines.DispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 30003571 ns (0.01%), 1 sample
+  [ 0] sun.nio.ch.FileChannelImpl.read
+  [ 1] io.ktor.util.BufferViewJvmKt.read
+  [ 2] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 3] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 4] kotlinx.coroutines.DispatchedTask.run
+  [ 5] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 6] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 30003194 ns (0.01%), 3 samples
+  [ 0] vtable stub
+  [ 1] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 2] kotlinx.coroutines.DispatchedTask.run
+  [ 3] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 4] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 30002125 ns (0.01%), 3 samples
+  [ 0] java.util.concurrent.atomic.AtomicIntegerFieldUpdater$AtomicIntegerFieldUpdaterImpl.getAndAdd
+  [ 1] java.util.concurrent.atomic.AtomicIntegerFieldUpdater$AtomicIntegerFieldUpdaterImpl.addAndGet
+  [ 2] io.ktor.utils.io.internal.RingBufferCapacity.flush
+  [ 3] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 4] io.ktor.utils.io.ByteBufferChannel.flush
+  [ 5] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 6] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 7] kotlinx.coroutines.DispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 30002058 ns (0.01%), 3 samples
+  [ 0] kotlin.coroutines.CoroutineContext$Element$DefaultImpls.get
+  [ 1] kotlinx.coroutines.Job$DefaultImpls.get
+  [ 2] kotlinx.coroutines.JobSupport.get
+  [ 3] kotlin.coroutines.CombinedContext.get
+  [ 4] kotlin.coroutines.jvm.internal.ContinuationImpl.intercepted
+  [ 5] kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt.intercepted
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readSuspendImpl
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readSuspend
+  [ 8] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 9] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [10] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [11] io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+  [12] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [13] kotlinx.coroutines.DispatchedTask.run
+  [14] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [15] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 30001984 ns (0.01%), 3 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.getClosed
+  [ 1] io.ktor.utils.io.ByteBufferChannel.setupStateForRead
+  [ 2] io.ktor.utils.io.ByteBufferChannel.access$setupStateForRead
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 7] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 8] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 9] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [10] kotlinx.coroutines.DispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [12] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 30001881 ns (0.01%), 2 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.writeSuspendPredicate
+  [ 1] io.ktor.utils.io.ByteBufferChannel.access$writeSuspendPredicate
+  [ 2] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 3] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 4] io.ktor.utils.io.ByteBufferChannel.tryWriteSuspend$ktor_io
+  [ 5] io.ktor.utils.io.internal.WriteSessionImpl.tryAwait
+  [ 6] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 7] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 8] kotlinx.coroutines.DispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 30001866 ns (0.01%), 3 samples
+  [ 0] java.nio.Buffer.limit
+  [ 1] java.nio.ByteBuffer.limit
+  [ 2] java.nio.MappedByteBuffer.limit
+  [ 3] java.nio.MappedByteBuffer.limit
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 8] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 9] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [10] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [11] kotlinx.coroutines.DispatchedTask.run
+  [12] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [13] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 30001676 ns (0.01%), 3 samples
+  [ 0] sun.nio.ch.FileDispatcherImpl.read0
+  [ 1] sun.nio.ch.IOUtil.readIntoNativeBuffer
+  [ 2] sun.nio.ch.IOUtil.read
+  [ 3] sun.nio.ch.FileChannelImpl.read
+  [ 4] io.ktor.util.BufferViewJvmKt.read
+  [ 5] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 6] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 7] kotlinx.coroutines.DispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 30001529 ns (0.01%), 3 samples
+  [ 0] io.ktor.utils.io.core.IoBuffer.resetFromContentToWrite
+  [ 1] io.ktor.utils.io.internal.WriteSessionImpl.request
+  [ 2] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 3] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 4] kotlinx.coroutines.DispatchedTask.run
+  [ 5] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 6] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 30001443 ns (0.01%), 3 samples
+  [ 0] io.ktor.utils.io.internal.RingBufferCapacity.tryWriteAtLeast
+  [ 1] io.ktor.utils.io.internal.WriteSessionImpl.request
+  [ 2] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 3] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 4] kotlinx.coroutines.DispatchedTask.run
+  [ 5] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 6] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 30001394 ns (0.01%), 1 sample
+  [ 0] io.ktor.utils.io.ByteBufferChannel.writeSuspendPredicate
+  [ 1] io.ktor.utils.io.ByteBufferChannel.access$writeSuspendPredicate
+  [ 2] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 3] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 4] io.ktor.utils.io.ByteBufferChannel.tryWriteSuspend$ktor_io
+  [ 5] io.ktor.utils.io.internal.WriteSessionImpl.tryAwait
+  [ 6] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 7] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 8] kotlinx.coroutines.DispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 30001056 ns (0.01%), 3 samples
+  [ 0] kotlin.coroutines.jvm.internal.ContinuationImpl.releaseIntercepted
+  [ 1] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 2] kotlinx.coroutines.DispatchedTask.run
+  [ 3] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 4] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 30001039 ns (0.01%), 1 sample
+  [ 0] kotlin.ranges.RangesKt___RangesKt.coerceAtMost
+  [ 1] io.ktor.utils.io.ByteBufferChannel.prepareBuffer
+  [ 2] io.ktor.utils.io.ByteBufferChannel.prepareWriteBuffer$ktor_io
+  [ 3] io.ktor.utils.io.internal.WriteSessionImpl.request
+  [ 4] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 5] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 6] kotlinx.coroutines.DispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 30001019 ns (0.01%), 2 samples
+  [ 0] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 1] kotlinx.coroutines.DispatchedTask.run
+  [ 2] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 3] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 30000992 ns (0.01%), 1 sample
+  [ 0] java.nio.channels.spi.AbstractInterruptibleChannel.end
+  [ 1] sun.nio.ch.FileChannelImpl.endBlocking
+  [ 2] sun.nio.ch.FileChannelImpl.read
+  [ 3] io.ktor.util.BufferViewJvmKt.read
+  [ 4] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 5] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 6] kotlinx.coroutines.DispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 30000726 ns (0.01%), 2 samples
+  [ 0] java.util.concurrent.atomic.AtomicReferenceFieldUpdater$AtomicReferenceFieldUpdaterImpl.accessCheck
+  [ 1] java.util.concurrent.atomic.AtomicReferenceFieldUpdater$AtomicReferenceFieldUpdaterImpl.getAndSet
+  [ 2] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [ 3] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 4] io.ktor.utils.io.ByteBufferChannel.flush
+  [ 5] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 6] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 7] kotlinx.coroutines.DispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 30000660 ns (0.01%), 3 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 1] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 2] io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+  [ 3] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 4] kotlinx.coroutines.DispatchedTask.run
+  [ 5] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 6] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 30000637 ns (0.01%), 3 samples
+  [ 0] kotlinx.coroutines.internal.DispatchedContinuation.<init>
+  [ 1] kotlinx.coroutines.CoroutineDispatcher.interceptContinuation
+  [ 2] kotlin.coroutines.jvm.internal.ContinuationImpl.intercepted
+  [ 3] kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt.intercepted
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readSuspendImpl
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readSuspend
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 8] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 9] io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+  [10] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [11] kotlinx.coroutines.DispatchedTask.run
+  [12] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [13] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 30000621 ns (0.01%), 3 samples
+  [ 0] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 1] kotlinx.coroutines.DispatchedTask.run
+  [ 2] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 3] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 30000619 ns (0.01%), 3 samples
+  [ 0] io.ktor.util.internal.LockFreeLinkedListNode.correctPrev
+  [ 1] io.ktor.util.internal.LockFreeLinkedListNode.finishRemove
+  [ 2] io.ktor.util.internal.LockFreeLinkedListNode.remove
+  [ 3] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 30000327 ns (0.01%), 2 samples
+  [ 0] java.nio.Buffer.limit
+  [ 1] java.nio.ByteBuffer.limit
+  [ 2] java.nio.MappedByteBuffer.limit
+  [ 3] java.nio.MappedByteBuffer.limit
+  [ 4] io.ktor.utils.io.ByteBufferChannel.prepareBuffer
+  [ 5] io.ktor.utils.io.ByteBufferChannel.prepareWriteBuffer$ktor_io
+  [ 6] io.ktor.utils.io.internal.WriteSessionImpl.request
+  [ 7] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 30000291 ns (0.01%), 1 sample
+  [ 0] java.util.concurrent.atomic.AtomicIntegerFieldUpdater$AtomicIntegerFieldUpdaterImpl.getAndSet
+  [ 1] io.ktor.utils.io.internal.RingBufferCapacity.flush
+  [ 2] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 3] io.ktor.utils.io.ByteBufferChannel.flush
+  [ 4] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 5] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 6] kotlinx.coroutines.DispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 29999954 ns (0.01%), 3 samples
+  [ 0] kotlinx.coroutines.DispatchedTask.run
+  [ 1] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 2] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 29999831 ns (0.01%), 2 samples
+  [ 0] io.ktor.util.internal.LockFreeLinkedListNode.correctPrev
+  [ 1] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 2] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 29999697 ns (0.01%), 3 samples
+  [ 0] kotlinx.coroutines.DispatchedTask.run
+  [ 1] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 2] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 29999033 ns (0.01%), 3 samples
+  [ 0] kotlinx.coroutines.JobSupport.getKey
+  [ 1] kotlin.coroutines.CoroutineContext$Element$DefaultImpls.get
+  [ 2] kotlinx.coroutines.Job$DefaultImpls.get
+  [ 3] kotlinx.coroutines.JobSupport.get
+  [ 4] kotlin.coroutines.CombinedContext.get
+  [ 5] io.ktor.utils.io.internal.CancellableReusableContinuation.parent
+  [ 6] io.ktor.utils.io.internal.CancellableReusableContinuation.completeSuspendBlock
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readSuspendImpl
+  [ 8] io.ktor.utils.io.ByteBufferChannel.readSuspend
+  [ 9] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [10] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [11] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [12] io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+  [13] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [14] kotlinx.coroutines.DispatchedTask.run
+  [15] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [16] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 29999019 ns (0.01%), 2 samples
+  [ 0] kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt.intercepted
+  [ 1] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 2] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 3] io.ktor.utils.io.ByteBufferChannel.tryWriteSuspend$ktor_io
+  [ 4] io.ktor.utils.io.internal.WriteSessionImpl.tryAwait
+  [ 5] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 6] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 7] kotlinx.coroutines.DispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 29998726 ns (0.01%), 3 samples
+  [ 0] io.ktor.util.internal.LockFreeLinkedListNode.helpDelete
+  [ 1] io.ktor.util.internal.LockFreeLinkedListNode.finishRemove
+  [ 2] io.ktor.util.internal.LockFreeLinkedListNode.remove
+  [ 3] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 29998570 ns (0.01%), 2 samples
+  [ 0] sun.nio.ch.FileChannelImpl.read
+  [ 1] java.nio.ByteBuffer.limit
+  [ 2] java.nio.MappedByteBuffer.limit
+  [ 3] java.nio.MappedByteBuffer.limit
+  [ 4] io.ktor.utils.io.ByteBufferChannel.prepareBuffer
+  [ 5] io.ktor.utils.io.ByteBufferChannel.prepareWriteBuffer$ktor_io
+  [ 6] io.ktor.utils.io.internal.WriteSessionImpl.request
+  [ 7] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 29998464 ns (0.01%), 2 samples
+  [ 0] kotlin.jvm.internal.Intrinsics.checkNotNullParameter
+  [ 1] io.ktor.utils.io.ByteBufferChannel.prepareWriteBuffer$ktor_io
+  [ 2] io.ktor.utils.io.internal.WriteSessionImpl.request
+  [ 3] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 4] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 5] kotlinx.coroutines.DispatchedTask.run
+  [ 6] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 29998463 ns (0.01%), 3 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.prepareBuffer
+  [ 1] io.ktor.utils.io.ByteBufferChannel.prepareWriteBuffer$ktor_io
+  [ 2] io.ktor.utils.io.internal.WriteSessionImpl.request
+  [ 3] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 4] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 5] kotlinx.coroutines.DispatchedTask.run
+  [ 6] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 29998373 ns (0.01%), 3 samples
+  [ 0] kotlinx.coroutines.DispatchedTask.run
+  [ 1] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 2] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 29996691 ns (0.01%), 3 samples
+  [ 0] io.ktor.util.internal.LockFreeLinkedListNode.finishRemove
+  [ 1] io.ktor.util.internal.LockFreeLinkedListNode.remove
+  [ 2] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20006264 ns (0.01%), 2 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.getState
+  [ 1] io.ktor.utils.io.ByteBufferChannel.access$getState
+  [ 2] io.ktor.utils.io.ByteBufferChannel.suspensionForSize
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readSuspendImpl
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readSuspend
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 8] io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+  [ 9] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [10] kotlinx.coroutines.DispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [12] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20005163 ns (0.01%), 2 samples
+  [ 0] io.ktor.utils.io.core.IoBuffer.resetFromContentToWrite
+  [ 1] io.ktor.utils.io.internal.WriteSessionImpl.request
+  [ 2] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 3] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 4] kotlinx.coroutines.DispatchedTask.run
+  [ 5] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 6] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20004892 ns (0.01%), 2 samples
+  [ 0] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 1] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 2] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 3] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 4] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 5] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 6] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 7] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 8] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 9] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [10] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [11] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [12] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [13] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [14] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [15] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [16] start_thread
+
+--- 20004879 ns (0.01%), 2 samples
+  [ 0] unsafe_arraycopy
+  [ 1] java.nio.Buffer.limit
+  [ 2] java.nio.ByteBuffer.limit
+  [ 3] java.nio.MappedByteBuffer.limit
+  [ 4] java.nio.MappedByteBuffer.limit
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 8] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 9] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [10] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [11] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [12] kotlinx.coroutines.DispatchedTask.run
+  [13] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [14] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20003837 ns (0.01%), 2 samples
+  [ 0] java.nio.Buffer.limit
+  [ 1] java.nio.ByteBuffer.limit
+  [ 2] java.nio.MappedByteBuffer.limit
+  [ 3] java.nio.MappedByteBuffer.limit
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 8] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 9] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [10] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [11] kotlinx.coroutines.DispatchedTask.run
+  [12] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [13] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20003802 ns (0.01%), 2 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 1] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 4] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 5] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 6] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 7] kotlinx.coroutines.DispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20002491 ns (0.01%), 2 samples
+  [ 0] io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+  [ 1] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 2] kotlinx.coroutines.DispatchedTask.run
+  [ 3] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 4] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20002250 ns (0.01%), 2 samples
+  [ 0] io.ktor.util.internal.LockFreeLinkedListNode.correctPrev
+  [ 1] io.ktor.util.internal.LockFreeLinkedListNode.finishRemove
+  [ 2] io.ktor.util.internal.LockFreeLinkedListNode.remove
+  [ 3] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20002196 ns (0.01%), 2 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.setupStateForRead
+  [ 1] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 4] io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+  [ 5] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 6] kotlinx.coroutines.DispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20002055 ns (0.01%), 1 sample
+  [ 0] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 1] JVM_FillInStackTrace
+  [ 2] Java_java_lang_Throwable_fillInStackTrace
+  [ 3] java.lang.Throwable.fillInStackTrace
+  [ 4] java.lang.Throwable.fillInStackTrace
+  [ 5] java.lang.Throwable.<init>
+  [ 6] java.lang.Exception.<init>
+  [ 7] java.lang.RuntimeException.<init>
+  [ 8] java.lang.IllegalStateException.<init>
+  [ 9] java.util.concurrent.CancellationException.<init>
+  [10] io.ktor.utils.io.ClosedWriteChannelException.<init>
+  [11] io.ktor.utils.io.ByteBufferChannel.close
+  [12] io.ktor.utils.io.CoroutinesKt$launchChannel$1.invoke
+  [13] io.ktor.utils.io.CoroutinesKt$launchChannel$1.invoke
+  [14] kotlinx.coroutines.InvokeOnCompletion.invoke
+  [15] kotlinx.coroutines.JobSupport.notifyCompletion
+  [16] kotlinx.coroutines.JobSupport.completeStateFinalization
+  [17] kotlinx.coroutines.JobSupport.finalizeFinishingState
+  [18] kotlinx.coroutines.JobSupport.tryMakeCompletingSlowPath
+  [19] kotlinx.coroutines.JobSupport.tryMakeCompleting
+  [20] kotlinx.coroutines.JobSupport.makeCompletingOnce$kotlinx_coroutines_core
+  [21] kotlinx.coroutines.AbstractCoroutine.resumeWith
+  [22] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [23] kotlinx.coroutines.DispatchedTask.run
+  [24] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [25] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20002006 ns (0.01%), 2 samples
+  [ 0] java.nio.Buffer.position
+  [ 1] java.nio.ByteBuffer.position
+  [ 2] java.nio.MappedByteBuffer.position
+  [ 3] java.nio.DirectByteBuffer.get
+  [ 4] java.nio.HeapByteBuffer.put
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 7] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 8] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 9] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [10] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [11] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [12] kotlinx.coroutines.DispatchedTask.run
+  [13] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [14] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20001878 ns (0.01%), 1 sample
+  [ 0] kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt.intercepted
+  [ 1] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 2] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 3] io.ktor.utils.io.ByteBufferChannel.tryWriteSuspend$ktor_io
+  [ 4] io.ktor.utils.io.internal.WriteSessionImpl.tryAwait
+  [ 5] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 6] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 7] kotlinx.coroutines.DispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20001845 ns (0.01%), 2 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.setupStateForRead
+  [ 1] io.ktor.utils.io.ByteBufferChannel.access$setupStateForRead
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 5] io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+  [ 6] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 7] kotlinx.coroutines.DispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20001702 ns (0.01%), 1 sample
+  [ 0] io.ktor.util.internal.LockFreeLinkedListNode.<init>
+  [ 1] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.<init>
+  [ 2] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher.dispatch
+  [ 3] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 4] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [ 5] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [ 6] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 7] io.ktor.utils.io.ByteBufferChannel.flush
+  [ 8] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 9] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [10] kotlinx.coroutines.DispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [12] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20001680 ns (0.01%), 2 samples
+  [ 0] kotlin.coroutines.jvm.internal.ContinuationImpl.getContext
+  [ 1] kotlinx.coroutines.DispatchedTask.run
+  [ 2] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 3] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20001631 ns (0.01%), 1 sample
+  [ 0] io.ktor.utils.io.internal.RingBufferCapacity.tryWriteAtLeast
+  [ 1] io.ktor.utils.io.internal.WriteSessionImpl.request
+  [ 2] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 3] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 4] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 5] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 6] io.ktor.utils.io.ByteBufferChannel.tryWriteSuspend$ktor_io
+  [ 7] io.ktor.utils.io.internal.WriteSessionImpl.tryAwait
+  [ 8] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 9] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [10] kotlinx.coroutines.DispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [12] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20001601 ns (0.01%), 1 sample
+  [ 0] io.ktor.utils.io.ByteBufferChannel.writeSuspendPredicate
+  [ 1] io.ktor.utils.io.ByteBufferChannel.access$writeSuspendPredicate
+  [ 2] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 3] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 4] io.ktor.utils.io.ByteBufferChannel.tryWriteSuspend$ktor_io
+  [ 5] io.ktor.utils.io.internal.WriteSessionImpl.tryAwait
+  [ 6] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 7] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 8] kotlinx.coroutines.DispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20001588 ns (0.01%), 2 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 1] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 2] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 3] io.ktor.utils.io.ByteBufferChannel.tryWriteSuspend$ktor_io
+  [ 4] io.ktor.utils.io.internal.WriteSessionImpl.tryAwait
+  [ 5] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 6] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 7] kotlinx.coroutines.DispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20001543 ns (0.01%), 2 samples
+  [ 0] kotlin.coroutines.jvm.internal.BaseContinuationImpl.<init>
+  [ 1] kotlin.coroutines.jvm.internal.ContinuationImpl.<init>
+  [ 2] kotlin.coroutines.jvm.internal.ContinuationImpl.<init>
+  [ 3] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.<init>
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 5] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 6] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 7] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 8] kotlinx.coroutines.DispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20001492 ns (0.01%), 1 sample
+  [ 0] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [ 1] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 2] io.ktor.utils.io.ByteBufferChannel.flush
+  [ 3] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 4] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 5] kotlinx.coroutines.DispatchedTask.run
+  [ 6] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20001413 ns (0.01%), 1 sample
+  [ 0] io.ktor.utils.io.ByteBufferChannel.prepareBuffer
+  [ 1] io.ktor.utils.io.ByteBufferChannel.prepareWriteBuffer$ktor_io
+  [ 2] io.ktor.utils.io.internal.WriteSessionImpl.request
+  [ 3] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 4] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 5] kotlinx.coroutines.DispatchedTask.run
+  [ 6] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20001383 ns (0.01%), 1 sample
+  [ 0] io.ktor.util.internal.LockFreeLinkedListNode.helpDelete
+  [ 1] io.ktor.util.internal.LockFreeLinkedListNode.finishRemove
+  [ 2] io.ktor.util.internal.LockFreeLinkedListNode.remove
+  [ 3] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20001345 ns (0.01%), 2 samples
+  [ 0] kotlin.coroutines.jvm.internal.ContinuationImpl.getContext
+  [ 1] kotlinx.coroutines.DispatchedTask.run
+  [ 2] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 3] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20001285 ns (0.01%), 2 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 1] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 2] kotlinx.coroutines.DispatchedTask.run
+  [ 3] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 4] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20001240 ns (0.01%), 1 sample
+  [ 0] io.ktor.utils.io.internal.WriteSessionImpl.request
+  [ 1] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 2] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 3] kotlinx.coroutines.DispatchedTask.run
+  [ 4] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 5] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20001151 ns (0.01%), 1 sample
+  [ 0] java.nio.ByteBuffer.order
+  [ 1] io.ktor.utils.io.ByteBufferChannel.prepareBuffer
+  [ 2] io.ktor.utils.io.ByteBufferChannel.prepareWriteBuffer$ktor_io
+  [ 3] io.ktor.utils.io.internal.WriteSessionImpl.request
+  [ 4] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 5] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 6] kotlinx.coroutines.DispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20001129 ns (0.01%), 1 sample
+  [ 0] io.ktor.util.internal.LockFreeLinkedListKt.unwrap
+
+--- 20001094 ns (0.01%), 1 sample
+  [ 0] io.ktor.utils.io.core.Buffer.getWritePosition
+  [ 1] io.ktor.utils.io.core.Buffer.commitWrittenUntilIndex
+  [ 2] io.ktor.utils.io.core.IoBuffer.resetFromContentToWrite
+  [ 3] io.ktor.utils.io.internal.WriteSessionImpl.request
+  [ 4] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 5] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 6] kotlinx.coroutines.DispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20000990 ns (0.01%), 2 samples
+  [ 0] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 1] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [ 2] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 6] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 7] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 8] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 9] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [10] kotlinx.coroutines.DispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [12] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20000988 ns (0.01%), 1 sample
+  [ 0] io.ktor.util.internal.LockFreeLinkedListNode.helpDelete
+  [ 1] io.ktor.util.internal.LockFreeLinkedListNode.finishRemove
+  [ 2] io.ktor.util.internal.LockFreeLinkedListNode.remove
+  [ 3] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20000898 ns (0.01%), 2 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 1] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 3] io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+  [ 4] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 5] kotlinx.coroutines.DispatchedTask.run
+  [ 6] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20000853 ns (0.01%), 1 sample
+  [ 0] io.ktor.util.internal.LockFreeLinkedListNode.<init>
+  [ 1] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.<init>
+  [ 2] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher.dispatch
+  [ 3] kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+  [ 4] io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+  [ 5] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [ 6] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 7] io.ktor.utils.io.ByteBufferChannel.flush
+  [ 8] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 9] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [10] kotlinx.coroutines.DispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [12] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20000775 ns (0.01%), 2 samples
+  [ 0] java.nio.MappedByteBuffer.limit
+  [ 1] io.ktor.utils.io.ByteBufferChannel.prepareBuffer
+  [ 2] io.ktor.utils.io.ByteBufferChannel.prepareWriteBuffer$ktor_io
+  [ 3] io.ktor.utils.io.internal.WriteSessionImpl.request
+  [ 4] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 5] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 6] kotlinx.coroutines.DispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20000712 ns (0.01%), 2 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+  [ 1] io.ktor.utils.io.ByteBufferChannel.bytesRead
+  [ 2] io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+  [ 3] io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+  [ 4] io.ktor.utils.io.ByteBufferChannel.readAvailable
+  [ 5] io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+  [ 6] io.ktor.utils.io.ByteBufferChannel.access$readAvailableSuspend
+  [ 7] io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+  [ 8] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 9] kotlinx.coroutines.DispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [11] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20000606 ns (0.01%), 1 sample
+  [ 0] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 1] io.ktor.utils.io.ByteBufferChannel.access$flushImpl
+  [ 2] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 3] io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+  [ 4] io.ktor.utils.io.ByteBufferChannel.tryWriteSuspend$ktor_io
+  [ 5] io.ktor.utils.io.internal.WriteSessionImpl.tryAwait
+  [ 6] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 7] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 8] kotlinx.coroutines.DispatchedTask.run
+  [ 9] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [10] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20000389 ns (0.01%), 2 samples
+  [ 0] java.nio.ByteBuffer.order
+  [ 1] io.ktor.utils.io.ByteBufferChannel.prepareBuffer
+  [ 2] io.ktor.utils.io.ByteBufferChannel.prepareWriteBuffer$ktor_io
+  [ 3] io.ktor.utils.io.internal.WriteSessionImpl.request
+  [ 4] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 5] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 6] kotlinx.coroutines.DispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20000371 ns (0.01%), 2 samples
+  [ 0] io.ktor.utils.io.ByteBufferChannel.prepareBuffer
+  [ 1] io.ktor.utils.io.ByteBufferChannel.prepareWriteBuffer$ktor_io
+  [ 2] io.ktor.utils.io.internal.WriteSessionImpl.request
+  [ 3] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 4] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 5] kotlinx.coroutines.DispatchedTask.run
+  [ 6] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+--- 20000344 ns (0.01%), 2 samples
+  [ 0] java.util.concurrent.atomic.AtomicReferenceFieldUpdater$AtomicReferenceFieldUpdaterImpl.getAndSet
+  [ 1] io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+  [ 2] io.ktor.utils.io.ByteBufferChannel.flushImpl
+  [ 3] io.ktor.utils.io.ByteBufferChannel.flush
+  [ 4] io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+  [ 5] kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+  [ 6] kotlinx.coroutines.DispatchedTask.run
+  [ 7] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+  [ 8] io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+
+          ns  percent  samples  top
+  ----------  -------  -------  ---
+ 69682431765   34.70%     6965  java.util.concurrent.ConcurrentLinkedQueue.poll
+ 55871485439   27.82%     4719  io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IOThread.run
+ 27850501918   13.87%     2783  io.ktor.benchmarks.dispatchers.HotLoopDispatcher.getQueue
+  8950375755    4.46%      895  jlong_disjoint_arraycopy
+  7620426828    3.79%      525  read
+  2750317746    1.37%      275  io.ktor.benchmarks.dispatchers.HotLoopDispatcher.thread$lambda-0
+  2100041271    1.05%      170  java.util.concurrent.atomic.AtomicReferenceFieldUpdater$AtomicReferenceFieldUpdaterImpl.compareAndSet
+  1910034205    0.95%      158  io.ktor.util.internal.LockFreeLinkedListNode.getNext
+  1120037760    0.56%       77  java.nio.ByteBuffer.limit
+  1110043674    0.55%       76  java.nio.channels.spi.AbstractInterruptibleChannel.begin
+  1079990720    0.54%      106  io.ktor.util.internal.LockFreeLinkedListNode.<init>
+  1020018399    0.51%      102  io.ktor.utils.io.ByteBufferChannel.setupStateForRead
+  1000016523    0.50%       90  kotlinx.coroutines.internal.DispatchedContinuation.resumeWith
+   990030618    0.49%       73  io.ktor.utils.io.core.Buffer.setLimit
+   900019520    0.45%       67  io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith
+   900019046    0.45%       63  io.ktor.utils.io.ByteBufferChannel.flushImpl
+   740028212    0.37%       74  io.ktor.utils.io.ByteBufferChannel.readAvailableSuspend
+   690037352    0.34%       69  kotlin.coroutines.CombinedContext.fold
+   610032260    0.30%       48  itable stub
+   570017439    0.28%       48  kotlinx.coroutines.DispatchedTask.run
+   530032281    0.26%       53  io.ktor.utils.io.ByteBufferChannel.readAsMuchAsPossible
+   510019688    0.25%       36  io.ktor.utils.io.internal.RingBufferCapacity.flush
+   490017326    0.24%       38  kotlin.coroutines.jvm.internal.ContinuationImpl.getContext
+   470004322    0.23%       34  kotlinx.coroutines.CompletionStateKt.toState$default
+   460005346    0.23%       28  java.util.concurrent.atomic.AtomicIntegerFieldUpdater$AtomicIntegerFieldUpdaterImpl.accessCheck
+   450037866    0.22%       31  /usr/lib/x86_64-linux-gnu/libc-2.33.so
+   450013279    0.22%       45  kotlin.jvm.internal.Intrinsics.areEqual
+   390018136    0.19%       39  kotlin.coroutines.jvm.internal.ContinuationImpl.<init>
+   390008930    0.19%       27  sun.nio.ch.FileDispatcherImpl.read0
+   380009564    0.19%       28  io.ktor.util.internal.LockFreeLinkedListNode.correctPrev
+   369968198    0.18%       28  io.ktor.util.internal.LockFreeLinkedListNode.remove
+   360004862    0.18%       30  io.ktor.util.internal.LockFreeLinkedListNode.markPrev
+   330021374    0.16%       21  sun.nio.ch.NativeThread.current
+   320012030    0.16%       24  kotlinx.coroutines.CompletionStateKt.toState
+   310010318    0.15%       25  io.ktor.utils.io.ByteBufferChannel.prepareBuffer
+   290015430    0.14%       29  io.ktor.utils.io.ByteBufferChannel.readSuspendImpl
+   280009550    0.14%       18  kotlin.coroutines.jvm.internal.ContinuationImpl.releaseIntercepted
+   269998117    0.13%       24  io.ktor.utils.io.ByteBufferChannel.getClosed
+   260007994    0.13%       21  io.ktor.utils.io.ByteBufferChannel.getState
+   260004010    0.13%       17  io.ktor.utils.io.internal.WriteSessionImpl.request
+   250004514    0.12%       25  java.lang.Object.equals
+   240008586    0.12%       17  io.ktor.util.cio.FileChannelsKt$readChannel$1$3$1.invokeSuspend
+   230001752    0.11%       15  io.ktor.util.internal.LockFreeLinkedListNode.finishRemove
+   210082871    0.10%       19  /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+   210008745    0.10%       21  io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.<init>
+   200008627    0.10%       14  io.ktor.util.internal.LockFreeLinkedListNode.helpDelete
+   180007364    0.09%       10  java.nio.channels.spi.AbstractInterruptibleChannel.end
+   170011470    0.08%       17  kotlinx.coroutines.internal.DispatchedContinuation.<init>
+   170009656    0.08%       16  java.nio.Buffer.limit
+   160002840    0.08%       16  jdk.internal.misc.Unsafe.copyMemory
+   150011995    0.07%        9  io.ktor.utils.io.core.IoBuffer.resetFromContentToWrite
+   150011306    0.07%       15  kotlinx.coroutines.internal.DispatchedContinuation.getContext
+   150004872    0.07%       15  io.ktor.utils.io.ByteBufferChannel.carryIndex
+   150003850    0.07%       15  io.ktor.utils.io.internal.RingBufferCapacity.tryReadAtMost
+   150002168    0.07%       15  kotlin.coroutines.CombinedContext.get
+   140013794    0.07%       14  io.ktor.benchmarks.FileBenchmarks$testKtorFakeFileReadInHot$1.invokeSuspend
+   120009735    0.06%       12  kotlinx.coroutines.internal.DispatchedContinuation.takeState$kotlinx_coroutines_core
+   119995400    0.06%       11  io.ktor.util.internal.LockFreeLinkedListNode.removed
+   110009888    0.05%       11  java.lang.Integer.valueOf
+   110006664    0.05%       10  kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith
+    99997170    0.05%       10  java.nio.HeapByteBuffer.put
+    90003790    0.04%        9  io.ktor.utils.io.internal.CancellableReusableContinuation$JobRelation.<init>
+    90000016    0.04%        8  io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher$IODispatchedTask.run
+    80011111    0.04%        8  io.ktor.utils.io.core.ByteOrder.getNioOrder
+    80004876    0.04%        4  io.ktor.utils.io.ByteBufferChannel.writeSuspendPredicate
+    80002917    0.04%        5  sun.nio.ch.FileChannelImpl.read
+    70008703    0.03%        7  io.ktor.utils.io.ByteBufferChannel.readSuspend
+    70003300    0.03%        5  io.ktor.utils.io.internal.RingBufferCapacity.tryWriteAtLeast
+    70002319    0.03%        5  Java_sun_nio_ch_FileDispatcherImpl_read0
+    70002202    0.03%        2  io.ktor.utils.io.ByteBufferChannel.access$flushImpl
+    70000962    0.03%        5  kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt.intercepted
+    60003393    0.03%        6  java.nio.MappedByteBuffer.limit
+    59996113    0.03%        5  kotlin.jvm.internal.Intrinsics.checkNotNullParameter
+    50002591    0.02%        3  /usr/lib/jvm/java-11-openjdk-amd64/lib/libnio.so
+    50001321    0.02%        5  kotlin.coroutines.jvm.internal.ContinuationImpl.intercepted
+    50000554    0.02%        5  io.ktor.utils.io.ByteBufferChannel.readAvailable$suspendImpl
+    49999808    0.02%        4  io.ktor.utils.io.ByteBufferChannel.resumeReadOp
+    40002695    0.02%        3  java.util.concurrent.atomic.AtomicReferenceFieldUpdater$AtomicReferenceFieldUpdaterImpl.accessCheck
+    40002101    0.02%        4  kotlin.coroutines.CoroutineContext$Element$DefaultImpls.get
+    40001753    0.02%        4  kotlin.coroutines.jvm.internal.BaseContinuationImpl.<init>
+    40001560    0.02%        2  sun.nio.ch.IOUtil.read
+    40001540    0.02%        3  java.nio.ByteBuffer.order
+    40001354    0.02%        4  java.nio.Buffer.position
+    40000642    0.02%        2  io.ktor.utils.io.core.Buffer.getWritePosition
+    40000390    0.02%        4  sun.nio.ch.NativeThreadSet.add
+    40000284    0.02%        4  io.ktor.utils.io.ByteBufferChannel.suspensionForSize
+    30003194    0.01%        3  vtable stub
+    30002879    0.01%        3  io.ktor.benchmarks.dispatchers.IOCoroutineDispatcher.dispatch
+    30002444    0.01%        3  io.ktor.utils.io.ByteBufferChannel$readAvailableSuspend$2.invokeSuspend
+    30002125    0.01%        3  java.util.concurrent.atomic.AtomicIntegerFieldUpdater$AtomicIntegerFieldUpdaterImpl.getAndAdd
+    30001331    0.01%        3  java.util.concurrent.atomic.AtomicReferenceFieldUpdater$AtomicReferenceFieldUpdaterImpl.valueCheck
+    30001092    0.01%        2  io.ktor.utils.io.ByteBufferChannel$writeSuspension$1.invoke
+    30001039    0.01%        1  kotlin.ranges.RangesKt___RangesKt.coerceAtMost
+    30000713    0.01%        3  io.ktor.utils.io.ByteBufferChannel.resumeWriteOp
+    30000291    0.01%        1  java.util.concurrent.atomic.AtomicIntegerFieldUpdater$AtomicIntegerFieldUpdaterImpl.getAndSet
+    30000043    0.01%        3  io.ktor.utils.io.ByteBufferChannel.prepareWriteBuffer$ktor_io
+    29999810    0.01%        3  java.util.concurrent.atomic.AtomicReferenceFieldUpdater$AtomicReferenceFieldUpdaterImpl.getAndSet
+    29999033    0.01%        3  kotlinx.coroutines.JobSupport.getKey
+    20004879    0.01%        2  unsafe_arraycopy
+    20001149    0.01%        2  sun.nio.ch.IOUtil.readIntoNativeBuffer
+    20001129    0.01%        1  io.ktor.util.internal.LockFreeLinkedListKt.unwrap
+    20000640    0.01%        2  sun.nio.ch.NativeThreadSet.remove
+    20000140    0.01%        2  java.lang.Class.getComponentType
+    19999851    0.01%        1  io.ktor.utils.io.core.Buffer.getLimit
+    19999154    0.01%        2  java.nio.Buffer.hasRemaining
+    19998968    0.01%        1  kotlinx.coroutines.internal.ThreadContextKt.updateThreadContext
+    19998581    0.01%        2  jdk.internal.misc.Unsafe.checkOffset
+    19998392    0.01%        2  io.ktor.utils.io.ByteBufferChannel.isClosedForRead
+    19998316    0.01%        2  java.util.concurrent.atomic.AtomicReferenceFieldUpdater$AtomicReferenceFieldUpdaterImpl.lazySet
+    10298298    0.01%        1  __GI___pthread_mutex_lock
+    10107536    0.01%        1  kotlinx.coroutines.BlockingCoroutine.joinBlocking
+    10075202    0.01%        1  JVM_IsInterrupted
+    10003236    0.00%        1  io.ktor.utils.io.internal.CancellableReusableContinuation.completeSuspendBlock
+    10002062    0.00%        1  pthread_self
+    10001506    0.00%        1  kotlin.coroutines.ContinuationInterceptor$DefaultImpls.get
+    10001310    0.00%        1  /usr/lib/jvm/java-11-openjdk-amd64/lib/server/classes.jsa
+    10001228    0.00%        1  kotlin.coroutines.AbstractCoroutineContextElement.get
+    10001165    0.00%        1  __pthread_cond_signal
+    10001115    0.00%        1  io.ktor.utils.io.core.Buffer.setWritePosition
+    10001021    0.00%        1  kotlinx.coroutines.JobSupport.tryMakeCompleting
+    10000956    0.00%        1  io.ktor.utils.io.core.IoBuffer$Companion.getEmpty
+    10000909    0.00%        1  kotlinx.coroutines.DispatchedTask.getExceptionalResult$kotlinx_coroutines_core
+    10000790    0.00%        1  kotlinx.coroutines.internal.ThreadContextKt$countAll$1.invoke
+    10000452    0.00%        1  kotlin.Result.exceptionOrNull-impl
+    10000373    0.00%        1  io.ktor.utils.io.ByteBufferChannel.getReadOp
+    10000355    0.00%        1  java.lang.Boolean.valueOf
+    10000238    0.00%        1  io.ktor.utils.io.internal.CancellableReusableContinuation.parent
+    10000197    0.00%        1  sun.nio.ch.FileChannelImpl.beginBlocking
+    10000145    0.00%        1  java.io.FileCleanable.register
+    10000039    0.00%        1  kotlin.coroutines.jvm.internal.Boxing.boxInt
+     9999972    0.00%        1  jdk.internal.misc.Unsafe.copyMemoryChecks
+     9999715    0.00%        1  kotlin.coroutines.jvm.internal.Boxing.boxBoolean
+     9999706    0.00%        1  java.nio.channels.spi.AbstractInterruptibleChannel.isOpen
+     9999678    0.00%        1  io.ktor.util.internal.LockFreeLinkedListNode.getPrev
+     9999614    0.00%        1  kotlinx.coroutines.internal.DispatchedContinuation.getDelegate$kotlinx_coroutines_core
+     9999211    0.00%        1  kotlinx.coroutines.internal.DispatchedContinuation.awaitReusability
+     9997708    0.00%        1  kotlin.coroutines.CoroutineContext$Element$DefaultImpls.fold
+
