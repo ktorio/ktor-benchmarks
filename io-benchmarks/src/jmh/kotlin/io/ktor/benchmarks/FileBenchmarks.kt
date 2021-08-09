@@ -12,12 +12,14 @@ import java.nio.*
 val dispatcher = newFixedThreadPoolContext(1, "FOOO1")
 val dispatcher2 = newFixedThreadPoolContext(1, "FOOO2")
 
-val simpleDispatcher = SimpleDispatcher()
-val simpleDispatcher2 = SimpleDispatcher()
+val simpleDispatcher = HotLoopDispatcher()
+val simpleDispatcher2 = HotLoopDispatcher()
+
+val blockingDispatcher = BlockingQueueDispatcher()
+val blockingDispatcher2 = BlockingQueueDispatcher()
 
 val ioDispatcher = IOCoroutineDispatcher(1)
 val ioDispatcher2 = IOCoroutineDispatcher(1)
-
 
 @OptIn(InternalCoroutinesApi::class)
 val experimentalDispatcher = HighThroughputDispatcher(8, 32, "FOOO3")
@@ -81,7 +83,7 @@ class FileBenchmarks {
     }
 
     @Benchmark
-    fun testKtorFileReadInSimpleDispatcher(): Long = runBlocking {
+    fun testKtorFileReadInHotDispatcher(): Long = runBlocking {
         var size = 0L
         val channel = testFile.readChannel(coroutineContext = simpleDispatcher)
         while (!channel.isClosedForRead) {
@@ -95,7 +97,21 @@ class FileBenchmarks {
     }
 
     @Benchmark
-    fun testKtorFileReadInSimple2SimpleDispatcher(): Long = runBlocking(simpleDispatcher) {
+    fun testKtorFileReadInBlocking2BlockingDispatcher(): Long = runBlocking(blockingDispatcher) {
+        var size = 0L
+        val channel = testFile.readChannel(coroutineContext = blockingDispatcher2)
+        while (!channel.isClosedForRead) {
+            val read = channel.readAvailable(buffer)
+            buffer.clear()
+            size += read
+        }
+
+        channel.cancel()
+        return@runBlocking size
+    }
+
+    @Benchmark
+    fun testKtorFileReadInHot2HotDispatcher(): Long = runBlocking(simpleDispatcher) {
         var size = 0L
         val channel = testFile.readChannel(coroutineContext = simpleDispatcher2)
         while (!channel.isClosedForRead) {
@@ -259,7 +275,6 @@ class FileBenchmarks {
         }.awaitAll().sum()
     }
 
-
     @Benchmark
     fun testKtorFakeFileRead(): Long = runBlocking {
         var size = 0L
@@ -275,7 +290,7 @@ class FileBenchmarks {
     }
 
     @Benchmark
-    fun testKtorFakeFileReadInSimple(): Long = runBlocking(ioDispatcher) {
+    fun testKtorFakeFileReadInHot(): Long = runBlocking(ioDispatcher) {
         var size = 0L
         val channel = testFile.readChannel(coroutineContext = ioDispatcher2)
         while (!channel.isClosedForRead) {

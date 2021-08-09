@@ -27,10 +27,9 @@ repositories {
 
 dependencies {
     jmh(kotlin("stdlib"))
-//    jmh("io.ktor:ktor-io:1.6.2-SNAPSHOT")
-//    jmh("io.ktor:ktor-utils:1.6.2-SNAPSHOT")
     jmh("io.ktor:ktor-io:1.6.1")
     jmh("io.ktor:ktor-utils:1.6.1")
+    jmh("io.ktor:ktor-network:1.6.1")
     jmh(kotlin("test"))
 }
 
@@ -44,7 +43,7 @@ jmh {
     warmupIterations.set(5)
     warmup.set("1s")
 
-    profilers.set(listOf("async:libPath=/Users/leonid.stashevsky/Apps/async-profiler-2.0/build/libasyncProfiler.dylib"))
+//    profilers.set(listOf("async:libPath=/home/leonid/Apps/async-profiler-2.0/build/libasyncProfiler.so"))
     timeUnit.set("ms")
 
 }

@@ -1,0 +1,1402 @@
+--- Execution profile ---
+Total samples       : 3745
+
+--- 25661037147 ns (27.01%), 1002 samples
+  [ 0] __send
+  [ 1] java.net.SocketOutputStream.socketWrite0
+  [ 2] java.net.SocketOutputStream.socketWrite
+  [ 3] java.net.SocketOutputStream.write
+  [ 4] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [ 5] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [ 6] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 9] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [10] java.lang.reflect.Method.invoke
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.Executors$RunnableAdapter.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [18] java.lang.Thread.run
+
+--- 22658496689 ns (23.85%), 967 samples
+  [ 0] __recv
+  [ 1] java.net.SocketInputStream.socketRead0
+  [ 2] java.net.SocketInputStream.socketRead
+  [ 3] java.net.SocketInputStream.read
+  [ 4] java.net.SocketInputStream.read
+  [ 5] java.net.SocketInputStream.read
+  [ 6] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 7] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [ 8] java.util.concurrent.Executors$RunnableAdapter.call
+  [ 9] java.util.concurrent.FutureTask.run
+  [10] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [11] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [12] java.lang.Thread.run
+
+--- 7777338331 ns (8.19%), 294 samples
+  [ 0] /usr/lib/x86_64-linux-gnu/libc-2.33.so
+  [ 1] Java_java_net_SocketInputStream_socketRead0
+  [ 2] java.net.SocketInputStream.socketRead0
+  [ 3] java.net.SocketInputStream.socketRead
+  [ 4] java.net.SocketInputStream.read
+  [ 5] java.net.SocketInputStream.read
+  [ 6] java.net.SocketInputStream.read
+  [ 7] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 8] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [ 9] java.util.concurrent.Executors$RunnableAdapter.call
+  [10] java.util.concurrent.FutureTask.run
+  [11] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [12] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [13] java.lang.Thread.run
+
+--- 5100199797 ns (5.37%), 188 samples
+  [ 0] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 1] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 2] Java_java_net_SocketOutputStream_socketWrite0
+  [ 3] java.net.SocketOutputStream.socketWrite0
+  [ 4] java.net.SocketOutputStream.socketWrite
+  [ 5] java.net.SocketOutputStream.write
+  [ 6] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [ 7] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [ 8] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [10] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [11] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [12] java.lang.reflect.Method.invoke
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.Executors$RunnableAdapter.call
+  [17] java.util.concurrent.FutureTask.run
+  [18] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [19] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [20] java.lang.Thread.run
+
+--- 4530193025 ns (4.77%), 147 samples
+  [ 0] Java_java_net_SocketOutputStream_socketWrite0
+  [ 1] java.net.SocketOutputStream.socketWrite0
+  [ 2] java.net.SocketOutputStream.socketWrite
+  [ 3] java.net.SocketOutputStream.write
+  [ 4] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [ 5] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [ 6] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 9] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [10] java.lang.reflect.Method.invoke
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.Executors$RunnableAdapter.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [18] java.lang.Thread.run
+
+--- 4530174764 ns (4.77%), 162 samples
+  [ 0] /usr/lib/x86_64-linux-gnu/libc-2.33.so
+  [ 1] Java_java_net_SocketOutputStream_socketWrite0
+  [ 2] java.net.SocketOutputStream.socketWrite0
+  [ 3] java.net.SocketOutputStream.socketWrite
+  [ 4] java.net.SocketOutputStream.write
+  [ 5] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [ 6] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [ 7] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [10] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [11] java.lang.reflect.Method.invoke
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.Executors$RunnableAdapter.call
+  [16] java.util.concurrent.FutureTask.run
+  [17] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [19] java.lang.Thread.run
+
+--- 3291174881 ns (3.46%), 143 samples
+  [ 0] __GI___pthread_mutex_lock
+  [ 1] Java_java_net_SocketInputStream_socketRead0
+  [ 2] java.net.SocketInputStream.socketRead0
+  [ 3] java.net.SocketInputStream.socketRead
+  [ 4] java.net.SocketInputStream.read
+  [ 5] java.net.SocketInputStream.read
+  [ 6] java.net.SocketInputStream.read
+  [ 7] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 8] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [ 9] java.util.concurrent.Executors$RunnableAdapter.call
+  [10] java.util.concurrent.FutureTask.run
+  [11] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [12] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [13] java.lang.Thread.run
+
+--- 2618273612 ns (2.76%), 103 samples
+  [ 0] Java_java_net_SocketInputStream_socketRead0
+  [ 1] java.net.SocketInputStream.socketRead0
+  [ 2] java.net.SocketInputStream.socketRead
+  [ 3] java.net.SocketInputStream.read
+  [ 4] java.net.SocketInputStream.read
+  [ 5] java.net.SocketInputStream.read
+  [ 6] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 7] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [ 8] java.util.concurrent.Executors$RunnableAdapter.call
+  [ 9] java.util.concurrent.FutureTask.run
+  [10] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [11] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [12] java.lang.Thread.run
+
+--- 2420122374 ns (2.55%), 86 samples
+  [ 0] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 1] Java_java_net_SocketOutputStream_socketWrite0
+  [ 2] java.net.SocketOutputStream.socketWrite0
+  [ 3] java.net.SocketOutputStream.socketWrite
+  [ 4] java.net.SocketOutputStream.write
+  [ 5] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [ 6] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [ 7] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [10] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [11] java.lang.reflect.Method.invoke
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.Executors$RunnableAdapter.call
+  [16] java.util.concurrent.FutureTask.run
+  [17] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [19] java.lang.Thread.run
+
+--- 1997362758 ns (2.10%), 75 samples
+  [ 0] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 1] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 2] Java_java_net_SocketInputStream_socketRead0
+  [ 3] java.net.SocketInputStream.socketRead0
+  [ 4] java.net.SocketInputStream.socketRead
+  [ 5] java.net.SocketInputStream.read
+  [ 6] java.net.SocketInputStream.read
+  [ 7] java.net.SocketInputStream.read
+  [ 8] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 9] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [10] java.util.concurrent.Executors$RunnableAdapter.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [13] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [14] java.lang.Thread.run
+
+--- 1625457526 ns (1.71%), 72 samples
+  [ 0] java.net.SocketInputStream.socketRead0
+  [ 1] java.net.SocketInputStream.socketRead
+  [ 2] java.net.SocketInputStream.read
+  [ 3] java.net.SocketInputStream.read
+  [ 4] java.net.SocketInputStream.read
+  [ 5] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 6] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [ 7] java.util.concurrent.Executors$RunnableAdapter.call
+  [ 8] java.util.concurrent.FutureTask.run
+  [ 9] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [10] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [11] java.lang.Thread.run
+
+--- 1570063747 ns (1.65%), 57 samples
+  [ 0] __GI___pthread_mutex_unlock
+  [ 1] Java_java_net_SocketOutputStream_socketWrite0
+  [ 2] java.net.SocketOutputStream.socketWrite0
+  [ 3] java.net.SocketOutputStream.socketWrite
+  [ 4] java.net.SocketOutputStream.write
+  [ 5] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [ 6] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [ 7] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [10] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [11] java.lang.reflect.Method.invoke
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.Executors$RunnableAdapter.call
+  [16] java.util.concurrent.FutureTask.run
+  [17] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [19] java.lang.Thread.run
+
+--- 1263982416 ns (1.33%), 44 samples
+  [ 0] __GI___pthread_mutex_unlock
+  [ 1] Java_java_net_SocketInputStream_socketRead0
+  [ 2] java.net.SocketInputStream.socketRead0
+  [ 3] java.net.SocketInputStream.socketRead
+  [ 4] java.net.SocketInputStream.read
+  [ 5] java.net.SocketInputStream.read
+  [ 6] java.net.SocketInputStream.read
+  [ 7] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 8] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [ 9] java.util.concurrent.Executors$RunnableAdapter.call
+  [10] java.util.concurrent.FutureTask.run
+  [11] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [12] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [13] java.lang.Thread.run
+
+--- 1200046690 ns (1.26%), 50 samples
+  [ 0] __GI___pthread_mutex_lock
+  [ 1] Java_java_net_SocketOutputStream_socketWrite0
+  [ 2] java.net.SocketOutputStream.socketWrite0
+  [ 3] java.net.SocketOutputStream.socketWrite
+  [ 4] java.net.SocketOutputStream.write
+  [ 5] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [ 6] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [ 7] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [10] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [11] java.lang.reflect.Method.invoke
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.Executors$RunnableAdapter.call
+  [16] java.util.concurrent.FutureTask.run
+  [17] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [19] java.lang.Thread.run
+
+--- 1150047213 ns (1.21%), 38 samples
+  [ 0] /usr/lib/x86_64-linux-gnu/libc-2.33.so
+  [ 1] java.net.SocketOutputStream.socketWrite0
+  [ 2] java.net.SocketOutputStream.socketWrite
+  [ 3] java.net.SocketOutputStream.write
+  [ 4] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [ 5] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [ 6] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 9] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [10] java.lang.reflect.Method.invoke
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.Executors$RunnableAdapter.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [18] java.lang.Thread.run
+
+--- 1100030958 ns (1.16%), 52 samples
+  [ 0] java.net.SocketOutputStream.socketWrite0
+  [ 1] java.net.SocketOutputStream.socketWrite
+  [ 2] java.net.SocketOutputStream.write
+  [ 3] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [ 4] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [ 5] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 8] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 9] java.lang.reflect.Method.invoke
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.Executors$RunnableAdapter.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [17] java.lang.Thread.run
+
+--- 1003872474 ns (1.06%), 40 samples
+  [ 0] /usr/lib/x86_64-linux-gnu/libc-2.33.so
+  [ 1] java.net.SocketInputStream.socketRead0
+  [ 2] java.net.SocketInputStream.socketRead
+  [ 3] java.net.SocketInputStream.read
+  [ 4] java.net.SocketInputStream.read
+  [ 5] java.net.SocketInputStream.read
+  [ 6] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 7] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [ 8] java.util.concurrent.Executors$RunnableAdapter.call
+  [ 9] java.util.concurrent.FutureTask.run
+  [10] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [11] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [12] java.lang.Thread.run
+
+--- 862971336 ns (0.91%), 36 samples
+  [ 0] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 1] Java_java_net_SocketInputStream_socketRead0
+  [ 2] java.net.SocketInputStream.socketRead0
+  [ 3] java.net.SocketInputStream.socketRead
+  [ 4] java.net.SocketInputStream.read
+  [ 5] java.net.SocketInputStream.read
+  [ 6] java.net.SocketInputStream.read
+  [ 7] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 8] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [ 9] java.util.concurrent.Executors$RunnableAdapter.call
+  [10] java.util.concurrent.FutureTask.run
+  [11] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [12] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [13] java.lang.Thread.run
+
+--- 722327863 ns (0.76%), 26 samples
+  [ 0] /usr/lib/jvm/java-11-openjdk-amd64/lib/libnet.so
+  [ 1] Java_java_net_SocketInputStream_socketRead0
+  [ 2] java.net.SocketInputStream.socketRead0
+  [ 3] java.net.SocketInputStream.socketRead
+  [ 4] java.net.SocketInputStream.read
+  [ 5] java.net.SocketInputStream.read
+  [ 6] java.net.SocketInputStream.read
+  [ 7] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 8] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [ 9] java.util.concurrent.Executors$RunnableAdapter.call
+  [10] java.util.concurrent.FutureTask.run
+  [11] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [12] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [13] java.lang.Thread.run
+
+--- 720034024 ns (0.76%), 21 samples
+  [ 0] /usr/lib/jvm/java-11-openjdk-amd64/lib/libnet.so
+  [ 1] Java_java_net_SocketOutputStream_socketWrite0
+  [ 2] java.net.SocketOutputStream.socketWrite0
+  [ 3] java.net.SocketOutputStream.socketWrite
+  [ 4] java.net.SocketOutputStream.write
+  [ 5] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [ 6] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [ 7] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [10] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [11] java.lang.reflect.Method.invoke
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.Executors$RunnableAdapter.call
+  [16] java.util.concurrent.FutureTask.run
+  [17] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [19] java.lang.Thread.run
+
+--- 270007043 ns (0.28%), 12 samples
+  [ 0] java.net.AbstractPlainSocketImpl.<init>
+  [ 1] java.net.PlainSocketImpl.<init>
+  [ 2] java.net.SocksSocketImpl.<init>
+  [ 3] java.net.Socket.setImpl
+  [ 4] java.net.Socket.<init>
+  [ 5] java.net.Socket.<init>
+  [ 6] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [ 7] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [ 8] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [10] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [11] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [12] java.lang.reflect.Method.invoke
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.Executors$RunnableAdapter.call
+  [17] java.util.concurrent.FutureTask.run
+  [18] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [19] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [20] java.lang.Thread.run
+
+--- 240826697 ns (0.25%), 10 samples
+  [ 0] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 1] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [ 2] java.util.concurrent.Executors$RunnableAdapter.call
+  [ 3] java.util.concurrent.FutureTask.run
+  [ 4] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [ 5] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [ 6] java.lang.Thread.run
+
+--- 240003062 ns (0.25%), 7 samples
+  [ 0] java.net.InetSocketAddress.<init>
+  [ 1] java.net.Socket.<init>
+  [ 2] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [ 3] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [ 4] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 7] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 8] java.lang.reflect.Method.invoke
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.Executors$RunnableAdapter.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [16] java.lang.Thread.run
+
+--- 230757346 ns (0.24%), 12 samples
+  [ 0] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 1] java.net.SocketInputStream.socketRead0
+  [ 2] java.net.SocketInputStream.socketRead
+  [ 3] java.net.SocketInputStream.read
+  [ 4] java.net.SocketInputStream.read
+  [ 5] java.net.SocketInputStream.read
+  [ 6] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 7] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [ 8] java.util.concurrent.Executors$RunnableAdapter.call
+  [ 9] java.util.concurrent.FutureTask.run
+  [10] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [11] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [12] java.lang.Thread.run
+
+--- 200007004 ns (0.21%), 8 samples
+  [ 0] pthread_mutex_lock
+  [ 1] Java_java_net_SocketOutputStream_socketWrite0
+  [ 2] java.net.SocketOutputStream.socketWrite0
+  [ 3] java.net.SocketOutputStream.socketWrite
+  [ 4] java.net.SocketOutputStream.write
+  [ 5] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [ 6] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [ 7] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [10] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [11] java.lang.reflect.Method.invoke
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.Executors$RunnableAdapter.call
+  [16] java.util.concurrent.FutureTask.run
+  [17] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [19] java.lang.Thread.run
+
+--- 160008542 ns (0.17%), 5 samples
+  [ 0] __send
+  [ 1] Java_java_net_SocketOutputStream_socketWrite0
+  [ 2] java.net.SocketOutputStream.socketWrite0
+  [ 3] java.net.SocketOutputStream.socketWrite
+  [ 4] java.net.SocketOutputStream.write
+  [ 5] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [ 6] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [ 7] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [10] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [11] java.lang.reflect.Method.invoke
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.Executors$RunnableAdapter.call
+  [16] java.util.concurrent.FutureTask.run
+  [17] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [19] java.lang.Thread.run
+
+--- 150401635 ns (0.16%), 4 samples
+  [ 0] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 1] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [ 2] java.util.concurrent.Executors$RunnableAdapter.call
+  [ 3] java.util.concurrent.FutureTask.run
+  [ 4] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [ 5] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [ 6] java.lang.Thread.run
+
+--- 139997208 ns (0.15%), 7 samples
+  [ 0] java.net.Socket.<init>
+  [ 1] java.net.Socket.<init>
+  [ 2] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [ 3] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [ 4] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 7] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 8] java.lang.reflect.Method.invoke
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.Executors$RunnableAdapter.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [16] java.lang.Thread.run
+
+--- 130296072 ns (0.14%), 4 samples
+  [ 0] java.net.SocketInputStream.socketRead0
+  [ 1] java.net.SocketInputStream.read
+  [ 2] java.net.SocketInputStream.read
+  [ 3] java.net.SocketInputStream.read
+  [ 4] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 5] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [ 6] java.util.concurrent.Executors$RunnableAdapter.call
+  [ 7] java.util.concurrent.FutureTask.run
+  [ 8] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [ 9] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [10] java.lang.Thread.run
+
+--- 120396210 ns (0.13%), 5 samples
+  [ 0] __recv
+  [ 1] Java_java_net_SocketInputStream_socketRead0
+  [ 2] java.net.SocketInputStream.socketRead0
+  [ 3] java.net.SocketInputStream.socketRead
+  [ 4] java.net.SocketInputStream.read
+  [ 5] java.net.SocketInputStream.read
+  [ 6] java.net.SocketInputStream.read
+  [ 7] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 8] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [ 9] java.util.concurrent.Executors$RunnableAdapter.call
+  [10] java.util.concurrent.FutureTask.run
+  [11] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [12] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [13] java.lang.Thread.run
+
+--- 110413798 ns (0.12%), 6 samples
+  [ 0] pthread_mutex_lock
+  [ 1] Java_java_net_SocketInputStream_socketRead0
+  [ 2] java.net.SocketInputStream.socketRead0
+  [ 3] java.net.SocketInputStream.socketRead
+  [ 4] java.net.SocketInputStream.read
+  [ 5] java.net.SocketInputStream.read
+  [ 6] java.net.SocketInputStream.read
+  [ 7] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 8] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [ 9] java.util.concurrent.Executors$RunnableAdapter.call
+  [10] java.util.concurrent.FutureTask.run
+  [11] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [12] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [13] java.lang.Thread.run
+
+--- 90348256 ns (0.10%), 3 samples
+  [ 0] java.net.SocketInputStream.read
+  [ 1] java.net.SocketInputStream.read
+  [ 2] java.net.SocketInputStream.read
+  [ 3] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 4] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [ 5] java.util.concurrent.Executors$RunnableAdapter.call
+  [ 6] java.util.concurrent.FutureTask.run
+  [ 7] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [ 8] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [ 9] java.lang.Thread.run
+
+--- 90006339 ns (0.09%), 3 samples
+  [ 0] /usr/lib/jvm/java-11-openjdk-amd64/lib/libnet.so
+  [ 1] java.net.SocketOutputStream.socketWrite0
+  [ 2] java.net.SocketOutputStream.socketWrite
+  [ 3] java.net.SocketOutputStream.write
+  [ 4] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [ 5] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [ 6] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 9] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [10] java.lang.reflect.Method.invoke
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.Executors$RunnableAdapter.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [18] java.lang.Thread.run
+
+--- 80312364 ns (0.08%), 1 sample
+  [ 0] pthread_mutex_unlock
+  [ 1] Java_java_net_SocketInputStream_socketRead0
+  [ 2] java.net.SocketInputStream.socketRead0
+  [ 3] java.net.SocketInputStream.socketRead
+  [ 4] java.net.SocketInputStream.read
+  [ 5] java.net.SocketInputStream.read
+  [ 6] java.net.SocketInputStream.read
+  [ 7] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 8] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [ 9] java.util.concurrent.Executors$RunnableAdapter.call
+  [10] java.util.concurrent.FutureTask.run
+  [11] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [12] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [13] java.lang.Thread.run
+
+--- 70002465 ns (0.07%), 3 samples
+  [ 0] java.net.Socket.<init>
+  [ 1] java.net.Socket.<init>
+  [ 2] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [ 3] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [ 4] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 7] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 8] java.lang.reflect.Method.invoke
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.Executors$RunnableAdapter.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [16] java.lang.Thread.run
+
+--- 60000964 ns (0.06%), 3 samples
+  [ 0] java.net.Socket.<init>
+  [ 1] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [ 2] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [ 3] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [ 4] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 6] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 7] java.lang.reflect.Method.invoke
+  [ 8] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] java.util.concurrent.FutureTask.run
+  [11] java.util.concurrent.Executors$RunnableAdapter.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [14] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [15] java.lang.Thread.run
+
+--- 50118094 ns (0.05%), 1 sample
+  [ 0] java.net.AbstractPlainSocketImpl.releaseFD
+  [ 1] java.net.SocketInputStream.read
+  [ 2] java.net.SocketInputStream.read
+  [ 3] java.net.SocketInputStream.read
+  [ 4] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 5] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [ 6] java.util.concurrent.Executors$RunnableAdapter.call
+  [ 7] java.util.concurrent.FutureTask.run
+  [ 8] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [ 9] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [10] java.lang.Thread.run
+
+--- 50001349 ns (0.05%), 1 sample
+  [ 0] java.lang.Integer.parseInt
+  [ 1] java.net.URI$Parser.parseServer
+  [ 2] java.net.URI$Parser.parseAuthority
+  [ 3] java.net.URI$Parser.parseHierarchical
+  [ 4] java.net.URI$Parser.parse
+  [ 5] java.net.URI.<init>
+  [ 6] java.net.SocksSocketImpl.connect
+  [ 7] java.net.Socket.connect
+  [ 8] java.net.Socket.connect
+  [ 9] java.net.Socket.<init>
+  [10] java.net.Socket.<init>
+  [11] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [12] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [13] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [14] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [15] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [16] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [17] java.lang.reflect.Method.invoke
+  [18] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [19] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [20] java.util.concurrent.FutureTask.run
+  [21] java.util.concurrent.Executors$RunnableAdapter.call
+  [22] java.util.concurrent.FutureTask.run
+  [23] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [24] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [25] java.lang.Thread.run
+
+--- 40168172 ns (0.04%), 1 sample
+  [ 0] java.net.AbstractPlainSocketImpl.releaseFD
+  [ 1] java.net.SocketInputStream.read
+  [ 2] java.net.SocketInputStream.read
+  [ 3] java.net.SocketInputStream.read
+  [ 4] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 5] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [ 6] java.util.concurrent.Executors$RunnableAdapter.call
+  [ 7] java.util.concurrent.FutureTask.run
+  [ 8] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [ 9] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [10] java.lang.Thread.run
+
+--- 40031544 ns (0.04%), 2 samples
+  [ 0] __errno_location
+  [ 1] Java_java_net_SocketInputStream_socketRead0
+  [ 2] java.net.SocketInputStream.socketRead0
+  [ 3] java.net.SocketInputStream.socketRead
+  [ 4] java.net.SocketInputStream.read
+  [ 5] java.net.SocketInputStream.read
+  [ 6] java.net.SocketInputStream.read
+  [ 7] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 8] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [ 9] java.util.concurrent.Executors$RunnableAdapter.call
+  [10] java.util.concurrent.FutureTask.run
+  [11] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [12] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [13] java.lang.Thread.run
+
+--- 40005208 ns (0.04%), 1 sample
+  [ 0] java.util.HashMap.keySet
+  [ 1] java.util.HashSet.iterator
+  [ 2] java.util.concurrent.ThreadPoolExecutor.interruptIdleWorkers
+  [ 3] java.util.concurrent.ThreadPoolExecutor.interruptIdleWorkers
+  [ 4] java.util.concurrent.ThreadPoolExecutor.shutdown
+  [ 5] java.util.concurrent.Executors$DelegatedExecutorService.shutdown
+  [ 6] io.ktor.benchmarks.SocketBenchmarks.cleanup
+  [ 7] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [10] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [11] java.lang.reflect.Method.invoke
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.Executors$RunnableAdapter.call
+  [16] java.util.concurrent.FutureTask.run
+  [17] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [19] java.lang.Thread.run
+
+--- 40001125 ns (0.04%), 3 samples
+  [ 0] java.net.AbstractPlainSocketImpl.<init>
+  [ 1] java.net.PlainSocketImpl.<init>
+  [ 2] java.net.SocksSocketImpl.<init>
+  [ 3] java.net.Socket.setImpl
+  [ 4] java.net.Socket.<init>
+  [ 5] java.net.Socket.<init>
+  [ 6] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [ 7] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [ 8] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [10] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [11] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [12] java.lang.reflect.Method.invoke
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.Executors$RunnableAdapter.call
+  [17] java.util.concurrent.FutureTask.run
+  [18] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [19] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [20] java.lang.Thread.run
+
+--- 30126776 ns (0.03%), 1 sample
+  [ 0] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 1] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 2] NET_SockaddrToInetAddress
+  [ 3] Java_java_net_PlainSocketImpl_socketAccept
+  [ 4] java.net.PlainSocketImpl.socketAccept
+  [ 5] java.net.AbstractPlainSocketImpl.accept
+  [ 6] java.net.ServerSocket.implAccept
+  [ 7] java.net.ServerSocket.accept
+  [ 8] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 9] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [10] java.util.concurrent.Executors$RunnableAdapter.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [13] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [14] java.lang.Thread.run
+
+--- 30118015 ns (0.03%), 1 sample
+  [ 0] java.net.AbstractPlainSocketImpl.acquireFD
+  [ 1] java.net.SocketInputStream.read
+  [ 2] java.net.SocketInputStream.read
+  [ 3] java.net.SocketInputStream.read
+  [ 4] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 5] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [ 6] java.util.concurrent.Executors$RunnableAdapter.call
+  [ 7] java.util.concurrent.FutureTask.run
+  [ 8] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [ 9] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [10] java.lang.Thread.run
+
+--- 30002265 ns (0.03%), 2 samples
+  [ 0] java.net.Socket.close
+  [ 1] java.net.Socket.<init>
+  [ 2] java.net.Socket.<init>
+  [ 3] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [ 4] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [ 5] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 8] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 9] java.lang.reflect.Method.invoke
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.Executors$RunnableAdapter.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [17] java.lang.Thread.run
+
+--- 30002067 ns (0.03%), 3 samples
+  [ 0] pthread_mutex_unlock
+  [ 1] Java_java_net_SocketOutputStream_socketWrite0
+  [ 2] java.net.SocketOutputStream.socketWrite0
+  [ 3] java.net.SocketOutputStream.socketWrite
+  [ 4] java.net.SocketOutputStream.write
+  [ 5] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [ 6] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [ 7] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [10] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [11] java.lang.reflect.Method.invoke
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.Executors$RunnableAdapter.call
+  [16] java.util.concurrent.FutureTask.run
+  [17] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [19] java.lang.Thread.run
+
+--- 30001333 ns (0.03%), 1 sample
+  [ 0] java.net.URI$Parser.scan
+  [ 1] java.net.URI$Parser.parseHierarchical
+  [ 2] java.net.URI$Parser.parse
+  [ 3] java.net.URI.<init>
+  [ 4] java.net.SocksSocketImpl.connect
+  [ 5] java.net.Socket.connect
+  [ 6] java.net.Socket.connect
+  [ 7] java.net.Socket.<init>
+  [ 8] java.net.Socket.<init>
+  [ 9] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [10] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [11] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [12] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [13] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [14] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [15] java.lang.reflect.Method.invoke
+  [16] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [17] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [18] java.util.concurrent.FutureTask.run
+  [19] java.util.concurrent.Executors$RunnableAdapter.call
+  [20] java.util.concurrent.FutureTask.run
+  [21] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [22] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [23] java.lang.Thread.run
+
+--- 30000036 ns (0.03%), 2 samples
+  [ 0] java.net.SocketOutputStream.socketWrite
+  [ 1] java.net.SocketOutputStream.write
+  [ 2] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [ 3] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [ 4] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 7] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 8] java.lang.reflect.Method.invoke
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.Executors$RunnableAdapter.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [16] java.lang.Thread.run
+
+--- 29997047 ns (0.03%), 2 samples
+  [ 0] __errno_location
+  [ 1] Java_java_net_SocketOutputStream_socketWrite0
+  [ 2] java.net.SocketOutputStream.socketWrite0
+  [ 3] java.net.SocketOutputStream.socketWrite
+  [ 4] java.net.SocketOutputStream.write
+  [ 5] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [ 6] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [ 7] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [10] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [11] java.lang.reflect.Method.invoke
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.Executors$RunnableAdapter.call
+  [16] java.util.concurrent.FutureTask.run
+  [17] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [19] java.lang.Thread.run
+
+--- 20081810 ns (0.02%), 1 sample
+  [ 0] java.net.AbstractPlainSocketImpl.acquireFD
+  [ 1] java.net.SocketInputStream.read
+  [ 2] java.net.SocketInputStream.read
+  [ 3] java.net.SocketInputStream.read
+  [ 4] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 5] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [ 6] java.util.concurrent.Executors$RunnableAdapter.call
+  [ 7] java.util.concurrent.FutureTask.run
+  [ 8] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [ 9] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [10] java.lang.Thread.run
+
+--- 20080995 ns (0.02%), 2 samples
+  [ 0] pthread_self
+  [ 1] Java_java_net_SocketInputStream_socketRead0
+  [ 2] java.net.SocketInputStream.socketRead0
+  [ 3] java.net.SocketInputStream.socketRead
+  [ 4] java.net.SocketInputStream.read
+  [ 5] java.net.SocketInputStream.read
+  [ 6] java.net.SocketInputStream.read
+  [ 7] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 8] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [ 9] java.util.concurrent.Executors$RunnableAdapter.call
+  [10] java.util.concurrent.FutureTask.run
+  [11] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [12] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [13] java.lang.Thread.run
+
+--- 20080003 ns (0.02%), 1 sample
+  [ 0] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 1] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 2] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 3] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 4] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 5] java.net.AbstractPlainSocketImpl.accept
+  [ 6] java.net.ServerSocket.implAccept
+  [ 7] java.net.ServerSocket.accept
+  [ 8] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 9] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [10] java.util.concurrent.Executors$RunnableAdapter.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [13] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [14] java.lang.Thread.run
+
+--- 20004556 ns (0.02%), 2 samples
+  [ 0] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 1] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 2] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 3] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 4] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 5] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 6] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 7] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 8] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 9] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [10] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [11] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [12] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [13] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [14] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [15] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [16] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [17] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [18] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [19] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [20] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [21] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [22] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [23] start_thread
+
+--- 20002343 ns (0.02%), 1 sample
+  [ 0] java.net.SocketInputStream.read
+  [ 1] java.net.SocketInputStream.read
+  [ 2] java.net.SocketInputStream.read
+  [ 3] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 4] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [ 5] java.util.concurrent.Executors$RunnableAdapter.call
+  [ 6] java.util.concurrent.FutureTask.run
+  [ 7] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [ 8] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [ 9] java.lang.Thread.run
+
+--- 20001173 ns (0.02%), 1 sample
+  [ 0] java.net.URI$Parser.scan
+  [ 1] java.net.URI$Parser.parse
+  [ 2] java.net.URI.<init>
+  [ 3] java.net.SocksSocketImpl.connect
+  [ 4] java.net.Socket.connect
+  [ 5] java.net.Socket.connect
+  [ 6] java.net.Socket.<init>
+  [ 7] java.net.Socket.<init>
+  [ 8] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [ 9] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [10] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [11] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [12] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [13] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [14] java.lang.reflect.Method.invoke
+  [15] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [16] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [17] java.util.concurrent.FutureTask.run
+  [18] java.util.concurrent.Executors$RunnableAdapter.call
+  [19] java.util.concurrent.FutureTask.run
+  [20] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [21] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [22] java.lang.Thread.run
+
+--- 20000750 ns (0.02%), 1 sample
+  [ 0] java.net.SocketOutputStream.socketWrite
+  [ 1] java.net.SocketOutputStream.write
+  [ 2] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [ 3] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [ 4] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 7] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 8] java.lang.reflect.Method.invoke
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.Executors$RunnableAdapter.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [16] java.lang.Thread.run
+
+--- 19999676 ns (0.02%), 1 sample
+  [ 0] Java_java_net_PlainSocketImpl_socketCreate
+  [ 1] java.net.PlainSocketImpl.socketCreate
+  [ 2] java.net.AbstractPlainSocketImpl.create
+  [ 3] java.net.Socket.createImpl
+  [ 4] java.net.Socket.<init>
+  [ 5] java.net.Socket.<init>
+  [ 6] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [ 7] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [ 8] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [10] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [11] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [12] java.lang.reflect.Method.invoke
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.Executors$RunnableAdapter.call
+  [17] java.util.concurrent.FutureTask.run
+  [18] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [19] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [20] java.lang.Thread.run
+
+--- 10063245 ns (0.01%), 1 sample
+  [ 0] java.net.SocketInputStream.read
+  [ 1] java.net.SocketInputStream.read
+  [ 2] java.net.SocketInputStream.read
+  [ 3] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 4] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [ 5] java.util.concurrent.Executors$RunnableAdapter.call
+  [ 6] java.util.concurrent.FutureTask.run
+  [ 7] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [ 8] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [ 9] java.lang.Thread.run
+
+--- 10046040 ns (0.01%), 1 sample
+  [ 0] java.lang.System.getSecurityManager
+  [ 1] sun.net.ResourceManager.afterUdpClose
+  [ 2] java.net.AbstractPlainSocketImpl.close
+  [ 3] java.net.SocksSocketImpl.close
+  [ 4] java.net.Socket.close
+  [ 5] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 6] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [ 7] java.util.concurrent.Executors$RunnableAdapter.call
+  [ 8] java.util.concurrent.FutureTask.run
+  [ 9] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [10] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [11] java.lang.Thread.run
+
+--- 10041680 ns (0.01%), 1 sample
+  [ 0] java.net.AbstractPlainSocketImpl.acquireFD
+  [ 1] java.net.SocketInputStream.read
+  [ 2] java.net.SocketInputStream.read
+  [ 3] java.net.SocketInputStream.read
+  [ 4] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 5] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [ 6] java.util.concurrent.Executors$RunnableAdapter.call
+  [ 7] java.util.concurrent.FutureTask.run
+  [ 8] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [ 9] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [10] java.lang.Thread.run
+
+--- 10032291 ns (0.01%), 1 sample
+  [ 0] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 1] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 2] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 3] JVM_DoPrivileged
+  [ 4] java.security.AccessController.doPrivileged
+  [ 5] java.net.Socket.getInputStream
+  [ 6] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 7] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [ 8] java.util.concurrent.Executors$RunnableAdapter.call
+  [ 9] java.util.concurrent.FutureTask.run
+  [10] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [11] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [12] java.lang.Thread.run
+
+--- 10017158 ns (0.01%), 1 sample
+  [ 0] /usr/lib/x86_64-linux-gnu/libc-2.33.so
+  [ 1] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 2] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 3] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 4] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 5] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 6] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 7] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 8] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 9] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [10] start_thread
+
+--- 10013714 ns (0.01%), 1 sample
+  [ 0] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 1] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 2] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 3] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 4] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 5] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 6] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 7] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 8] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 9] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [10] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [11] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [12] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [13] start_thread
+
+--- 10005656 ns (0.01%), 1 sample
+  [ 0] __poll
+  [ 1] Java_java_net_PlainSocketImpl_socketAccept
+  [ 2] java.net.PlainSocketImpl.socketAccept
+  [ 3] java.net.AbstractPlainSocketImpl.accept
+  [ 4] java.net.ServerSocket.implAccept
+  [ 5] java.net.ServerSocket.accept
+  [ 6] io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+  [ 7] io.ktor.benchmarks.SocketBenchmarks$$Lambda$35.268579710.run
+  [ 8] java.util.concurrent.Executors$RunnableAdapter.call
+  [ 9] java.util.concurrent.FutureTask.run
+  [10] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [11] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [12] java.lang.Thread.run
+
+--- 10005172 ns (0.01%), 1 sample
+  [ 0] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 1] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 2] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 3] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 4] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 5] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 6] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 7] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 8] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 9] start_thread
+
+--- 10004223 ns (0.01%), 1 sample
+  [ 0] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 1] JVM_DoPrivileged
+  [ 2] java.security.AccessController.doPrivileged
+  [ 3] java.net.SocksSocketImpl.connect
+  [ 4] java.net.Socket.connect
+  [ 5] java.net.Socket.connect
+  [ 6] java.net.Socket.<init>
+  [ 7] java.net.Socket.<init>
+  [ 8] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [ 9] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [10] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [11] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [12] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [13] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [14] java.lang.reflect.Method.invoke
+  [15] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [16] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [17] java.util.concurrent.FutureTask.run
+  [18] java.util.concurrent.Executors$RunnableAdapter.call
+  [19] java.util.concurrent.FutureTask.run
+  [20] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [21] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [22] java.lang.Thread.run
+
+--- 10004166 ns (0.01%), 1 sample
+  [ 0] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 1] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 2] JVM_DoPrivileged
+  [ 3] java.security.AccessController.doPrivileged
+  [ 4] java.net.SocksSocketImpl.connect
+  [ 5] java.net.Socket.connect
+  [ 6] java.net.Socket.connect
+  [ 7] java.net.Socket.<init>
+  [ 8] java.net.Socket.<init>
+  [ 9] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [10] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [11] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [12] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [13] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [14] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [15] java.lang.reflect.Method.invoke
+  [16] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [17] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [18] java.util.concurrent.FutureTask.run
+  [19] java.util.concurrent.Executors$RunnableAdapter.call
+  [20] java.util.concurrent.FutureTask.run
+  [21] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [22] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [23] java.lang.Thread.run
+
+--- 10003950 ns (0.01%), 1 sample
+  [ 0] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 1] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 2] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 3] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 4] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 5] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 6] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 7] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 8] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 9] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [10] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [11] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [12] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [13] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [14] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [15] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [16] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [17] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [18] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [19] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [20] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [21] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [22] start_thread
+
+--- 10003727 ns (0.01%), 1 sample
+  [ 0] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 1] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 2] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 3] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 4] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 5] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 6] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 7] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 8] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 9] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [10] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [11] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [12] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [13] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [14] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [15] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [16] start_thread
+
+--- 10002893 ns (0.01%), 1 sample
+  [ 0] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 1] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 2] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 3] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 4] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 5] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 6] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 7] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 8] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 9] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [10] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [11] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [12] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [13] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [14] start_thread
+
+--- 10002229 ns (0.01%), 1 sample
+  [ 0] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 1] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 2] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 3] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 4] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 5] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 6] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 7] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 8] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 9] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [10] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [11] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [12] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [13] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [14] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [15] start_thread
+
+--- 10002218 ns (0.01%), 1 sample
+  [ 0] java.net.Socket.<init>
+  [ 1] java.net.Socket.<init>
+  [ 2] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [ 3] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [ 4] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 7] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 8] java.lang.reflect.Method.invoke
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.Executors$RunnableAdapter.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [16] java.lang.Thread.run
+
+--- 10001875 ns (0.01%), 1 sample
+  [ 0] java.net.SocketOutputStream.socketWrite0
+  [ 1] java.net.Socket.<init>
+  [ 2] java.net.Socket.<init>
+  [ 3] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [ 4] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [ 5] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 8] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 9] java.lang.reflect.Method.invoke
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.Executors$RunnableAdapter.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [17] java.lang.Thread.run
+
+--- 10001210 ns (0.01%), 1 sample
+  [ 0] java.lang.String.length
+  [ 1] sun.net.www.ParseUtil.firstEncodeIndex
+  [ 2] sun.net.www.ParseUtil.encodePath
+  [ 3] sun.net.www.ParseUtil.encodePath
+  [ 4] java.net.SocksSocketImpl.connect
+  [ 5] java.net.Socket.connect
+  [ 6] java.net.Socket.connect
+  [ 7] java.net.Socket.<init>
+  [ 8] java.net.Socket.<init>
+  [ 9] io.ktor.benchmarks.SocketBenchmarks.testJvmSocketWrite
+  [10] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_avgt_jmhStub
+  [11] io.ktor.benchmarks.jmh_generated.SocketBenchmarks_testJvmSocketWrite_jmhTest.testJvmSocketWrite_AverageTime
+  [12] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [13] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [14] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [15] java.lang.reflect.Method.invoke
+  [16] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [17] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [18] java.util.concurrent.FutureTask.run
+  [19] java.util.concurrent.Executors$RunnableAdapter.call
+  [20] java.util.concurrent.FutureTask.run
+  [21] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [22] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [23] java.lang.Thread.run
+
+--- 9999072 ns (0.01%), 1 sample
+  [ 0] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 1] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 2] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 3] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 4] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 5] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 6] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 7] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 8] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [ 9] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [10] /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  [11] start_thread
+
+          ns  percent  samples  top
+  ----------  -------  -------  ---
+ 25821045689   27.18%     1007  __send
+ 22778892899   23.98%      972  __recv
+ 14471449940   15.23%      535  /usr/lib/x86_64-linux-gnu/libc-2.33.so
+ 10781696383   11.35%      411  /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+  4530193025    4.77%      147  Java_java_net_SocketOutputStream_socketWrite0
+  4491221571    4.73%      193  __GI___pthread_mutex_lock
+  2834046163    2.98%      101  __GI___pthread_mutex_unlock
+  2618273612    2.76%      103  Java_java_net_SocketInputStream_socketRead0
+  1755753598    1.85%       76  java.net.SocketInputStream.socketRead0
+  1532368226    1.61%       50  /usr/lib/jvm/java-11-openjdk-amd64/lib/libnet.so
+  1110032833    1.17%       53  java.net.SocketOutputStream.socketWrite0
+   391228332    0.41%       14  io.ktor.benchmarks.SocketBenchmarks.setup$lambda-2
+   310420802    0.33%       14  pthread_mutex_lock
+   310008168    0.33%       15  java.net.AbstractPlainSocketImpl.<init>
+   280002855    0.29%       14  java.net.Socket.<init>
+   240003062    0.25%        7  java.net.InetSocketAddress.<init>
+   120413844    0.13%        5  java.net.SocketInputStream.read
+   110314431    0.12%        4  pthread_mutex_unlock
+    90286266    0.10%        2  java.net.AbstractPlainSocketImpl.releaseFD
+    70028591    0.07%        4  __errno_location
+    60241505    0.06%        3  java.net.AbstractPlainSocketImpl.acquireFD
+    50002506    0.05%        2  java.net.URI$Parser.scan
+    50001349    0.05%        1  java.lang.Integer.parseInt
+    50000786    0.05%        3  java.net.SocketOutputStream.socketWrite
+    40005208    0.04%        1  java.util.HashMap.keySet
+    30002265    0.03%        2  java.net.Socket.close
+    20080995    0.02%        2  pthread_self
+    19999676    0.02%        1  Java_java_net_PlainSocketImpl_socketCreate
+    10046040    0.01%        1  java.lang.System.getSecurityManager
+    10005656    0.01%        1  __poll
+    10001210    0.01%        1  java.lang.String.length
+

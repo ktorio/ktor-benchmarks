@@ -1,7 +1,7 @@
 --- Execution profile ---
-Total samples       : 4419
+Total samples       : 2038
 
---- 36460000000 ns (82.51%), 3646 samples
+--- 30060976003 ns (60.16%), 1222 samples
   [ 0] read
   [ 1] sun.nio.ch.FileDispatcherImpl.read0
   [ 2] sun.nio.ch.FileDispatcherImpl.read
@@ -24,30 +24,51 @@ Total samples       : 4419
   [19] java.util.concurrent.ThreadPoolExecutor$Worker.run
   [20] java.lang.Thread.run
 
---- 1330000000 ns (3.01%), 133 samples
+--- 5510161832 ns (11.03%), 214 samples
   [ 0] jlong_disjoint_arraycopy
-  [ 1] java.lang.ThreadLocal$ThreadLocalMap.getEntry
-  [ 2] java.lang.ThreadLocal.get
-  [ 3] sun.nio.ch.Util.getTemporaryDirectBuffer
-  [ 4] sun.nio.ch.IOUtil.read
-  [ 5] sun.nio.ch.FileChannelImpl.read
-  [ 6] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 7] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 8] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [10] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [11] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [12] java.lang.reflect.Method.invoke
-  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [14] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [15] java.util.concurrent.FutureTask.run
-  [16] java.util.concurrent.Executors$RunnableAdapter.call
+  [ 1] java.nio.Buffer.position
+  [ 2] java.nio.ByteBuffer.position
+  [ 3] java.nio.MappedByteBuffer.position
+  [ 4] java.nio.DirectByteBuffer.get
+  [ 5] java.nio.HeapByteBuffer.put
+  [ 6] sun.nio.ch.IOUtil.read
+  [ 7] sun.nio.ch.FileChannelImpl.read
+  [ 8] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 9] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [10] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [11] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [12] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [13] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [14] java.lang.reflect.Method.invoke
+  [15] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [16] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
   [17] java.util.concurrent.FutureTask.run
-  [18] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [19] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [20] java.lang.Thread.run
+  [18] java.util.concurrent.Executors$RunnableAdapter.call
+  [19] java.util.concurrent.FutureTask.run
+  [20] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [21] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [22] java.lang.Thread.run
 
---- 740000000 ns (1.67%), 74 samples
+--- 1660043550 ns (3.32%), 69 samples
+  [ 0] sun.nio.ch.IOUtil.read
+  [ 1] sun.nio.ch.FileChannelImpl.read
+  [ 2] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 7] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 8] java.lang.reflect.Method.invoke
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.Executors$RunnableAdapter.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [16] java.lang.Thread.run
+
+--- 1570057415 ns (3.14%), 56 samples
   [ 0] sun.nio.ch.FileDispatcherImpl.read0
   [ 1] sun.nio.ch.FileDispatcherImpl.read
   [ 2] sun.nio.ch.IOUtil.readIntoNativeBuffer
@@ -69,7 +90,156 @@ Total samples       : 4419
   [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
   [19] java.lang.Thread.run
 
---- 570000000 ns (1.29%), 57 samples
+--- 1450032237 ns (2.90%), 60 samples
+  [ 0] /usr/lib/x86_64-linux-gnu/libc-2.33.so
+  [ 1] sun.nio.ch.FileDispatcherImpl.read0
+  [ 2] sun.nio.ch.FileDispatcherImpl.read
+  [ 3] sun.nio.ch.IOUtil.readIntoNativeBuffer
+  [ 4] sun.nio.ch.IOUtil.read
+  [ 5] sun.nio.ch.FileChannelImpl.read
+  [ 6] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 7] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 8] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [10] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [11] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [12] java.lang.reflect.Method.invoke
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.Executors$RunnableAdapter.call
+  [17] java.util.concurrent.FutureTask.run
+  [18] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [19] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [20] java.lang.Thread.run
+
+--- 1220023800 ns (2.44%), 50 samples
+  [ 0] java.lang.ThreadLocal.get
+  [ 1] sun.nio.ch.Util.getTemporaryDirectBuffer
+  [ 2] sun.nio.ch.IOUtil.read
+  [ 3] sun.nio.ch.FileChannelImpl.read
+  [ 4] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 9] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [10] java.lang.reflect.Method.invoke
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.Executors$RunnableAdapter.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [18] java.lang.Thread.run
+
+--- 1160024386 ns (2.32%), 50 samples
+  [ 0] java.nio.channels.spi.AbstractInterruptibleChannel.begin
+  [ 1] sun.nio.ch.FileChannelImpl.beginBlocking
+  [ 2] sun.nio.ch.FileChannelImpl.read
+  [ 3] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 8] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 9] java.lang.reflect.Method.invoke
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.Executors$RunnableAdapter.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [17] java.lang.Thread.run
+
+--- 1020030854 ns (2.04%), 42 samples
+  [ 0] sun.nio.ch.NativeThread.current
+  [ 1] sun.nio.ch.NativeThreadSet.add
+  [ 2] sun.nio.ch.FileChannelImpl.read
+  [ 3] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 8] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 9] java.lang.reflect.Method.invoke
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.Executors$RunnableAdapter.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [17] java.lang.Thread.run
+
+--- 810034104 ns (1.62%), 33 samples
+  [ 0] java.lang.Thread.blockedOn
+  [ 1] java.lang.System$2.blockedOn
+  [ 2] java.nio.channels.spi.AbstractInterruptibleChannel.blockedOn
+  [ 3] java.nio.channels.spi.AbstractInterruptibleChannel.begin
+  [ 4] sun.nio.ch.FileChannelImpl.beginBlocking
+  [ 5] sun.nio.ch.FileChannelImpl.read
+  [ 6] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 7] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 8] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [10] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [11] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [12] java.lang.reflect.Method.invoke
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.Executors$RunnableAdapter.call
+  [17] java.util.concurrent.FutureTask.run
+  [18] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [19] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [20] java.lang.Thread.run
+
+--- 749994504 ns (1.50%), 31 samples
+  [ 0] java.nio.channels.spi.AbstractInterruptibleChannel.end
+  [ 1] sun.nio.ch.FileChannelImpl.endBlocking
+  [ 2] sun.nio.ch.FileChannelImpl.read
+  [ 3] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 8] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 9] java.lang.reflect.Method.invoke
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.Executors$RunnableAdapter.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [17] java.lang.Thread.run
+
+--- 379999848 ns (0.76%), 17 samples
+  [ 0] java.lang.ThreadLocal$ThreadLocalMap.getEntry
+  [ 1] java.lang.ThreadLocal.get
+  [ 2] sun.nio.ch.Util.offerFirstTemporaryDirectBuffer
+  [ 3] sun.nio.ch.IOUtil.read
+  [ 4] sun.nio.ch.FileChannelImpl.read
+  [ 5] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 7] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [10] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [11] java.lang.reflect.Method.invoke
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.Executors$RunnableAdapter.call
+  [16] java.util.concurrent.FutureTask.run
+  [17] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [19] java.lang.Thread.run
+
+--- 200006638 ns (0.40%), 7 samples
   [ 0] Java_sun_nio_ch_FileDispatcherImpl_read0
   [ 1] sun.nio.ch.FileDispatcherImpl.read0
   [ 2] sun.nio.ch.FileDispatcherImpl.read
@@ -92,207 +262,8 @@ Total samples       : 4419
   [19] java.util.concurrent.ThreadPoolExecutor$Worker.run
   [20] java.lang.Thread.run
 
---- 380000000 ns (0.86%), 38 samples
-  [ 0] java.nio.channels.spi.AbstractInterruptibleChannel.begin
-  [ 1] sun.nio.ch.FileChannelImpl.beginBlocking
-  [ 2] sun.nio.ch.FileChannelImpl.read
-  [ 3] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 8] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 9] java.lang.reflect.Method.invoke
-  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [12] java.util.concurrent.FutureTask.run
-  [13] java.util.concurrent.Executors$RunnableAdapter.call
-  [14] java.util.concurrent.FutureTask.run
-  [15] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [17] java.lang.Thread.run
-
---- 280000000 ns (0.63%), 28 samples
-  [ 0] sun.nio.ch.FileChannelImpl.endBlocking
-  [ 1] sun.nio.ch.FileChannelImpl.read
-  [ 2] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 7] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 8] java.lang.reflect.Method.invoke
-  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [11] java.util.concurrent.FutureTask.run
-  [12] java.util.concurrent.Executors$RunnableAdapter.call
-  [13] java.util.concurrent.FutureTask.run
-  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [16] java.lang.Thread.run
-
---- 280000000 ns (0.63%), 28 samples
-  [ 0] java.nio.DirectByteBuffer.address
-  [ 1] sun.nio.ch.IOUtil.readIntoNativeBuffer
-  [ 2] sun.nio.ch.IOUtil.read
-  [ 3] sun.nio.ch.FileChannelImpl.read
-  [ 4] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 9] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [10] java.lang.reflect.Method.invoke
-  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [13] java.util.concurrent.FutureTask.run
-  [14] java.util.concurrent.Executors$RunnableAdapter.call
-  [15] java.util.concurrent.FutureTask.run
-  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [18] java.lang.Thread.run
-
---- 240000000 ns (0.54%), 24 samples
-  [ 0] sun.nio.ch.NativeThreadSet.remove
-  [ 1] sun.nio.ch.FileChannelImpl.read
-  [ 2] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 7] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 8] java.lang.reflect.Method.invoke
-  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [11] java.util.concurrent.FutureTask.run
-  [12] java.util.concurrent.Executors$RunnableAdapter.call
-  [13] java.util.concurrent.FutureTask.run
-  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [16] java.lang.Thread.run
-
---- 220000000 ns (0.50%), 22 samples
-  [ 0] java.nio.channels.spi.AbstractInterruptibleChannel.isOpen
-  [ 1] sun.nio.ch.FileChannelImpl.read
-  [ 2] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 7] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 8] java.lang.reflect.Method.invoke
-  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [11] java.util.concurrent.FutureTask.run
-  [12] java.util.concurrent.Executors$RunnableAdapter.call
-  [13] java.util.concurrent.FutureTask.run
-  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [16] java.lang.Thread.run
-
---- 210000000 ns (0.48%), 21 samples
-  [ 0] sun.nio.ch.Util$BufferCache.get
-  [ 1] sun.nio.ch.Util.getTemporaryDirectBuffer
-  [ 2] sun.nio.ch.IOUtil.read
-  [ 3] sun.nio.ch.FileChannelImpl.read
-  [ 4] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 9] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [10] java.lang.reflect.Method.invoke
-  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [13] java.util.concurrent.FutureTask.run
-  [14] java.util.concurrent.Executors$RunnableAdapter.call
-  [15] java.util.concurrent.FutureTask.run
-  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [18] java.lang.Thread.run
-
---- 200000000 ns (0.45%), 20 samples
-  [ 0] sun.nio.ch.FileChannelImpl.read
-  [ 1] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 2] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 4] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 6] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 7] java.lang.reflect.Method.invoke
-  [ 8] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [10] java.util.concurrent.FutureTask.run
-  [11] java.util.concurrent.Executors$RunnableAdapter.call
-  [12] java.util.concurrent.FutureTask.run
-  [13] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [14] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [15] java.lang.Thread.run
-
---- 200000000 ns (0.45%), 20 samples
-  [ 0] java.lang.Thread.blockedOn
-  [ 1] java.lang.System$2.blockedOn
-  [ 2] java.nio.channels.spi.AbstractInterruptibleChannel.blockedOn
-  [ 3] java.nio.channels.spi.AbstractInterruptibleChannel.end
-  [ 4] sun.nio.ch.FileChannelImpl.endBlocking
-  [ 5] sun.nio.ch.FileChannelImpl.read
-  [ 6] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 7] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 8] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [10] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [11] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [12] java.lang.reflect.Method.invoke
-  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [14] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [15] java.util.concurrent.FutureTask.run
-  [16] java.util.concurrent.Executors$RunnableAdapter.call
-  [17] java.util.concurrent.FutureTask.run
-  [18] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [19] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [20] java.lang.Thread.run
-
---- 190000000 ns (0.43%), 19 samples
-  [ 0] sun.nio.ch.NativeThreadSet.add
-  [ 1] sun.nio.ch.FileChannelImpl.read
-  [ 2] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 7] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 8] java.lang.reflect.Method.invoke
-  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [11] java.util.concurrent.FutureTask.run
-  [12] java.util.concurrent.Executors$RunnableAdapter.call
-  [13] java.util.concurrent.FutureTask.run
-  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [16] java.lang.Thread.run
-
---- 170000000 ns (0.38%), 17 samples
-  [ 0] sun.nio.ch.NativeThread.current
-  [ 1] sun.nio.ch.NativeThreadSet.add
-  [ 2] sun.nio.ch.FileChannelImpl.read
-  [ 3] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 8] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 9] java.lang.reflect.Method.invoke
-  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [12] java.util.concurrent.FutureTask.run
-  [13] java.util.concurrent.Executors$RunnableAdapter.call
-  [14] java.util.concurrent.FutureTask.run
-  [15] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [17] java.lang.Thread.run
-
---- 160000000 ns (0.36%), 16 samples
-  [ 0] convertReturnVal
+--- 200002347 ns (0.40%), 6 samples
+  [ 0] /usr/lib/jvm/java-11-openjdk-amd64/lib/libnio.so
   [ 1] sun.nio.ch.FileDispatcherImpl.read0
   [ 2] sun.nio.ch.FileDispatcherImpl.read
   [ 3] sun.nio.ch.IOUtil.readIntoNativeBuffer
@@ -314,132 +285,29 @@ Total samples       : 4419
   [19] java.util.concurrent.ThreadPoolExecutor$Worker.run
   [20] java.lang.Thread.run
 
---- 150000000 ns (0.34%), 15 samples
-  [ 0] java.nio.channels.spi.AbstractInterruptibleChannel.isOpen
-  [ 1] sun.nio.ch.FileChannelImpl.ensureOpen
-  [ 2] sun.nio.ch.FileChannelImpl.read
-  [ 3] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 8] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 9] java.lang.reflect.Method.invoke
-  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [12] java.util.concurrent.FutureTask.run
-  [13] java.util.concurrent.Executors$RunnableAdapter.call
-  [14] java.util.concurrent.FutureTask.run
-  [15] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [17] java.lang.Thread.run
-
---- 140000000 ns (0.32%), 14 samples
-  [ 0] sun.nio.ch.Util$BufferCache.get
-  [ 1] sun.nio.ch.Util.getTemporaryDirectBuffer
-  [ 2] sun.nio.ch.IOUtil.read
-  [ 3] sun.nio.ch.FileChannelImpl.read
-  [ 4] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 9] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [10] java.lang.reflect.Method.invoke
-  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+--- 170004608 ns (0.34%), 5 samples
+  [ 0] java.lang.ThreadLocal$ThreadLocalMap.getEntry
+  [ 1] java.lang.ThreadLocal.get
+  [ 2] sun.nio.ch.Util.getTemporaryDirectBuffer
+  [ 3] sun.nio.ch.IOUtil.read
+  [ 4] sun.nio.ch.FileChannelImpl.read
+  [ 5] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 7] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [10] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [11] java.lang.reflect.Method.invoke
   [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [13] java.util.concurrent.FutureTask.run
-  [14] java.util.concurrent.Executors$RunnableAdapter.call
-  [15] java.util.concurrent.FutureTask.run
-  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [18] java.lang.Thread.run
-
---- 120000000 ns (0.27%), 12 samples
-  [ 0] java.lang.Thread.blockedOn
-  [ 1] java.lang.System$2.blockedOn
-  [ 2] java.nio.channels.spi.AbstractInterruptibleChannel.blockedOn
-  [ 3] java.nio.channels.spi.AbstractInterruptibleChannel.begin
-  [ 4] sun.nio.ch.FileChannelImpl.beginBlocking
-  [ 5] sun.nio.ch.FileChannelImpl.read
-  [ 6] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 7] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 8] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [10] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [11] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [12] java.lang.reflect.Method.invoke
   [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [14] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [15] java.util.concurrent.FutureTask.run
-  [16] java.util.concurrent.Executors$RunnableAdapter.call
-  [17] java.util.concurrent.FutureTask.run
-  [18] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [19] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [20] java.lang.Thread.run
-
---- 100000000 ns (0.23%), 10 samples
-  [ 0] java.nio.channels.spi.AbstractInterruptibleChannel.end
-  [ 1] sun.nio.ch.FileChannelImpl.endBlocking
-  [ 2] sun.nio.ch.FileChannelImpl.read
-  [ 3] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 8] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 9] java.lang.reflect.Method.invoke
-  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [12] java.util.concurrent.FutureTask.run
-  [13] java.util.concurrent.Executors$RunnableAdapter.call
   [14] java.util.concurrent.FutureTask.run
-  [15] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [17] java.lang.Thread.run
+  [15] java.util.concurrent.Executors$RunnableAdapter.call
+  [16] java.util.concurrent.FutureTask.run
+  [17] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [19] java.lang.Thread.run
 
---- 100000000 ns (0.23%), 10 samples
-  [ 0] sun.nio.ch.FileChannelImpl.read
-  [ 1] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 2] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 4] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 6] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 7] java.lang.reflect.Method.invoke
-  [ 8] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [10] java.util.concurrent.FutureTask.run
-  [11] java.util.concurrent.Executors$RunnableAdapter.call
-  [12] java.util.concurrent.FutureTask.run
-  [13] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [14] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [15] java.lang.Thread.run
-
---- 90000000 ns (0.20%), 9 samples
-  [ 0] java.lang.Thread.blockedOn
-  [ 1] java.lang.System$2.blockedOn
-  [ 2] java.nio.channels.spi.AbstractInterruptibleChannel.blockedOn
-  [ 3] java.nio.channels.spi.AbstractInterruptibleChannel.begin
-  [ 4] sun.nio.ch.FileChannelImpl.beginBlocking
-  [ 5] sun.nio.ch.FileChannelImpl.read
-  [ 6] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 7] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 8] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [10] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [11] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [12] java.lang.reflect.Method.invoke
-  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [14] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [15] java.util.concurrent.FutureTask.run
-  [16] java.util.concurrent.Executors$RunnableAdapter.call
-  [17] java.util.concurrent.FutureTask.run
-  [18] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [19] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [20] java.lang.Thread.run
-
---- 80000000 ns (0.18%), 8 samples
+--- 170001575 ns (0.34%), 8 samples
   [ 0] sun.nio.ch.Util.getTemporaryDirectBuffer
   [ 1] sun.nio.ch.IOUtil.read
   [ 2] sun.nio.ch.FileChannelImpl.read
@@ -459,29 +327,8 @@ Total samples       : 4419
   [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
   [17] java.lang.Thread.run
 
---- 80000000 ns (0.18%), 8 samples
-  [ 0] java.lang.Thread.isInterrupted
-  [ 1] java.nio.channels.spi.AbstractInterruptibleChannel.begin
-  [ 2] sun.nio.ch.FileChannelImpl.beginBlocking
-  [ 3] sun.nio.ch.FileChannelImpl.read
-  [ 4] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 9] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [10] java.lang.reflect.Method.invoke
-  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [13] java.util.concurrent.FutureTask.run
-  [14] java.util.concurrent.Executors$RunnableAdapter.call
-  [15] java.util.concurrent.FutureTask.run
-  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [18] java.lang.Thread.run
-
---- 80000000 ns (0.18%), 8 samples
-  [ 0] java.lang.ThreadLocal.get
+--- 160011891 ns (0.32%), 6 samples
+  [ 0] sun.nio.ch.Util$BufferCache.get
   [ 1] sun.nio.ch.Util.getTemporaryDirectBuffer
   [ 2] sun.nio.ch.IOUtil.read
   [ 3] sun.nio.ch.FileChannelImpl.read
@@ -501,221 +348,52 @@ Total samples       : 4419
   [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
   [18] java.lang.Thread.run
 
---- 70000000 ns (0.16%), 7 samples
-  [ 0] java.nio.ByteBuffer.limit
-  [ 1] java.nio.MappedByteBuffer.limit
-  [ 2] java.nio.MappedByteBuffer.limit
-  [ 3] sun.nio.ch.Util$BufferCache.get
-  [ 4] sun.nio.ch.Util.getTemporaryDirectBuffer
-  [ 5] sun.nio.ch.IOUtil.read
-  [ 6] sun.nio.ch.FileChannelImpl.read
-  [ 7] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 8] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 9] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [10] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [11] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [12] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [13] java.lang.reflect.Method.invoke
-  [14] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [15] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [16] java.util.concurrent.FutureTask.run
-  [17] java.util.concurrent.Executors$RunnableAdapter.call
-  [18] java.util.concurrent.FutureTask.run
-  [19] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [20] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [21] java.lang.Thread.run
-
---- 70000000 ns (0.16%), 7 samples
-  [ 0] sun.nio.ch.FileChannelImpl.read
-  [ 1] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 2] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 4] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 6] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 7] java.lang.reflect.Method.invoke
-  [ 8] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [10] java.util.concurrent.FutureTask.run
-  [11] java.util.concurrent.Executors$RunnableAdapter.call
-  [12] java.util.concurrent.FutureTask.run
-  [13] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [14] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [15] java.lang.Thread.run
-
---- 60000000 ns (0.14%), 6 samples
-  [ 0] __psynch_cvwait
-  [ 1] os::PlatformMonitor::wait(long)
-  [ 2] Monitor::wait_without_safepoint_check(long long)
-  [ 3] WatcherThread::sleep() const
-  [ 4] WatcherThread::run()
-  [ 5] Thread::call_run()
-  [ 6] thread_native_entry(Thread*)
-  [ 7] __os_ch_md_redzone_cookie
-  [ 8] internal_catch_exc_subsystem
-
---- 50000000 ns (0.11%), 5 samples
-  [ 0] java.nio.MappedByteBuffer.rewind
-  [ 1] java.nio.MappedByteBuffer.rewind
-  [ 2] sun.nio.ch.Util$BufferCache.get
-  [ 3] sun.nio.ch.Util.getTemporaryDirectBuffer
-  [ 4] sun.nio.ch.IOUtil.read
-  [ 5] sun.nio.ch.FileChannelImpl.read
-  [ 6] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 7] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 8] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [10] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [11] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [12] java.lang.reflect.Method.invoke
+--- 139996240 ns (0.28%), 7 samples
+  [ 0] java.lang.ThreadLocal$ThreadLocalMap.getEntry
+  [ 1] java.lang.ThreadLocal.get
+  [ 2] sun.nio.ch.Util.offerFirstTemporaryDirectBuffer
+  [ 3] sun.nio.ch.IOUtil.read
+  [ 4] sun.nio.ch.FileChannelImpl.read
+  [ 5] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 7] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [10] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [11] java.lang.reflect.Method.invoke
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
   [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [14] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [15] java.util.concurrent.FutureTask.run
-  [16] java.util.concurrent.Executors$RunnableAdapter.call
-  [17] java.util.concurrent.FutureTask.run
-  [18] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [19] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [20] java.lang.Thread.run
-
---- 50000000 ns (0.11%), 5 samples
-  [ 0] sun.nio.ch.Util$BufferCache.get
-  [ 1] sun.nio.ch.Util.getTemporaryDirectBuffer
-  [ 2] sun.nio.ch.IOUtil.read
-  [ 3] sun.nio.ch.FileChannelImpl.read
-  [ 4] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 9] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [10] java.lang.reflect.Method.invoke
-  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [13] java.util.concurrent.FutureTask.run
-  [14] java.util.concurrent.Executors$RunnableAdapter.call
-  [15] java.util.concurrent.FutureTask.run
-  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [18] java.lang.Thread.run
-
---- 40000000 ns (0.09%), 4 samples
-  [ 0] sun.nio.ch.FileChannelImpl.read
-  [ 1] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 2] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 4] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 6] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 7] java.lang.reflect.Method.invoke
-  [ 8] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [10] java.util.concurrent.FutureTask.run
-  [11] java.util.concurrent.Executors$RunnableAdapter.call
-  [12] java.util.concurrent.FutureTask.run
-  [13] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [14] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [15] java.lang.Thread.run
-
---- 40000000 ns (0.09%), 4 samples
-  [ 0] sun.nio.ch.IOUtil.read
-  [ 1] sun.nio.ch.FileChannelImpl.read
-  [ 2] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 7] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 8] java.lang.reflect.Method.invoke
-  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [11] java.util.concurrent.FutureTask.run
-  [12] java.util.concurrent.Executors$RunnableAdapter.call
-  [13] java.util.concurrent.FutureTask.run
-  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [16] java.lang.Thread.run
-
---- 40000000 ns (0.09%), 4 samples
-  [ 0] sun.nio.ch.NativeThread.current
-  [ 1] sun.nio.ch.NativeThreadSet.add
-  [ 2] sun.nio.ch.FileChannelImpl.read
-  [ 3] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 8] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 9] java.lang.reflect.Method.invoke
-  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [12] java.util.concurrent.FutureTask.run
-  [13] java.util.concurrent.Executors$RunnableAdapter.call
   [14] java.util.concurrent.FutureTask.run
-  [15] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [17] java.lang.Thread.run
+  [15] java.util.concurrent.Executors$RunnableAdapter.call
+  [16] java.util.concurrent.FutureTask.run
+  [17] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [19] java.lang.Thread.run
 
---- 40000000 ns (0.09%), 4 samples
-  [ 0] sun.nio.ch.Util$BufferCache.get
-  [ 1] sun.nio.ch.Util.getTemporaryDirectBuffer
-  [ 2] sun.nio.ch.IOUtil.read
-  [ 3] sun.nio.ch.FileChannelImpl.read
-  [ 4] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 9] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [10] java.lang.reflect.Method.invoke
-  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+--- 129997740 ns (0.26%), 7 samples
+  [ 0] java.lang.ThreadLocal$ThreadLocalMap.getEntry
+  [ 1] java.lang.ThreadLocal.get
+  [ 2] sun.nio.ch.Util.getTemporaryDirectBuffer
+  [ 3] sun.nio.ch.IOUtil.read
+  [ 4] sun.nio.ch.FileChannelImpl.read
+  [ 5] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 7] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [10] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [11] java.lang.reflect.Method.invoke
   [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [13] java.util.concurrent.FutureTask.run
-  [14] java.util.concurrent.Executors$RunnableAdapter.call
-  [15] java.util.concurrent.FutureTask.run
-  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [18] java.lang.Thread.run
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.Executors$RunnableAdapter.call
+  [16] java.util.concurrent.FutureTask.run
+  [17] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [19] java.lang.Thread.run
 
---- 40000000 ns (0.09%), 4 samples
-  [ 0] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 1] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 2] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 3] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 4] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 5] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 6] java.lang.reflect.Method.invoke
-  [ 7] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [ 8] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [ 9] java.util.concurrent.FutureTask.run
-  [10] java.util.concurrent.Executors$RunnableAdapter.call
-  [11] java.util.concurrent.FutureTask.run
-  [12] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [13] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [14] java.lang.Thread.run
-
---- 30000000 ns (0.07%), 3 samples
-  [ 0] sun.nio.ch.Util$BufferCache.get
-  [ 1] sun.nio.ch.Util.getTemporaryDirectBuffer
-  [ 2] sun.nio.ch.IOUtil.read
-  [ 3] sun.nio.ch.FileChannelImpl.read
-  [ 4] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 9] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [10] java.lang.reflect.Method.invoke
-  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [13] java.util.concurrent.FutureTask.run
-  [14] java.util.concurrent.Executors$RunnableAdapter.call
-  [15] java.util.concurrent.FutureTask.run
-  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [18] java.lang.Thread.run
-
---- 30000000 ns (0.07%), 3 samples
-  [ 0] sun.nio.ch.IOUtil.readIntoNativeBuffer
+--- 120006695 ns (0.24%), 6 samples
+  [ 0] java.nio.Buffer.remaining
   [ 1] sun.nio.ch.IOUtil.read
   [ 2] sun.nio.ch.FileChannelImpl.read
   [ 3] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
@@ -734,42 +412,7 @@ Total samples       : 4419
   [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
   [17] java.lang.Thread.run
 
---- 30000000 ns (0.07%), 3 samples
-  [ 0] __psynch_cvwait
-  [ 1] os::PlatformMonitor::wait(long)
-  [ 2] Monitor::wait_without_safepoint_check(long long)
-  [ 3] G1ServiceThread::sleep_before_next_cycle()
-  [ 4] G1ServiceThread::run_service()
-  [ 5] ConcurrentGCThread::run()
-  [ 6] Thread::call_run()
-  [ 7] thread_native_entry(Thread*)
-  [ 8] __os_ch_md_redzone_cookie
-  [ 9] internal_catch_exc_subsystem
-
---- 30000000 ns (0.07%), 3 samples
-  [ 0] java.lang.Thread.blockedOn
-  [ 1] java.lang.System$2.blockedOn
-  [ 2] java.nio.channels.spi.AbstractInterruptibleChannel.blockedOn
-  [ 3] java.nio.channels.spi.AbstractInterruptibleChannel.begin
-  [ 4] sun.nio.ch.FileChannelImpl.beginBlocking
-  [ 5] sun.nio.ch.FileChannelImpl.read
-  [ 6] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 7] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 8] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [10] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [11] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [12] java.lang.reflect.Method.invoke
-  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [14] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [15] java.util.concurrent.FutureTask.run
-  [16] java.util.concurrent.Executors$RunnableAdapter.call
-  [17] java.util.concurrent.FutureTask.run
-  [18] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [19] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [20] java.lang.Thread.run
-
---- 30000000 ns (0.07%), 3 samples
+--- 110003911 ns (0.22%), 3 samples
   [ 0] sun.nio.ch.FileChannelImpl.read
   [ 1] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
   [ 2] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
@@ -787,9 +430,131 @@ Total samples       : 4419
   [14] java.util.concurrent.ThreadPoolExecutor$Worker.run
   [15] java.lang.Thread.run
 
---- 30000000 ns (0.07%), 3 samples
-  [ 0] java.lang.ThreadLocal.get
-  [ 1] sun.nio.ch.Util.getTemporaryDirectBuffer
+--- 100004732 ns (0.20%), 4 samples
+  [ 0] sun.nio.ch.IOUtil.read
+  [ 1] sun.nio.ch.FileChannelImpl.read
+  [ 2] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 7] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 8] java.lang.reflect.Method.invoke
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.Executors$RunnableAdapter.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [16] java.lang.Thread.run
+
+--- 100004084 ns (0.20%), 3 samples
+  [ 0] java.lang.ThreadLocal$ThreadLocalMap.getEntry
+  [ 1] java.lang.ThreadLocal.get
+  [ 2] sun.nio.ch.Util.getTemporaryDirectBuffer
+  [ 3] sun.nio.ch.IOUtil.read
+  [ 4] sun.nio.ch.FileChannelImpl.read
+  [ 5] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 7] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [10] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [11] java.lang.reflect.Method.invoke
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.Executors$RunnableAdapter.call
+  [16] java.util.concurrent.FutureTask.run
+  [17] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [19] java.lang.Thread.run
+
+--- 100001672 ns (0.20%), 5 samples
+  [ 0] sun.nio.ch.Util.offerFirstTemporaryDirectBuffer
+  [ 1] sun.nio.ch.IOUtil.read
+  [ 2] sun.nio.ch.FileChannelImpl.read
+  [ 3] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 8] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 9] java.lang.reflect.Method.invoke
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.Executors$RunnableAdapter.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [17] java.lang.Thread.run
+
+--- 90018032 ns (0.18%), 2 samples
+  [ 0] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 1] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 2] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 3] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 4] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 5] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 6] java.lang.reflect.Method.invoke
+  [ 7] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [ 8] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [ 9] java.util.concurrent.FutureTask.run
+  [10] java.util.concurrent.Executors$RunnableAdapter.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [13] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [14] java.lang.Thread.run
+
+--- 90003461 ns (0.18%), 4 samples
+  [ 0] jlong_arraycopy
+  [ 1] java.nio.Buffer.position
+  [ 2] java.nio.ByteBuffer.position
+  [ 3] java.nio.MappedByteBuffer.position
+  [ 4] java.nio.DirectByteBuffer.get
+  [ 5] java.nio.HeapByteBuffer.put
+  [ 6] sun.nio.ch.IOUtil.read
+  [ 7] sun.nio.ch.FileChannelImpl.read
+  [ 8] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 9] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [10] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [11] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [12] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [13] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [14] java.lang.reflect.Method.invoke
+  [15] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [16] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [17] java.util.concurrent.FutureTask.run
+  [18] java.util.concurrent.Executors$RunnableAdapter.call
+  [19] java.util.concurrent.FutureTask.run
+  [20] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [21] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [22] java.lang.Thread.run
+
+--- 90003018 ns (0.18%), 2 samples
+  [ 0] sun.nio.ch.NativeThreadSet.add
+  [ 1] sun.nio.ch.FileChannelImpl.read
+  [ 2] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 7] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 8] java.lang.reflect.Method.invoke
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.Executors$RunnableAdapter.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [16] java.lang.Thread.run
+
+--- 90002252 ns (0.18%), 3 samples
+  [ 0] sun.nio.ch.FileDispatcherImpl.read0
+  [ 1] sun.nio.ch.IOUtil.readIntoNativeBuffer
   [ 2] sun.nio.ch.IOUtil.read
   [ 3] sun.nio.ch.FileChannelImpl.read
   [ 4] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
@@ -808,7 +573,67 @@ Total samples       : 4419
   [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
   [18] java.lang.Thread.run
 
---- 30000000 ns (0.07%), 3 samples
+--- 80003902 ns (0.16%), 4 samples
+  [ 0] sun.nio.ch.FileChannelImpl.read
+  [ 1] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 2] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 4] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 6] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 7] java.lang.reflect.Method.invoke
+  [ 8] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] java.util.concurrent.FutureTask.run
+  [11] java.util.concurrent.Executors$RunnableAdapter.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [14] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [15] java.lang.Thread.run
+
+--- 80003700 ns (0.16%), 1 sample
+  [ 0] jdk.internal.misc.Unsafe.copyMemory
+  [ 1] java.nio.DirectByteBuffer.get
+  [ 2] java.nio.HeapByteBuffer.put
+  [ 3] sun.nio.ch.IOUtil.read
+  [ 4] sun.nio.ch.FileChannelImpl.read
+  [ 5] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 7] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [10] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [11] java.lang.reflect.Method.invoke
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.Executors$RunnableAdapter.call
+  [16] java.util.concurrent.FutureTask.run
+  [17] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [19] java.lang.Thread.run
+
+--- 70002150 ns (0.14%), 2 samples
+  [ 0] java.nio.Buffer.remaining
+  [ 1] sun.nio.ch.IOUtil.read
+  [ 2] sun.nio.ch.FileChannelImpl.read
+  [ 3] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 8] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 9] java.lang.reflect.Method.invoke
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.Executors$RunnableAdapter.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [17] java.lang.Thread.run
+
+--- 70001311 ns (0.14%), 3 samples
   [ 0] java.nio.Buffer.limit
   [ 1] java.nio.ByteBuffer.limit
   [ 2] java.nio.MappedByteBuffer.limit
@@ -833,14 +658,158 @@ Total samples       : 4419
   [21] java.util.concurrent.ThreadPoolExecutor$Worker.run
   [22] java.lang.Thread.run
 
---- 30000000 ns (0.07%), 3 samples
-  [ 0] __open
-  [ 1] handleOpen
-  [ 2] fileOpen
-  [ 3] java.io.RandomAccessFile.open0
-  [ 4] java.io.RandomAccessFile.open
-  [ 5] java.io.RandomAccessFile.<init>
-  [ 6] java.io.RandomAccessFile.<init>
+--- 70000699 ns (0.14%), 3 samples
+  [ 0] sun.nio.ch.FileChannelImpl.read
+  [ 1] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 2] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 4] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 6] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 7] java.lang.reflect.Method.invoke
+  [ 8] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] java.util.concurrent.FutureTask.run
+  [11] java.util.concurrent.Executors$RunnableAdapter.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [14] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [15] java.lang.Thread.run
+
+--- 69999678 ns (0.14%), 5 samples
+  [ 0] sun.nio.ch.Util$BufferCache.offerFirst
+  [ 1] sun.nio.ch.Util.offerFirstTemporaryDirectBuffer
+  [ 2] sun.nio.ch.IOUtil.read
+  [ 3] sun.nio.ch.FileChannelImpl.read
+  [ 4] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 9] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [10] java.lang.reflect.Method.invoke
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.Executors$RunnableAdapter.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [18] java.lang.Thread.run
+
+--- 69999097 ns (0.14%), 5 samples
+  [ 0] sun.nio.ch.NativeThread.current
+  [ 1] sun.nio.ch.NativeThreadSet.add
+  [ 2] sun.nio.ch.FileChannelImpl.read
+  [ 3] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 8] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 9] java.lang.reflect.Method.invoke
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.Executors$RunnableAdapter.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [17] java.lang.Thread.run
+
+--- 60002699 ns (0.12%), 1 sample
+  [ 0] java.nio.channels.spi.AbstractInterruptibleChannel.begin
+  [ 1] sun.nio.ch.FileChannelImpl.beginBlocking
+  [ 2] sun.nio.ch.FileChannelImpl.read
+  [ 3] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 8] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 9] java.lang.reflect.Method.invoke
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.Executors$RunnableAdapter.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [17] java.lang.Thread.run
+
+--- 60002470 ns (0.12%), 3 samples
+  [ 0] jdk.internal.misc.Unsafe.checkPrimitiveArray
+  [ 1] jdk.internal.misc.Unsafe.checkPrimitivePointer
+  [ 2] jdk.internal.misc.Unsafe.copyMemoryChecks
+  [ 3] jdk.internal.misc.Unsafe.copyMemory
+  [ 4] java.nio.DirectByteBuffer.get
+  [ 5] java.nio.HeapByteBuffer.put
+  [ 6] sun.nio.ch.IOUtil.read
+  [ 7] sun.nio.ch.FileChannelImpl.read
+  [ 8] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 9] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [10] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [11] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [12] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [13] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [14] java.lang.reflect.Method.invoke
+  [15] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [16] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [17] java.util.concurrent.FutureTask.run
+  [18] java.util.concurrent.Executors$RunnableAdapter.call
+  [19] java.util.concurrent.FutureTask.run
+  [20] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [21] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [22] java.lang.Thread.run
+
+--- 60002426 ns (0.12%), 1 sample
+  [ 0] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 1] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 2] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 3] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 4] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 5] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 6] java.lang.reflect.Method.invoke
+  [ 7] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [ 8] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [ 9] java.util.concurrent.FutureTask.run
+  [10] java.util.concurrent.Executors$RunnableAdapter.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [13] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [14] java.lang.Thread.run
+
+--- 60001317 ns (0.12%), 3 samples
+  [ 0] java.lang.Thread.blockedOn
+  [ 1] java.lang.System$2.blockedOn
+  [ 2] java.nio.channels.spi.AbstractInterruptibleChannel.blockedOn
+  [ 3] java.nio.channels.spi.AbstractInterruptibleChannel.begin
+  [ 4] sun.nio.ch.FileChannelImpl.beginBlocking
+  [ 5] sun.nio.ch.FileChannelImpl.read
+  [ 6] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 7] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 8] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [10] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [11] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [12] java.lang.reflect.Method.invoke
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.Executors$RunnableAdapter.call
+  [17] java.util.concurrent.FutureTask.run
+  [18] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [19] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [20] java.lang.Thread.run
+
+--- 60001043 ns (0.12%), 3 samples
+  [ 0] jdk.internal.misc.Unsafe.checkSize
+  [ 1] jdk.internal.misc.Unsafe.copyMemoryChecks
+  [ 2] jdk.internal.misc.Unsafe.copyMemory
+  [ 3] java.nio.DirectByteBuffer.get
+  [ 4] java.nio.HeapByteBuffer.put
+  [ 5] sun.nio.ch.IOUtil.read
+  [ 6] sun.nio.ch.FileChannelImpl.read
   [ 7] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
   [ 8] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
   [ 9] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
@@ -857,8 +826,236 @@ Total samples       : 4419
   [20] java.util.concurrent.ThreadPoolExecutor$Worker.run
   [21] java.lang.Thread.run
 
---- 30000000 ns (0.07%), 3 samples
-  [ 0] sun.nio.ch.FileDispatcherImpl.read0
+--- 60000364 ns (0.12%), 2 samples
+  [ 0] sun.nio.ch.IOUtil.read
+  [ 1] sun.nio.ch.FileChannelImpl.read
+  [ 2] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 7] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 8] java.lang.reflect.Method.invoke
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.Executors$RunnableAdapter.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [16] java.lang.Thread.run
+
+--- 59999277 ns (0.12%), 3 samples
+  [ 0] sun.nio.ch.FileChannelImpl.read
+  [ 1] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 2] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 4] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 6] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 7] java.lang.reflect.Method.invoke
+  [ 8] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] java.util.concurrent.FutureTask.run
+  [11] java.util.concurrent.Executors$RunnableAdapter.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [14] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [15] java.lang.Thread.run
+
+--- 50004482 ns (0.10%), 3 samples
+  [ 0] sun.nio.ch.IOUtil.read
+  [ 1] sun.nio.ch.FileChannelImpl.read
+  [ 2] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 7] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 8] java.lang.reflect.Method.invoke
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.Executors$RunnableAdapter.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [16] java.lang.Thread.run
+
+--- 50002678 ns (0.10%), 2 samples
+  [ 0] java.nio.channels.spi.AbstractInterruptibleChannel.end
+  [ 1] sun.nio.ch.FileChannelImpl.endBlocking
+  [ 2] sun.nio.ch.FileChannelImpl.read
+  [ 3] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 8] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 9] java.lang.reflect.Method.invoke
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.Executors$RunnableAdapter.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [17] java.lang.Thread.run
+
+--- 50002553 ns (0.10%), 1 sample
+  [ 0] java.lang.ThreadLocal$ThreadLocalMap.getEntry
+  [ 1] java.lang.ThreadLocal.get
+  [ 2] sun.nio.ch.Util.offerFirstTemporaryDirectBuffer
+  [ 3] sun.nio.ch.IOUtil.read
+  [ 4] sun.nio.ch.FileChannelImpl.read
+  [ 5] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 7] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [10] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [11] java.lang.reflect.Method.invoke
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.Executors$RunnableAdapter.call
+  [16] java.util.concurrent.FutureTask.run
+  [17] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [19] java.lang.Thread.run
+
+--- 50002075 ns (0.10%), 1 sample
+  [ 0] sun.nio.ch.Util$BufferCache.offerFirst
+  [ 1] sun.nio.ch.Util.offerFirstTemporaryDirectBuffer
+  [ 2] sun.nio.ch.IOUtil.read
+  [ 3] sun.nio.ch.FileChannelImpl.read
+  [ 4] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 9] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [10] java.lang.reflect.Method.invoke
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.Executors$RunnableAdapter.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [18] java.lang.Thread.run
+
+--- 50000938 ns (0.10%), 2 samples
+  [ 0] sun.nio.ch.FileChannelImpl.read
+  [ 1] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 2] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 4] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 6] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 7] java.lang.reflect.Method.invoke
+  [ 8] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] java.util.concurrent.FutureTask.run
+  [11] java.util.concurrent.Executors$RunnableAdapter.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [14] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [15] java.lang.Thread.run
+
+--- 49999803 ns (0.10%), 2 samples
+  [ 0] java.nio.Buffer.position
+  [ 1] java.nio.ByteBuffer.position
+  [ 2] java.nio.HeapByteBuffer.put
+  [ 3] sun.nio.ch.IOUtil.read
+  [ 4] sun.nio.ch.FileChannelImpl.read
+  [ 5] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 7] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [10] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [11] java.lang.reflect.Method.invoke
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.Executors$RunnableAdapter.call
+  [16] java.util.concurrent.FutureTask.run
+  [17] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [19] java.lang.Thread.run
+
+--- 49998953 ns (0.10%), 3 samples
+  [ 0] java.lang.Class.getComponentType
+  [ 1] jdk.internal.misc.Unsafe.checkPrimitiveArray
+  [ 2] jdk.internal.misc.Unsafe.checkPrimitivePointer
+  [ 3] jdk.internal.misc.Unsafe.copyMemoryChecks
+  [ 4] jdk.internal.misc.Unsafe.copyMemory
+  [ 5] java.nio.DirectByteBuffer.get
+  [ 6] java.nio.HeapByteBuffer.put
+  [ 7] sun.nio.ch.IOUtil.read
+  [ 8] sun.nio.ch.FileChannelImpl.read
+  [ 9] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [10] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [11] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [12] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [13] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [14] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [15] java.lang.reflect.Method.invoke
+  [16] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [17] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [18] java.util.concurrent.FutureTask.run
+  [19] java.util.concurrent.Executors$RunnableAdapter.call
+  [20] java.util.concurrent.FutureTask.run
+  [21] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [22] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [23] java.lang.Thread.run
+
+--- 49995818 ns (0.10%), 4 samples
+  [ 0] java.lang.ThreadLocal.get
+  [ 1] sun.nio.ch.Util.offerFirstTemporaryDirectBuffer
+  [ 2] sun.nio.ch.IOUtil.read
+  [ 3] sun.nio.ch.FileChannelImpl.read
+  [ 4] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 9] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [10] java.lang.reflect.Method.invoke
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.Executors$RunnableAdapter.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [18] java.lang.Thread.run
+
+--- 40004099 ns (0.08%), 2 samples
+  [ 0] java.nio.Buffer.position
+  [ 1] java.nio.ByteBuffer.position
+  [ 2] java.nio.HeapByteBuffer.put
+  [ 3] sun.nio.ch.IOUtil.read
+  [ 4] sun.nio.ch.FileChannelImpl.read
+  [ 5] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 7] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [10] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [11] java.lang.reflect.Method.invoke
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.Executors$RunnableAdapter.call
+  [16] java.util.concurrent.FutureTask.run
+  [17] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [19] java.lang.Thread.run
+
+--- 40001348 ns (0.08%), 3 samples
+  [ 0] sun.nio.ch.Util$BufferCache.next
   [ 1] sun.nio.ch.Util$BufferCache.get
   [ 2] sun.nio.ch.Util.getTemporaryDirectBuffer
   [ 3] sun.nio.ch.IOUtil.read
@@ -879,193 +1076,83 @@ Total samples       : 4419
   [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
   [19] java.lang.Thread.run
 
---- 30000000 ns (0.07%), 3 samples
-  [ 0] unsafe_arraycopy
-  [ 1] java.lang.ThreadLocal$ThreadLocalMap.getEntry
-  [ 2] java.lang.ThreadLocal.get
-  [ 3] sun.nio.ch.Util.getTemporaryDirectBuffer
-  [ 4] sun.nio.ch.IOUtil.read
-  [ 5] sun.nio.ch.FileChannelImpl.read
-  [ 6] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 7] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 8] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [10] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [11] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [12] java.lang.reflect.Method.invoke
-  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [14] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [15] java.util.concurrent.FutureTask.run
-  [16] java.util.concurrent.Executors$RunnableAdapter.call
-  [17] java.util.concurrent.FutureTask.run
-  [18] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [19] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [20] java.lang.Thread.run
-
---- 20000000 ns (0.05%), 2 samples
-  [ 0] java.nio.channels.spi.AbstractInterruptibleChannel.end
-  [ 1] sun.nio.ch.FileChannelImpl.endBlocking
-  [ 2] sun.nio.ch.FileChannelImpl.read
-  [ 3] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 8] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 9] java.lang.reflect.Method.invoke
-  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+--- 39997641 ns (0.08%), 3 samples
+  [ 0] java.nio.Buffer.position
+  [ 1] java.nio.HeapByteBuffer.put
+  [ 2] sun.nio.ch.IOUtil.read
+  [ 3] sun.nio.ch.FileChannelImpl.read
+  [ 4] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 9] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [10] java.lang.reflect.Method.invoke
   [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [12] java.util.concurrent.FutureTask.run
-  [13] java.util.concurrent.Executors$RunnableAdapter.call
-  [14] java.util.concurrent.FutureTask.run
-  [15] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [17] java.lang.Thread.run
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.Executors$RunnableAdapter.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [18] java.lang.Thread.run
 
---- 20000000 ns (0.05%), 2 samples
-  [ 0] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 1] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 2] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 3] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 4] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 5] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 6] java.lang.reflect.Method.invoke
+--- 39996380 ns (0.08%), 3 samples
+  [ 0] java.lang.Thread.isInterrupted
+  [ 1] java.nio.channels.spi.AbstractInterruptibleChannel.begin
+  [ 2] sun.nio.ch.FileChannelImpl.beginBlocking
+  [ 3] sun.nio.ch.FileChannelImpl.read
+  [ 4] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 9] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [10] java.lang.reflect.Method.invoke
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.Executors$RunnableAdapter.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [18] java.lang.Thread.run
+
+--- 30003944 ns (0.06%), 1 sample
+  [ 0] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 1] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 2] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 3] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 4] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 5] java.lang.reflect.Method.invoke
+  [ 6] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
   [ 7] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [ 8] java.util.concurrent.FutureTask.run
+  [ 9] java.util.concurrent.Executors$RunnableAdapter.call
+  [10] java.util.concurrent.FutureTask.run
+  [11] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [12] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [13] java.lang.Thread.run
+
+--- 30003480 ns (0.06%), 1 sample
+  [ 0] sun.nio.ch.FileChannelImpl.read
+  [ 1] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 2] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 4] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 6] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 7] java.lang.reflect.Method.invoke
   [ 8] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [ 9] java.util.concurrent.FutureTask.run
-  [10] java.util.concurrent.Executors$RunnableAdapter.call
-  [11] java.util.concurrent.FutureTask.run
-  [12] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [13] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [14] java.lang.Thread.run
-
---- 20000000 ns (0.05%), 2 samples
-  [ 0] java.nio.Buffer.clear
-  [ 1] java.nio.ByteBuffer.clear
-  [ 2] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 7] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 8] java.lang.reflect.Method.invoke
   [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [11] java.util.concurrent.FutureTask.run
-  [12] java.util.concurrent.Executors$RunnableAdapter.call
-  [13] java.util.concurrent.FutureTask.run
-  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [16] java.lang.Thread.run
-
---- 20000000 ns (0.05%), 2 samples
-  [ 0] java.nio.Buffer.limit
-  [ 1] java.nio.ByteBuffer.limit
-  [ 2] java.nio.MappedByteBuffer.limit
-  [ 3] java.nio.MappedByteBuffer.limit
-  [ 4] sun.nio.ch.Util$BufferCache.get
-  [ 5] sun.nio.ch.Util.getTemporaryDirectBuffer
-  [ 6] sun.nio.ch.IOUtil.read
-  [ 7] sun.nio.ch.FileChannelImpl.read
-  [ 8] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 9] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [10] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [11] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [12] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [13] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [14] java.lang.reflect.Method.invoke
-  [15] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [16] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [17] java.util.concurrent.FutureTask.run
-  [18] java.util.concurrent.Executors$RunnableAdapter.call
-  [19] java.util.concurrent.FutureTask.run
-  [20] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [21] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [22] java.lang.Thread.run
-
---- 20000000 ns (0.05%), 2 samples
-  [ 0] sun.nio.ch.Util$BufferCache.get
-  [ 1] sun.nio.ch.Util.getTemporaryDirectBuffer
-  [ 2] sun.nio.ch.IOUtil.read
-  [ 3] sun.nio.ch.FileChannelImpl.read
-  [ 4] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 9] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [10] java.lang.reflect.Method.invoke
-  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [13] java.util.concurrent.FutureTask.run
-  [14] java.util.concurrent.Executors$RunnableAdapter.call
-  [15] java.util.concurrent.FutureTask.run
-  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [18] java.lang.Thread.run
-
---- 20000000 ns (0.05%), 2 samples
-  [ 0] sun.nio.ch.Util$BufferCache.get
-  [ 1] sun.nio.ch.Util.getTemporaryDirectBuffer
-  [ 2] sun.nio.ch.IOUtil.read
-  [ 3] sun.nio.ch.FileChannelImpl.read
-  [ 4] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 9] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [10] java.lang.reflect.Method.invoke
-  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [13] java.util.concurrent.FutureTask.run
-  [14] java.util.concurrent.Executors$RunnableAdapter.call
-  [15] java.util.concurrent.FutureTask.run
-  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [18] java.lang.Thread.run
-
---- 20000000 ns (0.05%), 2 samples
-  [ 0] sun.nio.ch.FileDispatcherImpl.read0
-  [ 1] java.io.FileCleanable.<init>
-  [ 2] java.io.FileCleanable.register
-  [ 3] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 8] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 9] java.lang.reflect.Method.invoke
-  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] java.util.concurrent.FutureTask.run
+  [11] java.util.concurrent.Executors$RunnableAdapter.call
   [12] java.util.concurrent.FutureTask.run
-  [13] java.util.concurrent.Executors$RunnableAdapter.call
-  [14] java.util.concurrent.FutureTask.run
-  [15] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [17] java.lang.Thread.run
+  [13] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [14] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [15] java.lang.Thread.run
 
---- 20000000 ns (0.05%), 2 samples
-  [ 0] sun.nio.ch.Util.getTemporaryDirectBuffer
-  [ 1] sun.nio.ch.IOUtil.read
-  [ 2] sun.nio.ch.FileChannelImpl.read
-  [ 3] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 8] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 9] java.lang.reflect.Method.invoke
-  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [12] java.util.concurrent.FutureTask.run
-  [13] java.util.concurrent.Executors$RunnableAdapter.call
-  [14] java.util.concurrent.FutureTask.run
-  [15] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [17] java.lang.Thread.run
-
---- 20000000 ns (0.05%), 2 samples
+--- 30002338 ns (0.06%), 1 sample
   [ 0] java.lang.Thread.blockedOn
   [ 1] java.lang.System$2.blockedOn
   [ 2] java.nio.channels.spi.AbstractInterruptibleChannel.blockedOn
@@ -1088,448 +1175,10 @@ Total samples       : 4419
   [19] java.util.concurrent.ThreadPoolExecutor$Worker.run
   [20] java.lang.Thread.run
 
---- 20000000 ns (0.05%), 2 samples
-  [ 0] sun.nio.ch.IOUtil.read
-  [ 1] sun.nio.ch.FileChannelImpl.read
-  [ 2] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 7] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 8] java.lang.reflect.Method.invoke
-  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [11] java.util.concurrent.FutureTask.run
-  [12] java.util.concurrent.Executors$RunnableAdapter.call
-  [13] java.util.concurrent.FutureTask.run
-  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [16] java.lang.Thread.run
-
---- 20000000 ns (0.05%), 2 samples
-  [ 0] sun.nio.ch.IOUtil.readIntoNativeBuffer
-  [ 1] sun.nio.ch.IOUtil.read
-  [ 2] sun.nio.ch.FileChannelImpl.read
-  [ 3] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 8] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 9] java.lang.reflect.Method.invoke
-  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [12] java.util.concurrent.FutureTask.run
-  [13] java.util.concurrent.Executors$RunnableAdapter.call
-  [14] java.util.concurrent.FutureTask.run
-  [15] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [17] java.lang.Thread.run
-
---- 20000000 ns (0.05%), 2 samples
-  [ 0] sun.nio.ch.FileChannelImpl.endBlocking
-  [ 1] sun.nio.ch.FileChannelImpl.read
-  [ 2] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 7] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 8] java.lang.reflect.Method.invoke
-  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [11] java.util.concurrent.FutureTask.run
-  [12] java.util.concurrent.Executors$RunnableAdapter.call
-  [13] java.util.concurrent.FutureTask.run
-  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [16] java.lang.Thread.run
-
---- 20000000 ns (0.05%), 2 samples
-  [ 0] sun.nio.ch.FileChannelImpl.read
-  [ 1] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 2] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 4] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 6] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 7] java.lang.reflect.Method.invoke
-  [ 8] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [10] java.util.concurrent.FutureTask.run
-  [11] java.util.concurrent.Executors$RunnableAdapter.call
-  [12] java.util.concurrent.FutureTask.run
-  [13] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [14] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [15] java.lang.Thread.run
-
---- 20000000 ns (0.05%), 2 samples
-  [ 0] sun.nio.ch.Util$BufferCache.get
-  [ 1] sun.nio.ch.Util.getTemporaryDirectBuffer
-  [ 2] sun.nio.ch.IOUtil.read
-  [ 3] sun.nio.ch.FileChannelImpl.read
-  [ 4] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 9] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [10] java.lang.reflect.Method.invoke
-  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [13] java.util.concurrent.FutureTask.run
-  [14] java.util.concurrent.Executors$RunnableAdapter.call
-  [15] java.util.concurrent.FutureTask.run
-  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [18] java.lang.Thread.run
-
---- 20000000 ns (0.05%), 2 samples
-  [ 0] jdk.internal.access.SharedSecrets.getJavaLangAccess
-  [ 1] java.nio.channels.spi.AbstractInterruptibleChannel.blockedOn
-  [ 2] java.nio.channels.spi.AbstractInterruptibleChannel.begin
-  [ 3] sun.nio.ch.FileChannelImpl.beginBlocking
-  [ 4] sun.nio.ch.FileChannelImpl.read
-  [ 5] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 7] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [10] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [11] java.lang.reflect.Method.invoke
-  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [14] java.util.concurrent.FutureTask.run
-  [15] java.util.concurrent.Executors$RunnableAdapter.call
-  [16] java.util.concurrent.FutureTask.run
-  [17] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [19] java.lang.Thread.run
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] __psynch_mutexwait
-  [ 1] err_codes_iokit_usb
-  [ 2] Mutex::lock_contended(Thread*)
-  [ 3] Mutex::lock(Thread*)
-  [ 4] CompileBroker::compile_method_base(methodHandle const&, int, int, methodHandle const&, int, CompileTask::CompileReason, bool, Thread*)
-  [ 5] CompileBroker::compile_method(methodHandle const&, int, int, methodHandle const&, int, CompileTask::CompileReason, DirectiveSet*, Thread*)
-  [ 6] CompileBroker::compile_method(methodHandle const&, int, int, methodHandle const&, int, CompileTask::CompileReason, Thread*)
-  [ 7] TieredThresholdPolicy::compile(methodHandle const&, int, CompLevel, Thread*)
-  [ 8] TieredThresholdPolicy::event(methodHandle const&, methodHandle const&, int, int, CompLevel, CompiledMethod*, Thread*)
-  [ 9] InterpreterRuntime::frequency_counter_overflow_inner(JavaThread*, unsigned char*)
-  [10] InterpreterRuntime::frequency_counter_overflow(JavaThread*, unsigned char*)
-  [11] java.util.concurrent.locks.AbstractQueuedSynchronizer.signalNext
-  [12] java.util.concurrent.locks.AbstractQueuedSynchronizer.release
-  [13] java.util.concurrent.locks.ReentrantLock.unlock
-  [14] java.util.concurrent.LinkedBlockingQueue.poll
-  [15] java.util.concurrent.ExecutorCompletionService.poll
-  [16] org.openjdk.jmh.runner.BenchmarkHandler.runIteration
-  [17] org.openjdk.jmh.runner.BaseRunner.runBenchmark
-  [18] org.openjdk.jmh.runner.BaseRunner.runBenchmark
-  [19] org.openjdk.jmh.runner.BaseRunner.doSingle
-  [20] org.openjdk.jmh.runner.BaseRunner.runBenchmarksForked
-  [21] org.openjdk.jmh.runner.ForkedRunner.run
-  [22] org.openjdk.jmh.runner.ForkedMain.main
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] OtherRegionsTable::occupied() const
-  [ 1] G1YoungRemSetSamplingClosure::do_heap_region(HeapRegion*)
-  [ 2] G1CollectionSet::iterate(HeapRegionClosure*) const
-  [ 3] G1RemSetSamplingTask::execute()
-  [ 4] G1ServiceThread::run_task(G1ServiceTask*)
-  [ 5] G1ServiceThread::run_service()
-  [ 6] ConcurrentGCThread::run()
-  [ 7] Thread::call_run()
-  [ 8] thread_native_entry(Thread*)
-  [ 9] __os_ch_md_redzone_cookie
-  [10] internal_catch_exc_subsystem
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] fdval
-  [ 1] Java_sun_nio_ch_FileDispatcherImpl_read0
-  [ 2] sun.nio.ch.FileDispatcherImpl.read0
-  [ 3] sun.nio.ch.FileDispatcherImpl.read
-  [ 4] sun.nio.ch.IOUtil.readIntoNativeBuffer
-  [ 5] sun.nio.ch.IOUtil.read
-  [ 6] sun.nio.ch.FileChannelImpl.read
-  [ 7] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 8] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 9] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [10] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [11] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [12] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [13] java.lang.reflect.Method.invoke
-  [14] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [15] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [16] java.util.concurrent.FutureTask.run
-  [17] java.util.concurrent.Executors$RunnableAdapter.call
-  [18] java.util.concurrent.FutureTask.run
-  [19] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [20] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [21] java.lang.Thread.run
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] sun.nio.ch.FileChannelImpl.read
-  [ 1] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 2] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 4] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 6] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 7] java.lang.reflect.Method.invoke
-  [ 8] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [10] java.util.concurrent.FutureTask.run
-  [11] java.util.concurrent.Executors$RunnableAdapter.call
-  [12] java.util.concurrent.FutureTask.run
-  [13] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [14] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [15] java.lang.Thread.run
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] __psynch_cvwait
-  [ 1] Parker::park(bool, long)
-  [ 2] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
-  [ 3] jdk.internal.misc.Unsafe.park
-  [ 4] java.util.concurrent.locks.LockSupport.parkNanos
-  [ 5] java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos
-  [ 6] java.util.concurrent.LinkedBlockingQueue.poll
-  [ 7] java.util.concurrent.ExecutorCompletionService.poll
-  [ 8] org.openjdk.jmh.runner.BenchmarkHandler.runIteration
-  [ 9] org.openjdk.jmh.runner.BaseRunner.runBenchmark
-  [10] org.openjdk.jmh.runner.BaseRunner.runBenchmark
-  [11] org.openjdk.jmh.runner.BaseRunner.doSingle
-  [12] org.openjdk.jmh.runner.BaseRunner.runBenchmarksForked
-  [13] org.openjdk.jmh.runner.ForkedRunner.run
-  [14] org.openjdk.jmh.runner.ForkedMain.main
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] G1YoungRemSetSamplingClosure::do_heap_region(HeapRegion*)
-  [ 1] G1CollectionSet::iterate(HeapRegionClosure*) const
-  [ 2] G1RemSetSamplingTask::execute()
-  [ 3] G1ServiceThread::run_task(G1ServiceTask*)
-  [ 4] G1ServiceThread::run_service()
-  [ 5] ConcurrentGCThread::run()
-  [ 6] Thread::call_run()
-  [ 7] thread_native_entry(Thread*)
-  [ 8] __os_ch_md_redzone_cookie
-  [ 9] internal_catch_exc_subsystem
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] __psynch_cvsignal
-  [ 1] Unsafe_Unpark(JNIEnv_*, _jobject*, _jobject*)
-  [ 2] jdk.internal.misc.Unsafe.unpark
-  [ 3] java.util.concurrent.locks.LockSupport.unpark
-  [ 4] java.util.concurrent.locks.AbstractQueuedSynchronizer.signalNext
-  [ 5] java.util.concurrent.locks.AbstractQueuedSynchronizer.release
-  [ 6] java.util.concurrent.locks.ReentrantLock.unlock
-  [ 7] java.util.concurrent.LinkedBlockingQueue.signalNotEmpty
-  [ 8] java.util.concurrent.LinkedBlockingQueue.offer
-  [ 9] java.util.concurrent.ThreadPoolExecutor.execute
-  [10] java.util.concurrent.ExecutorCompletionService.submit
-  [11] org.openjdk.jmh.runner.BenchmarkHandler.runIteration
-  [12] org.openjdk.jmh.runner.BaseRunner.runBenchmark
-  [13] org.openjdk.jmh.runner.BaseRunner.runBenchmark
-  [14] org.openjdk.jmh.runner.BaseRunner.doSingle
-  [15] org.openjdk.jmh.runner.BaseRunner.runBenchmarksForked
-  [16] org.openjdk.jmh.runner.ForkedRunner.run
-  [17] org.openjdk.jmh.runner.ForkedMain.main
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] CodeHeap::find_blob_unsafe(void*) const
-  [ 1] JavaThread::pd_last_frame()
-  [ 2] JVM_GetCallerClass
-  [ 3] jdk.internal.reflect.Reflection.getCallerClass
-  [ 4] java.lang.reflect.Method.invoke
-  [ 5] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [ 6] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [ 7] java.util.concurrent.FutureTask.run
-  [ 8] java.util.concurrent.Executors$RunnableAdapter.call
-  [ 9] java.util.concurrent.FutureTask.run
-  [10] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [11] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [12] java.lang.Thread.run
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] sun.nio.ch.FileChannelImpl.beginBlocking
-  [ 1] sun.nio.ch.FileChannelImpl.read
-  [ 2] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 7] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 8] java.lang.reflect.Method.invoke
-  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [11] java.util.concurrent.FutureTask.run
-  [12] java.util.concurrent.Executors$RunnableAdapter.call
-  [13] java.util.concurrent.FutureTask.run
-  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [16] java.lang.Thread.run
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] semaphore_wait_trap
-  [ 1] GangWorker::loop()
-  [ 2] Thread::call_run()
-  [ 3] thread_native_entry(Thread*)
-  [ 4] __os_ch_md_redzone_cookie
-  [ 5] internal_catch_exc_subsystem
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] java.lang.Thread.isInterrupted
-  [ 1] java.nio.channels.spi.AbstractInterruptibleChannel.begin
-  [ 2] sun.nio.ch.FileChannelImpl.beginBlocking
-  [ 3] sun.nio.ch.FileChannelImpl.read
-  [ 4] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 9] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [10] java.lang.reflect.Method.invoke
-  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [13] java.util.concurrent.FutureTask.run
-  [14] java.util.concurrent.Executors$RunnableAdapter.call
-  [15] java.util.concurrent.FutureTask.run
-  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [18] java.lang.Thread.run
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] semaphore_signal_trap
-  [ 1] WorkGang::run_task(AbstractGangTask*, unsigned int, bool)
-  [ 2] SafepointSynchronize::do_cleanup_tasks()
-  [ 3] SafepointSynchronize::begin()
-  [ 4] VMThread::inner_execute(VM_Operation*)
-  [ 5] VMThread::run()
-  [ 6] Thread::call_run()
-  [ 7] thread_native_entry(Thread*)
-  [ 8] __os_ch_md_redzone_cookie
-  [ 9] internal_catch_exc_subsystem
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] Monitor::wait_without_safepoint_check(long long)
-  [ 1] G1ServiceThread::sleep_before_next_cycle()
-  [ 2] G1ServiceThread::run_service()
-  [ 3] ConcurrentGCThread::run()
-  [ 4] Thread::call_run()
-  [ 5] thread_native_entry(Thread*)
-  [ 6] __os_ch_md_redzone_cookie
-  [ 7] internal_catch_exc_subsystem
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] sun.nio.ch.FileChannelImpl.read
-  [ 1] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 2] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 4] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 6] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 7] java.lang.reflect.Method.invoke
-  [ 8] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [10] java.util.concurrent.FutureTask.run
-  [11] java.util.concurrent.Executors$RunnableAdapter.call
-  [12] java.util.concurrent.FutureTask.run
-  [13] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [14] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [15] java.lang.Thread.run
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] sun.nio.ch.FileChannelImpl.read
-  [ 1] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 2] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 4] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 6] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 7] java.lang.reflect.Method.invoke
-  [ 8] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [10] java.util.concurrent.FutureTask.run
-  [11] java.util.concurrent.Executors$RunnableAdapter.call
-  [12] java.util.concurrent.FutureTask.run
-  [13] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [14] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [15] java.lang.Thread.run
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] java.lang.Thread.blockedOn
-  [ 1] java.lang.System$2.blockedOn
-  [ 2] java.nio.channels.spi.AbstractInterruptibleChannel.blockedOn
-  [ 3] java.nio.channels.spi.AbstractInterruptibleChannel.begin
-  [ 4] sun.nio.ch.FileChannelImpl.beginBlocking
-  [ 5] sun.nio.ch.FileChannelImpl.read
-  [ 6] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 7] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 8] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [10] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [11] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [12] java.lang.reflect.Method.invoke
-  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [14] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [15] java.util.concurrent.FutureTask.run
-  [16] java.util.concurrent.Executors$RunnableAdapter.call
-  [17] java.util.concurrent.FutureTask.run
-  [18] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [19] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [20] java.lang.Thread.run
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] __psynch_cvwait
-  [ 1] Parker::park(bool, long)
-  [ 2] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
-  [ 3] jdk.internal.misc.Unsafe.park
-  [ 4] java.util.concurrent.locks.LockSupport.parkNanos
-  [ 5] java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos
-  [ 6] java.util.concurrent.LinkedBlockingQueue.poll
-  [ 7] java.util.concurrent.ExecutorCompletionService.poll
-  [ 8] org.openjdk.jmh.runner.BenchmarkHandler.runIteration
-  [ 9] org.openjdk.jmh.runner.BaseRunner.runBenchmark
-  [10] org.openjdk.jmh.runner.BaseRunner.runBenchmark
-  [11] org.openjdk.jmh.runner.BaseRunner.doSingle
-  [12] org.openjdk.jmh.runner.BaseRunner.runBenchmarksForked
-  [13] org.openjdk.jmh.runner.ForkedRunner.run
-  [14] org.openjdk.jmh.runner.ForkedMain.main
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] mach_absolute_time
-  [ 1] os::javaTimeNanos()
-  [ 2] WatcherThread::sleep() const
-  [ 3] WatcherThread::run()
-  [ 4] Thread::call_run()
-  [ 5] thread_native_entry(Thread*)
-  [ 6] __os_ch_md_redzone_cookie
-  [ 7] internal_catch_exc_subsystem
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] sun.nio.ch.NativeThreadSet.add
-  [ 1] sun.nio.ch.FileChannelImpl.read
-  [ 2] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 7] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 8] java.lang.reflect.Method.invoke
-  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [11] java.util.concurrent.FutureTask.run
-  [12] java.util.concurrent.Executors$RunnableAdapter.call
-  [13] java.util.concurrent.FutureTask.run
-  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [16] java.lang.Thread.run
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] java.nio.MappedByteBuffer.limit
-  [ 1] sun.nio.ch.Util$BufferCache.get
-  [ 2] sun.nio.ch.Util.getTemporaryDirectBuffer
+--- 30002332 ns (0.06%), 1 sample
+  [ 0] java.nio.Buffer.checkBounds
+  [ 1] java.nio.DirectByteBuffer.get
+  [ 2] java.nio.HeapByteBuffer.put
   [ 3] sun.nio.ch.IOUtil.read
   [ 4] sun.nio.ch.FileChannelImpl.read
   [ 5] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
@@ -1548,54 +1197,30 @@ Total samples       : 4419
   [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
   [19] java.lang.Thread.run
 
---- 10000000 ns (0.02%), 1 sample
-  [ 0] sun.nio.ch.NativeThreadSet.remove
-  [ 1] sun.nio.ch.FileChannelImpl.read
-  [ 2] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 7] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 8] java.lang.reflect.Method.invoke
-  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [11] java.util.concurrent.FutureTask.run
-  [12] java.util.concurrent.Executors$RunnableAdapter.call
-  [13] java.util.concurrent.FutureTask.run
-  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [16] java.lang.Thread.run
+--- 30002098 ns (0.06%), 1 sample
+  [ 0] fstatat64
+  [ 1] /usr/lib/jvm/java-11-openjdk-amd64/lib/libjava.so
+  [ 2] java.io.RandomAccessFile.open0
+  [ 3] java.io.RandomAccessFile.open
+  [ 4] java.io.RandomAccessFile.<init>
+  [ 5] java.io.RandomAccessFile.<init>
+  [ 6] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 7] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 8] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [10] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [11] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [12] java.lang.reflect.Method.invoke
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.Executors$RunnableAdapter.call
+  [17] java.util.concurrent.FutureTask.run
+  [18] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [19] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [20] java.lang.Thread.run
 
---- 10000000 ns (0.02%), 1 sample
-  [ 0] java.nio.channels.spi.AbstractInterruptibleChannel.begin
-  [ 1] sun.nio.ch.FileChannelImpl.beginBlocking
-  [ 2] sun.nio.ch.FileChannelImpl.read
-  [ 3] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 8] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 9] java.lang.reflect.Method.invoke
-  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [12] java.util.concurrent.FutureTask.run
-  [13] java.util.concurrent.Executors$RunnableAdapter.call
-  [14] java.util.concurrent.FutureTask.run
-  [15] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [17] java.lang.Thread.run
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] semaphore_wait_trap
-  [ 1] GangWorker::loop()
-  [ 2] Thread::call_run()
-  [ 3] thread_native_entry(Thread*)
-  [ 4] __os_ch_md_redzone_cookie
-  [ 5] internal_catch_exc_subsystem
-
---- 10000000 ns (0.02%), 1 sample
+--- 30001593 ns (0.06%), 2 samples
   [ 0] Java_sun_nio_ch_NativeThread_current
   [ 1] sun.nio.ch.NativeThread.current
   [ 2] sun.nio.ch.NativeThreadSet.add
@@ -1616,145 +1241,51 @@ Total samples       : 4419
   [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
   [18] java.lang.Thread.run
 
---- 10000000 ns (0.02%), 1 sample
-  [ 0] ciObjectFactory::get_metadata(Metadata*)
-  [ 1] ciEnv::get_klass_by_name_impl(ciKlass*, constantPoolHandle const&, ciSymbol*, bool)
-  [ 2] ciSignature::ciSignature(ciKlass*, constantPoolHandle const&, ciSymbol*)
-  [ 3] ciMethod::ciMethod(methodHandle const&, ciInstanceKlass*)
-  [ 4] ciObjectFactory::create_new_metadata(Metadata*)
-  [ 5] ciObjectFactory::get_metadata(Metadata*)
-  [ 6] ciEnv::get_method_from_handle(Method*)
-  [ 7] CompileBroker::invoke_compiler_on_method(CompileTask*)
-  [ 8] CompileBroker::compiler_thread_loop()
-  [ 9] JavaThread::thread_main_inner()
-  [10] Thread::call_run()
-  [11] thread_native_entry(Thread*)
-  [12] __os_ch_md_redzone_cookie
-  [13] internal_catch_exc_subsystem
+--- 30001418 ns (0.06%), 1 sample
+  [ 0] sun.nio.ch.FileChannelImpl.read
+  [ 1] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 2] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 4] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 6] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 7] java.lang.reflect.Method.invoke
+  [ 8] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] java.util.concurrent.FutureTask.run
+  [11] java.util.concurrent.Executors$RunnableAdapter.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [14] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [15] java.lang.Thread.run
 
---- 10000000 ns (0.02%), 1 sample
-  [ 0] __psynch_cvwait
-  [ 1] Parker::park(bool, long)
-  [ 2] Unsafe_Park(JNIEnv_*, _jobject*, unsigned char, long)
-  [ 3] jdk.internal.misc.Unsafe.park
-  [ 4] java.util.concurrent.locks.LockSupport.park
-  [ 5] java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
-  [ 6] java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly
-  [ 7] java.util.concurrent.CountDownLatch.await
-  [ 8] org.openjdk.jmh.runner.InfraControlL2.awaitWarmdownReady
-  [ 9] org.openjdk.jmh.runner.InfraControl.awaitWarmdownReady
-  [10] org.openjdk.jmh.runner.BenchmarkHandler.runIteration
-  [11] org.openjdk.jmh.runner.BaseRunner.runBenchmark
-  [12] org.openjdk.jmh.runner.BaseRunner.runBenchmark
-  [13] org.openjdk.jmh.runner.BaseRunner.doSingle
-  [14] org.openjdk.jmh.runner.BaseRunner.runBenchmarksForked
-  [15] org.openjdk.jmh.runner.ForkedRunner.run
-  [16] org.openjdk.jmh.runner.ForkedMain.main
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] java.lang.System.identityHashCode
-  [ 1] java.io.ObjectStreamClass$WeakClassKey.<init>
-  [ 2] java.io.ObjectStreamClass.lookup
-  [ 3] java.io.ObjectOutputStream.writeObject0
-  [ 4] java.io.ObjectOutputStream.defaultWriteFields
-  [ 5] java.io.ObjectOutputStream.writeSerialData
-  [ 6] java.io.ObjectOutputStream.writeOrdinaryObject
-  [ 7] java.io.ObjectOutputStream.writeObject0
-  [ 8] java.io.ObjectOutputStream.defaultWriteFields
-  [ 9] java.io.ObjectOutputStream.writeSerialData
-  [10] java.io.ObjectOutputStream.writeOrdinaryObject
-  [11] java.io.ObjectOutputStream.writeObject0
-  [12] java.io.ObjectOutputStream.writeArray
-  [13] java.io.ObjectOutputStream.writeObject0
-  [14] java.io.ObjectOutputStream.defaultWriteFields
-  [15] java.io.ObjectOutputStream.writeSerialData
-  [16] java.io.ObjectOutputStream.writeOrdinaryObject
-  [17] java.io.ObjectOutputStream.writeObject0
-  [18] java.io.ObjectOutputStream.writeObject
-  [19] org.openjdk.jmh.runner.link.BinaryLinkClient.pushFrame
-  [20] org.openjdk.jmh.runner.link.BinaryLinkClient.access$000
-  [21] org.openjdk.jmh.runner.link.BinaryLinkClient$1.invoke
-  [22] jdk.proxy1.$Proxy0.iterationResult
-  [23] org.openjdk.jmh.runner.BaseRunner.runBenchmark
-  [24] org.openjdk.jmh.runner.BaseRunner.runBenchmark
-  [25] org.openjdk.jmh.runner.BaseRunner.doSingle
-  [26] org.openjdk.jmh.runner.BaseRunner.runBenchmarksForked
-  [27] org.openjdk.jmh.runner.ForkedRunner.run
-  [28] org.openjdk.jmh.runner.ForkedMain.main
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] close
-  [ 1] java.io.FileDescriptor.close0
-  [ 2] java.io.FileDescriptor.close
-  [ 3] java.io.RandomAccessFile$1.close
-  [ 4] java.io.FileDescriptor.closeAll
-  [ 5] java.io.RandomAccessFile.close
-  [ 6] sun.nio.ch.FileChannelImpl.implCloseChannel
-  [ 7] java.nio.channels.spi.AbstractInterruptibleChannel.close
-  [ 8] kotlin.io.CloseableKt.closeFinally
-  [ 9] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [10] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [11] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [12] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [13] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [14] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [15] java.lang.reflect.Method.invoke
-  [16] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [17] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [18] java.util.concurrent.FutureTask.run
-  [19] java.util.concurrent.Executors$RunnableAdapter.call
-  [20] java.util.concurrent.FutureTask.run
-  [21] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [22] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [23] java.lang.Thread.run
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] PeriodicTask::real_time_tick(int)
-  [ 1] WatcherThread::run()
-  [ 2] Thread::call_run()
-  [ 3] thread_native_entry(Thread*)
-  [ 4] __os_ch_md_redzone_cookie
-  [ 5] internal_catch_exc_subsystem
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] jni_GetObjectField
-  [ 1] JNU_GetStringPlatformChars
-  [ 2] fileOpen
-  [ 3] java.io.RandomAccessFile.open0
-  [ 4] java.io.RandomAccessFile.open
-  [ 5] java.io.RandomAccessFile.<init>
-  [ 6] java.io.RandomAccessFile.<init>
-  [ 7] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 8] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 9] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [10] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [11] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [12] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [13] java.lang.reflect.Method.invoke
+--- 30000771 ns (0.06%), 1 sample
+  [ 0] java.lang.Thread.blockedOn
+  [ 1] java.lang.System$2.blockedOn
+  [ 2] java.nio.channels.spi.AbstractInterruptibleChannel.blockedOn
+  [ 3] java.nio.channels.spi.AbstractInterruptibleChannel.end
+  [ 4] sun.nio.ch.FileChannelImpl.endBlocking
+  [ 5] sun.nio.ch.FileChannelImpl.read
+  [ 6] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 7] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 8] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [10] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [11] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [12] java.lang.reflect.Method.invoke
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
   [14] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [15] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [16] java.util.concurrent.FutureTask.run
-  [17] java.util.concurrent.Executors$RunnableAdapter.call
-  [18] java.util.concurrent.FutureTask.run
-  [19] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [20] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [21] java.lang.Thread.run
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.Executors$RunnableAdapter.call
+  [17] java.util.concurrent.FutureTask.run
+  [18] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [19] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [20] java.lang.Thread.run
 
---- 10000000 ns (0.02%), 1 sample
-  [ 0] __psynch_cvwait
-  [ 1] os::PlatformMonitor::wait(long)
-  [ 2] Monitor::wait_without_safepoint_check(long long)
-  [ 3] MonitorDeflationThread::monitor_deflation_thread_entry(JavaThread*, Thread*)
-  [ 4] JavaThread::thread_main_inner()
-  [ 5] Thread::call_run()
-  [ 6] thread_native_entry(Thread*)
-  [ 7] __os_ch_md_redzone_cookie
-  [ 8] internal_catch_exc_subsystem
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] internal_catch_exc_subsystem
-  [ 1] sun.nio.ch.NativeThread.current
-  [ 2] sun.nio.ch.NativeThreadSet.add
+--- 30000456 ns (0.06%), 1 sample
+  [ 0] java.lang.ThreadLocal.get
+  [ 1] sun.nio.ch.Util.offerFirstTemporaryDirectBuffer
+  [ 2] sun.nio.ch.IOUtil.read
   [ 3] sun.nio.ch.FileChannelImpl.read
   [ 4] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
   [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
@@ -1772,58 +1303,67 @@ Total samples       : 4419
   [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
   [18] java.lang.Thread.run
 
---- 10000000 ns (0.02%), 1 sample
-  [ 0] Monitor::wait(long long, bool)
-  [ 1] CompileQueue::get()
-  [ 2] CompileBroker::compiler_thread_loop()
-  [ 3] JavaThread::thread_main_inner()
-  [ 4] Thread::call_run()
-  [ 5] thread_native_entry(Thread*)
-  [ 6] __os_ch_md_redzone_cookie
-  [ 7] internal_catch_exc_subsystem
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] err_codes_mach_rcv
-  [ 1] __os_ch_md_redzone_cookie
-  [ 2] os::PlatformMonitor::wait(long)
-  [ 3] Monitor::wait_without_safepoint_check(long long)
-  [ 4] WatcherThread::sleep() const
-  [ 5] WatcherThread::run()
-  [ 6] Thread::call_run()
-  [ 7] thread_native_entry(Thread*)
-  [ 8] __os_ch_md_redzone_cookie
-  [ 9] internal_catch_exc_subsystem
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] sun.nio.ch.IOUtil.read
-  [ 1] sun.nio.ch.FileChannelImpl.read
-  [ 2] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 7] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 8] java.lang.reflect.Method.invoke
+--- 29999082 ns (0.06%), 1 sample
+  [ 0] sun.nio.ch.FileChannelImpl.read
+  [ 1] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 2] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 4] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 6] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 7] java.lang.reflect.Method.invoke
+  [ 8] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
   [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [11] java.util.concurrent.FutureTask.run
-  [12] java.util.concurrent.Executors$RunnableAdapter.call
+  [10] java.util.concurrent.FutureTask.run
+  [11] java.util.concurrent.Executors$RunnableAdapter.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [14] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [15] java.lang.Thread.run
+
+--- 29998982 ns (0.06%), 2 samples
+  [ 0] sun.nio.ch.Util$BufferCache.offerFirst
+  [ 1] sun.nio.ch.Util.offerFirstTemporaryDirectBuffer
+  [ 2] sun.nio.ch.IOUtil.read
+  [ 3] sun.nio.ch.FileChannelImpl.read
+  [ 4] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 9] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [10] java.lang.reflect.Method.invoke
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
   [13] java.util.concurrent.FutureTask.run
-  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [16] java.lang.Thread.run
+  [14] java.util.concurrent.Executors$RunnableAdapter.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [18] java.lang.Thread.run
 
---- 10000000 ns (0.02%), 1 sample
-  [ 0] java.util.concurrent.ExecutorCompletionService.poll
-  [ 1] org.openjdk.jmh.runner.BenchmarkHandler.runIteration
-  [ 2] org.openjdk.jmh.runner.BaseRunner.runBenchmark
-  [ 3] org.openjdk.jmh.runner.BaseRunner.runBenchmark
-  [ 4] org.openjdk.jmh.runner.BaseRunner.doSingle
-  [ 5] org.openjdk.jmh.runner.BaseRunner.runBenchmarksForked
-  [ 6] org.openjdk.jmh.runner.ForkedRunner.run
-  [ 7] org.openjdk.jmh.runner.ForkedMain.main
+--- 29998862 ns (0.06%), 2 samples
+  [ 0] java.nio.Buffer.remaining
+  [ 1] java.nio.HeapByteBuffer.put
+  [ 2] sun.nio.ch.IOUtil.read
+  [ 3] sun.nio.ch.FileChannelImpl.read
+  [ 4] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 9] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [10] java.lang.reflect.Method.invoke
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.Executors$RunnableAdapter.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [18] java.lang.Thread.run
 
---- 10000000 ns (0.02%), 1 sample
+--- 29998664 ns (0.06%), 2 samples
   [ 0] java.nio.Buffer.limit
   [ 1] java.nio.ByteBuffer.limit
   [ 2] java.nio.MappedByteBuffer.limit
@@ -1848,7 +1388,71 @@ Total samples       : 4419
   [21] java.util.concurrent.ThreadPoolExecutor$Worker.run
   [22] java.lang.Thread.run
 
---- 10000000 ns (0.02%), 1 sample
+--- 29998141 ns (0.06%), 1 sample
+  [ 0] java.lang.ThreadLocal$ThreadLocalMap.getEntry
+  [ 1] java.lang.ThreadLocal.get
+  [ 2] sun.nio.ch.Util.offerFirstTemporaryDirectBuffer
+  [ 3] sun.nio.ch.IOUtil.read
+  [ 4] sun.nio.ch.FileChannelImpl.read
+  [ 5] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 7] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [10] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [11] java.lang.reflect.Method.invoke
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.Executors$RunnableAdapter.call
+  [16] java.util.concurrent.FutureTask.run
+  [17] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [19] java.lang.Thread.run
+
+--- 29996387 ns (0.06%), 2 samples
+  [ 0] sun.nio.ch.Util$BufferCache.get
+  [ 1] sun.nio.ch.Util.getTemporaryDirectBuffer
+  [ 2] sun.nio.ch.IOUtil.read
+  [ 3] sun.nio.ch.FileChannelImpl.read
+  [ 4] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 9] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [10] java.lang.reflect.Method.invoke
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.Executors$RunnableAdapter.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [18] java.lang.Thread.run
+
+--- 20004594 ns (0.04%), 1 sample
+  [ 0] java.nio.Buffer.limit
+  [ 1] java.nio.HeapByteBuffer.put
+  [ 2] sun.nio.ch.IOUtil.read
+  [ 3] sun.nio.ch.FileChannelImpl.read
+  [ 4] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 9] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [10] java.lang.reflect.Method.invoke
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.Executors$RunnableAdapter.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [18] java.lang.Thread.run
+
+--- 20003374 ns (0.04%), 1 sample
   [ 0] sun.nio.ch.IOUtil.readIntoNativeBuffer
   [ 1] sun.nio.ch.IOUtil.read
   [ 2] sun.nio.ch.FileChannelImpl.read
@@ -1868,28 +1472,10 @@ Total samples       : 4419
   [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
   [17] java.lang.Thread.run
 
---- 10000000 ns (0.02%), 1 sample
-  [ 0] sun.nio.ch.FileChannelImpl.read
-  [ 1] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-  [ 2] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
-  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 4] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [ 6] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [ 7] java.lang.reflect.Method.invoke
-  [ 8] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [10] java.util.concurrent.FutureTask.run
-  [11] java.util.concurrent.Executors$RunnableAdapter.call
-  [12] java.util.concurrent.FutureTask.run
-  [13] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [14] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [15] java.lang.Thread.run
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] java.nio.channels.spi.AbstractInterruptibleChannel.blockedOn
-  [ 1] java.nio.channels.spi.AbstractInterruptibleChannel.end
-  [ 2] sun.nio.ch.FileChannelImpl.endBlocking
+--- 20002825 ns (0.04%), 1 sample
+  [ 0] sun.nio.ch.FileDispatcherImpl.read
+  [ 1] sun.nio.ch.IOUtil.readIntoNativeBuffer
+  [ 2] sun.nio.ch.IOUtil.read
   [ 3] sun.nio.ch.FileChannelImpl.read
   [ 4] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
   [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
@@ -1907,22 +1493,29 @@ Total samples       : 4419
   [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
   [18] java.lang.Thread.run
 
---- 10000000 ns (0.02%), 1 sample
-  [ 0] __psynch_cvwait
-  [ 1] os::PlatformMonitor::wait(long)
-  [ 2] Monitor::wait(long long, bool)
-  [ 3] CompileQueue::get()
-  [ 4] CompileBroker::compiler_thread_loop()
-  [ 5] JavaThread::thread_main_inner()
-  [ 6] Thread::call_run()
-  [ 7] thread_native_entry(Thread*)
-  [ 8] __os_ch_md_redzone_cookie
-  [ 9] internal_catch_exc_subsystem
+--- 20002754 ns (0.04%), 1 sample
+  [ 0] sun.nio.ch.NativeThreadSet.add
+  [ 1] sun.nio.ch.FileChannelImpl.read
+  [ 2] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 7] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 8] java.lang.reflect.Method.invoke
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.Executors$RunnableAdapter.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [16] java.lang.Thread.run
 
---- 10000000 ns (0.02%), 1 sample
-  [ 0] sun.nio.ch.Util$BufferCache.get
-  [ 1] sun.nio.ch.Util.getTemporaryDirectBuffer
-  [ 2] sun.nio.ch.IOUtil.read
+--- 20001756 ns (0.04%), 1 sample
+  [ 0] java.nio.HeapByteBuffer.put
+  [ 1] sun.nio.ch.IOUtil.read
+  [ 2] sun.nio.ch.FileChannelImpl.read
   [ 3] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
   [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
   [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
@@ -1939,20 +1532,30 @@ Total samples       : 4419
   [16] java.util.concurrent.ThreadPoolExecutor$Worker.run
   [17] java.lang.Thread.run
 
---- 10000000 ns (0.02%), 1 sample
-  [ 0] __gettimeofday
-  [ 1] os::PlatformMonitor::wait(long)
-  [ 2] Monitor::wait_without_safepoint_check(long long)
-  [ 3] G1ServiceThread::sleep_before_next_cycle()
-  [ 4] G1ServiceThread::run_service()
-  [ 5] ConcurrentGCThread::run()
-  [ 6] Thread::call_run()
-  [ 7] thread_native_entry(Thread*)
-  [ 8] __os_ch_md_redzone_cookie
-  [ 9] internal_catch_exc_subsystem
+--- 20001701 ns (0.04%), 1 sample
+  [ 0] java.nio.Buffer.position
+  [ 1] java.nio.ByteBuffer.position
+  [ 2] java.nio.HeapByteBuffer.put
+  [ 3] sun.nio.ch.IOUtil.read
+  [ 4] sun.nio.ch.FileChannelImpl.read
+  [ 5] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 7] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [10] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [11] java.lang.reflect.Method.invoke
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.Executors$RunnableAdapter.call
+  [16] java.util.concurrent.FutureTask.run
+  [17] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [19] java.lang.Thread.run
 
---- 10000000 ns (0.02%), 1 sample
-  [ 0] java.lang.ThreadLocal$ThreadLocalMap.getEntry
+--- 20000620 ns (0.04%), 1 sample
+  [ 0] java.lang.ThreadLocal.getMap
   [ 1] java.lang.ThreadLocal.get
   [ 2] sun.nio.ch.Util.getTemporaryDirectBuffer
   [ 3] sun.nio.ch.IOUtil.read
@@ -1973,51 +1576,10 @@ Total samples       : 4419
   [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
   [19] java.lang.Thread.run
 
---- 10000000 ns (0.02%), 1 sample
-  [ 0] StatSamplerTask::task()
-  [ 1] WatcherThread::run()
-  [ 2] Thread::call_run()
-  [ 3] thread_native_entry(Thread*)
-  [ 4] __os_ch_md_redzone_cookie
-  [ 5] internal_catch_exc_subsystem
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] __unlink
-  [ 1] [unknown]
-  [ 2] Java_java_io_UnixFileSystem_delete0
-  [ 3] java.io.UnixFileSystem.delete0
-  [ 4] java.io.UnixFileSystem.delete
-  [ 5] java.io.File.delete
-  [ 6] io.ktor.benchmarks.FileBenchmarks.cleanup
-  [ 7] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
-  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
-  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
-  [10] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
-  [11] java.lang.reflect.Method.invoke
-  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
-  [14] java.util.concurrent.FutureTask.run
-  [15] java.util.concurrent.Executors$RunnableAdapter.call
-  [16] java.util.concurrent.FutureTask.run
-  [17] java.util.concurrent.ThreadPoolExecutor.runWorker
-  [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
-  [19] java.lang.Thread.run
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] __psynch_cvwait
-  [ 1] os::PlatformMonitor::wait(long)
-  [ 2] Monitor::wait_without_safepoint_check(long long)
-  [ 3] VMThread::wait_for_operation()
-  [ 4] VMThread::run()
-  [ 5] Thread::call_run()
-  [ 6] thread_native_entry(Thread*)
-  [ 7] __os_ch_md_redzone_cookie
-  [ 8] internal_catch_exc_subsystem
-
---- 10000000 ns (0.02%), 1 sample
-  [ 0] java.lang.ThreadLocal$ThreadLocalMap.getEntry
-  [ 1] java.lang.ThreadLocal.get
-  [ 2] sun.nio.ch.Util.getTemporaryDirectBuffer
+--- 20000531 ns (0.04%), 2 samples
+  [ 0] java.nio.Buffer.checkBounds
+  [ 1] java.nio.DirectByteBuffer.get
+  [ 2] java.nio.HeapByteBuffer.put
   [ 3] sun.nio.ch.IOUtil.read
   [ 4] sun.nio.ch.FileChannelImpl.read
   [ 5] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
@@ -2036,7 +1598,115 @@ Total samples       : 4419
   [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
   [19] java.lang.Thread.run
 
---- 10000000 ns (0.02%), 1 sample
+--- 19999890 ns (0.04%), 1 sample
+  [ 0] pthread_self
+  [ 1] sun.nio.ch.NativeThread.current
+  [ 2] sun.nio.ch.NativeThreadSet.add
+  [ 3] sun.nio.ch.FileChannelImpl.read
+  [ 4] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 9] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [10] java.lang.reflect.Method.invoke
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.Executors$RunnableAdapter.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [18] java.lang.Thread.run
+
+--- 19999655 ns (0.04%), 1 sample
+  [ 0] sun.nio.ch.FileChannelImpl.read
+  [ 1] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 2] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 4] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 6] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 7] java.lang.reflect.Method.invoke
+  [ 8] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] java.util.concurrent.FutureTask.run
+  [11] java.util.concurrent.Executors$RunnableAdapter.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [14] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [15] java.lang.Thread.run
+
+--- 19999003 ns (0.04%), 1 sample
+  [ 0] sun.nio.ch.NativeThreadSet.add
+  [ 1] sun.nio.ch.FileChannelImpl.read
+  [ 2] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 7] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 8] java.lang.reflect.Method.invoke
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.Executors$RunnableAdapter.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [16] java.lang.Thread.run
+
+--- 10002386 ns (0.02%), 1 sample
+  [ 0] unsafe_arraycopy
+  [ 1] java.nio.Buffer.position
+  [ 2] java.nio.ByteBuffer.position
+  [ 3] java.nio.MappedByteBuffer.position
+  [ 4] java.nio.DirectByteBuffer.get
+  [ 5] java.nio.HeapByteBuffer.put
+  [ 6] sun.nio.ch.IOUtil.read
+  [ 7] sun.nio.ch.FileChannelImpl.read
+  [ 8] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 9] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [10] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [11] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [12] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [13] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [14] java.lang.reflect.Method.invoke
+  [15] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [16] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [17] java.util.concurrent.FutureTask.run
+  [18] java.util.concurrent.Executors$RunnableAdapter.call
+  [19] java.util.concurrent.FutureTask.run
+  [20] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [21] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [22] java.lang.Thread.run
+
+--- 10000952 ns (0.02%), 1 sample
+  [ 0] java.nio.Buffer.rewind
+  [ 1] java.nio.ByteBuffer.rewind
+  [ 2] java.nio.MappedByteBuffer.rewind
+  [ 3] java.nio.MappedByteBuffer.rewind
+  [ 4] sun.nio.ch.Util$BufferCache.get
+  [ 5] sun.nio.ch.Util.getTemporaryDirectBuffer
+  [ 6] sun.nio.ch.IOUtil.read
+  [ 7] sun.nio.ch.FileChannelImpl.read
+  [ 8] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 9] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [10] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [11] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [12] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [13] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [14] java.lang.reflect.Method.invoke
+  [15] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [16] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [17] java.util.concurrent.FutureTask.run
+  [18] java.util.concurrent.Executors$RunnableAdapter.call
+  [19] java.util.concurrent.FutureTask.run
+  [20] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [21] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [22] java.lang.Thread.run
+
+--- 10000924 ns (0.02%), 1 sample
   [ 0] sun.nio.ch.NativeThreadSet.remove
   [ 1] sun.nio.ch.FileChannelImpl.read
   [ 2] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
@@ -2055,10 +1725,76 @@ Total samples       : 4419
   [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
   [16] java.lang.Thread.run
 
---- 10000000 ns (0.02%), 1 sample
-  [ 0] sun.nio.ch.Util$BufferCache.get
-  [ 1] sun.nio.ch.Util.getTemporaryDirectBuffer
-  [ 2] sun.nio.ch.IOUtil.read
+--- 10000766 ns (0.02%), 1 sample
+  [ 0] sun.nio.ch.NativeThreadSet.add
+  [ 1] sun.nio.ch.FileChannelImpl.read
+  [ 2] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 7] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 8] java.lang.reflect.Method.invoke
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.Executors$RunnableAdapter.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [16] java.lang.Thread.run
+
+--- 10000653 ns (0.02%), 1 sample
+  [ 0] java.nio.Buffer.rewind
+  [ 1] java.nio.ByteBuffer.rewind
+  [ 2] java.nio.MappedByteBuffer.rewind
+  [ 3] java.nio.MappedByteBuffer.rewind
+  [ 4] sun.nio.ch.Util$BufferCache.get
+  [ 5] sun.nio.ch.Util.getTemporaryDirectBuffer
+  [ 6] sun.nio.ch.IOUtil.read
+  [ 7] sun.nio.ch.FileChannelImpl.read
+  [ 8] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 9] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [10] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [11] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [12] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [13] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [14] java.lang.reflect.Method.invoke
+  [15] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [16] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [17] java.util.concurrent.FutureTask.run
+  [18] java.util.concurrent.Executors$RunnableAdapter.call
+  [19] java.util.concurrent.FutureTask.run
+  [20] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [21] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [22] java.lang.Thread.run
+
+--- 10000612 ns (0.02%), 1 sample
+  [ 0] jdk.internal.misc.SharedSecrets.getJavaLangAccess
+  [ 1] java.nio.channels.spi.AbstractInterruptibleChannel.blockedOn
+  [ 2] java.nio.channels.spi.AbstractInterruptibleChannel.begin
+  [ 3] sun.nio.ch.FileChannelImpl.beginBlocking
+  [ 4] sun.nio.ch.FileChannelImpl.read
+  [ 5] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 7] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [10] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [11] java.lang.reflect.Method.invoke
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.Executors$RunnableAdapter.call
+  [16] java.util.concurrent.FutureTask.run
+  [17] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [19] java.lang.Thread.run
+
+--- 10000482 ns (0.02%), 1 sample
+  [ 0] /usr/lib/jvm/java-11-openjdk-amd64/lib/libnio.so
+  [ 1] sun.nio.ch.NativeThread.current
+  [ 2] sun.nio.ch.NativeThreadSet.add
   [ 3] sun.nio.ch.FileChannelImpl.read
   [ 4] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
   [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
@@ -2076,7 +1812,66 @@ Total samples       : 4419
   [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
   [18] java.lang.Thread.run
 
---- 10000000 ns (0.02%), 1 sample
+--- 10000206 ns (0.02%), 1 sample
+  [ 0] sun.nio.ch.FileChannelImpl.read
+  [ 1] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 2] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 4] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 6] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 7] java.lang.reflect.Method.invoke
+  [ 8] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] java.util.concurrent.FutureTask.run
+  [11] java.util.concurrent.Executors$RunnableAdapter.call
+  [12] java.util.concurrent.FutureTask.run
+  [13] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [14] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [15] java.lang.Thread.run
+
+--- 9999784 ns (0.02%), 1 sample
+  [ 0] java.nio.Buffer.position
+  [ 1] java.nio.ByteBuffer.position
+  [ 2] java.nio.MappedByteBuffer.position
+  [ 3] java.nio.MappedByteBuffer.position
+  [ 4] sun.nio.ch.IOUtil.readIntoNativeBuffer
+  [ 5] sun.nio.ch.IOUtil.read
+  [ 6] sun.nio.ch.FileChannelImpl.read
+  [ 7] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 8] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 9] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [10] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [11] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [12] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [13] java.lang.reflect.Method.invoke
+  [14] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [15] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [16] java.util.concurrent.FutureTask.run
+  [17] java.util.concurrent.Executors$RunnableAdapter.call
+  [18] java.util.concurrent.FutureTask.run
+  [19] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [20] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [21] java.lang.Thread.run
+
+--- 9999441 ns (0.02%), 1 sample
+  [ 0] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 1] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 2] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 3] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 4] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 5] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 6] java.lang.reflect.Method.invoke
+  [ 7] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [ 8] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [ 9] java.util.concurrent.FutureTask.run
+  [10] java.util.concurrent.Executors$RunnableAdapter.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [13] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [14] java.lang.Thread.run
+
+--- 9999121 ns (0.02%), 1 sample
   [ 0] java.lang.ThreadLocal$ThreadLocalMap.getEntry
   [ 1] java.lang.ThreadLocal.get
   [ 2] sun.nio.ch.Util.getTemporaryDirectBuffer
@@ -2098,80 +1893,156 @@ Total samples       : 4419
   [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
   [19] java.lang.Thread.run
 
---- 10000000 ns (0.02%), 1 sample
-  [ 0] AccessInternal::PostRuntimeDispatch<G1BarrierSet::AccessBarrier<548964ull, G1BarrierSet>, (AccessInternal::BarrierType)2, 548964ull>::oop_access_barrier(void*)
-  [ 1] InstanceKlass::protection_domain() const
-  [ 2] ciInstanceKlass::ciInstanceKlass(Klass*)
-  [ 3] ciObjectFactory::create_new_metadata(Metadata*)
-  [ 4] ciObjectFactory::get_metadata(Metadata*)
-  [ 5] ciObjectFactory::get(oopDesc*)
-  [ 6] ciEnv::ciEnv(CompileTask*)
-  [ 7] CompileBroker::invoke_compiler_on_method(CompileTask*)
-  [ 8] CompileBroker::compiler_thread_loop()
-  [ 9] JavaThread::thread_main_inner()
-  [10] Thread::call_run()
-  [11] thread_native_entry(Thread*)
-  [12] __os_ch_md_redzone_cookie
-  [13] internal_catch_exc_subsystem
+--- 9999013 ns (0.02%), 1 sample
+  [ 0] java.nio.Buffer.position
+  [ 1] java.nio.ByteBuffer.position
+  [ 2] java.nio.HeapByteBuffer.put
+  [ 3] sun.nio.ch.IOUtil.read
+  [ 4] sun.nio.ch.FileChannelImpl.read
+  [ 5] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 7] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [10] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [11] java.lang.reflect.Method.invoke
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] java.util.concurrent.FutureTask.run
+  [15] java.util.concurrent.Executors$RunnableAdapter.call
+  [16] java.util.concurrent.FutureTask.run
+  [17] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [18] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [19] java.lang.Thread.run
+
+--- 9998820 ns (0.02%), 1 sample
+  [ 0] sun.nio.ch.Util$BufferCache.get
+  [ 1] sun.nio.ch.Util.getTemporaryDirectBuffer
+  [ 2] sun.nio.ch.IOUtil.read
+  [ 3] sun.nio.ch.FileChannelImpl.read
+  [ 4] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 9] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [10] java.lang.reflect.Method.invoke
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.Executors$RunnableAdapter.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [18] java.lang.Thread.run
+
+--- 9998233 ns (0.02%), 1 sample
+  [ 0] sun.nio.ch.FileDispatcherImpl.read
+  [ 1] sun.nio.ch.IOUtil.readIntoNativeBuffer
+  [ 2] sun.nio.ch.IOUtil.read
+  [ 3] sun.nio.ch.FileChannelImpl.read
+  [ 4] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 5] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 6] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 7] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 8] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 9] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [10] java.lang.reflect.Method.invoke
+  [11] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [12] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.Executors$RunnableAdapter.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [17] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [18] java.lang.Thread.run
+
+--- 9998217 ns (0.02%), 1 sample
+  [ 0] java.nio.Buffer.flip
+  [ 1] java.nio.ByteBuffer.flip
+  [ 2] java.nio.MappedByteBuffer.flip
+  [ 3] java.nio.MappedByteBuffer.flip
+  [ 4] sun.nio.ch.IOUtil.read
+  [ 5] sun.nio.ch.FileChannelImpl.read
+  [ 6] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 7] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 8] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 9] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [10] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [11] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [12] java.lang.reflect.Method.invoke
+  [13] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [14] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [15] java.util.concurrent.FutureTask.run
+  [16] java.util.concurrent.Executors$RunnableAdapter.call
+  [17] java.util.concurrent.FutureTask.run
+  [18] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [19] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [20] java.lang.Thread.run
+
+--- 9998146 ns (0.02%), 1 sample
+  [ 0] sun.nio.ch.NativeThreadSet.remove
+  [ 1] sun.nio.ch.FileChannelImpl.read
+  [ 2] io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+  [ 3] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+  [ 4] io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_AverageTime
+  [ 5] jdk.internal.reflect.NativeMethodAccessorImpl.invoke0
+  [ 6] jdk.internal.reflect.NativeMethodAccessorImpl.invoke
+  [ 7] jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke
+  [ 8] java.lang.reflect.Method.invoke
+  [ 9] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [10] org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+  [11] java.util.concurrent.FutureTask.run
+  [12] java.util.concurrent.Executors$RunnableAdapter.call
+  [13] java.util.concurrent.FutureTask.run
+  [14] java.util.concurrent.ThreadPoolExecutor.runWorker
+  [15] java.util.concurrent.ThreadPoolExecutor$Worker.run
+  [16] java.lang.Thread.run
 
           ns  percent  samples  top
   ----------  -------  -------  ---
- 36460000000   82.51%     3646  read
-  1330000000    3.01%      133  jlong_disjoint_arraycopy
-   790000000    1.79%       79  sun.nio.ch.FileDispatcherImpl.read0
-   570000000    1.29%       57  Java_sun_nio_ch_FileDispatcherImpl_read0
-   550000000    1.24%       55  sun.nio.ch.Util$BufferCache.get
-   500000000    1.13%       50  sun.nio.ch.FileChannelImpl.read
-   470000000    1.06%       47  java.lang.Thread.blockedOn
-   390000000    0.88%       39  java.nio.channels.spi.AbstractInterruptibleChannel.begin
-   370000000    0.84%       37  java.nio.channels.spi.AbstractInterruptibleChannel.isOpen
-   300000000    0.68%       30  sun.nio.ch.FileChannelImpl.endBlocking
-   280000000    0.63%       28  java.nio.DirectByteBuffer.address
-   260000000    0.59%       26  sun.nio.ch.NativeThreadSet.remove
-   210000000    0.48%       21  sun.nio.ch.NativeThread.current
-   200000000    0.45%       20  sun.nio.ch.NativeThreadSet.add
-   160000000    0.36%       16  convertReturnVal
-   150000000    0.34%       15  __psynch_cvwait
-   120000000    0.27%       12  java.nio.channels.spi.AbstractInterruptibleChannel.end
-   110000000    0.25%       11  java.lang.ThreadLocal.get
-   100000000    0.23%       10  sun.nio.ch.Util.getTemporaryDirectBuffer
-    90000000    0.20%        9  java.lang.Thread.isInterrupted
-    70000000    0.16%        7  java.nio.ByteBuffer.limit
-    70000000    0.16%        7  sun.nio.ch.IOUtil.read
-    60000000    0.14%        6  io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
-    60000000    0.14%        6  sun.nio.ch.IOUtil.readIntoNativeBuffer
-    60000000    0.14%        6  java.nio.Buffer.limit
-    50000000    0.11%        5  java.nio.MappedByteBuffer.rewind
-    30000000    0.07%        3  java.lang.ThreadLocal$ThreadLocalMap.getEntry
-    30000000    0.07%        3  __open
-    30000000    0.07%        3  unsafe_arraycopy
-    20000000    0.05%        2  java.nio.Buffer.clear
-    20000000    0.05%        2  semaphore_wait_trap
-    20000000    0.05%        2  jdk.internal.access.SharedSecrets.getJavaLangAccess
-    10000000    0.02%        1  java.nio.MappedByteBuffer.limit
-    10000000    0.02%        1  err_codes_mach_rcv
-    10000000    0.02%        1  close
-    10000000    0.02%        1  java.nio.channels.spi.AbstractInterruptibleChannel.blockedOn
-    10000000    0.02%        1  ciObjectFactory::get_metadata(Metadata*)
-    10000000    0.02%        1  __unlink
-    10000000    0.02%        1  java.util.concurrent.ExecutorCompletionService.poll
-    10000000    0.02%        1  fdval
-    10000000    0.02%        1  __psynch_mutexwait
-    10000000    0.02%        1  jni_GetObjectField
-    10000000    0.02%        1  mach_absolute_time
-    10000000    0.02%        1  __psynch_cvsignal
-    10000000    0.02%        1  semaphore_signal_trap
-    10000000    0.02%        1  internal_catch_exc_subsystem
-    10000000    0.02%        1  sun.nio.ch.FileChannelImpl.beginBlocking
-    10000000    0.02%        1  java.lang.System.identityHashCode
-    10000000    0.02%        1  __gettimeofday
-    10000000    0.02%        1  StatSamplerTask::task()
-    10000000    0.02%        1  PeriodicTask::real_time_tick(int)
-    10000000    0.02%        1  OtherRegionsTable::occupied() const
-    10000000    0.02%        1  Monitor::wait_without_safepoint_check(long long)
-    10000000    0.02%        1  Monitor::wait(long long, bool)
-    10000000    0.02%        1  Java_sun_nio_ch_NativeThread_current
-    10000000    0.02%        1  G1YoungRemSetSamplingClosure::do_heap_region(HeapRegion*)
-    10000000    0.02%        1  CodeHeap::find_blob_unsafe(void*) const
-    10000000    0.02%        1  AccessInternal::PostRuntimeDispatch<G1BarrierSet::AccessBarrier<548964ull, G1BarrierSet>, (AccessInternal::BarrierType)2, 548964ull>::oop_access_barrier(void*)
+ 30060976003   60.16%     1222  read
+  5510161832   11.03%      214  jlong_disjoint_arraycopy
+  1870053128    3.74%       78  sun.nio.ch.IOUtil.read
+  1660059667    3.32%       59  sun.nio.ch.FileDispatcherImpl.read0
+  1450032237    2.90%       60  /usr/lib/x86_64-linux-gnu/libc-2.33.so
+  1300020074    2.60%       55  java.lang.ThreadLocal.get
+  1220027085    2.44%       51  java.nio.channels.spi.AbstractInterruptibleChannel.begin
+  1090029951    2.18%       47  sun.nio.ch.NativeThread.current
+  1010002335    2.02%       42  java.lang.ThreadLocal$ThreadLocalMap.getEntry
+   930038530    1.86%       38  java.lang.Thread.blockedOn
+   799997182    1.60%       33  java.nio.channels.spi.AbstractInterruptibleChannel.end
+   490012568    0.98%       20  sun.nio.ch.FileChannelImpl.read
+   220007707    0.44%       10  java.nio.Buffer.remaining
+   210002829    0.42%        7  /usr/lib/jvm/java-11-openjdk-amd64/lib/libnio.so
+   200007098    0.40%        9  sun.nio.ch.Util$BufferCache.get
+   200006638    0.40%        7  Java_sun_nio_ch_FileDispatcherImpl_read0
+   170002041    0.34%       10  java.nio.Buffer.position
+   170001575    0.34%        8  sun.nio.ch.Util.getTemporaryDirectBuffer
+   160019899    0.32%        4  io.ktor.benchmarks.FileBenchmarks.testJvmRandomFileRead
+   150000735    0.30%        8  sun.nio.ch.Util$BufferCache.offerFirst
+   140005541    0.28%        5  sun.nio.ch.NativeThreadSet.add
+   120004569    0.24%        6  java.nio.Buffer.limit
+   100001672    0.20%        5  sun.nio.ch.Util.offerFirstTemporaryDirectBuffer
+    90003461    0.18%        4  jlong_arraycopy
+    80003700    0.16%        1  jdk.internal.misc.Unsafe.copyMemory
+    60002470    0.12%        3  jdk.internal.misc.Unsafe.checkPrimitiveArray
+    60001043    0.12%        3  jdk.internal.misc.Unsafe.checkSize
+    50002863    0.10%        3  java.nio.Buffer.checkBounds
+    49998953    0.10%        3  java.lang.Class.getComponentType
+    40001348    0.08%        3  sun.nio.ch.Util$BufferCache.next
+    39996380    0.08%        3  java.lang.Thread.isInterrupted
+    30003944    0.06%        1  io.ktor.benchmarks.jmh_generated.FileBenchmarks_testJvmRandomFileRead_jmhTest.testJvmRandomFileRead_avgt_jmhStub
+    30002098    0.06%        1  fstatat64
+    30001593    0.06%        2  Java_sun_nio_ch_NativeThread_current
+    30001058    0.06%        2  sun.nio.ch.FileDispatcherImpl.read
+    20003374    0.04%        1  sun.nio.ch.IOUtil.readIntoNativeBuffer
+    20001756    0.04%        1  java.nio.HeapByteBuffer.put
+    20001605    0.04%        2  java.nio.Buffer.rewind
+    20000620    0.04%        1  java.lang.ThreadLocal.getMap
+    19999890    0.04%        1  pthread_self
+    19999070    0.04%        2  sun.nio.ch.NativeThreadSet.remove
+    10002386    0.02%        1  unsafe_arraycopy
+    10000612    0.02%        1  jdk.internal.misc.SharedSecrets.getJavaLangAccess
+     9998217    0.02%        1  java.nio.Buffer.flip
 
