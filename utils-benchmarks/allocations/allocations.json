@@ -1,0 +1,71 @@
+{
+    "data": {
+        "SuspendFunctionGun.kt": {
+            "name": "SuspendFunctionGun.kt",
+            "locationSize": 17656,
+            "instanceIndex": {
+                "io.ktor.util.pipeline.SuspendFunctionGun$continuation$1": {
+                    "name": "io.ktor.util.pipeline.SuspendFunctionGun$continuation$1",
+                    "sites": {
+                        "SuspendFunctionGun.kt:31": {
+                            "stackTrace": "SuspendFunctionGun.kt:31",
+                            "totalCount": 1,
+                            "totalSize": 16
+                        }
+                    },
+                    "totalSize": 16
+                },
+                "PipelineToolsKt$setup$1$1$1": {
+                    "name": "PipelineToolsKt$setup$1$1$1",
+                    "sites": {
+                        "SuspendFunctionGun.kt:248": {
+                            "stackTrace": "SuspendFunctionGun.kt:248",
+                            "totalCount": 400,
+                            "totalSize": 16000
+                        }
+                    },
+                    "totalSize": 16000
+                },
+                "[Ljava.lang.Object;": {
+                    "name": "[Ljava.lang.Object;",
+                    "sites": {
+                        "SuspendFunctionGun.kt:224": {
+                            "stackTrace": "SuspendFunctionGun.kt:224",
+                            "totalCount": 1,
+                            "totalSize": 1616
+                        }
+                    },
+                    "totalSize": 1616
+                },
+                "java.util.ArrayList": {
+                    "name": "java.util.ArrayList",
+                    "sites": {
+                        "SuspendFunctionGun.kt:224": {
+                            "stackTrace": "SuspendFunctionGun.kt:224",
+                            "totalCount": 1,
+                            "totalSize": 24
+                        }
+                    },
+                    "totalSize": 24
+                }
+            }
+        },
+        "PipelineContext.kt": {
+            "name": "PipelineContext.kt",
+            "locationSize": 40,
+            "instanceIndex": {
+                "io.ktor.util.pipeline.SuspendFunctionGun": {
+                    "name": "io.ktor.util.pipeline.SuspendFunctionGun",
+                    "sites": {
+                        "PipelineContext.kt:79": {
+                            "stackTrace": "PipelineContext.kt:79",
+                            "totalCount": 1,
+                            "totalSize": 40
+                        }
+                    },
+                    "totalSize": 40
+                }
+            }
+        }
+    }
+}
