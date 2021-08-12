@@ -1,0 +1,49 @@
+{
+    "data": {
+        "PipelineContext.kt": {
+            "name": "PipelineContext.kt",
+            "locationSize": 32,
+            "instanceIndex": {
+                "io.ktor.util.pipeline.DebugPipelineContext": {
+                    "name": "io.ktor.util.pipeline.DebugPipelineContext",
+                    "sites": {
+                        "PipelineContext.kt:77": {
+                            "stackTrace": "PipelineContext.kt:77",
+                            "totalCount": 1,
+                            "totalSize": 32
+                        }
+                    },
+                    "totalSize": 32
+                }
+            }
+        },
+        "DebugPipelineContext.kt": {
+            "name": "DebugPipelineContext.kt",
+            "locationSize": 32000,
+            "instanceIndex": {
+                "io.ktor.util.pipeline.DebugPipelineContext$proceedLoop$1": {
+                    "name": "io.ktor.util.pipeline.DebugPipelineContext$proceedLoop$1",
+                    "sites": {
+                        "DebugPipelineContext.kt:-1": {
+                            "stackTrace": "DebugPipelineContext.kt:-1",
+                            "totalCount": 400,
+                            "totalSize": 16000
+                        }
+                    },
+                    "totalSize": 16000
+                },
+                "PipelineToolsKt$setup$1$1$1": {
+                    "name": "PipelineToolsKt$setup$1$1$1",
+                    "sites": {
+                        "DebugPipelineContext.kt:82": {
+                            "stackTrace": "DebugPipelineContext.kt:82",
+                            "totalCount": 400,
+                            "totalSize": 16000
+                        }
+                    },
+                    "totalSize": 16000
+                }
+            }
+        }
+    }
+}
