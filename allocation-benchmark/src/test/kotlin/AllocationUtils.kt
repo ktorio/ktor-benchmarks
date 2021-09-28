@@ -1,5 +1,3 @@
-@file:OptIn(EngineAPI::class)
-
 package benchmarks
 
 import io.ktor.server.engine.*

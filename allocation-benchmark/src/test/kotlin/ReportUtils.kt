@@ -10,7 +10,7 @@ private val serializer = Json {
 }
 
 fun saveReport(name: String, report: AllocationData) {
-    val file = File("allocations/${name}.json")
+    val file = File("allocations/$name.json")
     if (!file.exists()) {
         file.createNewFile()
     }
@@ -22,7 +22,7 @@ fun saveReport(name: String, report: AllocationData) {
 }
 
 fun loadReport(name: String): AllocationData {
-    val file = File("allocations/${name}.json")
+    val file = File("allocations/$name.json")
     check(file.exists()) { "No report found: $name" }
     val content = file.readText()
     return serializer.decodeFromString(content)
