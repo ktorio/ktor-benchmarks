@@ -6,7 +6,6 @@ import org.junit.jupiter.params.provider.*
 const val TEST_SIZE = 100
 const val WARMUP_SIZE = 10
 
-
 class ServerCallAllocationTest {
 
     @ParameterizedTest

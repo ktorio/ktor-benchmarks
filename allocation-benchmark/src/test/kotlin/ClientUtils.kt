@@ -3,7 +3,6 @@ package benchmarks
 import java.net.*
 import java.net.http.*
 
-
 const val SERVER_PORT = 8080
 
 val client = HttpClient.newHttpClient()
