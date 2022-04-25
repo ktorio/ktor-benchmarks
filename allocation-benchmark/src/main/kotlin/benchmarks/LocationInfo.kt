@@ -20,8 +20,8 @@ class LocationInfo(val name: String) {
         val instances = instanceIndex.values.sortedByDescending { it.totalSize }
 
         appendLine("Location: $name. Size: ${locationSize.formatSize()}")
-        instances.forEach {
-            appendLine(it)
-        }
+//        instances.forEach {
+//            appendLine(it)
+//        }
     }
 }
