@@ -2,9 +2,9 @@ package benchmarks
 
 import io.ktor.server.engine.*
 
-private val SAVE_REPORT: Boolean = System.getProperty("SAVE_REPORT") == "true"
+public val SAVE_REPORT: Boolean = System.getProperty("SAVE_REPORT") == "true"
 
-fun measureMemory(testName: String, engine: String, block: () -> Unit) {
+fun measureMemory(engine: String, block: () -> Unit): AllocationData {
     AllocationTracker.clear()
     val server = startServer(engine)
     try {
@@ -16,14 +16,7 @@ fun measureMemory(testName: String, engine: String, block: () -> Unit) {
         stopServer(server)
     }
 
-    val reportName = "$testName[$engine]"
-
-    if (SAVE_REPORT) {
-        saveReport(reportName, AllocationTracker.stats())
-        return
-    }
-
-    checkAllocationDataIsSame(loadReport(reportName), AllocationTracker.stats())
+    return AllocationTracker.stats()
 }
 
 private fun warmup() {

@@ -1,7 +1,6 @@
 package benchmarks
 
 import kotlinx.serialization.Serializable
-import kotlin.math.abs
 
 @Serializable
 class AllocationData {
@@ -20,59 +19,19 @@ class AllocationData {
     operator fun get(name: String): LocationInfo? = synchronized(this) {
         return@synchronized data[name]
     }
+
+    fun totalSize(): Long = packages.map { it.locationSize }.sum()
 }
 
-data class LocationDiff(val expected: LocationInfo? = null, val actual: LocationInfo? = null) {
-    override fun toString(): String = when {
-        expected == null -> buildString {
-            appendLine("Found new allocation:")
-            appendLine(actual)
-        }
-        actual == null -> buildString {
-            appendLine("Allocation was removed:")
-            appendLine(expected)
-        }
-        else -> buildString {
-            appendLine("Difference in allocations:")
-            appendLine("Expected:")
-            appendLine(expected)
-            appendLine("Actual:")
-            appendLine(actual)
-        }
-    }
-}
-
-fun checkAllocationDataIsSame(
+/**
+ * Returns how much extra bytes is allocated.
+ */
+fun allocationDiff(
     expected: AllocationData,
-    actual: AllocationData,
-    allowedFileDifference: Long = 300 * 1024
-) {
-    val visited = mutableSetOf<String>()
-    val problems = mutableListOf<LocationDiff>()
-    actual.packages.forEach {
-        visited.add(it.name)
+    actual: AllocationData
+): Long {
+    val expectedSize = expected.totalSize()
+    val actualSize = actual.totalSize()
 
-        val expectedPackage = expected[it.name]
-        if (expectedPackage == null) {
-            if (it.locationSize > allowedFileDifference) {
-                problems.add(LocationDiff(actual = it))
-            }
-
-            return@forEach
-        }
-
-        if (abs(expectedPackage.locationSize - it.locationSize) > allowedFileDifference) {
-            problems.add(LocationDiff(expectedPackage, it))
-        }
-    }
-
-    expected.packages.forEach {
-        if (it.name in visited || it.locationSize <= allowedFileDifference) return@forEach
-
-        problems.add(LocationDiff(expected = it))
-    }
-
-    if (problems.isEmpty()) return
-
-    error(problems.joinToString("\n\n"))
+    return actualSize - expectedSize
 }

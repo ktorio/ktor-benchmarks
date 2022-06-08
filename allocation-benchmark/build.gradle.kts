@@ -5,8 +5,8 @@ val junit_version: String by project
 val serialization_version: String by project
 
 plugins {
-    kotlin("jvm") version "1.6.20-M1-106"
-    kotlin("plugin.serialization") version "1.6.20-M1-106"
+    kotlin("jvm") version "1.6.21"
+    kotlin("plugin.serialization") version "1.6.21"
 }
 
 group = "com.example"
