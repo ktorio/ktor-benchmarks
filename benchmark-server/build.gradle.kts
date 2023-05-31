@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "1.4.32"
+    kotlin("jvm") version "1.7.10"
 }
 
 val ktor_version: String by project.extra

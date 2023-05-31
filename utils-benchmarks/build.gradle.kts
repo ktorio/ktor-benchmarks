@@ -21,7 +21,7 @@ allOpen {
 group = "org.example"
 version = "1.0-SNAPSHOT"
 
-val serialization_version= "1.1.0"
+val serialization_version= "1.4.0"
 val instrumenter by configurations.creating
 val instrumenterName = "java-allocation-instrumenter"
 val instrumenter_version = "3.3.0"
@@ -32,12 +32,12 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib"))
-    implementation("junit:junit:4.13.1")
+    implementation("junit:junit:4.13.2")
 
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$serialization_version")
-    implementation("io.ktor:ktor-io:1.6.2")
-    implementation("io.ktor:ktor-utils:1.6.2")
-    implementation("io.ktor:ktor-network:1.6.2")
+    implementation("io.ktor:ktor-io:2.1.0")
+    implementation("io.ktor:ktor-utils:2.1.0")
+    implementation("io.ktor:ktor-network:2.1.0")
 
     instrumenter("com.google.code.java-allocation-instrumenter:$instrumenterName:$instrumenter_version")
     implementation("com.google.code.java-allocation-instrumenter:$instrumenterName:$instrumenter_version")

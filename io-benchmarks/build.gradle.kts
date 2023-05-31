@@ -1,14 +1,14 @@
 
 buildscript {
     dependencies {
-        classpath("org.jetbrains.kotlinx:atomicfu-gradle-plugin:0.16.2")
+        classpath("org.jetbrains.kotlinx:atomicfu-gradle-plugin:0.18.3")
     }
 }
 
 plugins {
-    kotlin("jvm") version "1.5.21"
-    id("org.jetbrains.kotlin.plugin.allopen") version "1.5.21"
-    id("me.champeau.jmh") version "0.6.5"
+    kotlin("jvm") version "1.7.10"
+    id("org.jetbrains.kotlin.plugin.allopen") version "1.7.10"
+    id("me.champeau.jmh") version "0.6.7"
 }
 
 apply(plugin ="kotlinx-atomicfu")
@@ -27,9 +27,9 @@ repositories {
 
 dependencies {
     jmh(kotlin("stdlib"))
-    jmh("io.ktor:ktor-io:2.0.1")
-    jmh("io.ktor:ktor-utils:2.0.1")
-    jmh("io.ktor:ktor-network:2.0.1")
+    jmh("io.ktor:ktor-io:2.1.0")
+    jmh("io.ktor:ktor-utils:2.1.0")
+    jmh("io.ktor:ktor-network:2.1.0")
     jmh(kotlin("test"))
 }
 
