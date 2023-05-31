@@ -11,10 +11,10 @@ allOpen {
 group = "org.example"
 version = "1.0-SNAPSHOT"
 
-val okhttpVersion = "4.9.3"
+val okhttpVersion = "4.10.0"
 val apacheHttpClientVersion = "4.5.13"
 val logbackVersion = "1.2.11"
-val ktor_version = "2.0.1"
+val ktor_version = "2.1.0"
 
 repositories {
     mavenCentral()
