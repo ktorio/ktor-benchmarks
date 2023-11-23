@@ -9,6 +9,8 @@ class LocationInfo(val name: String) {
 
     private val instanceIndex = mutableMapOf<String, InstanceData>()
 
+    public val instances: MutableCollection<InstanceData> get() = instanceIndex.values
+
     fun add(instanceClass: Class<*>, size: Long, stackTrace: List<String>) = synchronized(this) {
         locationSize += size
 
