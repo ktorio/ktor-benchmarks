@@ -5,18 +5,30 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Allocations Inspector</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<div class="dropdown">
-    Select Engine:
-    <button onclick="selectEngine('Netty')">Netty</button>
-    <button onclick="selectEngine('Jetty')">Jetty</button>
-    <button onclick="selectEngine('Tomcat')">Tomcat</button>
-</div>
-<svg width="800"></svg>
-<div id="info" style="float: right"></div>
-<script src="https://d3js.org/d3.v5.js"></script>
-<script>
+<header>
+    <div class="dropdown">
+        Select Engine:
+        <button class="engine">Netty</button>
+        <button class="engine">Jetty</button>
+        <button class="engine">Tomcat</button>
+        <button class="engine">CIO</button>
+    </div>
+</header>
+<main>
+    <div><svg></svg></div>
+    <div id="info"></div>
+</main>
+<script src="d3.v5.js"></script>
+<script src="common.js" type="module"></script>
+<script type="module">
+    import { displaySite } from "./common.js";
+
     const width = 800
     const height = 900
 
@@ -37,21 +49,7 @@
             const sitesArray = Object.values(item.sites)
             sitesArray.sort((first, second) => second.totalSize - first.totalSize)
 
-            sitesArray.forEach(siteInfo => {
-                const site = sites.append("div")
-                    .attr("class", "site")
-
-                site.append("div")
-                    .text("Size: " + formatSize(siteInfo.totalSize) + ", Count: " + siteInfo.totalCount)
-
-                const stack = site.append("ul")
-                    .attr("class", "stacktrace")
-
-                siteInfo.stackTrace.split(",").forEach((stackItem) => {
-                    stack.append("li")
-                        .text(stackItem)
-                })
-            })
+            sitesArray.forEach(siteInfo => displaySite(sites, siteInfo))
         })
     }
 
@@ -130,10 +128,13 @@
             drawAllocations(result.data)
         })
 
-    const selectEngine = (engine) => {
-        d3.json(`testMemoryConsumptionIsSame[${engine}].json`).then(result => {
-            drawAllocations(result.data)
-        })
+    for (let button of document.getElementsByClassName("engine")) {
+        button.onclick = (e) => {
+            const engineName = e.target.innerText
+            d3.json(`testMemoryConsumptionIsSame[${engineName}].json`).then(result => {
+                drawAllocations(result.data)
+            })
+        };
     }
 </script>
 

@@ -1,0 +1,40 @@
+body {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11pt;
+}
+main {
+    display: grid;
+    grid-template-columns: 55% 45%;
+}
+.site {
+    margin: 0.5em 0;
+}
+.site > .header {
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+}
+.site > .header > .chevron::after {
+    content: '›'
+}
+.site[data-expand='true'] > .header > .chevron::after {
+    content: '⌄'
+}
+.site .stacktrace {
+    display: none;
+}
+.site[data-expand='true'] > .stacktrace {
+    display: block;
+}
+.stacktrace li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.2em;
+}
+.stacktrace li .fun {
+    color: dimgray;
+    min-width: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

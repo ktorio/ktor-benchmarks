@@ -1,8 +1,8 @@
 package benchmarks
 
 import org.junit.jupiter.api.Assertions.assertTrue
-import org.junit.jupiter.params.*
-import org.junit.jupiter.params.provider.*
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.provider.ValueSource
 
 const val TEST_SIZE = 1000
 const val WARMUP_SIZE = 10
@@ -27,17 +27,24 @@ class ServerCallAllocationTest {
             saveSiteStatistics(reportName, memory)
             println("Report updated: $reportName")
             val consumedMemory = memory.totalSize() / TEST_SIZE
-            println("Request consumes ${consumedMemory / 1024.0} KB")
+            println("Request consumes ${consumedMemory.kb}")
             return
         }
 
         val consumedMemory = memory.totalSize() / TEST_SIZE
         val expectedMemory = loadReport(reportName).totalSize() / TEST_SIZE
 
-        println("Request consumes ${consumedMemory / 1024} KB, expected ${expectedMemory / 1024} KB. Difference: ${(consumedMemory - expectedMemory) / 1024} KB")
-        println("Consumed ${consumedMemory / 1024} KB on request")
-        println("Expected ${expectedMemory / 1024} KB on request")
-        println("Extra consumed ${(consumedMemory - expectedMemory) / 1024} KB on request")
-        assertTrue(consumedMemory <= expectedMemory + ALLOWED_MEMORY_DIFFERENCE)
+        val difference = consumedMemory - expectedMemory
+        val message = """
+            Request consumes ${consumedMemory.kb}, expected ${expectedMemory.kb}. Difference: ${(consumedMemory - expectedMemory).kb}
+            Consumed ${consumedMemory.kb} on request
+            Expected ${expectedMemory.kb} on request
+            Extra consumed ${(consumedMemory - expectedMemory).kb} on request
+        """.trimIndent().also(::println)
+
+        assertTrue(difference - ALLOWED_MEMORY_DIFFERENCE <= 0, message)
     }
+
+    private val Long.kb get() = "%.2f KB".format(toDouble() / 1024.0)
+
 }

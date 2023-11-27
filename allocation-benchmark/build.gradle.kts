@@ -9,7 +9,7 @@ plugins {
     kotlin("plugin.serialization") version "1.9.10"
 }
 
-group = "com.example"
+group = "io.ktor"
 version = "0.0.1"
 
 repositories {
@@ -59,8 +59,16 @@ tasks.test {
 }
 
 tasks.register<Test>("dumpAllocations") {
+    group = "verification"
     systemProperty("SAVE_REPORT", "true")
     systemProperty("kotlinx.coroutines.debug", "off")
     jvmArgs = listOf("-javaagent:$agentPath")
     useJUnitPlatform()
+}
+
+tasks.register<JavaExec>("reportServer") {
+    group = "verification"
+    description = "Run a small server to show allocation reports."
+    classpath = sourceSets["main"].runtimeClasspath
+    mainClass = "benchmarks.ReportServerKt"
 }
