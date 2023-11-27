@@ -2,7 +2,6 @@ package benchmarks
 
 import com.google.monitoring.runtime.instrumentation.AllocationRecorder
 import com.google.monitoring.runtime.instrumentation.Sampler
-import com.google.monitoring.runtime.instrumentation.asm.*
 import kotlin.streams.*
 
 private val IGNORED_DESCRIPTORS = mutableListOf<String>(
@@ -45,15 +44,21 @@ object AllocationTracker : Sampler {
         if (IGNORED_DESCRIPTORS.any { descriptor.startsWith(it) }) return
 
         val frames = walker.walk { frames ->
-            frames.filter {
-                it.toStackTraceElement().className.startsWith("io.ktor")
-            }.toList()
-        }.takeIf { it.isNotEmpty() } ?: return
+            frames.toList()
+        }.takeIf { stack -> stack.any { it.isKtor() } } ?: return
 
-        val frame = frames.first()
-        val stackTrace = frames.map { "${it.fileName}:${it.lineNumber}" }
+        val firstKtorClass = frames.indexOfFirst { it.isKtor() }
+        val frame = frames[firstKtorClass]
+        val stackTrace = frames.subList(maxOf(firstKtorClass, 0), frames.size)
+            .asSequence()
+            .take(20)
+            .map { "${it.fileName}:${it.lineNumber} ${it.methodName ?: ""}" }
+            .toList()
         val fileName = frame.fileName
         val packageData = data.add(fileName) { LocationInfo(fileName) }
         packageData.add(type, size, stackTrace)
     }
+
+    private fun StackWalker.StackFrame.isKtor() =
+        toStackTraceElement().className.startsWith("io.ktor")
 }
