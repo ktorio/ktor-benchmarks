@@ -1,7 +1,6 @@
 package benchmarks
 
 import kotlinx.serialization.Serializable
-import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import java.io.File
@@ -10,11 +9,17 @@ private val serializer = Json {
     prettyPrint = true
 }
 
-fun saveReport(name: String, report: AllocationData) {
-    val file = File("allocations/$name.json")
-    if (!file.exists()) {
+fun saveReport(name: String, report: AllocationData, replace: Boolean = true) {
+    val file = if (replace)
+        File("allocations/$name.json")
+    else
+        File("build/allocations/$name.json")
+
+    if (!file.parentFile.exists())
+        file.parentFile.mkdirs()
+
+    if (!file.exists())
         file.createNewFile()
-    }
 
     val content = serializer.encodeToString(report)
     file.bufferedWriter().use {
@@ -30,8 +35,12 @@ data class SiteWithName(
     var totalSize: Long
 )
 
-fun saveSiteStatistics(name: String, report: AllocationData) {
-    val file = File("allocations/sites_$name.json")
+fun saveSiteStatistics(name: String, report: AllocationData, replace: Boolean) {
+    val file = if (replace)
+        File("allocations/sites_$name.json")
+    else
+        File("build/allocations/sites_$name.json")
+
     if (!file.exists()) {
         file.createNewFile()
     }

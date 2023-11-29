@@ -19,11 +19,6 @@ class LocationInfo(val name: String) {
     }
 
     override fun toString(): String = buildString {
-        val instances = instanceIndex.values.sortedByDescending { it.totalSize }
-
         appendLine("Location: $name. Size: ${locationSize.formatSize()}")
-//        instances.forEach {
-//            appendLine(it)
-//        }
     }
 }
