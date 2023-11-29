@@ -2,6 +2,12 @@ body {
     font-family: 'JetBrains Mono', monospace;
     font-size: 11pt;
 }
+header {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-evenly;
+    padding: 0 1rem 2rem 1rem;
+}
 main {
     display: grid;
     grid-template-columns: 55% 45%;

@@ -11,6 +11,7 @@ fun main() {
     embeddedServer(Netty, port = port) {
         routing {
             staticFiles("/", File("allocations"))
+            staticFiles("/test_output", File("build/allocations"))
         }
 
         println("""

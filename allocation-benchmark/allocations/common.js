@@ -31,3 +31,23 @@ export function displaySite(sites, item) {
         li.append("span").attr("class", "fun").text(fun)
     })
 }
+
+export function setupRenderControls(drawAllocations) {
+    const render = () => {
+        const engineName = document.querySelector("input[name='engine']:checked").value
+        const snapshotDir = document.querySelector("input[name='snapshot']:checked").value
+        const reportPath = `${snapshotDir}/testMemoryConsumptionIsSame[${engineName}].json`;
+        d3.json(reportPath).then(result => {
+            drawAllocations(result.data)
+            document.getElementById("info").innerText = ""
+        }, () => {
+            drawAllocations({})
+            document.getElementById("info").innerText = `Nothing found for ${reportPath}`
+        })
+    }
+    document.querySelectorAll("input[type='radio']").forEach(elem => {
+        elem.onchange = render
+    })
+
+    render()
+}
