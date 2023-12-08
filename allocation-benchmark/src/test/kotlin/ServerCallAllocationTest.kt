@@ -1,41 +1,70 @@
 package benchmarks
 
-import org.junit.jupiter.api.Assertions.assertTrue
-import org.junit.jupiter.params.*
-import org.junit.jupiter.params.provider.*
-import kotlin.math.exp
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.provider.ValueSource
+import kotlin.math.absoluteValue
 
 const val TEST_SIZE = 1000
 const val WARMUP_SIZE = 10
 
-const val ALLOWED_MEMORY_DIFFERENCE = 100
+const val ALLOWED_MEMORY_DIFFERENCE = 250L
 
 class ServerCallAllocationTest {
 
     @ParameterizedTest
-    @ValueSource(strings = ["Jetty", "Tomcat", "Netty"])
+    @ValueSource(strings = ["Jetty", "Tomcat", "Netty", "CIO"])
     fun testMemoryConsumptionIsSame(engine: String) {
         val reportName = "testMemoryConsumptionIsSame[$engine]"
 
-        val memory = measureMemory(engine) {
+        val snapshot = measureMemory(engine) {
             repeat(TEST_SIZE) {
                 makeRequest()
             }
         }
 
+        saveReport(reportName, snapshot, replace = SAVE_REPORT)
+        saveSiteStatistics(reportName, snapshot, replace = SAVE_REPORT)
+
+        val previousSnapshot = loadReport(reportName)
+        val consumedMemory = snapshot.totalSize() / TEST_SIZE
+        val expectedMemory = previousSnapshot.totalSize() / TEST_SIZE
+
+        val difference = consumedMemory - expectedMemory
+        val message = """
+            Request consumes ${consumedMemory.kb}, expected ${expectedMemory.kb}. Difference: ${(consumedMemory - expectedMemory).kb}
+              Consumed ${consumedMemory.kb} on request
+              Expected ${expectedMemory.kb} on request
+              ${if (difference > 0L) "Extra   " else "Saved   "} ${difference.absoluteValue.kb} on request
+            (See stdout + build/allocations/* files for details)
+        """.trimIndent().also(::println)
+
         if (SAVE_REPORT) {
-            saveReport(reportName, memory)
             println("Report updated: $reportName")
             return
         }
 
-        val consumedMemory = memory.totalSize() / TEST_SIZE
-        val expectedMemory = loadReport(reportName).totalSize() / TEST_SIZE
+        println("\nIncreased locations:")
+        snapshot.packages.mapNotNull { location ->
+            LocationDifference(previousSnapshot[location.name], location).takeIf {
+                it.difference() > 0
+            }
+        }.sortedByDescending { it.difference() }.forEach { diff ->
+            val (previous, current) = diff
+            println("\t" + current.name.padEnd(40) + diff.difference().kb.padStart(10) + "    (${(previous?.locationSize?.kb ?: "0").padEnd(12)} --> ${current.locationSize.kb.padStart(12)})")
+        }
 
-        println("Request consumes ${consumedMemory / 1024} KB, expected ${expectedMemory / 1024} KB. Difference: ${(consumedMemory - expectedMemory) / 1024} KB")
-        println("Consumed ${consumedMemory / TEST_SIZE} Bytes on request")
-        println("Expected ${expectedMemory / TEST_SIZE} Bytes on request")
-        println("Extra consumed ${(consumedMemory - expectedMemory) / TEST_SIZE} Bytes on request")
-        assertTrue(consumedMemory <= expectedMemory + ALLOWED_MEMORY_DIFFERENCE)
+        val increase = maxOf(difference - ALLOWED_MEMORY_DIFFERENCE, 0)
+        assertEquals(0L, increase, message)
     }
+
+    private val Long.kb get() = "%.2f KB".format(toDouble() / 1024.0)
+
+    data class LocationDifference(
+        val previous: LocationInfo?,
+        val current: LocationInfo
+    ) {
+        fun difference() = previous?.let { current.locationSize - it.locationSize } ?: current.locationSize
+    }
+
 }

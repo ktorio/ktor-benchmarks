@@ -1,7 +1,5 @@
 package benchmarks
 
-import io.ktor.server.engine.*
-
 public val SAVE_REPORT: Boolean = System.getProperty("SAVE_REPORT") == "true"
 
 fun measureMemory(engine: String, block: () -> Unit): AllocationData {
@@ -13,7 +11,7 @@ fun measureMemory(engine: String, block: () -> Unit): AllocationData {
         block()
         AllocationTracker.stop()
     } finally {
-        stopServer(server)
+        server.stop(1000, 1000)
     }
 
     return AllocationTracker.stats()
@@ -25,8 +23,4 @@ private fun warmup() {
     }
 }
 
-fun startServer(engine: String): BaseApplicationEngine = server(engine)
-
-fun stopServer(server: BaseApplicationEngine) {
-    server.stop(1000, 1000)
-}
+fun startServer(engine: String) = server(engine)
