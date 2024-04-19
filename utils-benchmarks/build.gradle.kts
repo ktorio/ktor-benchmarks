@@ -36,7 +36,7 @@ dependencies {
 
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$serialization_version")
     implementation("io.ktor:ktor-io:2.1.0")
-    implementation("io.ktor:ktor-utils:2.1.0")
+    implementation("io.ktor:ktor-utils:2.3.10")
     implementation("io.ktor:ktor-network:2.1.0")
 
     instrumenter("com.google.code.java-allocation-instrumenter:$instrumenterName:$instrumenter_version")
