@@ -27,7 +27,7 @@ repositories {
 
 dependencies {
     jmh(kotlin("stdlib"))
-    jmh("io.ktor:ktor-io:2.1.0")
+    jmh("io.ktor:ktor-io:2.3.10")
     jmh("io.ktor:ktor-utils:2.1.0")
     jmh("io.ktor:ktor-network:2.1.0")
     jmh(kotlin("test"))
