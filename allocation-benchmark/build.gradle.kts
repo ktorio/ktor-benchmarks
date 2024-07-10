@@ -54,7 +54,7 @@ val agentPath = instrumenter.toList().find {
 check(agentPath != null) { "Instrumentation agent is not found. Please check the configuration" }
 
 tasks.test {
-    jvmArgs = listOf("-javaagent:$agentPath")
+    jvmArgs = listOf("-javaagent:$agentPath", "-Dkotlinx.io.pool.size.bytes=16777216")
     systemProperty("kotlinx.coroutines.debug", "off")
     useJUnitPlatform()
 }
