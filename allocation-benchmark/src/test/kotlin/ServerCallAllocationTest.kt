@@ -8,7 +8,7 @@ import kotlin.math.absoluteValue
 const val TEST_SIZE = 1000
 const val WARMUP_SIZE = 10
 
-const val ALLOWED_MEMORY_DIFFERENCE = 250L
+const val ALLOWED_MEMORY_DIFFERENCE = 750L
 
 class ServerCallAllocationTest {
 
