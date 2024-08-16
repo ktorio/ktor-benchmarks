@@ -38,8 +38,17 @@ class ServerCallAllocationTest {
         val expectedMemory = previousSnapshot.totalSize() / TEST_SIZE
 
         val difference = consumedMemory - expectedMemory
+
+        // depending on the environment, the engine, and the cycle of the moon,
+        // the memory consumption will change
+        val allowedDifference =
+            when(engine) {
+                "CIO", "Tomcat" -> ALLOWED_MEMORY_DIFFERENCE_ABNORMAL
+                else -> ALLOWED_MEMORY_DIFFERENCE_NORMAL
+            }
+
         val message = """
-            Request consumes ${consumedMemory.kb}, expected ${expectedMemory.kb}. Difference: ${(consumedMemory - expectedMemory).kb}
+            Request consumes ${consumedMemory.kb}, expected ${expectedMemory.kb}. Difference: ${difference.kb} > ${allowedDifference.kb} (allowed)
               Consumed ${consumedMemory.kb} on request
               Expected ${expectedMemory.kb} on request
               ${if (difference > 0L) "Extra   " else "Saved   "} ${difference.absoluteValue.kb} on request
@@ -60,14 +69,6 @@ class ServerCallAllocationTest {
             val (previous, current) = diff
             println("\t" + current.name.padEnd(40) + diff.difference().kb.padStart(10) + "    (${(previous?.locationSize?.kb ?: "0").padEnd(12)} --> ${current.locationSize.kb.padStart(12)})")
         }
-
-        // depending on the environment, the engine, and the cycle of the moon,
-        // the memory consumption will change
-        val allowedDifference =
-            when(engine) {
-                "CIO", "TOMCAT" -> ALLOWED_MEMORY_DIFFERENCE_ABNORMAL
-                else -> ALLOWED_MEMORY_DIFFERENCE_NORMAL
-            }
 
         val increase = maxOf(difference - allowedDifference, 0)
         assertEquals(0L, increase, message)
