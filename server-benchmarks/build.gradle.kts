@@ -11,7 +11,7 @@ allOpen {
 group = "org.example"
 version = "1.0-SNAPSHOT"
 
-val okhttpVersion = "4.10.0"
+val okhttpVersion = "4.12.0"
 val apacheHttpClientVersion = "4.5.14"
 val logbackVersion = "1.5.6"
 val ktor_version = "2.1.0"
