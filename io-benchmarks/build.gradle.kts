@@ -6,8 +6,8 @@ buildscript {
 }
 
 plugins {
-    kotlin("jvm") version "1.7.10"
-    id("org.jetbrains.kotlin.plugin.allopen") version "1.7.10"
+    kotlin("jvm") version "1.9.30-station-874"
+    id("org.jetbrains.kotlin.plugin.allopen") version "1.9.25-858"
     id("me.champeau.jmh") version "0.6.7"
 }
 
