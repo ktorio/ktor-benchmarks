@@ -5,8 +5,8 @@ val junit_version: String by project
 val serialization_version: String by project
 
 plugins {
-    kotlin("jvm") version "1.9.30-station-874"
-    kotlin("plugin.serialization") version "1.9.30-station-874"
+    kotlin("jvm") version "2.0.20"
+    kotlin("plugin.serialization") version "2.0.20"
 }
 
 group = "io.ktor"
