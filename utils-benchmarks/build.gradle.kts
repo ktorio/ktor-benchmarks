@@ -24,7 +24,7 @@ version = "1.0-SNAPSHOT"
 val serialization_version= "1.4.0"
 val instrumenter by configurations.creating
 val instrumenterName = "java-allocation-instrumenter"
-val instrumenter_version = "3.3.0"
+val instrumenter_version = "3.3.4"
 
 repositories {
     mavenCentral()
