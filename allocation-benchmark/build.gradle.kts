@@ -5,8 +5,8 @@ val junit_version: String by project
 val serialization_version: String by project
 
 plugins {
-    kotlin("jvm") version "1.9.10"
-    kotlin("plugin.serialization") version "1.9.10"
+    kotlin("jvm") version "2.0.20"
+    kotlin("plugin.serialization") version "2.0.20"
 }
 
 group = "io.ktor"
@@ -16,6 +16,7 @@ repositories {
     mavenLocal()
     mavenCentral()
     maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/dev")
+    maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlinx/dev")
     maven("https://maven.pkg.jetbrains.space/public/p/ktor/eap")
 }
 
