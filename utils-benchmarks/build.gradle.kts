@@ -5,9 +5,9 @@ buildscript {
 }
 
 plugins {
-    kotlin("jvm") version "2.0.20"
-    id("org.jetbrains.kotlin.plugin.allopen") version "2.0.208"
-    kotlin("plugin.serialization") version "2.0.20"
+    kotlin("jvm") version "2.1.0-saturn-419"
+    id("org.jetbrains.kotlin.plugin.allopen") version "2.1.0-polaris-151"
+    kotlin("plugin.serialization") version "2.1.0-saturn-419"
     id("me.champeau.jmh") version "0.6.5"
 }
 
