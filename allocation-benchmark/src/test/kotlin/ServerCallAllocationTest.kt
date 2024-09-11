@@ -10,8 +10,7 @@ const val WARMUP_SIZE = 10
 
 // TODO investigate why TC has higher memory usage.
 const val KB = 1024L
-const val ALLOWED_MEMORY_DIFFERENCE_NORMAL = 2 * KB
-const val ALLOWED_MEMORY_DIFFERENCE_ABNORMAL = 7 * KB
+const val ALLOWED_MEMORY_DIFFERENCE = 5 * KB
 
 class ServerCallAllocationTest {
 
@@ -40,15 +39,7 @@ class ServerCallAllocationTest {
 
         val difference = consumedMemory - expectedMemory
 
-        // depending on the environment, the engine, and the cycle of the moon,
-        // the memory consumption will change
-        val allowedDifference =
-            when(engine) {
-                "CIO", "Tomcat" -> ALLOWED_MEMORY_DIFFERENCE_ABNORMAL
-                else -> ALLOWED_MEMORY_DIFFERENCE_NORMAL
-            }
-
-        val increase = maxOf(difference - allowedDifference, 0)
+        val increase = maxOf(difference - ALLOWED_MEMORY_DIFFERENCE, 0)
         val success = increase == 0L
         val message = """
             Request consumes ${consumedMemory.kb}, expected ${expectedMemory.kb}. Difference: ${difference.kb} ${if (success) "<" else ">"} ${allowedDifference.kb} (allowed)
