@@ -5,16 +5,17 @@
 package io.ktor.benchmarks
 
 import ch.qos.logback.classic.Level
-import io.ktor.application.*
 import io.ktor.benchmarks.cio.*
 import io.ktor.benchmarks.jetty.*
 import io.ktor.benchmarks.netty.*
 import io.ktor.client.engine.cio.*
 import io.ktor.http.*
 import io.ktor.http.content.*
-import io.ktor.response.*
-import io.ktor.routing.*
+import io.ktor.server.response.*
+import io.ktor.server.routing.*
+import io.ktor.server.application.*
 import io.ktor.server.engine.*
+import io.ktor.server.http.content.*
 import org.openjdk.jmh.annotations.*
 import org.openjdk.jmh.infra.*
 import org.slf4j.*
@@ -32,12 +33,12 @@ abstract class AsyncIntegrationBenchmark<TEngine : ApplicationEngine> {
         it.name.startsWith("ktor-server-core") && it.name.endsWith("SNAPSHOT.jar")
     }.single()
 
-    lateinit var server: TEngine
+    lateinit var server: EmbeddedServer<TEngine, *>
     protected val httpClient = KtorBenchmarkClient(CIO)
 
     private val port = 5678
 
-    abstract fun createServer(port: Int, main: Application.() -> Unit): TEngine
+    abstract fun createServer(port: Int, main: Application.() -> Unit): EmbeddedServer<TEngine, *>
     protected open val localhost = "http://localhost:$port"
 
     @Setup

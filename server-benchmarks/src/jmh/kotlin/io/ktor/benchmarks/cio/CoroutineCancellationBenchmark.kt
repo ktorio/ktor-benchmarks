@@ -7,7 +7,6 @@
 package io.ktor.benchmarks.cio
 
 import io.ktor.benchmarks.*
-import io.ktor.server.benchmarks.*
 import kotlinx.coroutines.*
 import org.openjdk.jmh.annotations.*
 import org.openjdk.jmh.infra.*

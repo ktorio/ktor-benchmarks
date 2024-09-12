@@ -4,10 +4,10 @@ import io.ktor.benchmarks.dispatchers.*
 import io.ktor.util.cio.*
 import io.ktor.utils.io.*
 import kotlinx.coroutines.*
-import kotlinx.coroutines.scheduling.*
 import org.openjdk.jmh.annotations.*
-import java.io.*
-import java.nio.*
+import java.io.File
+import java.io.RandomAccessFile
+import java.nio.ByteBuffer
 
 val dispatcher = newFixedThreadPoolContext(1, "FOOO1")
 val dispatcher2 = newFixedThreadPoolContext(1, "FOOO2")
@@ -21,17 +21,10 @@ val blockingDispatcher2 = BlockingQueueDispatcher()
 val ioDispatcher = IOCoroutineDispatcher(1)
 val ioDispatcher2 = IOCoroutineDispatcher(1)
 
-@OptIn(InternalCoroutinesApi::class)
 val experimentalDispatcher = HighThroughputDispatcher(8, 32, "FOOO3")
 
-@OptIn(InternalCoroutinesApi::class)
 val experimentalDispatcher2 = HighThroughputDispatcher(8, 32, "FOOO4")
 
-@OptIn(InternalCoroutinesApi::class)
-val hugeExperimentalDispatcher = ExperimentalCoroutineDispatcher(100, 100, "FOOO5")
-
-@OptIn(InternalCoroutinesApi::class)
-val hugeExperimentalDispatcher2 = ExperimentalCoroutineDispatcher(100, 100, "FOOO6")
 
 @State(Scope.Benchmark)
 class FileBenchmarks {
@@ -156,21 +149,6 @@ class FileBenchmarks {
     fun testKtorFileReadInExp2ExpDispatcher(): Long = runBlocking(experimentalDispatcher) {
         var size = 0L
         val channel = testFile.readChannel(coroutineContext = experimentalDispatcher2)
-        while (!channel.isClosedForRead) {
-            val read = channel.readAvailable(buffer)
-            buffer.clear()
-            size += read
-        }
-
-        channel.cancel()
-        return@runBlocking size
-    }
-
-
-    @Benchmark
-    fun testKtorFileReadInHugeExp2HugeExpDispatcher(): Long = runBlocking(hugeExperimentalDispatcher) {
-        var size = 0L
-        val channel = testFile.readChannel(coroutineContext = hugeExperimentalDispatcher2)
         while (!channel.isClosedForRead) {
             val read = channel.readAvailable(buffer)
             buffer.clear()

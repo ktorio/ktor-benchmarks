@@ -11,7 +11,6 @@ import kotlin.coroutines.*
 /**
  * Default ktor fixed size dispatcher for doing non-blocking I/O operations and selection
  */
-@OptIn(InternalAPI::class)
 class IOCoroutineDispatcher(private val nThreads: Int) : CoroutineDispatcher(), Closeable {
     @Suppress("DEPRECATION_ERROR")
     private val dispatcherThreadGroup = ThreadGroup("io-pool-group-sub")

@@ -5,7 +5,6 @@
 package io.ktor.benchmarks.jetty
 
 import io.ktor.benchmarks.*
-import io.ktor.server.benchmarks.*
 import org.eclipse.jetty.http.*
 import org.eclipse.jetty.server.*
 import org.eclipse.jetty.server.handler.*
