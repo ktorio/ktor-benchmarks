@@ -4,20 +4,19 @@
 
 package io.ktor.benchmarks.jetty
 
-import io.ktor.application.*
+import io.ktor.server.application.*
 import io.ktor.benchmarks.*
-import io.ktor.server.benchmarks.*
 import io.ktor.server.engine.*
 import io.ktor.server.jetty.*
 
 class JettyIntegrationBenchmark : IntegrationBenchmark<JettyApplicationEngine>() {
-    override fun createServer(port: Int, main: Application.() -> Unit): JettyApplicationEngine {
+    override fun createServer(port: Int, main: Application.() -> Unit): EmbeddedServer<JettyApplicationEngine, *> {
         return embeddedServer(Jetty, port, module = main)
     }
 }
 
 class JettyAsyncIntegrationBenchmark : AsyncIntegrationBenchmark<JettyApplicationEngine>() {
-    override fun createServer(port: Int, main: Application.() -> Unit): JettyApplicationEngine {
+    override fun createServer(port: Int, main: Application.() -> Unit): EmbeddedServer<JettyApplicationEngine, *> {
         return embeddedServer(Jetty, port, module = main)
     }
 }

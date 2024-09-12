@@ -7,12 +7,13 @@ package io.ktor.benchmarks.cio
 import io.ktor.benchmarks.*
 import io.ktor.http.*
 import io.ktor.http.cio.*
-import io.ktor.server.benchmarks.*
 import io.ktor.server.cio.*
 import io.ktor.server.cio.backend.*
 import io.ktor.utils.io.*
+import io.ktor.utils.io.core.*
 import io.netty.util.*
 import kotlinx.coroutines.*
+import kotlin.text.toByteArray
 
 class CIOPlatformBenchmark : PlatformBenchmark() {
     private var server: HttpServer? = null

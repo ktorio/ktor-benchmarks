@@ -1,8 +1,8 @@
 plugins {
     kotlin("jvm") version "2.0.20"
     kotlin("plugin.allopen") version "2.0.20"
+    id("me.champeau.jmh") version "0.7.2"
     id("org.jetbrains.kotlinx.atomicfu") version "0.25.0"
-    id("me.champeau.jmh") version "0.6.7"
 }
 
 allOpen {
@@ -17,11 +17,13 @@ repositories {
     mavenCentral()
 }
 
+val ktorVersion = "3.0.0-rc-1"
+
 dependencies {
     jmh(kotlin("stdlib"))
-    jmh("io.ktor:ktor-io:2.1.0")
-    jmh("io.ktor:ktor-utils:2.1.0")
-    jmh("io.ktor:ktor-network:2.1.0")
+    jmh("io.ktor:ktor-io:$ktorVersion")
+    jmh("io.ktor:ktor-utils:$ktorVersion")
+    jmh("io.ktor:ktor-network:$ktorVersion")
     jmh(kotlin("test"))
 }
 

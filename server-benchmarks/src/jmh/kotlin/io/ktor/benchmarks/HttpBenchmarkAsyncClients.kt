@@ -4,10 +4,12 @@
 package io.ktor.benchmarks
 
 import io.ktor.client.*
+import io.ktor.client.call.*
 import io.ktor.client.engine.*
 import io.ktor.client.request.*
 import io.ktor.client.statement.*
 import io.ktor.util.*
+import io.ktor.utils.io.*
 import kotlinx.coroutines.*
 import kotlinx.coroutines.sync.*
 import org.openjdk.jmh.infra.*
@@ -22,7 +24,6 @@ interface AsyncHttpBenchmarkClient {
     fun joinTask(control: Control)
 }
 
-@OptIn(InternalAPI::class)
 class KtorBenchmarkClient(val engineFactory: HttpClientEngineFactory<*>) : AsyncHttpBenchmarkClient {
     private val loadLimit = Semaphore(1000)
     private var httpClient: HttpClient? = null
@@ -50,8 +51,8 @@ class KtorBenchmarkClient(val engineFactory: HttpClientEngineFactory<*>) : Async
 
         GlobalScope.launch(Dispatchers.IO + parent) {
             try {
-                httpClient!!.get<HttpStatement>(url).execute { response ->
-                    val content = response.content
+                httpClient!!.prepareGet(url).execute { response ->
+                    val content = response.body<ByteChannel>()
                     val buffer = ByteBuffer.allocate(1024)
                     while (!content.isClosedForRead) {
                         buffer.clear()

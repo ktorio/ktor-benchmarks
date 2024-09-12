@@ -4,20 +4,19 @@
 
 package io.ktor.benchmarks.netty
 
-import io.ktor.application.*
+import io.ktor.server.application.*
 import io.ktor.benchmarks.*
-import io.ktor.server.benchmarks.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
 
 class NettyIntegrationBenchmark : IntegrationBenchmark<NettyApplicationEngine>() {
-    override fun createServer(port: Int, main: Application.() -> Unit): NettyApplicationEngine {
+    override fun createServer(port: Int, main: Application.() -> Unit): EmbeddedServer<NettyApplicationEngine, *> {
         return embeddedServer(Netty, port, module = main)
     }
 }
 
 class NettyAsyncIntegrationBenchmark : AsyncIntegrationBenchmark<NettyApplicationEngine>() {
-    override fun createServer(port: Int, main: Application.() -> Unit): NettyApplicationEngine {
+    override fun createServer(port: Int, main: Application.() -> Unit): EmbeddedServer<NettyApplicationEngine, *> {
         return embeddedServer(Netty, port, module = main)
     }
 }
