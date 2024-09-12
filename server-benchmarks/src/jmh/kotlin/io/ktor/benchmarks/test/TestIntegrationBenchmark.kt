@@ -4,27 +4,32 @@
 
 package io.ktor.benchmarks.test
 
-import io.ktor.application.*
+import io.ktor.server.application.*
 import io.ktor.benchmarks.*
+import io.ktor.client.call.*
+import io.ktor.client.request.*
 import io.ktor.http.*
-import io.ktor.server.benchmarks.*
 import io.ktor.server.engine.*
 import io.ktor.server.testing.*
+import kotlinx.coroutines.runBlocking
 
 class TestIntegrationBenchmark : IntegrationBenchmark<TestApplicationEngine>() {
 
     override val localhost: String = ""
+    private val testApplication = TestApplication {}
 
-    override fun createServer(port: Int, main: Application.() -> Unit): TestApplicationEngine {
+    override fun createServer(port: Int, main: Application.() -> Unit): EmbeddedServer<TestApplicationEngine, *> {
         return embeddedServer(TestEngine, port, module = main)
     }
 
     override fun load(url: String) {
-        server.handleRequest(HttpMethod.Get, url).apply {
-            if (response.status() != HttpStatusCode.OK) {
-                throw IllegalStateException("Expected 'HttpStatusCode.OK' but got '${response.status()}'")
+        runBlocking {
+            testApplication.client.get(url).let { response ->
+                if (response.status != HttpStatusCode.OK) {
+                    throw IllegalStateException("Expected 'HttpStatusCode.OK' but got '${response.status}'")
+                }
+                response.body<ByteArray>()
             }
-            response.byteContent!!
         }
     }
 }

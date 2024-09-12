@@ -4,19 +4,19 @@
 
 package io.ktor.benchmarks.cio
 
-import io.ktor.application.*
+import io.ktor.server.application.*
 import io.ktor.benchmarks.*
 import io.ktor.server.cio.*
 import io.ktor.server.engine.*
 
 class CIOIntegrationBenchmark : IntegrationBenchmark<CIOApplicationEngine>() {
-    override fun createServer(port: Int, main: Application.() -> Unit): CIOApplicationEngine {
+    override fun createServer(port: Int, main: Application.() -> Unit): EmbeddedServer<CIOApplicationEngine, *> {
         return embeddedServer(CIO, port, module = main)
     }
 }
 
 class CIOAsyncIntegrationBenchmark : AsyncIntegrationBenchmark<CIOApplicationEngine>() {
-    override fun createServer(port: Int, main: Application.() -> Unit): CIOApplicationEngine {
+    override fun createServer(port: Int, main: Application.() -> Unit): EmbeddedServer<CIOApplicationEngine, *> {
         return embeddedServer(CIO, port, module = main)
     }
 }

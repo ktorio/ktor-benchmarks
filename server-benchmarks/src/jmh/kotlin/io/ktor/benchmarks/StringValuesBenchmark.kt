@@ -8,7 +8,6 @@ import io.ktor.util.*
 import org.openjdk.jmh.annotations.*
 
 @State(Scope.Benchmark)
-@OptIn(InternalAPI::class)
 class StringValuesBenchmark {
     private val headers = valuesOf("A" to listOf("B"), "C" to listOf("D"))
 

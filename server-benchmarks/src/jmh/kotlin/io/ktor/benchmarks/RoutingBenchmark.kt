@@ -3,21 +3,20 @@
  */
 package io.ktor.benchmarks
 
-import io.ktor.application.*
+import io.ktor.client.call.*
+import io.ktor.client.request.*
+import io.ktor.client.statement.*
 import io.ktor.http.*
-import io.ktor.response.*
-import io.ktor.routing.*
+import io.ktor.server.response.*
+import io.ktor.server.routing.*
 import io.ktor.server.testing.*
+import kotlinx.coroutines.runBlocking
 import org.openjdk.jmh.annotations.*
 
 @State(Scope.Benchmark)
 class RoutingBenchmark {
-    private val testHost: TestApplicationEngine = TestApplicationEngine(createTestEnvironment())
-
-    @Setup
-    fun startServer() {
-        testHost.start()
-        testHost.application.routing {
+    private val testHost = TestApplication {
+        routing {
             get("/short") {
                 call.respond("short")
             }
@@ -30,34 +29,40 @@ class RoutingBenchmark {
         }
     }
 
+    @Setup
+    fun startServer() = runBlocking {
+        testHost.start()
+    }
+
     @TearDown
     fun stopServer() {
-        testHost.stop(0L, 0L)
+        testHost.stop()
     }
 
     @Benchmark
     fun shortPath() = handle("/short") {
-        check(response.content == "short") { "Invalid response" }
+        check(body<String>() == "short") { "Invalid response" }
     }
 
     @Benchmark
     fun longPath() = handle("/plain/path/with/multiple/components") {
-        check(response.content == "long") { "Invalid response" }
+        check(body<String>() == "long") { "Invalid response" }
     }
 
     @Benchmark
     fun paramPath() = handle("/plain/OK/with/parameters/components") {
-        check(response.content == "param OK") { "Invalid response" }
+        check(body<String>() == "param OK") { "Invalid response" }
     }
 
-    private inline fun <R> handle(url: String, block: TestApplicationCall.() -> R) =
-        testHost.handleRequest(HttpMethod.Get, url).apply {
-            if (response.status() != HttpStatusCode.OK) {
+    private inline fun <R> handle(url: String, crossinline block: suspend HttpResponse.() -> R) = runBlocking {
+        testHost.client.get(url).let { response ->
+            if (response.status != HttpStatusCode.OK) {
                 throw IllegalStateException("wrong response code")
             }
 
-            block()
+            response.block()
         }
+    }
 }
 
 /*

@@ -6,6 +6,7 @@ package io.ktor.benchmarks
 
 import io.ktor.util.cio.*
 import io.ktor.utils.io.*
+import io.ktor.utils.io.core.*
 import io.ktor.utils.io.jvm.javaio.*
 import kotlinx.coroutines.*
 import org.openjdk.jmh.annotations.*
@@ -13,6 +14,7 @@ import java.io.*
 import java.nio.ByteBuffer
 import java.nio.channels.*
 import java.nio.file.*
+import kotlin.io.use
 
 @State(Scope.Benchmark)
 class ChannelBenchmarks {
@@ -53,7 +55,7 @@ class ChannelBenchmarks {
     }
 
     @Benchmark
-    fun readChannelReadPacket() = runBlocking(Dispatchers.Unconfined) {
+    fun readChannelReadPacket(): Unit = runBlocking(Dispatchers.Unconfined) {
         file.readChannel().readRemaining().let { val size = it.remaining; it.release(); size }
     }
 
