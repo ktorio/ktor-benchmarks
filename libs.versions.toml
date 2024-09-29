@@ -3,8 +3,11 @@
 kotlin = "2.0.20"
 ktor = "3.0.0-rc-1"
 kotlinx-serialization = "1.7.3"
+kotlinx-atomicfu = "0.25.0"
 logback = "1.5.7"
+
 instrumenter = "3.3.4"
+jmh-plugin = "0.6.7"
 
 junit = "5.11.1"
 
@@ -16,6 +19,9 @@ ktor-server-jetty-jakarta = { module = "io.ktor:ktor-server-jetty-jakarta", vers
 ktor-server-cio = { module = "io.ktor:ktor-server-cio", version.ref = "ktor" }
 ktor-server-tomcat-jakarta = { module = "io.ktor:ktor-server-tomcat-jakarta", version.ref = "ktor" }
 ktor-server-websockets = { module = "io.ktor:ktor-server-websockets", version.ref = "ktor" }
+ktor-io = { module = "io.ktor:ktor-io", version.ref = "ktor" }
+ktor-network = { module = "io.ktor:ktor-network", version.ref = "ktor" }
+ktor-utils = { module = "io.ktor:ktor-utils", version.ref = "ktor" }
 
 logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
@@ -29,3 +35,6 @@ junit-jupiter-params = { module = "org.junit.jupiter:junit-jupiter-params", vers
 
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+kotlin-allopen = { id = "org.jetbrains.kotlin.plugin.allopen", version.ref = "kotlin" }
+kotlinx-atomicfu = { id = "org.jetbrains.kotlinx.atomicfu", version.ref = "kotlinx-atomicfu" }
+jmh = { id = "me.champeau.jmh", version.ref = "jmh-plugin" }

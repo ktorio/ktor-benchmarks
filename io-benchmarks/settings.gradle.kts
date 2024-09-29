@@ -1,4 +1,4 @@
-rootProject.name = "io-benchmarks"
+@file:Suppress("UnstableApiUsage")
 
 pluginManagement {
     repositories {
@@ -7,3 +7,18 @@ pluginManagement {
         maven(uri("https://plugins.gradle.org/m2/"))
     }
 }
+
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+    }
+
+    versionCatalogs {
+        create("libs") {
+            from(files("../libs.versions.toml"))
+        }
+    }
+}
+
+rootProject.name = "io-benchmarks"
