@@ -1,19 +1,13 @@
 plugins {
-    kotlin("jvm") version "2.0.20"
+    alias(libs.plugins.kotlin.jvm)
 }
-
-val ktor_version: String by project.extra
 
 group = "io.ktor"
 version = "1.0-SNAPSHOT"
 
-repositories {
-    mavenCentral()
-}
-
 dependencies {
     implementation(kotlin("stdlib"))
 
-    implementation("io.ktor:ktor-server-cio:$ktor_version")
-    implementation("io.ktor:ktor-websockets:$ktor_version")
+    implementation(libs.ktor.server.cio)
+    implementation(libs.ktor.websockets)
 }
