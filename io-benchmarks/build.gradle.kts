@@ -1,17 +1,9 @@
-
-buildscript {
-    dependencies {
-        classpath("org.jetbrains.kotlinx:atomicfu-gradle-plugin:0.25.0")
-    }
-}
-
 plugins {
     kotlin("jvm") version "2.0.20"
-    id("org.jetbrains.kotlin.plugin.allopen") version "2.0.208"
+    kotlin("plugin.allopen") version "2.0.20"
+    id("org.jetbrains.kotlinx.atomicfu") version "0.25.0"
     id("me.champeau.jmh") version "0.6.7"
 }
-
-apply(plugin ="kotlinx-atomicfu")
 
 allOpen {
     annotation("org.openjdk.jmh.annotations.State")
