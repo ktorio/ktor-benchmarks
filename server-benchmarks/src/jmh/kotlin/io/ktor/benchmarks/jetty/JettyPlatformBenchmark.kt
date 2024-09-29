@@ -5,13 +5,13 @@
 package io.ktor.benchmarks.jetty
 
 import io.ktor.benchmarks.*
+import jakarta.servlet.*
+import jakarta.servlet.http.*
 import org.eclipse.jetty.http.*
 import org.eclipse.jetty.server.*
 import org.eclipse.jetty.server.handler.*
 import org.eclipse.jetty.util.*
 import java.io.*
-import javax.servlet.*
-import javax.servlet.http.*
 
 class JettyPlatformBenchmark : PlatformBenchmark() {
     lateinit var server: Server
