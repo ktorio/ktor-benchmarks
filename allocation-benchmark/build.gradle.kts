@@ -1,53 +1,31 @@
-val kotlin_version: String by project
-val logback_version: String by project
-val instrumenter_version: String by project
-val junit_version: String by project
-val serialization_version: String by project
-
 plugins {
-    kotlin("jvm") version "2.0.20"
-    kotlin("plugin.serialization") version "2.0.20"
+    alias(libs.plugins.kotlin.jvm)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 group = "io.ktor"
 version = "0.0.1"
 
-repositories {
-    mavenLocal()
-    mavenCentral()
-    maven("https://maven.pkg.jetbrains.space/public/p/ktor/eap")
-}
-
-var ktor_version: String by project.extra
-
-if (project.hasProperty("ktorVersion")) {
-    ktor_version = project.property("ktorVersion") as String
-}
-
 val instrumenter by configurations.creating
-val instrumenterName = "java-allocation-instrumenter"
 
 dependencies {
-    implementation("io.ktor:ktor-server-core:$ktor_version")
-    implementation("io.ktor:ktor-server-netty:$ktor_version")
-    implementation("io.ktor:ktor-server-jetty-jakarta:$ktor_version")
-    implementation("io.ktor:ktor-server-cio:$ktor_version")
-    implementation("io.ktor:ktor-server-tomcat-jakarta:$ktor_version")
-    implementation("ch.qos.logback:logback-classic:$logback_version")
+    implementation(libs.ktor.server.core)
+    implementation(libs.ktor.server.netty)
+    implementation(libs.ktor.server.jetty.jakarta)
+    implementation(libs.ktor.server.cio)
+    implementation(libs.ktor.server.tomcat.jakarta)
+    implementation(libs.logback.classic)
 
-    testImplementation("org.junit.jupiter:junit-jupiter-params:$junit_version")
-    testImplementation("org.junit.jupiter:junit-jupiter:$junit_version")
+    testImplementation(libs.junit.jupiter)
+    testImplementation(libs.junit.jupiter.params)
 
-    instrumenter("com.google.code.java-allocation-instrumenter:$instrumenterName:$instrumenter_version")
-    implementation("com.google.code.java-allocation-instrumenter:$instrumenterName:$instrumenter_version")
+    instrumenter(libs.instrumenter)
+    implementation(libs.instrumenter)
 
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$serialization_version")
+    implementation(libs.kotlinx.serialization.json)
 }
 
-val agentPath = instrumenter.toList().find {
-    it.name.contains("$instrumenterName-$instrumenter_version.jar")
-}?.path
-
+val agentPath = instrumenter.singleOrNull()?.path
 check(agentPath != null) { "Instrumentation agent is not found. Please check the configuration" }
 
 tasks.test {
