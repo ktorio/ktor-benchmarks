@@ -1,4 +1,4 @@
-rootProject.name = "server-benchmarks"
+@file:Suppress("UnstableApiUsage")
 
 pluginManagement {
     repositories {
@@ -6,3 +6,17 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+    }
+
+    versionCatalogs {
+        create("libs") {
+            from(files("../libs.versions.toml"))
+        }
+    }
+}
+
+rootProject.name = "server-benchmarks"

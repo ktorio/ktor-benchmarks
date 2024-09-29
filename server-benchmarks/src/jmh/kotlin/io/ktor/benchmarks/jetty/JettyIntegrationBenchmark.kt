@@ -7,7 +7,7 @@ package io.ktor.benchmarks.jetty
 import io.ktor.server.application.*
 import io.ktor.benchmarks.*
 import io.ktor.server.engine.*
-import io.ktor.server.jetty.*
+import io.ktor.server.jetty.jakarta.*
 
 class JettyIntegrationBenchmark : IntegrationBenchmark<JettyApplicationEngine>() {
     override fun createServer(port: Int, main: Application.() -> Unit): EmbeddedServer<JettyApplicationEngine, *> {
