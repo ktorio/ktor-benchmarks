@@ -1,9 +1,9 @@
 plugins {
-    kotlin("jvm") version "2.0.20"
-    kotlin("plugin.allopen") version "2.0.20"
-    kotlin("plugin.serialization") version "2.0.20"
-    id("org.jetbrains.kotlinx.atomicfu") version "0.25.0"
-    id("me.champeau.jmh") version "0.6.5"
+    alias(libs.plugins.kotlin.jvm)
+    alias(libs.plugins.kotlin.allopen)
+    alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.kotlinx.atomicfu)
+    alias(libs.plugins.jmh)
 }
 
 allOpen {
@@ -13,27 +13,19 @@ allOpen {
 group = "org.example"
 version = "1.0-SNAPSHOT"
 
-val serialization_version= "1.7.1"
 val instrumenter by configurations.creating
-val instrumenterName = "java-allocation-instrumenter"
-val instrumenter_version = "3.3.4"
-
-repositories {
-    mavenCentral()
-}
 
 dependencies {
     implementation(kotlin("stdlib"))
-    implementation("junit:junit:4.13.2")
+    implementation(libs.junit4)
 
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$serialization_version")
-    implementation("io.ktor:ktor-io:2.1.0")
-    implementation("io.ktor:ktor-utils:2.1.0")
-    implementation("io.ktor:ktor-network:2.1.0")
+    implementation(libs.kotlinx.serialization.json)
+    implementation(libs.ktor.io)
+    implementation(libs.ktor.utils)
+    implementation(libs.ktor.network)
 
-    instrumenter("com.google.code.java-allocation-instrumenter:$instrumenterName:$instrumenter_version")
-    implementation("com.google.code.java-allocation-instrumenter:$instrumenterName:$instrumenter_version")
-
+    instrumenter(libs.instrumenter)
+    implementation(libs.instrumenter)
 }
 
 jmh {
@@ -57,10 +49,7 @@ jmh {
 
 }
 
-val agentPath = instrumenter.toList().find {
-    it.name.contains("$instrumenterName-$instrumenter_version.jar")
-}?.path
-
+val agentPath = instrumenter.singleOrNull()?.path
 check(agentPath != null) { "Instrumentation agent is not found. Please check the configuration" }
 
 tasks.test {
