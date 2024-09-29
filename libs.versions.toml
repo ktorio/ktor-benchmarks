@@ -9,9 +9,10 @@ apache-httpclient = "4.5.14"
 logback = "1.5.7"
 
 instrumenter = "3.3.4"
-jmh-plugin = "0.6.7"
+jmh-plugin = "0.7.2"
 
 junit = "5.11.1"
+junit4 = "4.13.2"
 
 [libraries]
 
@@ -38,6 +39,7 @@ instrumenter = { module = "com.google.code.java-allocation-instrumenter:java-all
 
 junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
 junit-jupiter-params = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "junit" }
+junit4 = { module = "junit:junit", version.ref = "junit4" }
 
 [plugins]
 
