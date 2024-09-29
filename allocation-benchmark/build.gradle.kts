@@ -15,8 +15,6 @@ version = "0.0.1"
 repositories {
     mavenLocal()
     mavenCentral()
-    maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/dev")
-    maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlinx/dev")
     maven("https://maven.pkg.jetbrains.space/public/p/ktor/eap")
 }
 
