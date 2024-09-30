@@ -13,7 +13,7 @@ version = "1.0-SNAPSHOT"
 
 val okhttpVersion = "4.12.0"
 val apacheHttpClientVersion = "4.5.14"
-val logbackVersion = "1.5.7"
+val logbackVersion = "1.5.8"
 val ktor_version = "3.0.0-rc-1"
 
 repositories {
