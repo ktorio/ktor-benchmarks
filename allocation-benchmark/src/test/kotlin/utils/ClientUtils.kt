@@ -6,10 +6,11 @@ import java.net.http.*
 const val SERVER_PORT = 8080
 
 val client = HttpClient.newHttpClient()
-val request = HttpRequest.newBuilder()
-    .uri(URI.create("http://127.0.0.1:$SERVER_PORT"))
+
+fun createRequest(path: String) = HttpRequest.newBuilder()
+    .uri(URI.create("http://127.0.0.1:$SERVER_PORT").resolve(path))
     .build()
 
-fun makeRequest() {
+fun makeRequest(request: HttpRequest) {
     client.send(request, HttpResponse.BodyHandlers.ofString())
 }

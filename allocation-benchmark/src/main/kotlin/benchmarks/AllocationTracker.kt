@@ -9,7 +9,7 @@ private val IGNORED_DESCRIPTORS = mutableListOf<String>(
     "benchmarks"
 )
 private val MAX_FRAMES = 20
-private val EXTERNAL_FRAMES_DOWN = 1
+private val EXTERNAL_FRAMES_DOWN = 0
 
 object AllocationTracker : Sampler {
     private val walker = StackWalker.getInstance()
