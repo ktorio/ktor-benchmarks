@@ -13,7 +13,7 @@ allOpen {
 group = "org.example"
 version = "1.0-SNAPSHOT"
 
-val serialization_version= "1.7.1"
+val serialization_version= "1.7.3"
 val instrumenter by configurations.creating
 val instrumenterName = "java-allocation-instrumenter"
 val instrumenter_version = "3.3.4"
