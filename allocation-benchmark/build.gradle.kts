@@ -32,14 +32,13 @@ val instrumenterName = "java-allocation-instrumenter"
 dependencies {
     implementation("io.ktor:ktor-server-core:$ktor_version")
     implementation("io.ktor:ktor-server-netty:$ktor_version")
-    implementation("io.ktor:ktor-server-jetty:$ktor_version")
+    implementation("io.ktor:ktor-server-jetty-jakarta:$ktor_version")
     implementation("io.ktor:ktor-server-cio:$ktor_version")
-    implementation("io.ktor:ktor-server-tomcat:$ktor_version")
+    implementation("io.ktor:ktor-server-tomcat-jakarta:$ktor_version")
     implementation("ch.qos.logback:logback-classic:$logback_version")
 
     testImplementation("org.junit.jupiter:junit-jupiter-params:$junit_version")
-
-    testImplementation("org.junit.jupiter:junit-jupiter")
+    testImplementation("org.junit.jupiter:junit-jupiter:$junit_version")
 
     instrumenter("com.google.code.java-allocation-instrumenter:$instrumenterName:$instrumenter_version")
     implementation("com.google.code.java-allocation-instrumenter:$instrumenterName:$instrumenter_version")

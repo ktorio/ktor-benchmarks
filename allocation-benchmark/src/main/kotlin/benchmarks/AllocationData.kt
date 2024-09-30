@@ -3,9 +3,9 @@ package benchmarks
 import kotlinx.serialization.Serializable
 
 @Serializable
-class AllocationData {
-    private val data = mutableMapOf<String, LocationInfo>()
-
+data class AllocationData(
+    val data: MutableMap<String, LocationInfo> = mutableMapOf(),
+) {
     val packages: List<LocationInfo> get() = data.values.sortedByDescending { it.locationSize }
 
     fun clear() = synchronized(this) {
@@ -21,17 +21,4 @@ class AllocationData {
     }
 
     fun totalSize(): Long = packages.map { it.locationSize }.sum()
-}
-
-/**
- * Returns how much extra bytes is allocated.
- */
-fun allocationDiff(
-    expected: AllocationData,
-    actual: AllocationData
-): Long {
-    val expectedSize = expected.totalSize()
-    val actualSize = actual.totalSize()
-
-    return actualSize - expectedSize
 }

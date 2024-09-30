@@ -1,26 +1,29 @@
-package benchmarks
+package benchmarks.utils
+
+import benchmarks.AllocationData
+import benchmarks.AllocationTracker
+import benchmarks.WARMUP_SIZE
+import benchmarks.server
 
 public val SAVE_REPORT: Boolean = System.getProperty("SAVE_REPORT") == "true"
 
-fun measureMemory(engine: String, block: () -> Unit): AllocationData {
+fun measureMemory(engine: String, requestCount: Number, block: () -> Unit): AllocationData {
     AllocationTracker.clear()
     val server = startServer(engine)
     try {
-        warmup()
+        repeat(WARMUP_SIZE) {
+            block()
+        }
         AllocationTracker.start()
-        block()
+        repeat(requestCount.toInt()) {
+            block()
+        }
         AllocationTracker.stop()
     } finally {
         server.stop(1000, 1000)
     }
 
     return AllocationTracker.stats()
-}
-
-private fun warmup() {
-    repeat(WARMUP_SIZE) {
-        makeRequest()
-    }
 }
 
 fun startServer(engine: String) = server(engine)
