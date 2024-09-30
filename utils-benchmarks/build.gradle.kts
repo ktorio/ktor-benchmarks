@@ -3,7 +3,7 @@ plugins {
     kotlin("plugin.allopen") version "2.0.20"
     kotlin("plugin.serialization") version "2.0.20"
     id("org.jetbrains.kotlinx.atomicfu") version "0.25.0"
-    id("me.champeau.jmh") version "0.6.5"
+    id("me.champeau.jmh") version "0.7.2"
 }
 
 allOpen {
