@@ -27,9 +27,9 @@ dependencies {
     implementation("junit:junit:4.13.2")
 
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$serialization_version")
-    implementation("io.ktor:ktor-io:2.1.0")
-    implementation("io.ktor:ktor-utils:2.1.0")
-    implementation("io.ktor:ktor-network:2.1.0")
+    implementation("io.ktor:ktor-io:3.0.0-tls-eap-907")
+    implementation("io.ktor:ktor-utils:3.0.0-tls-eap-907")
+    implementation("io.ktor:ktor-network:3.0.0-tls-eap-907")
 
     instrumenter("com.google.code.java-allocation-instrumenter:$instrumenterName:$instrumenter_version")
     implementation("com.google.code.java-allocation-instrumenter:$instrumenterName:$instrumenter_version")
