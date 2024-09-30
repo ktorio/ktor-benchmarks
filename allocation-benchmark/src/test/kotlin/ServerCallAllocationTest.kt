@@ -14,6 +14,7 @@ import kotlin.math.roundToLong
 
 const val TEST_SIZE = 300L
 const val WARMUP_SIZE = 20
+const val KB = 1024L
 
 // TODO investigate why TC has higher memory usage.
 const val ALLOWED_MEMORY_DIFFERENCE_RATIO = 0.12
@@ -57,8 +58,8 @@ class ServerCallAllocationTest {
         saveSiteStatistics(reportName, snapshot, replace = SAVE_REPORT)
 
         val previousSnapshot = loadReport(reportName)
-        val consumedMemory = snapshot.totalSize() / requestCount
-        val expectedMemory = previousSnapshot.totalSize() / requestCount
+        val consumedMemory = snapshot.totalSize()
+        val expectedMemory = previousSnapshot.totalSize()
 
         val difference = consumedMemory - expectedMemory
 
@@ -66,9 +67,10 @@ class ServerCallAllocationTest {
         val increase = maxOf(difference - allowedDifference, 0)
         val success = increase == 0L
         val message = """
-            Request consumes $consumedMemory bytes, expected $expectedMemory. Difference: $difference ${if (success) "<" else ">"} $allowedDifference (allowed)
-              Consumed $consumedMemory bytes on request
-              Expected $expectedMemory bytes on request
+            Request consumes ${consumedMemory.kb} bytes, expected ${expectedMemory.kb}. 
+              Difference: $difference ${if (success) "<" else ">"} $allowedDifference (allowed)
+              Consumed ${consumedMemory.kb} bytes on request
+              Expected ${expectedMemory.kb} bytes on request
               ${if (difference > 0L) "Extra   " else "Saved   "} ${difference.absoluteValue.padEnd(3)} bytes on request
             (See stdout + build/allocations/* files for details)
         """.trimIndent().also(::println)
@@ -103,6 +105,7 @@ class ServerCallAllocationTest {
         fun difference() = previous?.let { current.locationSize - it.locationSize } ?: current.locationSize
     }
 
+    private val Long.kb get() = "%.2f KB".format(toDouble() / KB.toDouble())
     private fun Long.padStart(padding: Int) = toString().padStart(padding)
     private fun Long.padEnd(padding: Int) = toString().padEnd(padding)
 
