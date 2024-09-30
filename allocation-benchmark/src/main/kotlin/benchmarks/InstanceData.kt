@@ -4,10 +4,11 @@ import kotlinx.serialization.Serializable
 import kotlin.math.round
 
 @Serializable
-class SiteStatistic(val stackTrace: String) {
-    var totalCount: Long = 0L
+data class SiteStatistic(
+    val stackTrace: String,
+    var totalCount: Long = 0L,
     var totalSize: Long = 0L
-
+) {
     fun add(size: Long) {
         totalCount += 1
         totalSize += size
@@ -17,9 +18,11 @@ class SiteStatistic(val stackTrace: String) {
 }
 
 @Serializable
-class InstanceData(val name: String) {
-    val sites = mutableMapOf<String, SiteStatistic>()
-    var totalSize: Long = 0L
+data class InstanceData(
+    val name: String,
+    val sites: MutableMap<String, SiteStatistic> = mutableMapOf(),
+    var totalSize: Long = 0L,
+) {
 
     fun add(size: Long, stackTrace: List<String>) = synchronized(this) {
         totalSize += size

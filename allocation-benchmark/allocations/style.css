@@ -3,6 +3,13 @@ body {
     font-size: 11pt;
 }
 header {
+    h1 {
+        margin-bottom: 4px;
+    }
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.controls {
     display: flex;
     gap: 1rem;
     justify-content: space-evenly;

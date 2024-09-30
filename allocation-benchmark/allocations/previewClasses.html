@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -13,26 +13,41 @@
 <body>
 <header>
     <div>
+        <h1>Allocations by Class</h1>
+        <a href="previewSites.html">view by site</a>
+    </div>
+</header>
+<div class="controls">
+    <div>
+        <h3>Select Testcase:</h3>
+        <div>
+            <input type="radio" name="test" id="fileResponse" value="fileResponse" checked/>
+            <label for="fileResponse">Files</label>
+            <input type="radio" name="test" id="helloWorld" value="helloWorld" checked/>
+            <label for="helloWorld">Hello</label>
+        </div>
+    </div>
+    <div>
         <h3>Select Engine:</h3>
         <div>
-            <input type="radio" name="engine" id="netty" value="Netty" checked />
-            <label for="netty">Netty</label>
-            <input type="radio" name="engine" id="jetty" value="Jetty" />
-            <label for="jetty">Jetty</label>
-            <input type="radio" name="engine" id="tomcat" value="Tomcat" />
-            <label for="tomcat">Tomcat</label>
-            <input type="radio" name="engine" id="cio" value="CIO" />
+            <input type="radio" name="engine" id="cio" value="CIO" checked/>
             <label for="cio">CIO</label>
+            <input type="radio" name="engine" id="netty" value="Netty"/>
+            <label for="netty">Netty</label>
+            <input type="radio" name="engine" id="jetty" value="Jetty"/>
+            <label for="jetty">Jetty</label>
+            <input type="radio" name="engine" id="tomcat" value="Tomcat"/>
+            <label for="tomcat">Tomcat</label>
         </div>
     </div>
     <div>
         <h3>Select Snapshot:</h3>
-        <input type="radio" name="snapshot" id="current-snapshot" value="" checked />
+        <input type="radio" name="snapshot" id="current-snapshot" value="" checked/>
         <label for="current-snapshot">Current</label>
-        <input type="radio" name="snapshot" id="test-snapshot" value="test_output" />
+        <input type="radio" name="snapshot" id="test-snapshot" value="test_output"/>
         <label for="test-snapshot">Test</label>
     </div>
-</header>
+</div>
 <main>
     <div><svg></svg></div>
     <div id="info"></div>
@@ -44,8 +59,6 @@
 
     const width = 800
     const height = 900
-
-    const formatSize = (size) => Math.round(size / 1024 / 1024 * 1000) / 1000 + "Mb"
 
     const displaySites = (name, index) => {
         const info = d3.select("#info")
@@ -116,7 +129,7 @@
             .attr("y", (d, i) => y(i) + y.bandwidth() / 2)
             .attr("dy", "0.35em")
             .attr("dx", +4)
-            .text(d => formatSize(d.totalSize))
+            .text(d => d.totalSize)
 
         svg.append("g")
             .call(yAxis);

@@ -3,13 +3,12 @@ package benchmarks
 import kotlinx.serialization.Serializable
 
 @Serializable
-class LocationInfo(val name: String) {
-    var locationSize = 0L
-        private set
-
-    private val instanceIndex = mutableMapOf<String, InstanceData>()
-
-    public val instances: MutableCollection<InstanceData> get() = instanceIndex.values
+data class LocationInfo(
+    val name: String,
+    var locationSize: Long = 0L,
+    val instanceIndex: MutableMap<String, InstanceData> = mutableMapOf()
+) {
+    val instances: MutableCollection<InstanceData> get() = instanceIndex.values
 
     fun add(instanceClass: Class<*>, size: Long, stackTrace: List<String>) = synchronized(this) {
         locationSize += size
