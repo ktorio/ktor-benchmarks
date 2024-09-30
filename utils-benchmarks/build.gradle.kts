@@ -1,7 +1,7 @@
 plugins {
-    kotlin("jvm") version "2.0.20"
-    kotlin("plugin.allopen") version "2.0.20"
-    kotlin("plugin.serialization") version "2.0.20"
+    kotlin("jvm") version "2.1.20-polaris-189"
+    kotlin("plugin.allopen") version "2.1.20-polaris-189"
+    kotlin("plugin.serialization") version "2.1.20-polaris-189"
     id("org.jetbrains.kotlinx.atomicfu") version "0.25.0"
     id("me.champeau.jmh") version "0.6.5"
 }

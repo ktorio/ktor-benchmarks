@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "2.0.20"
+    kotlin("jvm") version "2.1.20-polaris-189"
 }
 
 val ktor_version: String by project.extra
