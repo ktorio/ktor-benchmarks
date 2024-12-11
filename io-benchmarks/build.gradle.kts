@@ -17,6 +17,7 @@ dependencies {
     jmh(libs.ktor.io)
     jmh(libs.ktor.utils)
     jmh(libs.ktor.network)
+    jmh(libs.kotlinx.io)
     jmh(kotlin("test"))
 }
 
