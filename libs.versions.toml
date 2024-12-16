@@ -1,7 +1,7 @@
 [versions]
 
 kotlin = "2.0.21"
-ktor = "3.0.2"
+ktor = "3.1.0-eap-1190"
 kotlinx-serialization = "1.7.3"
 kotlinx-atomicfu = "0.25.0"
 kotlinx-io = "0.6.0"
