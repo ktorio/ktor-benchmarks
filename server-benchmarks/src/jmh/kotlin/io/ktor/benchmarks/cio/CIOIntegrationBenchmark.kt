@@ -8,9 +8,11 @@ import io.ktor.server.application.*
 import io.ktor.benchmarks.*
 import io.ktor.server.cio.*
 import io.ktor.server.engine.*
+import org.openjdk.jmh.annotations.*
 
+@State(Scope.Benchmark)
 class CIOIntegrationBenchmark : IntegrationBenchmark<CIOApplicationEngine>() {
-    override fun createServer(port: Int, main: Application.() -> Unit): EmbeddedServer<CIOApplicationEngine, *> {
+    override fun createServer(port: Int, main: Application.() -> Unit): CIOApplicationEngine {
         return embeddedServer(CIO, port, module = main)
     }
 }

@@ -25,3 +25,14 @@ dependencies {
     jmh(libs.okhttp)
     jmh(libs.logback.classic)
 }
+
+jmh {
+    warmupIterations = 2
+    fork = 2
+    iterations = 10
+    threads = 32
+    // Change this list for different benchmarks
+    includes = listOf(
+        "io.ktor.benchmarks.cio.CIOIntegrationBenchmark"
+    )
+}
