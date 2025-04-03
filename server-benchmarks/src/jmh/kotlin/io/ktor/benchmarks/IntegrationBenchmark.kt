@@ -22,7 +22,7 @@ import java.util.concurrent.*
 
 @State(Scope.Benchmark)
 abstract class IntegrationBenchmark<TEngine : ApplicationEngine> {
-    private val coreDirectory = File("../ktor-server-core").absoluteFile.normalize()
+    private val coreDirectory = File("${System.getProperty("user.home")}/dev/ktor/ktor-server/ktor-server-core").absoluteFile.normalize()
     private val packageName = IntegrationBenchmark::class.java.`package`.name
     private val classFileName = IntegrationBenchmark::class.simpleName!! + ".class"
     private val smallFile = File(coreDirectory, "build.gradle")
@@ -45,27 +45,13 @@ abstract class IntegrationBenchmark<TEngine : ApplicationEngine> {
         val okContent = TextContent("OK", ContentType.Text.Plain, HttpStatusCode.OK)
         server = createServer(port) {
             routing {
-                get("/long/path/to/find/issues/with/routing/scalability") {
-                    call.respond(okContent)
-                }
                 get("/sayOK") {
                     call.respond(okContent)
                 }
-                get("/thinkOK") {
-                    call.respondText("OK")
-                }
-                get("/query") {
-                    val parameters = call.parameters
-                    val message = parameters["message"]
-                        ?: throw IllegalArgumentException("GET request should have `message` parameter")
-                    call.respondText(message)
-                }
-                static {
-                    resource("jarfile", "String.class", "java.lang")
-                    resource("regularClasspathFile", classFileName, packageName)
-                    file("smallFile", smallFile)
-                    file("largeFile", largeFile)
-                }
+                staticResources("/jarfile", "String.class", "java.lang")
+                staticResources("/regularClasspathFile", classFileName, packageName)
+                staticFiles("/smallFile", smallFile)
+                staticFiles("/largeFile", largeFile)
                 get("/smallFileSync") {
                     call.respond(smallFile.readBytes())
                 }
@@ -98,33 +84,8 @@ abstract class IntegrationBenchmark<TEngine : ApplicationEngine> {
     }
 
     @Benchmark
-    fun random() {
-        when (ThreadLocalRandom.current().nextInt(14)) {
-            0, 1, 2, 3, 4 -> thinkOK()
-            5, 6, 7, 8, 9 -> query()
-            10, 11, 12 -> smallFile()
-            13 -> largeFile()
-        }
-    }
-
-    @Benchmark
     fun sayOK() {
         load("$localhost/sayOK")
-    }
-
-    @Benchmark
-    fun longPath() {
-        load("$localhost/long/path/to/find/issues/with/routing/scalability")
-    }
-
-    @Benchmark
-    fun query() {
-        load("$localhost/query?utm_source=Google&utm_medium=cpc&utm_campaign=ok%2B+plus&utm_content=obshie&message=OK")
-    }
-
-    @Benchmark
-    fun thinkOK() {
-        load("$localhost/thinkOK")
     }
 
     @Benchmark
@@ -217,8 +178,8 @@ fun main(args: Array<String>) {
     benchmark(args) {
         threads = 32
         run<CIOIntegrationBenchmark>()
-        run<JettyIntegrationBenchmark>()
-        run<NettyIntegrationBenchmark>()
-        run<TestIntegrationBenchmark>()
+//        run<JettyIntegrationBenchmark>()
+//        run<NettyIntegrationBenchmark>()
+//        run<TestIntegrationBenchmark>()
     }
 }
