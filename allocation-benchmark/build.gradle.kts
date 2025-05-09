@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.kotlin.jvm)
     alias(libs.plugins.kotlin.serialization)
+    id("test-server")
 }
 
 group = "io.ktor"
@@ -16,6 +17,13 @@ dependencies {
     implementation(libs.ktor.server.tomcat.jakarta)
     implementation(libs.logback.classic)
 
+    testImplementation(libs.ktor.client.core)
+    testImplementation(libs.ktor.client.cio)
+    testImplementation(libs.ktor.client.apache)
+    testImplementation(libs.ktor.client.okhttp)
+    testImplementation(libs.ktor.client.java)
+
+    testImplementation(kotlin("test"))
     testImplementation(libs.junit.jupiter)
     testImplementation(libs.junit.jupiter.params)
 

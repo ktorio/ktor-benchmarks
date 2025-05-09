@@ -5,6 +5,8 @@
 import io.ktor.http.*
 import io.ktor.http.content.*
 import io.ktor.server.application.*
+import io.ktor.server.http.content.*
+import io.ktor.server.plugins.compression.*
 import io.ktor.server.request.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
@@ -16,9 +18,30 @@ internal fun Application.benchmarks() {
     install(WebSockets)
 
     routing {
+        staticResources("", basePackage = "benchmarks")
+
         route("/benchmarks") {
-            val testBytes = makeArray(1024 * 1024)
+            val oneMegabyte = makeArray(1 * MB)
             val testData = "{'message': 'Hello World'}"
+
+            suspend fun RoutingCall.respondBytes(size: Int) {
+                val megabytes = size / MB
+                val bytes = size % MB
+
+                respond(
+                    object : OutgoingContent.WriteChannelContent() {
+                        override suspend fun writeTo(channel: ByteWriteChannel) {
+                            repeat(megabytes) { channel.writeFully(oneMegabyte) }
+                            if (bytes > 0) channel.writeFully(oneMegabyte, 0, bytes)
+                        }
+                    }
+                )
+            }
+
+            /** Simple text response. */
+            get("/hello") {
+                call.respondText("Hello, World!")
+            }
 
             /**
              * Receive json data-class.
@@ -53,13 +76,7 @@ internal fun Application.benchmarks() {
              */
             get("/bytes") {
                 val size = call.request.queryParameters["size"]!!.toInt()
-                call.respond(
-                    object : OutgoingContent.WriteChannelContent() {
-                        override suspend fun writeTo(channel: ByteWriteChannel) {
-                            channel.writeFully(testBytes, 0, size * 1024)
-                        }
-                    }
-                )
+                call.respondBytes(size)
             }
 
             /**
@@ -82,6 +99,16 @@ internal fun Application.benchmarks() {
                 )
             }
 
+            route("/gzip") {
+                install(Compression) {
+                    gzip()
+                }
+                get {
+                    val size = call.request.queryParameters["size"]!!.toInt()
+                    call.respondBytes(size)
+                }
+            }
+
             route("/websockets") {
                 webSocket("/get/{count}") {
                     val count = call.parameters["count"]!!.toInt()
@@ -94,3 +121,5 @@ internal fun Application.benchmarks() {
         }
     }
 }
+
+private const val MB = 1024 * 1024
