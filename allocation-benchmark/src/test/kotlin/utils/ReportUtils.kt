@@ -2,9 +2,7 @@ package utils.benchmarks
 
 import benchmarks.AllocationData
 import benchmarks.InstanceData
-import benchmarks.LocationInfo
 import kotlinx.serialization.Serializable
-import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import java.io.File
 import kotlin.math.roundToLong
@@ -71,8 +69,8 @@ fun loadReport(name: String): AllocationData {
     return serializer.decodeFromString(content)
 }
 
-fun normalizeReport(report: AllocationData, requestCount: Long): AllocationData =
-    report.copy(data = report.data.mapValuesTo(mutableMapOf()) { (_, value) ->
+fun AllocationData.normalized(requestCount: Long): AllocationData =
+    copy(data = data.mapValuesTo(mutableMapOf()) { (_, value) ->
         value.copy(
             locationSize = value.locationSize.divRounded(requestCount),
             instanceIndex = normalizeInstanceIndex(value.instanceIndex, requestCount)
