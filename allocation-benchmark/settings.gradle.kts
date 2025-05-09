@@ -26,3 +26,6 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "allocation-benchmark"
+
+// For client benchmarks
+includeBuild("../benchmark-server")
