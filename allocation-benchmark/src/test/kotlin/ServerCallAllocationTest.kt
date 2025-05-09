@@ -1,12 +1,11 @@
 package benchmarks
 
 import benchmarks.utils.SAVE_REPORT
-import benchmarks.utils.measureMemory
+import benchmarks.utils.measureServerMemory
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.ValueSource
 import utils.benchmarks.loadReport
-import utils.benchmarks.normalizeReport
 import utils.benchmarks.saveReport
 import utils.benchmarks.saveSiteStatistics
 import kotlin.math.absoluteValue
@@ -19,12 +18,12 @@ const val KB = 1024L
 // TODO investigate why TC has higher memory usage.
 const val ALLOWED_MEMORY_DIFFERENCE_RATIO = 0.12
 
-class ServerCallAllocationTest {
+class ServerCallAllocationTest : BaseAllocationTest() {
 
     @ParameterizedTest
     @ValueSource(strings = ["Jetty", "Tomcat", "Netty", "CIO"])
     fun helloWorldFootprint(engine: String) {
-        runTest(
+        runAllocationTest(
             engine,
             "helloWorld[$engine]",
             endpoint = "/hello"
@@ -34,25 +33,37 @@ class ServerCallAllocationTest {
     @ParameterizedTest
     @ValueSource(strings = ["Jetty", "Tomcat", "Netty", "CIO"])
     fun fileResponseFootprint(engine: String) {
-        runTest(
+        runAllocationTest(
             engine,
             "fileResponse[$engine]",
             endpoint = "/"
         )
     }
 
-   private fun runTest(
+    override fun measureEngineRequest(engine: String, endpoint: String, requestCount: Long): AllocationData {
+        val request = createRequest(endpoint)
+        return measureServerMemory(engine, requestCount) {
+            makeRequest(request)
+        }
+    }
+}
+
+abstract class BaseAllocationTest {
+    /**
+     * Runs a test to measure memory allocations for a specific engine.
+     *
+     * @param engine The engine name to test
+     * @param reportName The name for the report
+     * @param endpoint The endpoint to use in the test
+     * @param requestCount The number of requests to make
+     */
+    protected fun runAllocationTest(
         engine: String,
         reportName: String,
         endpoint: String,
-        requestCount: Long = TEST_SIZE
+        requestCount: Long = TEST_SIZE,
     ) {
-        val request = createRequest(endpoint)
-        val snapshot = measureMemory(engine, requestCount) {
-            makeRequest(request)
-        }.let {
-            normalizeReport(it, requestCount)
-        }
+        val snapshot = measureEngineRequest(engine, endpoint, requestCount)
 
         saveReport(reportName, snapshot, replace = SAVE_REPORT)
         saveSiteStatistics(reportName, snapshot, replace = SAVE_REPORT)
@@ -98,7 +109,16 @@ class ServerCallAllocationTest {
         assertEquals(0L, increase, message)
     }
 
-    data class LocationDifference(
+    protected abstract fun measureEngineRequest(
+        engine: String,
+        endpoint: String,
+        requestCount: Long = TEST_SIZE,
+    ): AllocationData
+
+    /**
+     * Represents a difference between two location infos.
+     */
+    private data class LocationDifference(
         val previous: LocationInfo?,
         val current: LocationInfo
     ) {
@@ -108,5 +128,4 @@ class ServerCallAllocationTest {
     private val Long.kb get() = "%.2f KB".format(toDouble() / KB.toDouble())
     private fun Long.padStart(padding: Int) = toString().padStart(padding)
     private fun Long.padEnd(padding: Int) = toString().padEnd(padding)
-
 }

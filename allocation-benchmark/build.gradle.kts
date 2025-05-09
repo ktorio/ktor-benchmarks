@@ -16,6 +16,12 @@ dependencies {
     implementation(libs.ktor.server.tomcat.jakarta)
     implementation(libs.logback.classic)
 
+    implementation(libs.ktor.client.core)
+    implementation(libs.ktor.client.cio)
+    implementation(libs.ktor.client.apache)
+    implementation(libs.ktor.client.okhttp)
+    implementation(libs.ktor.client.java)
+
     testImplementation(libs.junit.jupiter)
     testImplementation(libs.junit.jupiter.params)
 
