@@ -1,5 +1,5 @@
 plugins {
-    alias(libs.plugins.kotlin.jvm)
+    `kotlin-dsl`
 }
 
 group = "io.ktor"
