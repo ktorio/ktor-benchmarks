@@ -39,9 +39,9 @@ data class SiteWithName(
 
 fun saveSiteStatistics(name: String, report: AllocationData, replace: Boolean) {
     val file = if (replace)
-        File("allocations/sites_$name.json")
+        File("allocations/${name}_sites.json")
     else
-        File("build/allocations/sites_$name.json")
+        File("build/allocations/${name}__sites.json")
 
     if (!file.exists()) {
         file.createNewFile()
