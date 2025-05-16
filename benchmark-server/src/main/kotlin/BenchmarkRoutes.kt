@@ -13,6 +13,8 @@ import io.ktor.utils.io.*
 import io.ktor.websocket.*
 
 internal fun Application.benchmarks() {
+    install(WebSockets)
+
     routing {
         route("/benchmarks") {
             val testBytes = makeArray(1024 * 1024)
