@@ -109,20 +109,29 @@ abstract class BaseAllocationTest {
             return
         }
 
+        val diffs = previousSnapshot diff snapshot
+
         println("\nIncreased locations:")
-        snapshot.packages.mapNotNull { location ->
-            LocationDifference(previousSnapshot[location.name], location).takeIf {
-                it.difference() > 0
+        diffs.filter { it.difference > 0 }
+            .sortedByDescending { it.difference }.forEach { diff ->
+                println(
+                    "\t" +
+                            diff.locationName.padEnd(40) +
+                            diff.difference.toString().padStart(10) +
+                            "    (${diff.previousSize.padEnd(12)} --> ${diff.currentSize.padStart(12)})"
+                )
             }
-        }.sortedByDescending { it.difference() }.forEach { diff ->
-            val (previous, current) = diff
-            println(
-                "\t" +
-                current.name.padEnd(40) +
-                diff.difference().toString().padStart(10) +
-                "    (${(previous?.locationSize ?: 0).padEnd(12)} --> ${current.locationSize.padStart(12)})"
-            )
-        }
+
+        println("\nDecreased locations:")
+        diffs.filter { it.difference < 0 }
+            .sortedBy { it.difference }.forEach { diff ->
+                println(
+                    "\t" +
+                            diff.locationName.padEnd(40) +
+                            diff.difference.toString().padStart(10) +
+                            "    (${diff.previousSize.padEnd(12)} --> ${diff.currentSize.padStart(12)})"
+                )
+            }
 
         assertEquals(0L, increase, message)
     }
@@ -133,14 +142,27 @@ abstract class BaseAllocationTest {
         block: suspend () -> Unit,
     ): AllocationData
 
+    private infix fun AllocationData.diff(other: AllocationData): List<LocationDifference> {
+        val locations = this.packages.map { it.name }.toSet() + other.packages.map { it.name }.toSet()
+        return locations.map { location ->
+            LocationDifference(
+                previous = this[location],
+                current = other[location],
+            )
+        }
+    }
+
     /**
      * Represents a difference between two location infos.
      */
-    private data class LocationDifference(
+    private class LocationDifference(
         val previous: LocationInfo?,
-        val current: LocationInfo
+        val current: LocationInfo?,
     ) {
-        fun difference() = previous?.let { current.locationSize - it.locationSize } ?: current.locationSize
+        val previousSize = previous?.locationSize ?: 0L
+        val currentSize = current?.locationSize ?: 0L
+        val locationName = current?.name ?: previous?.name ?: "unknown"
+        val difference = currentSize - previousSize
     }
 
     private val Long.kb get() = "%.2f KB".format(toDouble() / KB.toDouble())
