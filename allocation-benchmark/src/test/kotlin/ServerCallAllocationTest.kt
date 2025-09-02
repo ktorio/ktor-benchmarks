@@ -58,7 +58,7 @@ class ServerCallAllocationTest : BaseAllocationTest() {
         return AllocationTracker.measureAllocations(
             count = requestCount,
             prepare = { server = startServer(engine) },
-            cleanup = { server.stop(1000, 1000) },
+            cleanup = { server.stop(1000, 5000) },
             block = { block() },
         )
     }
