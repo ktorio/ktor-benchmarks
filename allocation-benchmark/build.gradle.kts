@@ -42,6 +42,16 @@ tasks.test {
     useJUnitPlatform()
 }
 
+tasks.register<Test>("serverTests") {
+    group = "verification"
+    systemProperty("kotlinx.coroutines.debug", "off")
+    jvmArgs = listOf("-javaagent:$agentPath")
+    useJUnitPlatform()
+    filter {
+        include("**/ServerCallAllocationTest*")
+    }
+}
+
 tasks.register<Test>("dumpAllocations") {
     group = "verification"
     systemProperty("SAVE_REPORT", "true")
