@@ -5,13 +5,13 @@
 package io.ktor.benchmarks.jetty
 
 import io.ktor.benchmarks.*
-import jakarta.servlet.*
-import jakarta.servlet.http.*
 import org.eclipse.jetty.http.*
 import org.eclipse.jetty.server.*
-import org.eclipse.jetty.server.handler.*
+import org.eclipse.jetty.server.Handler
+import org.eclipse.jetty.server.Request
+import org.eclipse.jetty.server.Response
+import org.eclipse.jetty.util.Callback
 import org.eclipse.jetty.util.*
-import java.io.*
 
 class JettyPlatformBenchmark : PlatformBenchmark() {
     lateinit var server: Server
@@ -33,46 +33,46 @@ class JettyPlatformBenchmark : PlatformBenchmark() {
         server.stop()
     }
 
-    private class PathHandler : AbstractHandler() {
-        var _plainHandler = PlainTextHandler()
+    private class PathHandler : Handler.Abstract() {
+        var plainHandler = PlainTextHandler()
 
         init {
-            addBean(_plainHandler)
+            addBean(plainHandler)
         }
 
         override fun setServer(server: Server) {
             super.setServer(server)
-            _plainHandler.server = server
+            plainHandler.server = server
         }
 
-        @Throws(IOException::class, ServletException::class)
+        @Throws(Exception::class)
         override fun handle(
-            target: String,
-            baseRequest: Request,
-            request: HttpServletRequest,
-            response: HttpServletResponse
-        ) {
-            when (target) {
-                "/sayOK" -> _plainHandler.handle(target, baseRequest, request, response)
+            request: Request,
+            response: Response,
+            callback: Callback
+        ): Boolean {
+            val target = request.httpURI.path
+            return when (target) {
+                "/sayOK" -> plainHandler.handle(request, response, callback)
+                else -> false
             }
         }
     }
 
-    private class PlainTextHandler : AbstractHandler() {
-        internal var helloWorld = BufferUtil.toBuffer("OK")
-        internal var contentType: HttpField =
+    private class PlainTextHandler : Handler.Abstract() {
+        var helloWorld = BufferUtil.toBuffer("OK")
+        var contentType: HttpField =
             PreEncodedHttpField(HttpHeader.CONTENT_TYPE, MimeTypes.Type.TEXT_PLAIN.asString())
 
-        @Throws(IOException::class, ServletException::class)
+        @Throws(Exception::class)
         override fun handle(
-            target: String,
-            baseRequest: Request,
-            request: HttpServletRequest,
-            response: HttpServletResponse
-        ) {
-            baseRequest.isHandled = true
-            baseRequest.response.httpFields.add(contentType)
-            baseRequest.response.httpOutput.sendContent(helloWorld.slice())
+            request: Request,
+            response: Response,
+            callback: Callback
+        ): Boolean {
+            response.headers.add(contentType)
+            response.write(true, helloWorld.slice(), callback)
+            return true
         }
     }
 }

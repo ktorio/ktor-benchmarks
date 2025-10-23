@@ -36,7 +36,9 @@ class RoutingBenchmark {
 
     @TearDown
     fun stopServer() {
-        testHost.stop()
+        runBlocking {
+            testHost.stop()
+        }
     }
 
     @Benchmark
