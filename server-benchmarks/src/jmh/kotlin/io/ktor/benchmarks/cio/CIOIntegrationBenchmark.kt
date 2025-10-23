@@ -12,7 +12,7 @@ import org.openjdk.jmh.annotations.*
 
 @State(Scope.Benchmark)
 class CIOIntegrationBenchmark : IntegrationBenchmark<CIOApplicationEngine>() {
-    override fun createServer(port: Int, main: Application.() -> Unit): CIOApplicationEngine {
+    override fun createServer(port: Int, main: Application.() -> Unit): EmbeddedServer<CIOApplicationEngine, *> {
         return embeddedServer(CIO, port, module = main)
     }
 }
