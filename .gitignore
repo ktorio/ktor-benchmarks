@@ -17,3 +17,6 @@ gradle-app.setting
 .idea
 *.iml
 
+# Kotlin
+.kotlin
+
