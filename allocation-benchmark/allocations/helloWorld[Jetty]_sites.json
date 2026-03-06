@@ -6,22 +6,10 @@
         "totalSize": 288
     },
     {
-        "name": "java.util.Arrays$ArrayItr",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, JettyKtorHandler.kt:118 invokeSuspend",
-        "totalCount": 9,
-        "totalSize": 216
-    },
-    {
         "name": "io.ktor.server.routing.RoutingResolveContext$handleRoute$1",
         "stackTrace": "RoutingResolveContext.kt:-1 handleRoute, RoutingResolveContext.kt:167 handleRoute, RoutingResolveContext.kt:167 handleRoute, RoutingResolveContext.kt:92 resolve, RoutingRoot.kt:69 interceptor, RoutingRoot.kt:157 invokeSuspend, RoutingRoot.kt:-1 invoke, RoutingRoot.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationEngine.kt:119 invokeSuspend, BaseApplicationEngine.kt:-1 invoke, BaseApplicationEngine.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend",
         "totalCount": 2,
         "totalSize": 192
-    },
-    {
-        "name": "kotlin.ranges.IntRange",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, JettyKtorHandler.kt:118 invokeSuspend",
-        "totalCount": 6,
-        "totalSize": 144
     },
     {
         "name": "kotlin.coroutines.CombinedContext",
@@ -66,12 +54,6 @@
         "totalSize": 96
     },
     {
-        "name": "kotlin.Pair",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, JettyKtorHandler.kt:118 invokeSuspend",
-        "totalCount": 4,
-        "totalSize": 96
-    },
-    {
         "name": "io.ktor.util.pipeline.PhaseContent",
         "stackTrace": "Pipeline.kt:402 fastPathMerge, Pipeline.kt:273 resetFrom, BaseApplicationResponse.kt:53 <init>, JettyApplicationCall.kt:93 <init>, JettyApplicationCall.kt:52 <init>, JettyApplicationCall.kt:-1 <init>, JettyKtorHandler.kt:71 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, ThreadPoolExecutor.java:1144 runWorker, ThreadPoolExecutor.java:642 run, Thread.java:1583 run",
         "totalCount": 3,
@@ -94,18 +76,6 @@
         "stackTrace": "RoutingRoot.kt:-1 executeResult, RoutingRoot.kt:71 interceptor, RoutingRoot.kt:157 invokeSuspend, RoutingRoot.kt:-1 invoke, RoutingRoot.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationEngine.kt:119 invokeSuspend, BaseApplicationEngine.kt:-1 invoke, BaseApplicationEngine.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode",
         "totalCount": 1,
         "totalSize": 80
-    },
-    {
-        "name": "[B",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, JettyKtorHandler.kt:118 invokeSuspend",
-        "totalCount": 3,
-        "totalSize": 72
-    },
-    {
-        "name": "java.lang.String",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, JettyKtorHandler.kt:118 invokeSuspend",
-        "totalCount": 3,
-        "totalSize": 72
     },
     {
         "name": "io.ktor.server.jetty.jakarta.JettyKtorHandler$handle$1",
@@ -290,12 +260,6 @@
     {
         "name": "[Ljava.lang.Object;",
         "stackTrace": "RoutingResolveTrace.kt:35 append, RoutingResolveTrace.kt:69 register, RoutingResolveTrace.kt:92 finish, RoutingResolveContext.kt:175 handleRoute, RoutingResolveContext.kt:167 handleRoute, RoutingResolveContext.kt:92 resolve, RoutingRoot.kt:69 interceptor, RoutingRoot.kt:157 invokeSuspend, RoutingRoot.kt:-1 invoke, RoutingRoot.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationEngine.kt:119 invokeSuspend, BaseApplicationEngine.kt:-1 invoke, BaseApplicationEngine.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils",
-        "totalCount": 1,
-        "totalSize": 56
-    },
-    {
-        "name": "[Ljava.lang.Object;",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, JettyKtorHandler.kt:118 invokeSuspend",
         "totalCount": 1,
         "totalSize": 56
     },
@@ -534,12 +498,6 @@
         "totalSize": 40
     },
     {
-        "name": "kotlin.text.DelimitedRangesSequence$iterator$1",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, JettyKtorHandler.kt:118 invokeSuspend",
-        "totalCount": 1,
-        "totalSize": 40
-    },
-    {
         "name": "io.ktor.server.jetty.jakarta.JettyKtorHandler$handle$1$invokeSuspend$$inlined$execute$1",
         "stackTrace": "JettyKtorHandler.kt:118 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, ThreadPoolExecutor.java:1144 runWorker, ThreadPoolExecutor.java:642 run, Thread.java:1583 run",
         "totalCount": 1,
@@ -740,12 +698,6 @@
     {
         "name": "[Ljava.lang.Object;",
         "stackTrace": "RoutingResolveTrace.kt:143 addCandidate, RoutingResolveContext.kt:161 handleRoute, RoutingResolveContext.kt:167 handleRoute, RoutingResolveContext.kt:167 handleRoute, RoutingResolveContext.kt:92 resolve, RoutingRoot.kt:69 interceptor, RoutingRoot.kt:157 invokeSuspend, RoutingRoot.kt:-1 invoke, RoutingRoot.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationEngine.kt:119 invokeSuspend, BaseApplicationEngine.kt:-1 invoke, BaseApplicationEngine.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute",
-        "totalCount": 1,
-        "totalSize": 32
-    },
-    {
-        "name": "kotlin.text.DelimitedRangesSequence",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, JettyKtorHandler.kt:118 invokeSuspend",
         "totalCount": 1,
         "totalSize": 32
     },
@@ -1076,24 +1028,6 @@
     {
         "name": "java.util.ArrayList",
         "stackTrace": "RoutingResolveTrace.kt:143 addCandidate, RoutingResolveContext.kt:161 handleRoute, RoutingResolveContext.kt:167 handleRoute, RoutingResolveContext.kt:167 handleRoute, RoutingResolveContext.kt:92 resolve, RoutingRoot.kt:69 interceptor, RoutingRoot.kt:157 invokeSuspend, RoutingRoot.kt:-1 invoke, RoutingRoot.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationEngine.kt:119 invokeSuspend, BaseApplicationEngine.kt:-1 invoke, BaseApplicationEngine.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute",
-        "totalCount": 1,
-        "totalSize": 24
-    },
-    {
-        "name": "[Ljava.lang.String;",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, JettyKtorHandler.kt:118 invokeSuspend",
-        "totalCount": 1,
-        "totalSize": 24
-    },
-    {
-        "name": "java.util.Arrays$ArrayList",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, JettyKtorHandler.kt:118 invokeSuspend",
-        "totalCount": 1,
-        "totalSize": 24
-    },
-    {
-        "name": "java.util.ArrayList",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, JettyKtorHandler.kt:118 invokeSuspend",
         "totalCount": 1,
         "totalSize": 24
     },
@@ -1502,12 +1436,6 @@
     {
         "name": "io.ktor.server.routing.Stack",
         "stackTrace": "RoutingResolveTrace.kt:60 <init>, RoutingResolveContext.kt:53 <init>, RoutingRoot.kt:68 interceptor, RoutingRoot.kt:157 invokeSuspend, RoutingRoot.kt:-1 invoke, RoutingRoot.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationEngine.kt:119 invokeSuspend, BaseApplicationEngine.kt:-1 invoke, BaseApplicationEngine.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke",
-        "totalCount": 1,
-        "totalSize": 16
-    },
-    {
-        "name": "kotlin.sequences.SequencesKt___SequencesKt$asIterable$$inlined$Iterable$1",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, JettyKtorHandler.kt:118 invokeSuspend",
         "totalCount": 1,
         "totalSize": 16
     },

@@ -9,7 +9,7 @@
         "name": "java.nio.DirectByteBuffer",
         "stackTrace": "NettyHttpResponsePipeline.kt:335 respondWithBigBody, NettyHttpResponsePipeline.kt:24 access$respondWithBigBody, NettyHttpResponsePipeline.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, AbstractEventExecutor.java:148 runTask, AbstractEventExecutor.java:141 safeExecute, SingleThreadEventExecutor.java:535 runAllTasks, SingleThreadIoEventLoop.java:201 run, SingleThreadEventExecutor.java:1195 run, ThreadExecutorMap.java:74 run, FastThreadLocalRunnable.java:30 run, Thread.java:1583 run",
         "totalCount": 26,
-        "totalSize": 1665
+        "totalSize": 1659
     },
     {
         "name": "java.nio.HeapByteBuffer",
@@ -21,7 +21,7 @@
         "name": "io.netty.util.concurrent.ScheduledFutureTask",
         "stackTrace": "NettyHttpResponsePipeline.kt:351 respondWithBigBody, NettyHttpResponsePipeline.kt:24 access$respondWithBigBody, NettyHttpResponsePipeline.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, AbstractEventExecutor.java:148 runTask, AbstractEventExecutor.java:141 safeExecute, SingleThreadEventExecutor.java:535 runAllTasks, SingleThreadIoEventLoop.java:201 run, SingleThreadEventExecutor.java:1195 run, ThreadExecutorMap.java:74 run, FastThreadLocalRunnable.java:30 run, Thread.java:1583 run",
         "totalCount": 23,
-        "totalSize": 1480
+        "totalSize": 1475
     },
     {
         "name": "io.ktor.utils.io.ByteChannel$flush$1",
@@ -33,13 +33,13 @@
         "name": "io.netty.channel.DefaultChannelPromise",
         "stackTrace": "NettyHttpResponsePipeline.kt:351 respondWithBigBody, NettyHttpResponsePipeline.kt:24 access$respondWithBigBody, NettyHttpResponsePipeline.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, AbstractEventExecutor.java:148 runTask, AbstractEventExecutor.java:141 safeExecute, SingleThreadEventExecutor.java:535 runAllTasks, SingleThreadIoEventLoop.java:201 run, SingleThreadEventExecutor.java:1195 run, ThreadExecutorMap.java:74 run, FastThreadLocalRunnable.java:30 run, Thread.java:1583 run",
         "totalCount": 23,
-        "totalSize": 1110
+        "totalSize": 1106
     },
     {
         "name": "io.netty.handler.timeout.WriteTimeoutHandler$WriteTimeoutTask",
         "stackTrace": "NettyHttpResponsePipeline.kt:351 respondWithBigBody, NettyHttpResponsePipeline.kt:24 access$respondWithBigBody, NettyHttpResponsePipeline.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, AbstractEventExecutor.java:148 runTask, AbstractEventExecutor.java:141 safeExecute, SingleThreadEventExecutor.java:535 runAllTasks, SingleThreadIoEventLoop.java:201 run, SingleThreadEventExecutor.java:1195 run, ThreadExecutorMap.java:74 run, FastThreadLocalRunnable.java:30 run, Thread.java:1583 run",
         "totalCount": 23,
-        "totalSize": 925
+        "totalSize": 922
     },
     {
         "name": "java.lang.String",
@@ -57,13 +57,13 @@
         "name": "io.netty.handler.codec.http.DefaultHttpContent",
         "stackTrace": "NettyHttp1ApplicationCall.kt:51 prepareMessage$ktor_server_netty, NettyHttpResponsePipeline.kt:339 respondWithBigBody, NettyHttpResponsePipeline.kt:24 access$respondWithBigBody, NettyHttpResponsePipeline.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, AbstractEventExecutor.java:148 runTask, AbstractEventExecutor.java:141 safeExecute, SingleThreadEventExecutor.java:535 runAllTasks, SingleThreadIoEventLoop.java:201 run, SingleThreadEventExecutor.java:1195 run, ThreadExecutorMap.java:74 run, FastThreadLocalRunnable.java:30 run, Thread.java:1583 run",
         "totalCount": 26,
-        "totalSize": 624
+        "totalSize": 622
     },
     {
         "name": "kotlin.jvm.internal.Ref$ObjectRef",
         "stackTrace": "NettyHttpResponsePipeline.kt:330 respondWithBigBody, NettyHttpResponsePipeline.kt:24 access$respondWithBigBody, NettyHttpResponsePipeline.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, AbstractEventExecutor.java:148 runTask, AbstractEventExecutor.java:141 safeExecute, SingleThreadEventExecutor.java:535 runAllTasks, SingleThreadIoEventLoop.java:201 run, SingleThreadEventExecutor.java:1195 run, ThreadExecutorMap.java:74 run, FastThreadLocalRunnable.java:30 run, Thread.java:1583 run",
         "totalCount": 26,
-        "totalSize": 416
+        "totalSize": 415
     },
     {
         "name": "io.ktor.server.routing.RoutingResolveContext$handleRoute$1",
@@ -72,16 +72,10 @@
         "totalSize": 288
     },
     {
-        "name": "java.util.Arrays$ArrayItr",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, NettyApplicationCallHandler.kt:169 invokeSuspend",
-        "totalCount": 9,
-        "totalSize": 216
-    },
-    {
         "name": "kotlin.coroutines.CombinedContext",
         "stackTrace": "NettyApplicationCallHandler.kt:55 handleRequest, NettyApplicationCallHandler.kt:35 channelRead, AbstractChannelHandlerContext.java:356 fireChannelRead, AbstractChannelHandlerContext.java:365 lambda$fireChannelRead$2, AbstractEventExecutor.java:148 runTask, AbstractEventExecutor.java:141 safeExecute, SingleThreadEventExecutor.java:535 runAllTasks, SingleThreadIoEventLoop.java:201 run, SingleThreadEventExecutor.java:1195 run, ThreadExecutorMap.java:74 run, FastThreadLocalRunnable.java:30 run, Thread.java:1583 run",
-        "totalCount": 9,
-        "totalSize": 216
+        "totalCount": 11,
+        "totalSize": 264
     },
     {
         "name": "java.net.URL",
@@ -93,25 +87,13 @@
         "name": "io.netty.util.concurrent.ScheduledFutureTask",
         "stackTrace": "NettyHttpResponsePipeline.kt:345 respondWithBigBody, NettyHttpResponsePipeline.kt:24 access$respondWithBigBody, NettyHttpResponsePipeline.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, AbstractEventExecutor.java:148 runTask, AbstractEventExecutor.java:141 safeExecute, SingleThreadEventExecutor.java:535 runAllTasks, SingleThreadIoEventLoop.java:201 run, SingleThreadEventExecutor.java:1195 run, ThreadExecutorMap.java:74 run, FastThreadLocalRunnable.java:30 run, Thread.java:1583 run",
         "totalCount": 3,
-        "totalSize": 185
+        "totalSize": 184
     },
     {
         "name": "[I",
-        "stackTrace": "DateJvm.kt:20 GMTDate, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend, RoutingNode.kt:-1 invoke, RoutingNode.kt:-1 invoke",
+        "stackTrace": "DateJvm.kt:111 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend",
         "totalCount": 2,
         "totalSize": 176
-    },
-    {
-        "name": "[I",
-        "stackTrace": "DateJvm.kt:35 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend",
-        "totalCount": 2,
-        "totalSize": 176
-    },
-    {
-        "name": "kotlin.ranges.IntRange",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, NettyApplicationCallHandler.kt:169 invokeSuspend",
-        "totalCount": 6,
-        "totalSize": 144
     },
     {
         "name": "kotlin.coroutines.CombinedContext",
@@ -123,7 +105,7 @@
         "name": "io.netty.channel.DefaultChannelPromise",
         "stackTrace": "NettyHttpResponsePipeline.kt:345 respondWithBigBody, NettyHttpResponsePipeline.kt:24 access$respondWithBigBody, NettyHttpResponsePipeline.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, AbstractEventExecutor.java:148 runTask, AbstractEventExecutor.java:141 safeExecute, SingleThreadEventExecutor.java:535 runAllTasks, SingleThreadIoEventLoop.java:201 run, SingleThreadEventExecutor.java:1195 run, ThreadExecutorMap.java:74 run, FastThreadLocalRunnable.java:30 run, Thread.java:1583 run",
         "totalCount": 3,
-        "totalSize": 139
+        "totalSize": 138
     },
     {
         "name": "[B",
@@ -147,17 +129,11 @@
         "name": "io.netty.handler.timeout.WriteTimeoutHandler$WriteTimeoutTask",
         "stackTrace": "NettyHttpResponsePipeline.kt:345 respondWithBigBody, NettyHttpResponsePipeline.kt:24 access$respondWithBigBody, NettyHttpResponsePipeline.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, AbstractEventExecutor.java:148 runTask, AbstractEventExecutor.java:141 safeExecute, SingleThreadEventExecutor.java:535 runAllTasks, SingleThreadIoEventLoop.java:201 run, SingleThreadEventExecutor.java:1195 run, ThreadExecutorMap.java:74 run, FastThreadLocalRunnable.java:30 run, Thread.java:1583 run",
         "totalCount": 3,
-        "totalSize": 116
+        "totalSize": 115
     },
     {
         "name": "java.util.GregorianCalendar",
-        "stackTrace": "DateJvm.kt:20 GMTDate, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend, RoutingNode.kt:-1 invoke, RoutingNode.kt:-1 invoke",
-        "totalCount": 1,
-        "totalSize": 112
-    },
-    {
-        "name": "java.util.GregorianCalendar",
-        "stackTrace": "DateJvm.kt:35 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend",
+        "stackTrace": "DateJvm.kt:111 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend",
         "totalCount": 1,
         "totalSize": 112
     },
@@ -228,27 +204,15 @@
         "totalSize": 96
     },
     {
-        "name": "sun.util.calendar.Gregorian$Date",
-        "stackTrace": "DateJvm.kt:20 GMTDate, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend, RoutingNode.kt:-1 invoke, RoutingNode.kt:-1 invoke",
-        "totalCount": 1,
-        "totalSize": 96
-    },
-    {
-        "name": "sun.util.calendar.Gregorian$Date",
-        "stackTrace": "DateJvm.kt:35 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend",
-        "totalCount": 1,
-        "totalSize": 96
-    },
-    {
-        "name": "kotlin.Pair",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, NettyApplicationCallHandler.kt:169 invokeSuspend",
-        "totalCount": 4,
-        "totalSize": 96
-    },
-    {
         "name": "kotlin.coroutines.CombinedContext",
         "stackTrace": "BaseApplicationResponse.kt:222 respondFromChannel$suspendImpl, BaseApplicationResponse.kt:-1 respondFromChannel, BaseApplicationResponse.kt:152 respondOutgoingContent$suspendImpl, BaseApplicationResponse.kt:-1 respondOutgoingContent, NettyApplicationResponse.kt:41 respondOutgoingContent$suspendImpl, NettyApplicationResponse.kt:-1 respondOutgoingContent, BaseApplicationResponse.kt:341 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:99 proceedWith, DefaultTransform.kt:31 invokeSuspend, DefaultTransform.kt:-1 invoke, DefaultTransform.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils",
         "totalCount": 4,
+        "totalSize": 96
+    },
+    {
+        "name": "sun.util.calendar.Gregorian$Date",
+        "stackTrace": "DateJvm.kt:111 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend",
+        "totalCount": 1,
         "totalSize": 96
     },
     {
@@ -378,18 +342,6 @@
         "totalSize": 72
     },
     {
-        "name": "[B",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, NettyApplicationCallHandler.kt:169 invokeSuspend",
-        "totalCount": 3,
-        "totalSize": 72
-    },
-    {
-        "name": "java.lang.String",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, NettyApplicationCallHandler.kt:169 invokeSuspend",
-        "totalCount": 3,
-        "totalSize": 72
-    },
-    {
         "name": "io.ktor.server.netty.http1.NettyHttp1ApplicationResponse",
         "stackTrace": "NettyHttp1ApplicationCall.kt:35 <init>, NettyHttp1Handler.kt:150 prepareCallFromRequest, NettyHttp1Handler.kt:123 handleRequest, NettyHttp1Handler.kt:74 channelRead, AbstractChannelHandlerContext.java:356 fireChannelRead, ChannelInboundHandlerAdapter.java:93 channelRead, HttpServerExpectContinueHandler.java:95 channelRead, AbstractChannelHandlerContext.java:356 fireChannelRead, CombinedChannelDuplexHandler.java:434 fireChannelRead, ByteToMessageDecoder.java:361 fireChannelRead, ByteToMessageDecoder.java:325 channelRead, CombinedChannelDuplexHandler.java:249 channelRead, AbstractChannelHandlerContext.java:354 fireChannelRead, DefaultChannelPipeline.java:1429 channelRead, DefaultChannelPipeline.java:918 fireChannelRead, AbstractNioByteChannel.java:172 read, AbstractNioChannel.java:445 handle, NioIoHandler.java:388 handle, NioIoHandler.java:596 processSelectedKey, NioIoHandler.java:571 processSelectedKeysOptimized",
         "totalCount": 1,
@@ -424,6 +376,18 @@
         "stackTrace": "NettyHttp1ApplicationRequest.kt:27 <init>, NettyHttp1ApplicationCall.kt:27 <init>, NettyHttp1Handler.kt:150 prepareCallFromRequest, NettyHttp1Handler.kt:123 handleRequest, NettyHttp1Handler.kt:74 channelRead, AbstractChannelHandlerContext.java:356 fireChannelRead, ChannelInboundHandlerAdapter.java:93 channelRead, HttpServerExpectContinueHandler.java:95 channelRead, AbstractChannelHandlerContext.java:356 fireChannelRead, CombinedChannelDuplexHandler.java:434 fireChannelRead, ByteToMessageDecoder.java:361 fireChannelRead, ByteToMessageDecoder.java:325 channelRead, CombinedChannelDuplexHandler.java:249 channelRead, AbstractChannelHandlerContext.java:354 fireChannelRead, DefaultChannelPipeline.java:1429 channelRead, DefaultChannelPipeline.java:918 fireChannelRead, AbstractNioByteChannel.java:172 read, AbstractNioChannel.java:445 handle, NioIoHandler.java:388 handle, NioIoHandler.java:596 processSelectedKey",
         "totalCount": 3,
         "totalSize": 72
+    },
+    {
+        "name": "kotlin.coroutines.CombinedContext",
+        "stackTrace": "NettyHttp1Handler.kt:156 prepareCallFromRequest, NettyHttp1Handler.kt:123 handleRequest, NettyHttp1Handler.kt:74 channelRead, AbstractChannelHandlerContext.java:356 fireChannelRead, ChannelInboundHandlerAdapter.java:93 channelRead, HttpServerExpectContinueHandler.java:95 channelRead, AbstractChannelHandlerContext.java:356 fireChannelRead, CombinedChannelDuplexHandler.java:434 fireChannelRead, ByteToMessageDecoder.java:361 fireChannelRead, ByteToMessageDecoder.java:325 channelRead, CombinedChannelDuplexHandler.java:249 channelRead, AbstractChannelHandlerContext.java:354 fireChannelRead, DefaultChannelPipeline.java:1429 channelRead, DefaultChannelPipeline.java:918 fireChannelRead, AbstractNioByteChannel.java:172 read, AbstractNioChannel.java:445 handle, NioIoHandler.java:388 handle, NioIoHandler.java:596 processSelectedKey, NioIoHandler.java:571 processSelectedKeysOptimized, NioIoHandler.java:512 processSelectedKeys",
+        "totalCount": 3,
+        "totalSize": 72
+    },
+    {
+        "name": "java.nio.DirectByteBuffer",
+        "stackTrace": "NettyHttpResponsePipeline.kt:335 respondWithBigBody, NettyHttpResponsePipeline.kt:296 respondBodyWithFlushOnLimit, NettyHttpResponsePipeline.kt:250 respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:24 access$respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:201 invokeSuspend, NettyHttpResponsePipeline.kt:-1 invoke, NettyHttpResponsePipeline.kt:-1 invoke, Undispatched.kt:20 startCoroutineUndispatched, CoroutineStart.kt:360 invoke, AbstractCoroutine.kt:134 start, Builders.common.kt:53 launch, null:1 launch, NettyHttpResponsePipeline.kt:200 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener, DefaultChannelPromise.java:95 addListener",
+        "totalCount": 1,
+        "totalSize": 69
     },
     {
         "name": "[B",
@@ -558,16 +522,16 @@
         "totalSize": 64
     },
     {
-        "name": "java.nio.DirectByteBuffer",
-        "stackTrace": "NettyHttpResponsePipeline.kt:335 respondWithBigBody, NettyHttpResponsePipeline.kt:296 respondBodyWithFlushOnLimit, NettyHttpResponsePipeline.kt:250 respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:24 access$respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:201 invokeSuspend, NettyHttpResponsePipeline.kt:-1 invoke, NettyHttpResponsePipeline.kt:-1 invoke, Undispatched.kt:20 startCoroutineUndispatched, CoroutineStart.kt:360 invoke, AbstractCoroutine.kt:134 start, Builders.common.kt:53 launch, null:1 launch, NettyHttpResponsePipeline.kt:200 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener, DefaultChannelPromise.java:95 addListener",
-        "totalCount": 1,
-        "totalSize": 63
-    },
-    {
         "name": "io.netty.util.concurrent.ScheduledFutureTask",
         "stackTrace": "NettyHttpResponsePipeline.kt:136 handleLastResponseMessage, NettyHttpResponsePipeline.kt:357 respondWithBigBody, NettyHttpResponsePipeline.kt:24 access$respondWithBigBody, NettyHttpResponsePipeline.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, AbstractEventExecutor.java:148 runTask, AbstractEventExecutor.java:141 safeExecute, SingleThreadEventExecutor.java:535 runAllTasks, SingleThreadIoEventLoop.java:201 run, SingleThreadEventExecutor.java:1195 run, ThreadExecutorMap.java:74 run, FastThreadLocalRunnable.java:30 run, Thread.java:1583 run",
         "totalCount": 1,
-        "totalSize": 62
+        "totalSize": 61
+    },
+    {
+        "name": "io.netty.util.concurrent.ScheduledFutureTask",
+        "stackTrace": "NettyHttpResponsePipeline.kt:351 respondWithBigBody, NettyHttpResponsePipeline.kt:296 respondBodyWithFlushOnLimit, NettyHttpResponsePipeline.kt:250 respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:24 access$respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:201 invokeSuspend, NettyHttpResponsePipeline.kt:-1 invoke, NettyHttpResponsePipeline.kt:-1 invoke, Undispatched.kt:20 startCoroutineUndispatched, CoroutineStart.kt:360 invoke, AbstractCoroutine.kt:134 start, Builders.common.kt:53 launch, null:1 launch, NettyHttpResponsePipeline.kt:200 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener, DefaultChannelPromise.java:95 addListener",
+        "totalCount": 1,
+        "totalSize": 61
     },
     {
         "name": "[Ljava.lang.Object;",
@@ -578,12 +542,6 @@
     {
         "name": "[Ljava.lang.Object;",
         "stackTrace": "StaticContentResolution.kt:149 normalisedPath, StaticContentResolution.kt:62 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend, RoutingNode.kt:-1 invoke, RoutingNode.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils",
-        "totalCount": 1,
-        "totalSize": 56
-    },
-    {
-        "name": "io.netty.util.concurrent.ScheduledFutureTask",
-        "stackTrace": "NettyHttpResponsePipeline.kt:351 respondWithBigBody, NettyHttpResponsePipeline.kt:296 respondBodyWithFlushOnLimit, NettyHttpResponsePipeline.kt:250 respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:24 access$respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:201 invokeSuspend, NettyHttpResponsePipeline.kt:-1 invoke, NettyHttpResponsePipeline.kt:-1 invoke, Undispatched.kt:20 startCoroutineUndispatched, CoroutineStart.kt:360 invoke, AbstractCoroutine.kt:134 start, Builders.common.kt:53 launch, null:1 launch, NettyHttpResponsePipeline.kt:200 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener, DefaultChannelPromise.java:95 addListener",
         "totalCount": 1,
         "totalSize": 56
     },
@@ -624,36 +582,6 @@
         "totalSize": 56
     },
     {
-        "name": "java.util.Calendar$Builder",
-        "stackTrace": "DateJvm.kt:20 GMTDate, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend, RoutingNode.kt:-1 invoke, RoutingNode.kt:-1 invoke",
-        "totalCount": 1,
-        "totalSize": 56
-    },
-    {
-        "name": "java.util.Calendar$Builder",
-        "stackTrace": "DateJvm.kt:35 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend",
-        "totalCount": 1,
-        "totalSize": 56
-    },
-    {
-        "name": "io.ktor.util.date.GMTDate",
-        "stackTrace": "DateJvm.kt:65 toDate, DateJvm.kt:20 GMTDate, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend, RoutingNode.kt:-1 invoke",
-        "totalCount": 1,
-        "totalSize": 56
-    },
-    {
-        "name": "io.ktor.util.date.GMTDate",
-        "stackTrace": "DateJvm.kt:65 toDate, DateJvm.kt:43 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke",
-        "totalCount": 1,
-        "totalSize": 56
-    },
-    {
-        "name": "[Ljava.lang.Object;",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, NettyApplicationCallHandler.kt:169 invokeSuspend",
-        "totalCount": 1,
-        "totalSize": 56
-    },
-    {
         "name": "[Ljava.lang.Object;",
         "stackTrace": "RoutingResolveTrace.kt:154 push, RoutingResolveTrace.kt:79 begin, RoutingResolveContext.kt:147 handleRoute, RoutingResolveContext.kt:92 resolve, RoutingRoot.kt:69 interceptor, RoutingRoot.kt:157 invokeSuspend, RoutingRoot.kt:-1 invoke, RoutingRoot.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationEngine.kt:119 invokeSuspend, BaseApplicationEngine.kt:-1 invoke, BaseApplicationEngine.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend",
         "totalCount": 1,
@@ -680,6 +608,24 @@
     {
         "name": "[Ljava.lang.Object;",
         "stackTrace": "RoutingResolveTrace.kt:35 append, RoutingResolveTrace.kt:69 register, RoutingResolveTrace.kt:92 finish, RoutingResolveContext.kt:175 handleRoute, RoutingResolveContext.kt:167 handleRoute, RoutingResolveContext.kt:92 resolve, RoutingRoot.kt:69 interceptor, RoutingRoot.kt:157 invokeSuspend, RoutingRoot.kt:-1 invoke, RoutingRoot.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationEngine.kt:119 invokeSuspend, BaseApplicationEngine.kt:-1 invoke, BaseApplicationEngine.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils",
+        "totalCount": 1,
+        "totalSize": 56
+    },
+    {
+        "name": "io.ktor.util.date.GMTDate",
+        "stackTrace": "DateJvm.kt:82 timestampToGMTDate, DateJvm.kt:32 GMTDate, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend, RoutingNode.kt:-1 invoke",
+        "totalCount": 1,
+        "totalSize": 56
+    },
+    {
+        "name": "io.ktor.util.date.GMTDate",
+        "stackTrace": "DateJvm.kt:141 toDate, DateJvm.kt:119 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke",
+        "totalCount": 1,
+        "totalSize": 56
+    },
+    {
+        "name": "java.util.Calendar$Builder",
+        "stackTrace": "DateJvm.kt:111 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend",
         "totalCount": 1,
         "totalSize": 56
     },
@@ -1008,12 +954,6 @@
         "totalSize": 48
     },
     {
-        "name": "kotlin.coroutines.CombinedContext",
-        "stackTrace": "NettyHttp1Handler.kt:156 prepareCallFromRequest, NettyHttp1Handler.kt:123 handleRequest, NettyHttp1Handler.kt:74 channelRead, AbstractChannelHandlerContext.java:356 fireChannelRead, ChannelInboundHandlerAdapter.java:93 channelRead, HttpServerExpectContinueHandler.java:95 channelRead, AbstractChannelHandlerContext.java:356 fireChannelRead, CombinedChannelDuplexHandler.java:434 fireChannelRead, ByteToMessageDecoder.java:361 fireChannelRead, ByteToMessageDecoder.java:325 channelRead, CombinedChannelDuplexHandler.java:249 channelRead, AbstractChannelHandlerContext.java:354 fireChannelRead, DefaultChannelPipeline.java:1429 channelRead, DefaultChannelPipeline.java:918 fireChannelRead, AbstractNioByteChannel.java:172 read, AbstractNioChannel.java:445 handle, NioIoHandler.java:388 handle, NioIoHandler.java:596 processSelectedKey, NioIoHandler.java:571 processSelectedKeysOptimized, NioIoHandler.java:512 processSelectedKeys",
-        "totalCount": 2,
-        "totalSize": 48
-    },
-    {
         "name": "io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1",
         "stackTrace": "DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, NettyApplicationCallHandler.kt:169 invokeSuspend, NettyApplicationCallHandler.kt:-1 invoke, NettyApplicationCallHandler.kt:-1 invoke",
         "totalCount": 1,
@@ -1053,7 +993,7 @@
         "name": "io.netty.channel.DefaultChannelPromise",
         "stackTrace": "NettyHttpResponsePipeline.kt:351 respondWithBigBody, NettyHttpResponsePipeline.kt:296 respondBodyWithFlushOnLimit, NettyHttpResponsePipeline.kt:250 respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:24 access$respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:201 invokeSuspend, NettyHttpResponsePipeline.kt:-1 invoke, NettyHttpResponsePipeline.kt:-1 invoke, Undispatched.kt:20 startCoroutineUndispatched, CoroutineStart.kt:360 invoke, AbstractCoroutine.kt:134 start, Builders.common.kt:53 launch, null:1 launch, NettyHttpResponsePipeline.kt:200 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener, DefaultChannelPromise.java:95 addListener",
         "totalCount": 1,
-        "totalSize": 42
+        "totalSize": 46
     },
     {
         "name": "kotlin.text.DelimitedRangesSequence$iterator$1",
@@ -1146,26 +1086,14 @@
         "totalSize": 40
     },
     {
-        "name": "[Z",
-        "stackTrace": "DateJvm.kt:20 GMTDate, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend, RoutingNode.kt:-1 invoke, RoutingNode.kt:-1 invoke",
-        "totalCount": 1,
-        "totalSize": 40
-    },
-    {
-        "name": "[Z",
-        "stackTrace": "DateJvm.kt:35 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend",
-        "totalCount": 1,
-        "totalSize": 40
-    },
-    {
-        "name": "kotlin.text.DelimitedRangesSequence$iterator$1",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, NettyApplicationCallHandler.kt:169 invokeSuspend",
-        "totalCount": 1,
-        "totalSize": 40
-    },
-    {
         "name": "io.ktor.server.response.ApplicationSendPipeline",
         "stackTrace": "BaseApplicationResponse.kt:50 <init>, NettyApplicationResponse.kt:17 <init>, NettyHttp1ApplicationResponse.kt:18 <init>, NettyHttp1ApplicationCall.kt:35 <init>, NettyHttp1Handler.kt:150 prepareCallFromRequest, NettyHttp1Handler.kt:123 handleRequest, NettyHttp1Handler.kt:74 channelRead, AbstractChannelHandlerContext.java:356 fireChannelRead, ChannelInboundHandlerAdapter.java:93 channelRead, HttpServerExpectContinueHandler.java:95 channelRead, AbstractChannelHandlerContext.java:356 fireChannelRead, CombinedChannelDuplexHandler.java:434 fireChannelRead, ByteToMessageDecoder.java:361 fireChannelRead, ByteToMessageDecoder.java:325 channelRead, CombinedChannelDuplexHandler.java:249 channelRead, AbstractChannelHandlerContext.java:354 fireChannelRead, DefaultChannelPipeline.java:1429 channelRead, DefaultChannelPipeline.java:918 fireChannelRead, AbstractNioByteChannel.java:172 read, AbstractNioChannel.java:445 handle",
+        "totalCount": 1,
+        "totalSize": 40
+    },
+    {
+        "name": "[Z",
+        "stackTrace": "DateJvm.kt:111 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend",
         "totalCount": 1,
         "totalSize": 40
     },
@@ -1260,6 +1188,12 @@
         "totalSize": 40
     },
     {
+        "name": "io.netty.handler.codec.DefaultHeaders$ValueIterator",
+        "stackTrace": "NettyHttp1Handler.kt:141 prepareCallFromRequest, NettyHttp1Handler.kt:123 handleRequest, NettyHttp1Handler.kt:74 channelRead, AbstractChannelHandlerContext.java:356 fireChannelRead, ChannelInboundHandlerAdapter.java:93 channelRead, HttpServerExpectContinueHandler.java:95 channelRead, AbstractChannelHandlerContext.java:356 fireChannelRead, CombinedChannelDuplexHandler.java:434 fireChannelRead, ByteToMessageDecoder.java:361 fireChannelRead, ByteToMessageDecoder.java:325 channelRead, CombinedChannelDuplexHandler.java:249 channelRead, AbstractChannelHandlerContext.java:354 fireChannelRead, DefaultChannelPipeline.java:1429 channelRead, DefaultChannelPipeline.java:918 fireChannelRead, AbstractNioByteChannel.java:172 read, AbstractNioChannel.java:445 handle, NioIoHandler.java:388 handle, NioIoHandler.java:596 processSelectedKey, NioIoHandler.java:571 processSelectedKeysOptimized, NioIoHandler.java:512 processSelectedKeys",
+        "totalCount": 1,
+        "totalSize": 40
+    },
+    {
         "name": "io.ktor.util.pipeline.SuspendFunctionGun",
         "stackTrace": "PipelineContext.kt:69 pipelineContextFor, Pipeline.kt:296 createContext, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, NettyApplicationCallHandler.kt:169 invokeSuspend, NettyApplicationCallHandler.kt:-1 invoke, NettyApplicationCallHandler.kt:-1 invoke, Undispatched.kt:20 startCoroutineUndispatched, CoroutineStart.kt:360 invoke, AbstractCoroutine.kt:134 start, Builders.common.kt:53 launch, null:1 launch, NettyApplicationCallHandler.kt:55 handleRequest, NettyApplicationCallHandler.kt:35 channelRead, AbstractChannelHandlerContext.java:356 fireChannelRead, AbstractChannelHandlerContext.java:365 lambda$fireChannelRead$2, AbstractEventExecutor.java:148 runTask",
         "totalCount": 1,
@@ -1292,12 +1226,6 @@
     {
         "name": "[B",
         "stackTrace": "HeaderValueWithParameters.kt:59 toString, BaseApplicationResponse.kt:105 commitHeaders, BaseApplicationResponse.kt:151 respondOutgoingContent$suspendImpl, BaseApplicationResponse.kt:-1 respondOutgoingContent, NettyApplicationResponse.kt:41 respondOutgoingContent$suspendImpl, NettyApplicationResponse.kt:-1 respondOutgoingContent, BaseApplicationResponse.kt:341 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:99 proceedWith, DefaultTransform.kt:31 invokeSuspend, DefaultTransform.kt:-1 invoke, DefaultTransform.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils",
-        "totalCount": 1,
-        "totalSize": 40
-    },
-    {
-        "name": "io.netty.handler.codec.DefaultHeaders$ValueIterator",
-        "stackTrace": "NettyHttp1Handler.kt:141 prepareCallFromRequest, NettyHttp1Handler.kt:123 handleRequest, NettyHttp1Handler.kt:74 channelRead, AbstractChannelHandlerContext.java:356 fireChannelRead, ChannelInboundHandlerAdapter.java:93 channelRead, HttpServerExpectContinueHandler.java:95 channelRead, AbstractChannelHandlerContext.java:356 fireChannelRead, CombinedChannelDuplexHandler.java:434 fireChannelRead, ByteToMessageDecoder.java:361 fireChannelRead, ByteToMessageDecoder.java:325 channelRead, CombinedChannelDuplexHandler.java:249 channelRead, AbstractChannelHandlerContext.java:354 fireChannelRead, DefaultChannelPipeline.java:1429 channelRead, DefaultChannelPipeline.java:918 fireChannelRead, AbstractNioByteChannel.java:172 read, AbstractNioChannel.java:445 handle, NioIoHandler.java:388 handle, NioIoHandler.java:596 processSelectedKey, NioIoHandler.java:571 processSelectedKeysOptimized, NioIoHandler.java:512 processSelectedKeys",
         "totalCount": 1,
         "totalSize": 40
     },
@@ -1335,19 +1263,19 @@
         "name": "io.netty.handler.timeout.WriteTimeoutHandler$WriteTimeoutTask",
         "stackTrace": "NettyHttpResponsePipeline.kt:136 handleLastResponseMessage, NettyHttpResponsePipeline.kt:357 respondWithBigBody, NettyHttpResponsePipeline.kt:24 access$respondWithBigBody, NettyHttpResponsePipeline.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, AbstractEventExecutor.java:148 runTask, AbstractEventExecutor.java:141 safeExecute, SingleThreadEventExecutor.java:535 runAllTasks, SingleThreadIoEventLoop.java:201 run, SingleThreadEventExecutor.java:1195 run, ThreadExecutorMap.java:74 run, FastThreadLocalRunnable.java:30 run, Thread.java:1583 run",
         "totalCount": 1,
-        "totalSize": 39
-    },
-    {
-        "name": "kotlinx.coroutines.JobCancellationException",
-        "stackTrace": "NettyApplicationCall.kt:90 finishComplete, NettyApplicationCall.kt:74 finish$ktor_server_netty, NettyApplicationEngine.kt:247 invokeSuspend, NettyApplicationEngine.kt:-1 invoke, NettyApplicationEngine.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode",
-        "totalCount": 1,
-        "totalSize": 39
+        "totalSize": 38
     },
     {
         "name": "io.netty.handler.timeout.WriteTimeoutHandler$WriteTimeoutTask",
         "stackTrace": "NettyHttpResponsePipeline.kt:351 respondWithBigBody, NettyHttpResponsePipeline.kt:296 respondBodyWithFlushOnLimit, NettyHttpResponsePipeline.kt:250 respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:24 access$respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:201 invokeSuspend, NettyHttpResponsePipeline.kt:-1 invoke, NettyHttpResponsePipeline.kt:-1 invoke, Undispatched.kt:20 startCoroutineUndispatched, CoroutineStart.kt:360 invoke, AbstractCoroutine.kt:134 start, Builders.common.kt:53 launch, null:1 launch, NettyHttpResponsePipeline.kt:200 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener, DefaultChannelPromise.java:95 addListener",
         "totalCount": 1,
-        "totalSize": 35
+        "totalSize": 38
+    },
+    {
+        "name": "kotlinx.coroutines.JobCancellationException",
+        "stackTrace": "NettyApplicationCall.kt:90 finishComplete, NettyApplicationCall.kt:74 finish$ktor_server_netty, NettyApplicationEngine.kt:248 invokeSuspend, NettyApplicationEngine.kt:-1 invoke, NettyApplicationEngine.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode",
+        "totalCount": 1,
+        "totalSize": 38
     },
     {
         "name": "kotlin.text.DelimitedRangesSequence",
@@ -1532,12 +1460,6 @@
     {
         "name": "io.ktor.util.DelegatingMutableSet",
         "stackTrace": "CaseInsensitiveMap.kt:45 getEntries, CaseInsensitiveMap.kt:12 entrySet, StringValues.kt:525 <init>, Parameters.kt:93 <init>, Parameters.kt:45 build, RoutingPipelineCall.kt:88 parameters_delegate$lambda$0, Lazy.kt:100 getValue, RoutingPipelineCall.kt:56 getParameters, RoutingNode.kt:244 <init>, RoutingRoot.kt:102 executeResult, RoutingRoot.kt:71 interceptor, RoutingRoot.kt:157 invokeSuspend, RoutingRoot.kt:-1 invoke, RoutingRoot.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationEngine.kt:119 invokeSuspend, BaseApplicationEngine.kt:-1 invoke, BaseApplicationEngine.kt:-1 invoke",
-        "totalCount": 1,
-        "totalSize": 32
-    },
-    {
-        "name": "kotlin.text.DelimitedRangesSequence",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, NettyApplicationCallHandler.kt:169 invokeSuspend",
         "totalCount": 1,
         "totalSize": 32
     },
@@ -1819,7 +1741,7 @@
     },
     {
         "name": "[Ljava.lang.StackTraceElement;",
-        "stackTrace": "NettyApplicationCall.kt:90 finishComplete, NettyApplicationCall.kt:74 finish$ktor_server_netty, NettyApplicationEngine.kt:247 invokeSuspend, NettyApplicationEngine.kt:-1 invoke, NettyApplicationEngine.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode",
+        "stackTrace": "NettyApplicationCall.kt:90 finishComplete, NettyApplicationCall.kt:74 finish$ktor_server_netty, NettyApplicationEngine.kt:248 invokeSuspend, NettyApplicationEngine.kt:-1 invoke, NettyApplicationEngine.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode",
         "totalCount": 2,
         "totalSize": 31
     },
@@ -1828,6 +1750,12 @@
         "stackTrace": "NettyHttpResponsePipeline.kt:333 respondWithBigBody, NettyHttpResponsePipeline.kt:24 access$respondWithBigBody, NettyHttpResponsePipeline.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, AbstractEventExecutor.java:148 runTask, AbstractEventExecutor.java:141 safeExecute, SingleThreadEventExecutor.java:535 runAllTasks, SingleThreadIoEventLoop.java:201 run, SingleThreadEventExecutor.java:1195 run, ThreadExecutorMap.java:74 run, FastThreadLocalRunnable.java:30 run, Thread.java:1583 run",
         "totalCount": 0,
         "totalSize": 27
+    },
+    {
+        "name": "io.netty.handler.codec.http.DefaultHttpContent",
+        "stackTrace": "NettyHttp1ApplicationCall.kt:51 prepareMessage$ktor_server_netty, NettyHttpResponsePipeline.kt:339 respondWithBigBody, NettyHttpResponsePipeline.kt:296 respondBodyWithFlushOnLimit, NettyHttpResponsePipeline.kt:250 respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:24 access$respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:201 invokeSuspend, NettyHttpResponsePipeline.kt:-1 invoke, NettyHttpResponsePipeline.kt:-1 invoke, Undispatched.kt:20 startCoroutineUndispatched, CoroutineStart.kt:360 invoke, AbstractCoroutine.kt:134 start, Builders.common.kt:53 launch, null:1 launch, NettyHttpResponsePipeline.kt:200 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener",
+        "totalCount": 1,
+        "totalSize": 26
     },
     {
         "name": "kotlinx.coroutines.CompletedExceptionally",
@@ -2138,30 +2066,6 @@
     {
         "name": "io.ktor.util.Entry",
         "stackTrace": "CaseInsensitiveMap.kt:47 _get_entries_$lambda$0, DelegatingMutableSet.kt:43 next, StringValues.kt:525 <init>, Parameters.kt:93 <init>, Parameters.kt:45 build, RoutingPipelineCall.kt:88 parameters_delegate$lambda$0, Lazy.kt:100 getValue, RoutingPipelineCall.kt:56 getParameters, RoutingNode.kt:244 <init>, RoutingRoot.kt:102 executeResult, RoutingRoot.kt:71 interceptor, RoutingRoot.kt:157 invokeSuspend, RoutingRoot.kt:-1 invoke, RoutingRoot.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationEngine.kt:119 invokeSuspend, BaseApplicationEngine.kt:-1 invoke, BaseApplicationEngine.kt:-1 invoke",
-        "totalCount": 1,
-        "totalSize": 24
-    },
-    {
-        "name": "[Ljava.lang.String;",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, NettyApplicationCallHandler.kt:169 invokeSuspend",
-        "totalCount": 1,
-        "totalSize": 24
-    },
-    {
-        "name": "java.util.Arrays$ArrayList",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, NettyApplicationCallHandler.kt:169 invokeSuspend",
-        "totalCount": 1,
-        "totalSize": 24
-    },
-    {
-        "name": "java.util.ArrayList",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, NettyApplicationCallHandler.kt:169 invokeSuspend",
-        "totalCount": 1,
-        "totalSize": 24
-    },
-    {
-        "name": "io.netty.handler.codec.http.DefaultHttpContent",
-        "stackTrace": "NettyHttp1ApplicationCall.kt:51 prepareMessage$ktor_server_netty, NettyHttpResponsePipeline.kt:339 respondWithBigBody, NettyHttpResponsePipeline.kt:296 respondBodyWithFlushOnLimit, NettyHttpResponsePipeline.kt:250 respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:24 access$respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:201 invokeSuspend, NettyHttpResponsePipeline.kt:-1 invoke, NettyHttpResponsePipeline.kt:-1 invoke, Undispatched.kt:20 startCoroutineUndispatched, CoroutineStart.kt:360 invoke, AbstractCoroutine.kt:134 start, Builders.common.kt:53 launch, null:1 launch, NettyHttpResponsePipeline.kt:200 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener",
         "totalCount": 1,
         "totalSize": 24
     },
@@ -2862,6 +2766,12 @@
         "totalSize": 23
     },
     {
+        "name": "kotlin.jvm.internal.Ref$ObjectRef",
+        "stackTrace": "NettyHttpResponsePipeline.kt:330 respondWithBigBody, NettyHttpResponsePipeline.kt:296 respondBodyWithFlushOnLimit, NettyHttpResponsePipeline.kt:250 respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:24 access$respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:201 invokeSuspend, NettyHttpResponsePipeline.kt:-1 invoke, NettyHttpResponsePipeline.kt:-1 invoke, Undispatched.kt:20 startCoroutineUndispatched, CoroutineStart.kt:360 invoke, AbstractCoroutine.kt:134 start, Builders.common.kt:53 launch, null:1 launch, NettyHttpResponsePipeline.kt:200 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener, DefaultChannelPromise.java:95 addListener",
+        "totalCount": 1,
+        "totalSize": 17
+    },
+    {
         "name": "kotlin.sequences.SequencesKt___SequencesKt$asIterable$$inlined$Iterable$1",
         "stackTrace": "StaticContentResolution.kt:149 normalisedPath, StaticContentResolution.kt:62 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, StaticContent.kt:878 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend, RoutingNode.kt:-1 invoke, RoutingNode.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute",
         "totalCount": 1,
@@ -2928,12 +2838,6 @@
         "totalSize": 16
     },
     {
-        "name": "kotlin.jvm.internal.Ref$ObjectRef",
-        "stackTrace": "NettyHttpResponsePipeline.kt:330 respondWithBigBody, NettyHttpResponsePipeline.kt:296 respondBodyWithFlushOnLimit, NettyHttpResponsePipeline.kt:250 respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:24 access$respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:201 invokeSuspend, NettyHttpResponsePipeline.kt:-1 invoke, NettyHttpResponsePipeline.kt:-1 invoke, Undispatched.kt:20 startCoroutineUndispatched, CoroutineStart.kt:360 invoke, AbstractCoroutine.kt:134 start, Builders.common.kt:53 launch, null:1 launch, NettyHttpResponsePipeline.kt:200 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener, DefaultChannelPromise.java:95 addListener",
-        "totalCount": 1,
-        "totalSize": 16
-    },
-    {
         "name": "kotlinx.coroutines.internal.ContextScope",
         "stackTrace": "FileChannels.kt:30 readChannel, FileChannels.kt:23 readChannel$default, LocalFileContent.kt:42 readFrom, BaseApplicationResponse.kt:148 respondOutgoingContent$suspendImpl, BaseApplicationResponse.kt:-1 respondOutgoingContent, NettyApplicationResponse.kt:41 respondOutgoingContent$suspendImpl, NettyApplicationResponse.kt:-1 respondOutgoingContent, BaseApplicationResponse.kt:341 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:99 proceedWith, DefaultTransform.kt:31 invokeSuspend, DefaultTransform.kt:-1 invoke, DefaultTransform.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed",
         "totalCount": 1,
@@ -2972,12 +2876,6 @@
     {
         "name": "java.lang.Object",
         "stackTrace": "ByteChannel.kt:33 <init>, ByteChannel.kt:26 <init>, NettyApplicationResponse.kt:72 responseChannel$suspendImpl, NettyApplicationResponse.kt:-1 responseChannel, BaseApplicationResponse.kt:220 respondFromChannel$suspendImpl, BaseApplicationResponse.kt:-1 respondFromChannel, BaseApplicationResponse.kt:152 respondOutgoingContent$suspendImpl, BaseApplicationResponse.kt:-1 respondOutgoingContent, NettyApplicationResponse.kt:41 respondOutgoingContent$suspendImpl, NettyApplicationResponse.kt:-1 respondOutgoingContent, BaseApplicationResponse.kt:341 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:99 proceedWith, DefaultTransform.kt:31 invokeSuspend, DefaultTransform.kt:-1 invoke, DefaultTransform.kt:-1 invoke",
-        "totalCount": 1,
-        "totalSize": 16
-    },
-    {
-        "name": "kotlin.sequences.SequencesKt___SequencesKt$asIterable$$inlined$Iterable$1",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, NettyApplicationCallHandler.kt:169 invokeSuspend",
         "totalCount": 1,
         "totalSize": 16
     },
@@ -3138,12 +3036,6 @@
         "totalSize": 9
     },
     {
-        "name": "io.netty.util.ResourceLeakDetector$TraceRecord",
-        "stackTrace": "NettyHttpResponsePipeline.kt:345 respondWithBigBody, NettyHttpResponsePipeline.kt:24 access$respondWithBigBody, NettyHttpResponsePipeline.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, AbstractEventExecutor.java:148 runTask, AbstractEventExecutor.java:141 safeExecute, SingleThreadEventExecutor.java:535 runAllTasks, SingleThreadIoEventLoop.java:201 run, SingleThreadEventExecutor.java:1195 run, ThreadExecutorMap.java:74 run, FastThreadLocalRunnable.java:30 run, Thread.java:1583 run",
-        "totalCount": 0,
-        "totalSize": 9
-    },
-    {
         "name": "io.netty.util.ResourceLeakDetector$DefaultResourceLeak",
         "stackTrace": "NettyHttpResponsePipeline.kt:333 respondWithBigBody, NettyHttpResponsePipeline.kt:24 access$respondWithBigBody, NettyHttpResponsePipeline.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, AbstractEventExecutor.java:148 runTask, AbstractEventExecutor.java:141 safeExecute, SingleThreadEventExecutor.java:535 runAllTasks, SingleThreadIoEventLoop.java:201 run, SingleThreadEventExecutor.java:1195 run, ThreadExecutorMap.java:74 run, FastThreadLocalRunnable.java:30 run, Thread.java:1583 run",
         "totalCount": 0,
@@ -3153,7 +3045,19 @@
         "name": "io.netty.util.concurrent.ScheduledFutureTask",
         "stackTrace": "NettyHttpResponsePipeline.kt:345 respondWithBigBody, NettyHttpResponsePipeline.kt:296 respondBodyWithFlushOnLimit, NettyHttpResponsePipeline.kt:250 respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:24 access$respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:201 invokeSuspend, NettyHttpResponsePipeline.kt:-1 invoke, NettyHttpResponsePipeline.kt:-1 invoke, Undispatched.kt:20 startCoroutineUndispatched, CoroutineStart.kt:360 invoke, AbstractCoroutine.kt:134 start, Builders.common.kt:53 launch, null:1 launch, NettyHttpResponsePipeline.kt:200 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener, DefaultChannelPromise.java:95 addListener",
         "totalCount": 0,
+        "totalSize": 8
+    },
+    {
+        "name": "io.netty.util.ResourceLeakDetector$TraceRecord",
+        "stackTrace": "NettyHttpResponsePipeline.kt:345 respondWithBigBody, NettyHttpResponsePipeline.kt:24 access$respondWithBigBody, NettyHttpResponsePipeline.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, AbstractEventExecutor.java:148 runTask, AbstractEventExecutor.java:141 safeExecute, SingleThreadEventExecutor.java:535 runAllTasks, SingleThreadIoEventLoop.java:201 run, SingleThreadEventExecutor.java:1195 run, ThreadExecutorMap.java:74 run, FastThreadLocalRunnable.java:30 run, Thread.java:1583 run",
+        "totalCount": 0,
         "totalSize": 7
+    },
+    {
+        "name": "io.netty.channel.DefaultChannelPromise",
+        "stackTrace": "NettyHttpResponsePipeline.kt:345 respondWithBigBody, NettyHttpResponsePipeline.kt:296 respondBodyWithFlushOnLimit, NettyHttpResponsePipeline.kt:250 respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:24 access$respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:201 invokeSuspend, NettyHttpResponsePipeline.kt:-1 invoke, NettyHttpResponsePipeline.kt:-1 invoke, Undispatched.kt:20 startCoroutineUndispatched, CoroutineStart.kt:360 invoke, AbstractCoroutine.kt:134 start, Builders.common.kt:53 launch, null:1 launch, NettyHttpResponsePipeline.kt:200 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener, DefaultChannelPromise.java:95 addListener",
+        "totalCount": 0,
+        "totalSize": 6
     },
     {
         "name": "java.util.concurrent.ConcurrentHashMap$Node",
@@ -3168,16 +3072,10 @@
         "totalSize": 6
     },
     {
-        "name": "io.netty.channel.DefaultChannelPromise",
-        "stackTrace": "NettyHttpResponsePipeline.kt:345 respondWithBigBody, NettyHttpResponsePipeline.kt:296 respondBodyWithFlushOnLimit, NettyHttpResponsePipeline.kt:250 respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:24 access$respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:201 invokeSuspend, NettyHttpResponsePipeline.kt:-1 invoke, NettyHttpResponsePipeline.kt:-1 invoke, Undispatched.kt:20 startCoroutineUndispatched, CoroutineStart.kt:360 invoke, AbstractCoroutine.kt:134 start, Builders.common.kt:53 launch, null:1 launch, NettyHttpResponsePipeline.kt:200 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener, DefaultChannelPromise.java:95 addListener",
-        "totalCount": 0,
-        "totalSize": 5
-    },
-    {
         "name": "io.netty.handler.timeout.WriteTimeoutHandler$WriteTimeoutTask",
         "stackTrace": "NettyHttpResponsePipeline.kt:345 respondWithBigBody, NettyHttpResponsePipeline.kt:296 respondBodyWithFlushOnLimit, NettyHttpResponsePipeline.kt:250 respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:24 access$respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:201 invokeSuspend, NettyHttpResponsePipeline.kt:-1 invoke, NettyHttpResponsePipeline.kt:-1 invoke, Undispatched.kt:20 startCoroutineUndispatched, CoroutineStart.kt:360 invoke, AbstractCoroutine.kt:134 start, Builders.common.kt:53 launch, null:1 launch, NettyHttpResponsePipeline.kt:200 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener, DefaultChannelPromise.java:95 addListener",
         "totalCount": 0,
-        "totalSize": 4
+        "totalSize": 5
     },
     {
         "name": "[Ljava.lang.Object;",
@@ -3192,13 +3090,19 @@
         "totalSize": 4
     },
     {
+        "name": "io.netty.util.concurrent.ScheduledFutureTask",
+        "stackTrace": "NettyHttpResponsePipeline.kt:136 handleLastResponseMessage, NettyHttpResponsePipeline.kt:357 respondWithBigBody, NettyHttpResponsePipeline.kt:296 respondBodyWithFlushOnLimit, NettyHttpResponsePipeline.kt:250 respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:24 access$respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:201 invokeSuspend, NettyHttpResponsePipeline.kt:-1 invoke, NettyHttpResponsePipeline.kt:-1 invoke, Undispatched.kt:20 startCoroutineUndispatched, CoroutineStart.kt:360 invoke, AbstractCoroutine.kt:134 start, Builders.common.kt:53 launch, null:1 launch, NettyHttpResponsePipeline.kt:200 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener",
+        "totalCount": 0,
+        "totalSize": 3
+    },
+    {
         "name": "io.netty.channel.DefaultChannelPromise",
         "stackTrace": "NettyHttpResponsePipeline.kt:136 handleLastResponseMessage, NettyHttpResponsePipeline.kt:357 respondWithBigBody, NettyHttpResponsePipeline.kt:296 respondBodyWithFlushOnLimit, NettyHttpResponsePipeline.kt:250 respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:24 access$respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:201 invokeSuspend, NettyHttpResponsePipeline.kt:-1 invoke, NettyHttpResponsePipeline.kt:-1 invoke, Undispatched.kt:20 startCoroutineUndispatched, CoroutineStart.kt:360 invoke, AbstractCoroutine.kt:134 start, Builders.common.kt:53 launch, null:1 launch, NettyHttpResponsePipeline.kt:200 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener",
         "totalCount": 0,
         "totalSize": 2
     },
     {
-        "name": "io.netty.util.concurrent.ScheduledFutureTask",
+        "name": "io.netty.handler.timeout.WriteTimeoutHandler$WriteTimeoutTask",
         "stackTrace": "NettyHttpResponsePipeline.kt:136 handleLastResponseMessage, NettyHttpResponsePipeline.kt:357 respondWithBigBody, NettyHttpResponsePipeline.kt:296 respondBodyWithFlushOnLimit, NettyHttpResponsePipeline.kt:250 respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:24 access$respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:201 invokeSuspend, NettyHttpResponsePipeline.kt:-1 invoke, NettyHttpResponsePipeline.kt:-1 invoke, Undispatched.kt:20 startCoroutineUndispatched, CoroutineStart.kt:360 invoke, AbstractCoroutine.kt:134 start, Builders.common.kt:53 launch, null:1 launch, NettyHttpResponsePipeline.kt:200 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener",
         "totalCount": 0,
         "totalSize": 2
@@ -3216,20 +3120,56 @@
         "totalSize": 2
     },
     {
+        "name": "kotlinx.coroutines.JobCancellationException",
+        "stackTrace": "NettyApplicationCall.kt:90 finishComplete, NettyApplicationCall.kt:85 finishSuspend, NettyApplicationCall.kt:16 access$finishSuspend, NettyApplicationCall.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, AbstractEventExecutor.java:148 runTask, AbstractEventExecutor.java:141 safeExecute, SingleThreadEventExecutor.java:535 runAllTasks, SingleThreadIoEventLoop.java:201 run, SingleThreadEventExecutor.java:1195 run, ThreadExecutorMap.java:74 run, FastThreadLocalRunnable.java:30 run, Thread.java:1583 run",
+        "totalCount": 0,
+        "totalSize": 2
+    },
+    {
+        "name": "io.ktor.server.netty.NettyApplicationCall$finishSuspend$1",
+        "stackTrace": "NettyApplicationCall.kt:-1 finishSuspend, NettyApplicationCall.kt:78 finish$ktor_server_netty, NettyApplicationEngine.kt:248 invokeSuspend, NettyApplicationEngine.kt:-1 invoke, NettyApplicationEngine.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode",
+        "totalCount": 0,
+        "totalSize": 2
+    },
+    {
         "name": "kotlinx.coroutines.internal.DispatchedContinuation",
-        "stackTrace": "NettyApplicationCall.kt:83 finishSuspend, NettyApplicationCall.kt:78 finish$ktor_server_netty, NettyApplicationEngine.kt:247 invokeSuspend, NettyApplicationEngine.kt:-1 invoke, NettyApplicationEngine.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode",
+        "stackTrace": "NettyApplicationCall.kt:83 finishSuspend, NettyApplicationCall.kt:78 finish$ktor_server_netty, NettyApplicationEngine.kt:248 invokeSuspend, NettyApplicationEngine.kt:-1 invoke, NettyApplicationEngine.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode",
         "totalCount": 0,
         "totalSize": 2
     },
     {
         "name": "kotlinx.coroutines.CancellableContinuationImpl",
-        "stackTrace": "NettyApplicationCall.kt:83 finishSuspend, NettyApplicationCall.kt:78 finish$ktor_server_netty, NettyApplicationEngine.kt:247 invokeSuspend, NettyApplicationEngine.kt:-1 invoke, NettyApplicationEngine.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode",
+        "stackTrace": "NettyApplicationCall.kt:83 finishSuspend, NettyApplicationCall.kt:78 finish$ktor_server_netty, NettyApplicationEngine.kt:248 invokeSuspend, NettyApplicationEngine.kt:-1 invoke, NettyApplicationEngine.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode",
         "totalCount": 0,
         "totalSize": 2
     },
     {
-        "name": "io.netty.handler.timeout.WriteTimeoutHandler$WriteTimeoutTask",
-        "stackTrace": "NettyHttpResponsePipeline.kt:136 handleLastResponseMessage, NettyHttpResponsePipeline.kt:357 respondWithBigBody, NettyHttpResponsePipeline.kt:296 respondBodyWithFlushOnLimit, NettyHttpResponsePipeline.kt:250 respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:24 access$respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:201 invokeSuspend, NettyHttpResponsePipeline.kt:-1 invoke, NettyHttpResponsePipeline.kt:-1 invoke, Undispatched.kt:20 startCoroutineUndispatched, CoroutineStart.kt:360 invoke, AbstractCoroutine.kt:134 start, Builders.common.kt:53 launch, null:1 launch, NettyHttpResponsePipeline.kt:200 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener",
+        "name": "java.util.concurrent.ConcurrentHashMap$Node",
+        "stackTrace": "NettyHttpResponsePipeline.kt:333 respondWithBigBody, NettyHttpResponsePipeline.kt:296 respondBodyWithFlushOnLimit, NettyHttpResponsePipeline.kt:250 respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:24 access$respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:201 invokeSuspend, NettyHttpResponsePipeline.kt:-1 invoke, NettyHttpResponsePipeline.kt:-1 invoke, Undispatched.kt:20 startCoroutineUndispatched, CoroutineStart.kt:360 invoke, AbstractCoroutine.kt:134 start, Builders.common.kt:53 launch, null:1 launch, NettyHttpResponsePipeline.kt:200 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener, DefaultChannelPromise.java:95 addListener",
+        "totalCount": 0,
+        "totalSize": 1
+    },
+    {
+        "name": "io.netty.util.ResourceLeakDetector$TraceRecord",
+        "stackTrace": "NettyHttpResponsePipeline.kt:54 flushIfNeeded$ktor_server_netty, NettyHttpResponsePipeline.kt:169 scheduleFlush$lambda$0, AbstractEventExecutor.java:148 runTask, AbstractEventExecutor.java:141 safeExecute, SingleThreadEventExecutor.java:535 runAllTasks, SingleThreadIoEventLoop.java:201 run, SingleThreadEventExecutor.java:1195 run, ThreadExecutorMap.java:74 run, FastThreadLocalRunnable.java:30 run, Thread.java:1583 run",
+        "totalCount": 0,
+        "totalSize": 1
+    },
+    {
+        "name": "io.netty.util.ResourceLeakDetector$TraceRecord",
+        "stackTrace": "NettyHttpResponsePipeline.kt:333 respondWithBigBody, NettyHttpResponsePipeline.kt:296 respondBodyWithFlushOnLimit, NettyHttpResponsePipeline.kt:250 respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:24 access$respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:201 invokeSuspend, NettyHttpResponsePipeline.kt:-1 invoke, NettyHttpResponsePipeline.kt:-1 invoke, Undispatched.kt:20 startCoroutineUndispatched, CoroutineStart.kt:360 invoke, AbstractCoroutine.kt:134 start, Builders.common.kt:53 launch, null:1 launch, NettyHttpResponsePipeline.kt:200 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener, DefaultChannelPromise.java:95 addListener",
+        "totalCount": 0,
+        "totalSize": 1
+    },
+    {
+        "name": "io.netty.util.ResourceLeakDetector$TraceRecord",
+        "stackTrace": "NettyHttpResponsePipeline.kt:345 respondWithBigBody, NettyHttpResponsePipeline.kt:296 respondBodyWithFlushOnLimit, NettyHttpResponsePipeline.kt:250 respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:24 access$respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:201 invokeSuspend, NettyHttpResponsePipeline.kt:-1 invoke, NettyHttpResponsePipeline.kt:-1 invoke, Undispatched.kt:20 startCoroutineUndispatched, CoroutineStart.kt:360 invoke, AbstractCoroutine.kt:134 start, Builders.common.kt:53 launch, null:1 launch, NettyHttpResponsePipeline.kt:200 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener, DefaultChannelPromise.java:95 addListener",
+        "totalCount": 0,
+        "totalSize": 1
+    },
+    {
+        "name": "io.netty.util.ResourceLeakDetector$DefaultResourceLeak",
+        "stackTrace": "NettyHttpResponsePipeline.kt:333 respondWithBigBody, NettyHttpResponsePipeline.kt:296 respondBodyWithFlushOnLimit, NettyHttpResponsePipeline.kt:250 respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:24 access$respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:201 invokeSuspend, NettyHttpResponsePipeline.kt:-1 invoke, NettyHttpResponsePipeline.kt:-1 invoke, Undispatched.kt:20 startCoroutineUndispatched, CoroutineStart.kt:360 invoke, AbstractCoroutine.kt:134 start, Builders.common.kt:53 launch, null:1 launch, NettyHttpResponsePipeline.kt:200 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener, DefaultChannelPromise.java:95 addListener",
         "totalCount": 0,
         "totalSize": 1
     },
@@ -3242,12 +3182,6 @@
     {
         "name": "io.netty.util.concurrent.DefaultFutureListeners",
         "stackTrace": "NettyHttpResponsePipeline.kt:146 handleLastResponseMessage, NettyHttpResponsePipeline.kt:357 respondWithBigBody, NettyHttpResponsePipeline.kt:296 respondBodyWithFlushOnLimit, NettyHttpResponsePipeline.kt:250 respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:24 access$respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:201 invokeSuspend, NettyHttpResponsePipeline.kt:-1 invoke, NettyHttpResponsePipeline.kt:-1 invoke, Undispatched.kt:20 startCoroutineUndispatched, CoroutineStart.kt:360 invoke, AbstractCoroutine.kt:134 start, Builders.common.kt:53 launch, null:1 launch, NettyHttpResponsePipeline.kt:200 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener",
-        "totalCount": 0,
-        "totalSize": 1
-    },
-    {
-        "name": "io.netty.util.ResourceLeakDetector$TraceRecord",
-        "stackTrace": "NettyHttpResponsePipeline.kt:54 flushIfNeeded$ktor_server_netty, NettyHttpResponsePipeline.kt:169 scheduleFlush$lambda$0, AbstractEventExecutor.java:148 runTask, AbstractEventExecutor.java:141 safeExecute, SingleThreadEventExecutor.java:535 runAllTasks, SingleThreadIoEventLoop.java:201 run, SingleThreadEventExecutor.java:1195 run, ThreadExecutorMap.java:74 run, FastThreadLocalRunnable.java:30 run, Thread.java:1583 run",
         "totalCount": 0,
         "totalSize": 1
     },
@@ -3283,91 +3217,31 @@
     },
     {
         "name": "[Ljava.lang.StackTraceElement;",
-        "stackTrace": "NettyApplicationCall.kt:90 finishComplete, NettyApplicationCall.kt:85 finishSuspend, NettyApplicationCall.kt:16 access$finishSuspend, NettyApplicationCall.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:829 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 0,
-        "totalSize": 1
-    },
-    {
-        "name": "kotlinx.coroutines.JobCancellationException",
-        "stackTrace": "NettyApplicationCall.kt:90 finishComplete, NettyApplicationCall.kt:85 finishSuspend, NettyApplicationCall.kt:16 access$finishSuspend, NettyApplicationCall.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:829 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 0,
-        "totalSize": 1
-    },
-    {
-        "name": "io.ktor.server.netty.NettyApplicationCall$finishSuspend$1",
-        "stackTrace": "NettyApplicationCall.kt:-1 finishSuspend, NettyApplicationCall.kt:78 finish$ktor_server_netty, NettyApplicationEngine.kt:247 invokeSuspend, NettyApplicationEngine.kt:-1 invoke, NettyApplicationEngine.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode",
+        "stackTrace": "NettyApplicationCall.kt:90 finishComplete, NettyApplicationCall.kt:85 finishSuspend, NettyApplicationCall.kt:16 access$finishSuspend, NettyApplicationCall.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, AbstractEventExecutor.java:148 runTask, AbstractEventExecutor.java:141 safeExecute, SingleThreadEventExecutor.java:535 runAllTasks, SingleThreadIoEventLoop.java:201 run, SingleThreadEventExecutor.java:1195 run, ThreadExecutorMap.java:74 run, FastThreadLocalRunnable.java:30 run, Thread.java:1583 run",
         "totalCount": 0,
         "totalSize": 1
     },
     {
         "name": "kotlinx.coroutines.ChildContinuation",
-        "stackTrace": "NettyApplicationCall.kt:83 finishSuspend, NettyApplicationCall.kt:78 finish$ktor_server_netty, NettyApplicationEngine.kt:247 invokeSuspend, NettyApplicationEngine.kt:-1 invoke, NettyApplicationEngine.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode",
+        "stackTrace": "NettyApplicationCall.kt:83 finishSuspend, NettyApplicationCall.kt:78 finish$ktor_server_netty, NettyApplicationEngine.kt:248 invokeSuspend, NettyApplicationEngine.kt:-1 invoke, NettyApplicationEngine.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode",
         "totalCount": 0,
         "totalSize": 1
     },
     {
         "name": "kotlinx.coroutines.ResumeOnCompletion",
-        "stackTrace": "NettyApplicationCall.kt:83 finishSuspend, NettyApplicationCall.kt:78 finish$ktor_server_netty, NettyApplicationEngine.kt:247 invokeSuspend, NettyApplicationEngine.kt:-1 invoke, NettyApplicationEngine.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode",
+        "stackTrace": "NettyApplicationCall.kt:83 finishSuspend, NettyApplicationCall.kt:78 finish$ktor_server_netty, NettyApplicationEngine.kt:248 invokeSuspend, NettyApplicationEngine.kt:-1 invoke, NettyApplicationEngine.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode",
         "totalCount": 0,
         "totalSize": 1
     },
     {
         "name": "kotlinx.coroutines.DisposeOnCancel",
-        "stackTrace": "NettyApplicationCall.kt:83 finishSuspend, NettyApplicationCall.kt:78 finish$ktor_server_netty, NettyApplicationEngine.kt:247 invokeSuspend, NettyApplicationEngine.kt:-1 invoke, NettyApplicationEngine.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode",
+        "stackTrace": "NettyApplicationCall.kt:83 finishSuspend, NettyApplicationCall.kt:78 finish$ktor_server_netty, NettyApplicationEngine.kt:248 invokeSuspend, NettyApplicationEngine.kt:-1 invoke, NettyApplicationEngine.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode",
         "totalCount": 0,
         "totalSize": 1
     },
     {
-        "name": "java.util.concurrent.ConcurrentHashMap$Node",
-        "stackTrace": "NettyHttpResponsePipeline.kt:333 respondWithBigBody, NettyHttpResponsePipeline.kt:296 respondBodyWithFlushOnLimit, NettyHttpResponsePipeline.kt:250 respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:24 access$respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:201 invokeSuspend, NettyHttpResponsePipeline.kt:-1 invoke, NettyHttpResponsePipeline.kt:-1 invoke, Undispatched.kt:20 startCoroutineUndispatched, CoroutineStart.kt:360 invoke, AbstractCoroutine.kt:134 start, Builders.common.kt:53 launch, null:1 launch, NettyHttpResponsePipeline.kt:200 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener, DefaultChannelPromise.java:95 addListener",
-        "totalCount": 0,
-        "totalSize": 0
-    },
-    {
-        "name": "java.util.concurrent.ConcurrentHashMap$Node",
-        "stackTrace": "NettyHttpResponsePipeline.kt:220 respondWithHeader, NettyHttpResponsePipeline.kt:183 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener, DefaultChannelPromise.java:95 addListener, NettyHttpResponsePipeline.kt:83 setOnResponseReadyHandler$lambda$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:37 access$200, DefaultPromise.java:517 run, AbstractEventExecutor.java:148 runTask, AbstractEventExecutor.java:141 safeExecute, SingleThreadEventExecutor.java:535 runAllTasks, SingleThreadIoEventLoop.java:201 run, SingleThreadEventExecutor.java:1195 run, ThreadExecutorMap.java:74 run",
-        "totalCount": 0,
-        "totalSize": 0
-    },
-    {
-        "name": "io.netty.util.ResourceLeakDetector$TraceRecord",
-        "stackTrace": "NettyHttpResponsePipeline.kt:333 respondWithBigBody, NettyHttpResponsePipeline.kt:296 respondBodyWithFlushOnLimit, NettyHttpResponsePipeline.kt:250 respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:24 access$respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:201 invokeSuspend, NettyHttpResponsePipeline.kt:-1 invoke, NettyHttpResponsePipeline.kt:-1 invoke, Undispatched.kt:20 startCoroutineUndispatched, CoroutineStart.kt:360 invoke, AbstractCoroutine.kt:134 start, Builders.common.kt:53 launch, null:1 launch, NettyHttpResponsePipeline.kt:200 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener, DefaultChannelPromise.java:95 addListener",
-        "totalCount": 0,
-        "totalSize": 0
-    },
-    {
-        "name": "io.netty.util.ResourceLeakDetector$TraceRecord",
-        "stackTrace": "NettyHttpResponsePipeline.kt:345 respondWithBigBody, NettyHttpResponsePipeline.kt:296 respondBodyWithFlushOnLimit, NettyHttpResponsePipeline.kt:250 respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:24 access$respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:201 invokeSuspend, NettyHttpResponsePipeline.kt:-1 invoke, NettyHttpResponsePipeline.kt:-1 invoke, Undispatched.kt:20 startCoroutineUndispatched, CoroutineStart.kt:360 invoke, AbstractCoroutine.kt:134 start, Builders.common.kt:53 launch, null:1 launch, NettyHttpResponsePipeline.kt:200 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener, DefaultChannelPromise.java:95 addListener",
-        "totalCount": 0,
-        "totalSize": 0
-    },
-    {
-        "name": "io.netty.util.ResourceLeakDetector$TraceRecord",
-        "stackTrace": "NettyHttpResponsePipeline.kt:220 respondWithHeader, NettyHttpResponsePipeline.kt:183 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener, DefaultChannelPromise.java:95 addListener, NettyHttpResponsePipeline.kt:83 setOnResponseReadyHandler$lambda$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:37 access$200, DefaultPromise.java:517 run, AbstractEventExecutor.java:148 runTask, AbstractEventExecutor.java:141 safeExecute, SingleThreadEventExecutor.java:535 runAllTasks, SingleThreadIoEventLoop.java:201 run, SingleThreadEventExecutor.java:1195 run, ThreadExecutorMap.java:74 run",
-        "totalCount": 0,
-        "totalSize": 0
-    },
-    {
-        "name": "io.netty.util.ResourceLeakDetector$DefaultResourceLeak",
-        "stackTrace": "NettyHttpResponsePipeline.kt:333 respondWithBigBody, NettyHttpResponsePipeline.kt:296 respondBodyWithFlushOnLimit, NettyHttpResponsePipeline.kt:250 respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:24 access$respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:201 invokeSuspend, NettyHttpResponsePipeline.kt:-1 invoke, NettyHttpResponsePipeline.kt:-1 invoke, Undispatched.kt:20 startCoroutineUndispatched, CoroutineStart.kt:360 invoke, AbstractCoroutine.kt:134 start, Builders.common.kt:53 launch, null:1 launch, NettyHttpResponsePipeline.kt:200 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener, DefaultChannelPromise.java:95 addListener",
-        "totalCount": 0,
-        "totalSize": 0
-    },
-    {
-        "name": "io.netty.util.ResourceLeakDetector$DefaultResourceLeak",
-        "stackTrace": "NettyHttpResponsePipeline.kt:220 respondWithHeader, NettyHttpResponsePipeline.kt:183 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener, DefaultChannelPromise.java:95 addListener, NettyHttpResponsePipeline.kt:83 setOnResponseReadyHandler$lambda$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:37 access$200, DefaultPromise.java:517 run, AbstractEventExecutor.java:148 runTask, AbstractEventExecutor.java:141 safeExecute, SingleThreadEventExecutor.java:535 runAllTasks, SingleThreadIoEventLoop.java:201 run, SingleThreadEventExecutor.java:1195 run, ThreadExecutorMap.java:74 run",
-        "totalCount": 0,
-        "totalSize": 0
-    },
-    {
         "name": "io.netty.buffer.SimpleLeakAwareByteBuf",
         "stackTrace": "NettyHttpResponsePipeline.kt:333 respondWithBigBody, NettyHttpResponsePipeline.kt:296 respondBodyWithFlushOnLimit, NettyHttpResponsePipeline.kt:250 respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:24 access$respondWithBodyAndTrailerMessage, NettyHttpResponsePipeline.kt:201 invokeSuspend, NettyHttpResponsePipeline.kt:-1 invoke, NettyHttpResponsePipeline.kt:-1 invoke, Undispatched.kt:20 startCoroutineUndispatched, CoroutineStart.kt:360 invoke, AbstractCoroutine.kt:134 start, Builders.common.kt:53 launch, null:1 launch, NettyHttpResponsePipeline.kt:200 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener, DefaultChannelPromise.java:95 addListener",
-        "totalCount": 0,
-        "totalSize": 0
-    },
-    {
-        "name": "io.netty.buffer.SimpleLeakAwareByteBuf",
-        "stackTrace": "NettyHttpResponsePipeline.kt:220 respondWithHeader, NettyHttpResponsePipeline.kt:183 handleRequestMessage, NettyHttpResponsePipeline.kt:69 processElement$lambda$0, NettyHttpResponsePipeline.kt:92 setOnResponseReadyHandler$lambda$0$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:506 notifyListeners, DefaultPromise.java:199 addListener, DefaultChannelPromise.java:95 addListener, NettyHttpResponsePipeline.kt:83 setOnResponseReadyHandler$lambda$0, DefaultPromise.java:604 notifyListener0, DefaultPromise.java:571 notifyListenersNow, DefaultPromise.java:37 access$200, DefaultPromise.java:517 run, AbstractEventExecutor.java:148 runTask, AbstractEventExecutor.java:141 safeExecute, SingleThreadEventExecutor.java:535 runAllTasks, SingleThreadIoEventLoop.java:201 run, SingleThreadEventExecutor.java:1195 run, ThreadExecutorMap.java:74 run",
         "totalCount": 0,
         "totalSize": 0
     }
