@@ -15,7 +15,7 @@
         "name": "java.nio.HeapByteBuffer",
         "stackTrace": "ServletWriter.kt:86 loop, ServletWriter.kt:38 access$loop, ServletWriter.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 26,
-        "totalSize": 1456
+        "totalSize": 1454
     },
     {
         "name": "io.ktor.utils.io.ByteChannel$flush$1",
@@ -27,31 +27,31 @@
         "name": "kotlinx.coroutines.internal.DispatchedContinuation",
         "stackTrace": "ServletWriter.kt:102 awaitReadySuspend, ServletWriter.kt:96 awaitReady, ServletWriter.kt:38 access$awaitReady, ServletWriter.kt:87 loop, ServletWriter.kt:38 access$loop, ServletWriter.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 26,
-        "totalSize": 1247
+        "totalSize": 1246
     },
     {
         "name": "kotlinx.coroutines.CancellableContinuationImpl",
         "stackTrace": "ServletWriter.kt:102 awaitReadySuspend, ServletWriter.kt:96 awaitReady, ServletWriter.kt:38 access$awaitReady, ServletWriter.kt:87 loop, ServletWriter.kt:38 access$loop, ServletWriter.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 26,
-        "totalSize": 1247
+        "totalSize": 1246
     },
     {
         "name": "io.ktor.server.servlet.jakarta.ServletWriter$awaitReadySuspend$1",
         "stackTrace": "ServletWriter.kt:-1 awaitReadySuspend, ServletWriter.kt:96 awaitReady, ServletWriter.kt:38 access$awaitReady, ServletWriter.kt:87 loop, ServletWriter.kt:38 access$loop, ServletWriter.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 26,
-        "totalSize": 1040
-    },
-    {
-        "name": "java.util.concurrent.atomic.AtomicBoolean",
-        "stackTrace": "ServletWriter.kt:86 loop, ServletWriter.kt:38 access$loop, ServletWriter.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 54,
-        "totalSize": 864
+        "totalSize": 1039
     },
     {
         "name": "java.lang.String",
         "stackTrace": "StaticContentResolution.kt:69 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, StaticContent.kt:878 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend, RoutingNode.kt:-1 invoke, RoutingNode.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend",
         "totalCount": 36,
         "totalSize": 864
+    },
+    {
+        "name": "java.util.concurrent.atomic.AtomicBoolean",
+        "stackTrace": "ServletWriter.kt:86 loop, ServletWriter.kt:38 access$loop, ServletWriter.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
+        "totalCount": 54,
+        "totalSize": 862
     },
     {
         "name": "kotlinx.coroutines.ChildContinuation",
@@ -63,7 +63,7 @@
         "name": "kotlinx.coroutines.scheduling.TaskImpl",
         "stackTrace": "ServletWriter.kt:113 onWritePossible, Response.java:796 onWritePossible, CoyoteAdapter.java:168 asyncDispatch, AbstractProcessor.java:243 dispatch, AbstractProcessorLight.java:57 process, AbstractProtocol.java:903 process, NioEndpoint.java:1774 doRun, SocketProcessorBase.java:52 run, ThreadPoolExecutor.java:973 runWorker, ThreadPoolExecutor.java:491 run, TaskThread.java:63 run, Thread.java:1583 run",
         "totalCount": 26,
-        "totalSize": 826
+        "totalSize": 827
     },
     {
         "name": "java.lang.StringBuilder",
@@ -75,25 +75,25 @@
         "name": "org.apache.tomcat.util.net.NioEndpoint$PollerEvent",
         "stackTrace": "ServletWriter.kt:86 loop, ServletWriter.kt:38 access$loop, ServletWriter.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 26,
-        "totalSize": 624
+        "totalSize": 623
     },
     {
         "name": "kotlinx.coroutines.internal.LimitedDispatcher$Worker",
         "stackTrace": "ServletWriter.kt:113 onWritePossible, Response.java:796 onWritePossible, CoyoteAdapter.java:168 asyncDispatch, AbstractProcessor.java:243 dispatch, AbstractProcessorLight.java:57 process, AbstractProtocol.java:903 process, NioEndpoint.java:1774 doRun, SocketProcessorBase.java:52 run, ThreadPoolExecutor.java:973 runWorker, ThreadPoolExecutor.java:491 run, TaskThread.java:63 run, Thread.java:1583 run",
         "totalCount": 26,
-        "totalSize": 620
+        "totalSize": 621
     },
     {
         "name": "java.util.concurrent.atomic.AtomicBoolean",
         "stackTrace": "ServletWriter.kt:95 awaitReady, ServletWriter.kt:38 access$awaitReady, ServletWriter.kt:85 loop, ServletWriter.kt:38 access$loop, ServletWriter.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 27,
-        "totalSize": 432
+        "totalSize": 431
     },
     {
         "name": "kotlin.jvm.internal.Ref$IntRef",
         "stackTrace": "ServletWriter.kt:139 loop, ServletWriter.kt:38 access$loop, ServletWriter.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 27,
-        "totalSize": 432
+        "totalSize": 431
     },
     {
         "name": "java.util.concurrent.atomic.AtomicBoolean",
@@ -105,7 +105,7 @@
         "name": "[B",
         "stackTrace": "ServletWriter.kt:72 loop, ServletWriter.kt:51 run, ServletWriter.kt:21 invokeSuspend, ServletWriter.kt:-1 invoke, ServletWriter.kt:-1 invoke, ByteReadChannelOperations.kt:348 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 11,
-        "totalSize": 369
+        "totalSize": 370
     },
     {
         "name": "io.ktor.server.routing.RoutingResolveContext$handleRoute$1",
@@ -138,12 +138,6 @@
         "totalSize": 224
     },
     {
-        "name": "java.util.Arrays$ArrayItr",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 9,
-        "totalSize": 216
-    },
-    {
         "name": "java.util.concurrent.atomic.AtomicBoolean",
         "stackTrace": "ServletWriter.kt:46 <init>, ServletWriter.kt:-1 <init>, ServletWriter.kt:19 servletWriter-moChb0s, AsyncServlet.kt:116 createResponseJob, ServletApplicationResponse.kt:44 responseJob$lambda$0, LazyJVM.kt:86 getValue, ServletApplicationResponse.kt:48 responseChannel$lambda$0, LazyJVM.kt:86 getValue, ServletApplicationResponse.kt:51 responseChannel, BaseApplicationResponse.kt:220 respondFromChannel$suspendImpl, BaseApplicationResponse.kt:-1 respondFromChannel, BaseApplicationResponse.kt:152 respondOutgoingContent$suspendImpl, BaseApplicationResponse.kt:-1 respondOutgoingContent, BaseApplicationResponse.kt:341 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:99 proceedWith",
         "totalCount": 13,
@@ -157,13 +151,7 @@
     },
     {
         "name": "[I",
-        "stackTrace": "DateJvm.kt:20 GMTDate, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend, RoutingNode.kt:-1 invoke, RoutingNode.kt:-1 invoke",
-        "totalCount": 2,
-        "totalSize": 176
-    },
-    {
-        "name": "[I",
-        "stackTrace": "DateJvm.kt:35 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend",
+        "stackTrace": "DateJvm.kt:111 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend",
         "totalCount": 2,
         "totalSize": 176
     },
@@ -182,12 +170,6 @@
     {
         "name": "kotlin.coroutines.CombinedContext",
         "stackTrace": "ByteWriteChannelOperations.kt:185 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 6,
-        "totalSize": 144
-    },
-    {
-        "name": "kotlin.ranges.IntRange",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 6,
         "totalSize": 144
     },
@@ -229,13 +211,7 @@
     },
     {
         "name": "java.util.GregorianCalendar",
-        "stackTrace": "DateJvm.kt:20 GMTDate, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend, RoutingNode.kt:-1 invoke, RoutingNode.kt:-1 invoke",
-        "totalCount": 1,
-        "totalSize": 112
-    },
-    {
-        "name": "java.util.GregorianCalendar",
-        "stackTrace": "DateJvm.kt:35 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend",
+        "stackTrace": "DateJvm.kt:111 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend",
         "totalCount": 1,
         "totalSize": 112
     },
@@ -324,27 +300,15 @@
         "totalSize": 96
     },
     {
-        "name": "sun.util.calendar.Gregorian$Date",
-        "stackTrace": "DateJvm.kt:20 GMTDate, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend, RoutingNode.kt:-1 invoke, RoutingNode.kt:-1 invoke",
-        "totalCount": 1,
-        "totalSize": 96
-    },
-    {
-        "name": "sun.util.calendar.Gregorian$Date",
-        "stackTrace": "DateJvm.kt:35 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend",
-        "totalCount": 1,
-        "totalSize": 96
-    },
-    {
-        "name": "kotlin.Pair",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 4,
-        "totalSize": 96
-    },
-    {
         "name": "kotlin.coroutines.CombinedContext",
         "stackTrace": "BaseApplicationResponse.kt:222 respondFromChannel$suspendImpl, BaseApplicationResponse.kt:-1 respondFromChannel, BaseApplicationResponse.kt:152 respondOutgoingContent$suspendImpl, BaseApplicationResponse.kt:-1 respondOutgoingContent, BaseApplicationResponse.kt:341 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:99 proceedWith, DefaultTransform.kt:31 invokeSuspend, DefaultTransform.kt:-1 invoke, DefaultTransform.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, PipelineCall.kt:132 respond$suspendImpl",
         "totalCount": 4,
+        "totalSize": 96
+    },
+    {
+        "name": "sun.util.calendar.Gregorian$Date",
+        "stackTrace": "DateJvm.kt:111 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend",
+        "totalCount": 1,
         "totalSize": 96
     },
     {
@@ -489,18 +453,6 @@
         "name": "io.ktor.utils.io.ByteReadChannelOperationsKt$copyTo$2",
         "stackTrace": "ByteReadChannelOperations.kt:-1 copyTo, BaseApplicationResponse.kt:223 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedContinuation.kt:375 resumeCancellableWith, Cancellable.kt:26 startCoroutineCancellable, Builders.common.kt:170 withContext, null:1 withContext, BaseApplicationResponse.kt:222 respondFromChannel$suspendImpl, BaseApplicationResponse.kt:-1 respondFromChannel, BaseApplicationResponse.kt:152 respondOutgoingContent$suspendImpl, BaseApplicationResponse.kt:-1 respondOutgoingContent, BaseApplicationResponse.kt:341 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:99 proceedWith, DefaultTransform.kt:31 invokeSuspend, DefaultTransform.kt:-1 invoke",
         "totalCount": 1,
-        "totalSize": 72
-    },
-    {
-        "name": "[B",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 3,
-        "totalSize": 72
-    },
-    {
-        "name": "java.lang.String",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 3,
         "totalSize": 72
     },
     {
@@ -727,7 +679,7 @@
     },
     {
         "name": "io.ktor.utils.io.ByteChannel$awaitContent$1",
-        "stackTrace": "ByteChannel.kt:-1 awaitContent, ByteReadChannel.kt:35 awaitContent$default, ServletWriter.kt:136 loop, ServletWriter.kt:51 run, ServletWriter.kt:21 invokeSuspend, ServletWriter.kt:-1 invoke, ServletWriter.kt:-1 invoke, ByteReadChannelOperations.kt:348 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
+        "stackTrace": "ByteChannel.kt:-1 awaitContent, ByteReadChannel.kt:35 awaitContent$default, ByteReadChannelOperations.kt:408 discard, ByteReadChannelOperations.kt:404 discard$default, DefaultEnginePipeline.kt:54 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 1,
         "totalSize": 56
     },
@@ -768,36 +720,6 @@
         "totalSize": 56
     },
     {
-        "name": "java.util.Calendar$Builder",
-        "stackTrace": "DateJvm.kt:20 GMTDate, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend, RoutingNode.kt:-1 invoke, RoutingNode.kt:-1 invoke",
-        "totalCount": 1,
-        "totalSize": 56
-    },
-    {
-        "name": "java.util.Calendar$Builder",
-        "stackTrace": "DateJvm.kt:35 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend",
-        "totalCount": 1,
-        "totalSize": 56
-    },
-    {
-        "name": "io.ktor.util.date.GMTDate",
-        "stackTrace": "DateJvm.kt:65 toDate, DateJvm.kt:20 GMTDate, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend, RoutingNode.kt:-1 invoke",
-        "totalCount": 1,
-        "totalSize": 56
-    },
-    {
-        "name": "io.ktor.util.date.GMTDate",
-        "stackTrace": "DateJvm.kt:65 toDate, DateJvm.kt:43 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke",
-        "totalCount": 1,
-        "totalSize": 56
-    },
-    {
-        "name": "[Ljava.lang.Object;",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 1,
-        "totalSize": 56
-    },
-    {
         "name": "[Ljava.lang.Object;",
         "stackTrace": "RoutingResolveTrace.kt:154 push, RoutingResolveTrace.kt:79 begin, RoutingResolveContext.kt:147 handleRoute, RoutingResolveContext.kt:92 resolve, RoutingRoot.kt:69 interceptor, RoutingRoot.kt:157 invokeSuspend, RoutingRoot.kt:-1 invoke, RoutingRoot.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationEngine.kt:119 invokeSuspend, BaseApplicationEngine.kt:-1 invoke, BaseApplicationEngine.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend",
         "totalCount": 1,
@@ -824,6 +746,24 @@
     {
         "name": "[Ljava.lang.Object;",
         "stackTrace": "RoutingResolveTrace.kt:35 append, RoutingResolveTrace.kt:69 register, RoutingResolveTrace.kt:92 finish, RoutingResolveContext.kt:175 handleRoute, RoutingResolveContext.kt:167 handleRoute, RoutingResolveContext.kt:92 resolve, RoutingRoot.kt:69 interceptor, RoutingRoot.kt:157 invokeSuspend, RoutingRoot.kt:-1 invoke, RoutingRoot.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationEngine.kt:119 invokeSuspend, BaseApplicationEngine.kt:-1 invoke, BaseApplicationEngine.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils",
+        "totalCount": 1,
+        "totalSize": 56
+    },
+    {
+        "name": "io.ktor.util.date.GMTDate",
+        "stackTrace": "DateJvm.kt:82 timestampToGMTDate, DateJvm.kt:32 GMTDate, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend, RoutingNode.kt:-1 invoke",
+        "totalCount": 1,
+        "totalSize": 56
+    },
+    {
+        "name": "io.ktor.util.date.GMTDate",
+        "stackTrace": "DateJvm.kt:141 toDate, DateJvm.kt:119 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke",
+        "totalCount": 1,
+        "totalSize": 56
+    },
+    {
+        "name": "java.util.Calendar$Builder",
+        "stackTrace": "DateJvm.kt:111 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend",
         "totalCount": 1,
         "totalSize": 56
     },
@@ -895,7 +835,7 @@
     },
     {
         "name": "io.ktor.utils.io.ByteChannel$awaitContent$1",
-        "stackTrace": "ByteChannel.kt:-1 awaitContent, ByteReadChannel.kt:35 awaitContent$default, ByteReadChannelOperations.kt:408 discard, ByteReadChannelOperations.kt:404 discard$default, DefaultEnginePipeline.kt:54 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
+        "stackTrace": "ByteChannel.kt:-1 awaitContent, ByteReadChannel.kt:35 awaitContent$default, ServletWriter.kt:136 loop, ServletWriter.kt:51 run, ServletWriter.kt:21 invokeSuspend, ServletWriter.kt:-1 invoke, ServletWriter.kt:-1 invoke, ByteReadChannelOperations.kt:348 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 1,
         "totalSize": 55
     },
@@ -991,13 +931,13 @@
     },
     {
         "name": "kotlinx.coroutines.internal.DispatchedContinuation",
-        "stackTrace": "ByteChannel.kt:285 awaitContent, ByteReadChannel.kt:35 awaitContent$default, ServletWriter.kt:136 loop, ServletWriter.kt:51 run, ServletWriter.kt:21 invokeSuspend, ServletWriter.kt:-1 invoke, ServletWriter.kt:-1 invoke, ByteReadChannelOperations.kt:348 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
+        "stackTrace": "ByteChannel.kt:285 awaitContent, ByteReadChannel.kt:35 awaitContent$default, ByteReadChannelOperations.kt:408 discard, ByteReadChannelOperations.kt:404 discard$default, DefaultEnginePipeline.kt:54 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 1,
         "totalSize": 48
     },
     {
         "name": "kotlinx.coroutines.CancellableContinuationImpl",
-        "stackTrace": "ByteChannel.kt:285 awaitContent, ByteReadChannel.kt:35 awaitContent$default, ServletWriter.kt:136 loop, ServletWriter.kt:51 run, ServletWriter.kt:21 invokeSuspend, ServletWriter.kt:-1 invoke, ServletWriter.kt:-1 invoke, ByteReadChannelOperations.kt:348 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
+        "stackTrace": "ByteChannel.kt:285 awaitContent, ByteReadChannel.kt:35 awaitContent$default, ByteReadChannelOperations.kt:408 discard, ByteReadChannelOperations.kt:404 discard$default, DefaultEnginePipeline.kt:54 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 1,
         "totalSize": 48
     },
@@ -1249,13 +1189,13 @@
     },
     {
         "name": "kotlinx.coroutines.internal.DispatchedContinuation",
-        "stackTrace": "ByteChannel.kt:285 awaitContent, ByteReadChannel.kt:35 awaitContent$default, ByteReadChannelOperations.kt:408 discard, ByteReadChannelOperations.kt:404 discard$default, DefaultEnginePipeline.kt:54 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
+        "stackTrace": "ByteChannel.kt:285 awaitContent, ByteReadChannel.kt:35 awaitContent$default, ServletWriter.kt:136 loop, ServletWriter.kt:51 run, ServletWriter.kt:21 invokeSuspend, ServletWriter.kt:-1 invoke, ServletWriter.kt:-1 invoke, ByteReadChannelOperations.kt:348 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 1,
         "totalSize": 47
     },
     {
         "name": "kotlinx.coroutines.CancellableContinuationImpl",
-        "stackTrace": "ByteChannel.kt:285 awaitContent, ByteReadChannel.kt:35 awaitContent$default, ByteReadChannelOperations.kt:408 discard, ByteReadChannelOperations.kt:404 discard$default, DefaultEnginePipeline.kt:54 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
+        "stackTrace": "ByteChannel.kt:285 awaitContent, ByteReadChannel.kt:35 awaitContent$default, ServletWriter.kt:136 loop, ServletWriter.kt:51 run, ServletWriter.kt:21 invokeSuspend, ServletWriter.kt:-1 invoke, ServletWriter.kt:-1 invoke, ByteReadChannelOperations.kt:348 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 1,
         "totalSize": 47
     },
@@ -1398,24 +1338,6 @@
         "totalSize": 40
     },
     {
-        "name": "[Z",
-        "stackTrace": "DateJvm.kt:20 GMTDate, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend, RoutingNode.kt:-1 invoke, RoutingNode.kt:-1 invoke",
-        "totalCount": 1,
-        "totalSize": 40
-    },
-    {
-        "name": "[Z",
-        "stackTrace": "DateJvm.kt:35 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend",
-        "totalCount": 1,
-        "totalSize": 40
-    },
-    {
-        "name": "kotlin.text.DelimitedRangesSequence$iterator$1",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 1,
-        "totalSize": 40
-    },
-    {
         "name": "io.ktor.server.servlet.jakarta.KtorServlet$asyncService$1$invokeSuspend$$inlined$execute$1",
         "stackTrace": "KtorServlet.kt:170 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 1,
@@ -1448,6 +1370,12 @@
     {
         "name": "io.ktor.server.servlet.jakarta.ServletReader$run$1",
         "stackTrace": "ServletReader.kt:-1 run, ServletReader.kt:24 invokeSuspend, ServletReader.kt:-1 invoke, ServletReader.kt:-1 invoke, ByteWriteChannelOperations.kt:185 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
+        "totalCount": 1,
+        "totalSize": 40
+    },
+    {
+        "name": "[Z",
+        "stackTrace": "DateJvm.kt:111 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend",
         "totalCount": 1,
         "totalSize": 40
     },
@@ -1723,13 +1651,13 @@
     },
     {
         "name": "kotlinx.coroutines.ChildContinuation",
-        "stackTrace": "ByteChannel.kt:291 awaitContent, ByteReadChannel.kt:35 awaitContent$default, ServletWriter.kt:136 loop, ServletWriter.kt:51 run, ServletWriter.kt:21 invokeSuspend, ServletWriter.kt:-1 invoke, ServletWriter.kt:-1 invoke, ByteReadChannelOperations.kt:348 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
+        "stackTrace": "ByteChannel.kt:291 awaitContent, ByteReadChannel.kt:35 awaitContent$default, ByteReadChannelOperations.kt:408 discard, ByteReadChannelOperations.kt:404 discard$default, DefaultEnginePipeline.kt:54 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 1,
         "totalSize": 32
     },
     {
         "name": "kotlinx.coroutines.scheduling.TaskImpl",
-        "stackTrace": "ByteChannel.kt:236 resume, ByteChannel.kt:242 resume, ByteChannel.kt:389 flushWriteBuffer, ByteChannel.kt:96 flush, CloseHookByteWriteChannel.kt:-1 flush, ByteReadChannelOperations.kt:209 copyTo, BaseApplicationResponse.kt:223 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedContinuation.kt:375 resumeCancellableWith, Cancellable.kt:26 startCoroutineCancellable, Builders.common.kt:170 withContext, null:1 withContext, BaseApplicationResponse.kt:222 respondFromChannel$suspendImpl, BaseApplicationResponse.kt:-1 respondFromChannel, BaseApplicationResponse.kt:152 respondOutgoingContent$suspendImpl, BaseApplicationResponse.kt:-1 respondOutgoingContent, BaseApplicationResponse.kt:341 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn",
+        "stackTrace": "ByteChannel.kt:239 resume, ByteChannel.kt:242 resume, ByteChannel.kt:177 closeSlot, ByteChannel.kt:133 flushAndClose, ByteWriteChannelOperations.kt:196 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 1,
         "totalSize": 32
     },
@@ -1916,12 +1844,6 @@
     {
         "name": "[Lkotlin.coroutines.Continuation;",
         "stackTrace": "SuspendFunctionGun.kt:76 <init>, PipelineContext.kt:69 pipelineContextFor, Pipeline.kt:296 createContext, Pipeline.kt:92 execute, PipelineCall.kt:132 respond$suspendImpl, PipelineCall.kt:-1 respond, RoutingPipelineCall.kt:23 respond, RoutingNode.kt:252 respond, PreCompressed.kt:362 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend, RoutingNode.kt:-1 invoke",
-        "totalCount": 1,
-        "totalSize": 32
-    },
-    {
-        "name": "kotlin.text.DelimitedRangesSequence",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 1,
         "totalSize": 32
     },
@@ -2227,13 +2149,13 @@
     },
     {
         "name": "kotlinx.coroutines.ChildContinuation",
-        "stackTrace": "ByteChannel.kt:291 awaitContent, ByteReadChannel.kt:35 awaitContent$default, ByteReadChannelOperations.kt:408 discard, ByteReadChannelOperations.kt:404 discard$default, DefaultEnginePipeline.kt:54 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
+        "stackTrace": "ByteChannel.kt:291 awaitContent, ByteReadChannel.kt:35 awaitContent$default, ServletWriter.kt:136 loop, ServletWriter.kt:51 run, ServletWriter.kt:21 invokeSuspend, ServletWriter.kt:-1 invoke, ServletWriter.kt:-1 invoke, ByteReadChannelOperations.kt:348 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 1,
         "totalSize": 31
     },
     {
         "name": "kotlinx.coroutines.scheduling.TaskImpl",
-        "stackTrace": "ByteChannel.kt:239 resume, ByteChannel.kt:242 resume, ByteChannel.kt:177 closeSlot, ByteChannel.kt:133 flushAndClose, ByteWriteChannelOperations.kt:196 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
+        "stackTrace": "ByteChannel.kt:236 resume, ByteChannel.kt:242 resume, ByteChannel.kt:389 flushWriteBuffer, ByteChannel.kt:96 flush, CloseHookByteWriteChannel.kt:-1 flush, ByteReadChannelOperations.kt:209 copyTo, BaseApplicationResponse.kt:223 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedContinuation.kt:375 resumeCancellableWith, Cancellable.kt:26 startCoroutineCancellable, Builders.common.kt:170 withContext, null:1 withContext, BaseApplicationResponse.kt:222 respondFromChannel$suspendImpl, BaseApplicationResponse.kt:-1 respondFromChannel, BaseApplicationResponse.kt:152 respondOutgoingContent$suspendImpl, BaseApplicationResponse.kt:-1 respondOutgoingContent, BaseApplicationResponse.kt:341 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn",
         "totalCount": 1,
         "totalSize": 31
     },
@@ -2377,19 +2299,13 @@
     },
     {
         "name": "io.ktor.utils.io.ByteChannel$Slot$Read",
-        "stackTrace": "ByteChannel.kt:74 awaitContent, ByteReadChannel.kt:35 awaitContent$default, ServletWriter.kt:136 loop, ServletWriter.kt:51 run, ServletWriter.kt:21 invokeSuspend, ServletWriter.kt:-1 invoke, ServletWriter.kt:-1 invoke, ByteReadChannelOperations.kt:348 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 1,
-        "totalSize": 24
-    },
-    {
-        "name": "io.ktor.utils.io.ByteChannel$Slot$Read",
         "stackTrace": "ByteChannel.kt:74 awaitContent, ByteReadChannel.kt:35 awaitContent$default, ByteReadChannelOperations.kt:408 discard, ByteReadChannelOperations.kt:404 discard$default, DefaultEnginePipeline.kt:54 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 1,
         "totalSize": 24
     },
     {
         "name": "kotlinx.coroutines.internal.LimitedDispatcher$Worker",
-        "stackTrace": "ByteChannel.kt:236 resume, ByteChannel.kt:242 resume, ByteChannel.kt:389 flushWriteBuffer, ByteChannel.kt:96 flush, CloseHookByteWriteChannel.kt:-1 flush, ByteReadChannelOperations.kt:209 copyTo, BaseApplicationResponse.kt:223 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedContinuation.kt:375 resumeCancellableWith, Cancellable.kt:26 startCoroutineCancellable, Builders.common.kt:170 withContext, null:1 withContext, BaseApplicationResponse.kt:222 respondFromChannel$suspendImpl, BaseApplicationResponse.kt:-1 respondFromChannel, BaseApplicationResponse.kt:152 respondOutgoingContent$suspendImpl, BaseApplicationResponse.kt:-1 respondOutgoingContent, BaseApplicationResponse.kt:341 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn",
+        "stackTrace": "ByteChannel.kt:239 resume, ByteChannel.kt:242 resume, ByteChannel.kt:177 closeSlot, ByteChannel.kt:133 flushAndClose, ByteWriteChannelOperations.kt:196 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 1,
         "totalSize": 24
     },
@@ -2538,6 +2454,12 @@
         "totalSize": 24
     },
     {
+        "name": "kotlinx.coroutines.NodeList",
+        "stackTrace": "ByteWriteChannelOperations.kt:183 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
+        "totalCount": 1,
+        "totalSize": 24
+    },
+    {
         "name": "io.ktor.utils.io.WriterJob",
         "stackTrace": "ByteWriteChannelOperations.kt:206 writer, ByteWriteChannelOperations.kt:174 writer, FileChannels.kt:30 readChannel, FileChannels.kt:23 readChannel$default, LocalFileContent.kt:42 readFrom, BaseApplicationResponse.kt:148 respondOutgoingContent$suspendImpl, BaseApplicationResponse.kt:-1 respondOutgoingContent, BaseApplicationResponse.kt:341 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:99 proceedWith, DefaultTransform.kt:31 invokeSuspend, DefaultTransform.kt:-1 invoke, DefaultTransform.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed",
         "totalCount": 1,
@@ -2600,6 +2522,12 @@
     {
         "name": "java.lang.Long",
         "stackTrace": "ByteReadChannelOperations.kt:416 discard, BaseApplicationResponse.kt:227 respondFromChannel$suspendImpl, BaseApplicationResponse.kt:-1 respondFromChannel, BaseApplicationResponse.kt:152 respondOutgoingContent$suspendImpl, BaseApplicationResponse.kt:-1 respondOutgoingContent, BaseApplicationResponse.kt:341 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:99 proceedWith, DefaultTransform.kt:31 invokeSuspend, DefaultTransform.kt:-1 invoke, DefaultTransform.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute",
+        "totalCount": 1,
+        "totalSize": 24
+    },
+    {
+        "name": "java.lang.Long",
+        "stackTrace": "ByteReadChannelOperations.kt:416 discard, ByteReadChannelOperations.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 1,
         "totalSize": 24
     },
@@ -2672,24 +2600,6 @@
     {
         "name": "[Lkotlin.coroutines.Continuation;",
         "stackTrace": "SuspendFunctionGun.kt:76 <init>, PipelineContext.kt:69 pipelineContextFor, Pipeline.kt:296 createContext, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, RoutingRoot.kt:212 executeResult, RoutingRoot.kt:71 interceptor, RoutingRoot.kt:157 invokeSuspend, RoutingRoot.kt:-1 invoke, RoutingRoot.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationEngine.kt:119 invokeSuspend, BaseApplicationEngine.kt:-1 invoke, BaseApplicationEngine.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn",
-        "totalCount": 1,
-        "totalSize": 24
-    },
-    {
-        "name": "[Ljava.lang.String;",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 1,
-        "totalSize": 24
-    },
-    {
-        "name": "java.util.Arrays$ArrayList",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 1,
-        "totalSize": 24
-    },
-    {
-        "name": "java.util.ArrayList",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 1,
         "totalSize": 24
     },
@@ -3444,20 +3354,14 @@
         "totalSize": 24
     },
     {
+        "name": "io.ktor.utils.io.ByteChannel$Slot$Read",
+        "stackTrace": "ByteChannel.kt:74 awaitContent, ByteReadChannel.kt:35 awaitContent$default, ServletWriter.kt:136 loop, ServletWriter.kt:51 run, ServletWriter.kt:21 invokeSuspend, ServletWriter.kt:-1 invoke, ServletWriter.kt:-1 invoke, ByteReadChannelOperations.kt:348 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
+        "totalCount": 1,
+        "totalSize": 23
+    },
+    {
         "name": "kotlinx.coroutines.internal.LimitedDispatcher$Worker",
-        "stackTrace": "ByteChannel.kt:239 resume, ByteChannel.kt:242 resume, ByteChannel.kt:177 closeSlot, ByteChannel.kt:133 flushAndClose, ByteWriteChannelOperations.kt:196 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 1,
-        "totalSize": 23
-    },
-    {
-        "name": "kotlinx.coroutines.NodeList",
-        "stackTrace": "ByteWriteChannelOperations.kt:183 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 1,
-        "totalSize": 23
-    },
-    {
-        "name": "java.lang.Long",
-        "stackTrace": "ByteReadChannelOperations.kt:416 discard, ByteReadChannelOperations.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
+        "stackTrace": "ByteChannel.kt:236 resume, ByteChannel.kt:242 resume, ByteChannel.kt:389 flushWriteBuffer, ByteChannel.kt:96 flush, CloseHookByteWriteChannel.kt:-1 flush, ByteReadChannelOperations.kt:209 copyTo, BaseApplicationResponse.kt:223 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedContinuation.kt:375 resumeCancellableWith, Cancellable.kt:26 startCoroutineCancellable, Builders.common.kt:170 withContext, null:1 withContext, BaseApplicationResponse.kt:222 respondFromChannel$suspendImpl, BaseApplicationResponse.kt:-1 respondFromChannel, BaseApplicationResponse.kt:152 respondOutgoingContent$suspendImpl, BaseApplicationResponse.kt:-1 respondOutgoingContent, BaseApplicationResponse.kt:341 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn",
         "totalCount": 1,
         "totalSize": 23
     },
@@ -3471,7 +3375,7 @@
         "name": "java.text.DateFormatSymbols",
         "stackTrace": "ServletWriter.kt:72 loop, ServletWriter.kt:51 run, ServletWriter.kt:21 invokeSuspend, ServletWriter.kt:-1 invoke, ServletWriter.kt:-1 invoke, ByteReadChannelOperations.kt:348 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 0,
-        "totalSize": 17
+        "totalSize": 18
     },
     {
         "name": "java.util.concurrent.atomic.AtomicReferenceArray",
@@ -3482,12 +3386,6 @@
     {
         "name": "java.util.concurrent.atomic.AtomicBoolean",
         "stackTrace": "ServletWriter.kt:95 awaitReady, ServletWriter.kt:71 loop, ServletWriter.kt:51 run, ServletWriter.kt:21 invokeSuspend, ServletWriter.kt:-1 invoke, ServletWriter.kt:-1 invoke, ByteReadChannelOperations.kt:348 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 1,
-        "totalSize": 16
-    },
-    {
-        "name": "java.util.concurrent.atomic.AtomicBoolean",
-        "stackTrace": "ServletWriter.kt:95 awaitReady, ServletWriter.kt:38 access$awaitReady, ServletWriter.kt:87 loop, ServletWriter.kt:38 access$loop, ServletWriter.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 1,
         "totalSize": 16
     },
@@ -3576,12 +3474,6 @@
         "totalSize": 16
     },
     {
-        "name": "kotlinx.coroutines.internal.Removed",
-        "stackTrace": "ByteChannel.kt:236 resume, ByteChannel.kt:242 resume, ByteChannel.kt:389 flushWriteBuffer, ByteChannel.kt:96 flush, CloseHookByteWriteChannel.kt:-1 flush, ByteReadChannelOperations.kt:209 copyTo, BaseApplicationResponse.kt:223 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedContinuation.kt:375 resumeCancellableWith, Cancellable.kt:26 startCoroutineCancellable, Builders.common.kt:170 withContext, null:1 withContext, BaseApplicationResponse.kt:222 respondFromChannel$suspendImpl, BaseApplicationResponse.kt:-1 respondFromChannel, BaseApplicationResponse.kt:152 respondOutgoingContent$suspendImpl, BaseApplicationResponse.kt:-1 respondOutgoingContent, BaseApplicationResponse.kt:341 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn",
-        "totalCount": 1,
-        "totalSize": 16
-    },
-    {
         "name": "kotlinx.coroutines.internal.ContextScope",
         "stackTrace": "FileChannels.kt:30 readChannel, FileChannels.kt:23 readChannel$default, LocalFileContent.kt:42 readFrom, BaseApplicationResponse.kt:148 respondOutgoingContent$suspendImpl, BaseApplicationResponse.kt:-1 respondOutgoingContent, BaseApplicationResponse.kt:341 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:99 proceedWith, DefaultTransform.kt:31 invokeSuspend, DefaultTransform.kt:-1 invoke, DefaultTransform.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute",
         "totalCount": 1,
@@ -3626,12 +3518,6 @@
     {
         "name": "kotlinx.coroutines.internal.Removed",
         "stackTrace": "ByteReadChannelOperations.kt:349 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 1,
-        "totalSize": 16
-    },
-    {
-        "name": "kotlin.sequences.SequencesKt___SequencesKt$asIterable$$inlined$Iterable$1",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 1,
         "totalSize": 16
     },
@@ -3864,10 +3750,22 @@
         "totalSize": 16
     },
     {
+        "name": "java.util.concurrent.atomic.AtomicBoolean",
+        "stackTrace": "ServletWriter.kt:95 awaitReady, ServletWriter.kt:38 access$awaitReady, ServletWriter.kt:87 loop, ServletWriter.kt:38 access$loop, ServletWriter.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
+        "totalCount": 1,
+        "totalSize": 15
+    },
+    {
+        "name": "kotlinx.coroutines.internal.Removed",
+        "stackTrace": "ByteChannel.kt:236 resume, ByteChannel.kt:242 resume, ByteChannel.kt:389 flushWriteBuffer, ByteChannel.kt:96 flush, CloseHookByteWriteChannel.kt:-1 flush, ByteReadChannelOperations.kt:209 copyTo, BaseApplicationResponse.kt:223 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedContinuation.kt:375 resumeCancellableWith, Cancellable.kt:26 startCoroutineCancellable, Builders.common.kt:170 withContext, null:1 withContext, BaseApplicationResponse.kt:222 respondFromChannel$suspendImpl, BaseApplicationResponse.kt:-1 respondFromChannel, BaseApplicationResponse.kt:152 respondOutgoingContent$suspendImpl, BaseApplicationResponse.kt:-1 respondOutgoingContent, BaseApplicationResponse.kt:341 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn",
+        "totalCount": 1,
+        "totalSize": 15
+    },
+    {
         "name": "java.lang.StringBuffer",
         "stackTrace": "ServletWriter.kt:72 loop, ServletWriter.kt:51 run, ServletWriter.kt:21 invokeSuspend, ServletWriter.kt:-1 invoke, ServletWriter.kt:-1 invoke, ByteReadChannelOperations.kt:348 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 0,
-        "totalSize": 4
+        "totalSize": 5
     },
     {
         "name": "java.util.Date",
@@ -3888,70 +3786,64 @@
         "totalSize": 2
     },
     {
-        "name": "java.lang.Long",
-        "stackTrace": "ByteReadChannelOperations.kt:416 discard, ByteReadChannelOperations.kt:404 discard$default, DefaultEnginePipeline.kt:54 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 0,
-        "totalSize": 1
-    },
-    {
-        "name": "java.util.concurrent.atomic.AtomicBoolean",
-        "stackTrace": "ServletWriter.kt:95 awaitReady, ServletWriter.kt:38 access$awaitReady, ServletWriter.kt:85 loop, ServletWriter.kt:51 run, ServletWriter.kt:21 invokeSuspend, ServletWriter.kt:-1 invoke, ServletWriter.kt:-1 invoke, ByteReadChannelOperations.kt:348 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 0,
-        "totalSize": 0
-    },
-    {
         "name": "java.util.concurrent.atomic.AtomicBoolean",
         "stackTrace": "ServletWriter.kt:86 loop, ServletWriter.kt:51 run, ServletWriter.kt:21 invokeSuspend, ServletWriter.kt:-1 invoke, ServletWriter.kt:-1 invoke, ByteReadChannelOperations.kt:348 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 0,
-        "totalSize": 0
-    },
-    {
-        "name": "java.util.concurrent.atomic.AtomicBoolean",
-        "stackTrace": "ServletWriter.kt:95 awaitReady, ServletWriter.kt:38 access$awaitReady, ServletWriter.kt:87 loop, ServletWriter.kt:51 run, ServletWriter.kt:21 invokeSuspend, ServletWriter.kt:-1 invoke, ServletWriter.kt:-1 invoke, ByteReadChannelOperations.kt:348 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 0,
-        "totalSize": 0
-    },
-    {
-        "name": "kotlin.jvm.internal.Ref$IntRef",
-        "stackTrace": "ServletWriter.kt:139 loop, ServletWriter.kt:51 run, ServletWriter.kt:21 invokeSuspend, ServletWriter.kt:-1 invoke, ServletWriter.kt:-1 invoke, ByteReadChannelOperations.kt:348 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 0,
-        "totalSize": 0
+        "totalSize": 2
     },
     {
         "name": "java.nio.HeapByteBuffer",
         "stackTrace": "ServletWriter.kt:86 loop, ServletWriter.kt:51 run, ServletWriter.kt:21 invokeSuspend, ServletWriter.kt:-1 invoke, ServletWriter.kt:-1 invoke, ByteReadChannelOperations.kt:348 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 0,
-        "totalSize": 0
-    },
-    {
-        "name": "org.apache.tomcat.util.net.NioEndpoint$PollerEvent",
-        "stackTrace": "ServletWriter.kt:86 loop, ServletWriter.kt:51 run, ServletWriter.kt:21 invokeSuspend, ServletWriter.kt:-1 invoke, ServletWriter.kt:-1 invoke, ByteReadChannelOperations.kt:348 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 0,
-        "totalSize": 0
-    },
-    {
-        "name": "io.ktor.server.servlet.jakarta.ServletWriter$awaitReadySuspend$1",
-        "stackTrace": "ServletWriter.kt:-1 awaitReadySuspend, ServletWriter.kt:96 awaitReady, ServletWriter.kt:38 access$awaitReady, ServletWriter.kt:87 loop, ServletWriter.kt:51 run, ServletWriter.kt:21 invokeSuspend, ServletWriter.kt:-1 invoke, ServletWriter.kt:-1 invoke, ByteReadChannelOperations.kt:348 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 0,
-        "totalSize": 0
+        "totalSize": 2
     },
     {
         "name": "kotlinx.coroutines.internal.DispatchedContinuation",
         "stackTrace": "ServletWriter.kt:102 awaitReadySuspend, ServletWriter.kt:96 awaitReady, ServletWriter.kt:38 access$awaitReady, ServletWriter.kt:87 loop, ServletWriter.kt:51 run, ServletWriter.kt:21 invokeSuspend, ServletWriter.kt:-1 invoke, ServletWriter.kt:-1 invoke, ByteReadChannelOperations.kt:348 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 0,
-        "totalSize": 0
+        "totalSize": 2
     },
     {
         "name": "kotlinx.coroutines.CancellableContinuationImpl",
         "stackTrace": "ServletWriter.kt:102 awaitReadySuspend, ServletWriter.kt:96 awaitReady, ServletWriter.kt:38 access$awaitReady, ServletWriter.kt:87 loop, ServletWriter.kt:51 run, ServletWriter.kt:21 invokeSuspend, ServletWriter.kt:-1 invoke, ServletWriter.kt:-1 invoke, ByteReadChannelOperations.kt:348 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 0,
-        "totalSize": 0
+        "totalSize": 2
+    },
+    {
+        "name": "java.util.concurrent.atomic.AtomicBoolean",
+        "stackTrace": "ServletWriter.kt:95 awaitReady, ServletWriter.kt:38 access$awaitReady, ServletWriter.kt:85 loop, ServletWriter.kt:51 run, ServletWriter.kt:21 invokeSuspend, ServletWriter.kt:-1 invoke, ServletWriter.kt:-1 invoke, ByteReadChannelOperations.kt:348 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
+        "totalCount": 0,
+        "totalSize": 1
+    },
+    {
+        "name": "java.util.concurrent.atomic.AtomicBoolean",
+        "stackTrace": "ServletWriter.kt:95 awaitReady, ServletWriter.kt:38 access$awaitReady, ServletWriter.kt:87 loop, ServletWriter.kt:51 run, ServletWriter.kt:21 invokeSuspend, ServletWriter.kt:-1 invoke, ServletWriter.kt:-1 invoke, ByteReadChannelOperations.kt:348 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
+        "totalCount": 0,
+        "totalSize": 1
+    },
+    {
+        "name": "kotlin.jvm.internal.Ref$IntRef",
+        "stackTrace": "ServletWriter.kt:139 loop, ServletWriter.kt:51 run, ServletWriter.kt:21 invokeSuspend, ServletWriter.kt:-1 invoke, ServletWriter.kt:-1 invoke, ByteReadChannelOperations.kt:348 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
+        "totalCount": 0,
+        "totalSize": 1
+    },
+    {
+        "name": "org.apache.tomcat.util.net.NioEndpoint$PollerEvent",
+        "stackTrace": "ServletWriter.kt:86 loop, ServletWriter.kt:51 run, ServletWriter.kt:21 invokeSuspend, ServletWriter.kt:-1 invoke, ServletWriter.kt:-1 invoke, ByteReadChannelOperations.kt:348 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
+        "totalCount": 0,
+        "totalSize": 1
+    },
+    {
+        "name": "io.ktor.server.servlet.jakarta.ServletWriter$awaitReadySuspend$1",
+        "stackTrace": "ServletWriter.kt:-1 awaitReadySuspend, ServletWriter.kt:96 awaitReady, ServletWriter.kt:38 access$awaitReady, ServletWriter.kt:87 loop, ServletWriter.kt:51 run, ServletWriter.kt:21 invokeSuspend, ServletWriter.kt:-1 invoke, ServletWriter.kt:-1 invoke, ByteReadChannelOperations.kt:348 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
+        "totalCount": 0,
+        "totalSize": 1
     },
     {
         "name": "kotlinx.coroutines.ChildContinuation",
         "stackTrace": "ServletWriter.kt:102 awaitReadySuspend, ServletWriter.kt:96 awaitReady, ServletWriter.kt:38 access$awaitReady, ServletWriter.kt:87 loop, ServletWriter.kt:51 run, ServletWriter.kt:21 invokeSuspend, ServletWriter.kt:-1 invoke, ServletWriter.kt:-1 invoke, ByteReadChannelOperations.kt:348 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 0,
-        "totalSize": 0
+        "totalSize": 1
     },
     {
         "name": "org.apache.tomcat.util.buf.ByteChunk",
@@ -3978,8 +3870,20 @@
         "totalSize": 0
     },
     {
+        "name": "kotlinx.coroutines.internal.Removed",
+        "stackTrace": "ByteChannel.kt:236 resume, ByteChannel.kt:242 resume, ByteChannel.kt:323 awaitContent, ByteReadChannel.kt:35 awaitContent$default, ServletWriter.kt:136 loop, ServletWriter.kt:51 run, ServletWriter.kt:21 invokeSuspend, ServletWriter.kt:-1 invoke, ServletWriter.kt:-1 invoke, ByteReadChannelOperations.kt:348 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
+        "totalCount": 0,
+        "totalSize": 0
+    },
+    {
         "name": "kotlinx.coroutines.NodeList",
         "stackTrace": "ByteWriteChannelOperations.kt:199 writer, ServletReader.kt:23 servletReader-Q2Q30fc, AsyncServlet.kt:91 inputStreamChannel_delegate$lambda$0, LazyJVM.kt:86 getValue, AsyncServlet.kt:88 getInputStreamChannel, AsyncServlet.kt:97 getEngineReceiveChannel, BaseApplicationRequest.kt:33 receiveChannel, DefaultEnginePipeline.kt:54 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
+        "totalCount": 0,
+        "totalSize": 0
+    },
+    {
+        "name": "java.lang.Long",
+        "stackTrace": "ByteReadChannelOperations.kt:416 discard, ByteReadChannelOperations.kt:404 discard$default, DefaultEnginePipeline.kt:54 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 0,
         "totalSize": 0
     }

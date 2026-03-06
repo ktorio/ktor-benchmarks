@@ -72,18 +72,6 @@
         "totalSize": 264
     },
     {
-        "name": "java.util.Arrays$ArrayItr",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, ServerPipeline.kt:88 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 9,
-        "totalSize": 216
-    },
-    {
-        "name": "java.util.Arrays$ArrayItr",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, CIOApplicationEngine.kt:267 invokeSuspend",
-        "totalCount": 9,
-        "totalSize": 216
-    },
-    {
         "name": "kotlin.coroutines.CombinedContext",
         "stackTrace": "ServerPipeline.kt:134 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 9,
@@ -97,13 +85,7 @@
     },
     {
         "name": "[I",
-        "stackTrace": "DateJvm.kt:20 GMTDate, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend, RoutingNode.kt:-1 invoke, RoutingNode.kt:-1 invoke",
-        "totalCount": 2,
-        "totalSize": 176
-    },
-    {
-        "name": "[I",
-        "stackTrace": "DateJvm.kt:35 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend",
+        "stackTrace": "DateJvm.kt:111 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend",
         "totalCount": 2,
         "totalSize": 176
     },
@@ -122,18 +104,6 @@
     {
         "name": "java.lang.Long",
         "stackTrace": "ByteReadChannelOperations.kt:750 internalReadLineTo, ByteReadChannelOperations.kt:670 readLineStrictTo, ByteReadChannelOperations.kt:663 readLineStrictTo$default, HttpParser.kt:122 parseHeaders, HttpParser.kt:60 parseRequest, HttpParser.kt:-1 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 6,
-        "totalSize": 144
-    },
-    {
-        "name": "kotlin.ranges.IntRange",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, ServerPipeline.kt:88 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 6,
-        "totalSize": 144
-    },
-    {
-        "name": "kotlin.ranges.IntRange",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, CIOApplicationEngine.kt:267 invokeSuspend",
         "totalCount": 6,
         "totalSize": 144
     },
@@ -193,13 +163,7 @@
     },
     {
         "name": "java.util.GregorianCalendar",
-        "stackTrace": "DateJvm.kt:20 GMTDate, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend, RoutingNode.kt:-1 invoke, RoutingNode.kt:-1 invoke",
-        "totalCount": 1,
-        "totalSize": 112
-    },
-    {
-        "name": "java.util.GregorianCalendar",
-        "stackTrace": "DateJvm.kt:35 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend",
+        "stackTrace": "DateJvm.kt:111 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend",
         "totalCount": 1,
         "totalSize": 112
     },
@@ -282,18 +246,6 @@
         "totalSize": 96
     },
     {
-        "name": "kotlin.Pair",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, ServerPipeline.kt:88 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 4,
-        "totalSize": 96
-    },
-    {
-        "name": "kotlin.Pair",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, CIOApplicationEngine.kt:267 invokeSuspend",
-        "totalCount": 4,
-        "totalSize": 96
-    },
-    {
         "name": "io.ktor.server.routing.RoutingResolveContext$handleRoute$1",
         "stackTrace": "RoutingResolveContext.kt:-1 handleRoute, RoutingResolveContext.kt:92 resolve, RoutingRoot.kt:69 interceptor, RoutingRoot.kt:157 invokeSuspend, RoutingRoot.kt:-1 invoke, RoutingRoot.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationEngine.kt:119 invokeSuspend, BaseApplicationEngine.kt:-1 invoke, BaseApplicationEngine.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke",
         "totalCount": 1,
@@ -308,18 +260,6 @@
     {
         "name": "io.ktor.server.routing.RoutingResolveContext$handleRoute$1",
         "stackTrace": "RoutingResolveContext.kt:-1 handleRoute, RoutingResolveContext.kt:167 handleRoute, RoutingResolveContext.kt:167 handleRoute, RoutingResolveContext.kt:167 handleRoute, RoutingResolveContext.kt:92 resolve, RoutingRoot.kt:69 interceptor, RoutingRoot.kt:157 invokeSuspend, RoutingRoot.kt:-1 invoke, RoutingRoot.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationEngine.kt:119 invokeSuspend, BaseApplicationEngine.kt:-1 invoke, BaseApplicationEngine.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute",
-        "totalCount": 1,
-        "totalSize": 96
-    },
-    {
-        "name": "sun.util.calendar.Gregorian$Date",
-        "stackTrace": "DateJvm.kt:20 GMTDate, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend, RoutingNode.kt:-1 invoke, RoutingNode.kt:-1 invoke",
-        "totalCount": 1,
-        "totalSize": 96
-    },
-    {
-        "name": "sun.util.calendar.Gregorian$Date",
-        "stackTrace": "DateJvm.kt:35 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend",
         "totalCount": 1,
         "totalSize": 96
     },
@@ -339,6 +279,12 @@
         "name": "kotlin.coroutines.CombinedContext",
         "stackTrace": "CIOApplicationEngine.kt:183 handleRequest, CIOApplicationEngine.kt:27 access$handleRequest, CIOApplicationEngine.kt:135 invokeSuspend, CIOApplicationEngine.kt:-1 invoke, CIOApplicationEngine.kt:-1 invoke, ServerPipeline.kt:145 invokeSuspend, ServerPipeline.kt:-1 invoke, ServerPipeline.kt:-1 invoke, Undispatched.kt:20 startCoroutineUndispatched, CoroutineStart.kt:360 invoke, AbstractCoroutine.kt:134 start, Builders.common.kt:53 launch, null:1 launch, ServerPipeline.kt:134 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask",
         "totalCount": 4,
+        "totalSize": 96
+    },
+    {
+        "name": "sun.util.calendar.Gregorian$Date",
+        "stackTrace": "DateJvm.kt:111 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend",
+        "totalCount": 1,
         "totalSize": 96
     },
     {
@@ -459,30 +405,6 @@
         "name": "io.ktor.utils.io.ByteReadChannelOperationsKt$copyTo$2",
         "stackTrace": "ByteReadChannelOperations.kt:-1 copyTo, BaseApplicationResponse.kt:223 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedContinuation.kt:375 resumeCancellableWith, Cancellable.kt:26 startCoroutineCancellable, Builders.common.kt:170 withContext, null:1 withContext, BaseApplicationResponse.kt:222 respondFromChannel$suspendImpl, BaseApplicationResponse.kt:-1 respondFromChannel, BaseApplicationResponse.kt:152 respondOutgoingContent$suspendImpl, BaseApplicationResponse.kt:-1 respondOutgoingContent, CIOApplicationResponse.kt:86 respondOutgoingContent, BaseApplicationResponse.kt:341 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:99 proceedWith, DefaultTransform.kt:31 invokeSuspend",
         "totalCount": 1,
-        "totalSize": 72
-    },
-    {
-        "name": "[B",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, ServerPipeline.kt:88 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 3,
-        "totalSize": 72
-    },
-    {
-        "name": "[B",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, CIOApplicationEngine.kt:267 invokeSuspend",
-        "totalCount": 3,
-        "totalSize": 72
-    },
-    {
-        "name": "java.lang.String",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, ServerPipeline.kt:88 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 3,
-        "totalSize": 72
-    },
-    {
-        "name": "java.lang.String",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, CIOApplicationEngine.kt:267 invokeSuspend",
-        "totalCount": 3,
         "totalSize": 72
     },
     {
@@ -762,18 +684,6 @@
         "totalSize": 56
     },
     {
-        "name": "[Ljava.lang.Object;",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, ServerPipeline.kt:88 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 1,
-        "totalSize": 56
-    },
-    {
-        "name": "[Ljava.lang.Object;",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, CIOApplicationEngine.kt:267 invokeSuspend",
-        "totalCount": 1,
-        "totalSize": 56
-    },
-    {
         "name": "kotlinx.coroutines.JobSupport$AwaitContinuation",
         "stackTrace": "ServerPipeline.kt:156 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 1,
@@ -788,30 +698,6 @@
     {
         "name": "[Ljava.lang.Object;",
         "stackTrace": "RoutingResolveContext.kt:148 handleRoute, RoutingResolveContext.kt:92 resolve, RoutingRoot.kt:69 interceptor, RoutingRoot.kt:157 invokeSuspend, RoutingRoot.kt:-1 invoke, RoutingRoot.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationEngine.kt:119 invokeSuspend, BaseApplicationEngine.kt:-1 invoke, BaseApplicationEngine.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke",
-        "totalCount": 1,
-        "totalSize": 56
-    },
-    {
-        "name": "java.util.Calendar$Builder",
-        "stackTrace": "DateJvm.kt:20 GMTDate, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend, RoutingNode.kt:-1 invoke, RoutingNode.kt:-1 invoke",
-        "totalCount": 1,
-        "totalSize": 56
-    },
-    {
-        "name": "java.util.Calendar$Builder",
-        "stackTrace": "DateJvm.kt:35 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend",
-        "totalCount": 1,
-        "totalSize": 56
-    },
-    {
-        "name": "io.ktor.util.date.GMTDate",
-        "stackTrace": "DateJvm.kt:65 toDate, DateJvm.kt:20 GMTDate, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend, RoutingNode.kt:-1 invoke",
-        "totalCount": 1,
-        "totalSize": 56
-    },
-    {
-        "name": "io.ktor.util.date.GMTDate",
-        "stackTrace": "DateJvm.kt:65 toDate, DateJvm.kt:43 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke",
         "totalCount": 1,
         "totalSize": 56
     },
@@ -848,6 +734,24 @@
     {
         "name": "[Ljava.lang.Object;",
         "stackTrace": "RoutingResolveTrace.kt:35 append, RoutingResolveTrace.kt:69 register, RoutingResolveTrace.kt:92 finish, RoutingResolveContext.kt:175 handleRoute, RoutingResolveContext.kt:167 handleRoute, RoutingResolveContext.kt:92 resolve, RoutingRoot.kt:69 interceptor, RoutingRoot.kt:157 invokeSuspend, RoutingRoot.kt:-1 invoke, RoutingRoot.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationEngine.kt:119 invokeSuspend, BaseApplicationEngine.kt:-1 invoke, BaseApplicationEngine.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils",
+        "totalCount": 1,
+        "totalSize": 56
+    },
+    {
+        "name": "io.ktor.util.date.GMTDate",
+        "stackTrace": "DateJvm.kt:82 timestampToGMTDate, DateJvm.kt:32 GMTDate, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend, RoutingNode.kt:-1 invoke",
+        "totalCount": 1,
+        "totalSize": 56
+    },
+    {
+        "name": "io.ktor.util.date.GMTDate",
+        "stackTrace": "DateJvm.kt:141 toDate, DateJvm.kt:119 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke",
+        "totalCount": 1,
+        "totalSize": 56
+    },
+    {
+        "name": "java.util.Calendar$Builder",
+        "stackTrace": "DateJvm.kt:111 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend",
         "totalCount": 1,
         "totalSize": 56
     },
@@ -1458,18 +1362,6 @@
         "totalSize": 40
     },
     {
-        "name": "kotlin.text.DelimitedRangesSequence$iterator$1",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, ServerPipeline.kt:88 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 1,
-        "totalSize": 40
-    },
-    {
-        "name": "kotlin.text.DelimitedRangesSequence$iterator$1",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, CIOApplicationEngine.kt:267 invokeSuspend",
-        "totalCount": 1,
-        "totalSize": 40
-    },
-    {
         "name": "io.ktor.server.cio.backend.ServerRequestScope",
         "stackTrace": "ServerPipeline.kt:135 invokeSuspend, ServerPipeline.kt:-1 invoke, ServerPipeline.kt:-1 invoke, Undispatched.kt:20 startCoroutineUndispatched, CoroutineStart.kt:360 invoke, AbstractCoroutine.kt:134 start, Builders.common.kt:53 launch, null:1 launch, ServerPipeline.kt:134 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
         "totalCount": 1,
@@ -1512,18 +1404,6 @@
         "totalSize": 40
     },
     {
-        "name": "[Z",
-        "stackTrace": "DateJvm.kt:20 GMTDate, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend, RoutingNode.kt:-1 invoke, RoutingNode.kt:-1 invoke",
-        "totalCount": 1,
-        "totalSize": 40
-    },
-    {
-        "name": "[Z",
-        "stackTrace": "DateJvm.kt:35 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend",
-        "totalCount": 1,
-        "totalSize": 40
-    },
-    {
         "name": "[B",
         "stackTrace": "CharArrayBuilder.kt:109 copy, CharArrayBuilder.kt:10 access$copy, CharArrayBuilder.kt:154 toString, CIOHeaders.kt:30 getAll$lambda$0, Sequences.kt:243 next, _Sequences.kt:830 toList, CIOHeaders.kt:30 getAll, BaseApplicationRequest.kt:73 getAll, StringValues.kt:49 get, BaseApplicationRequest.kt:47 get, BaseApplicationResponse.kt:109 commitHeaders, BaseApplicationResponse.kt:151 respondOutgoingContent$suspendImpl, BaseApplicationResponse.kt:-1 respondOutgoingContent, CIOApplicationResponse.kt:86 respondOutgoingContent, BaseApplicationResponse.kt:341 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed",
         "totalCount": 1,
@@ -1550,6 +1430,12 @@
     {
         "name": "io.ktor.server.cio.CIOApplicationEngine$handleRequest$2$invokeSuspend$$inlined$execute$1",
         "stackTrace": "CIOApplicationEngine.kt:267 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
+        "totalCount": 1,
+        "totalSize": 40
+    },
+    {
+        "name": "[Z",
+        "stackTrace": "DateJvm.kt:111 GMTDate, Date.kt:179 truncateToSeconds, Versions.kt:93 <init>, LastModifiedJavaTime.kt:37 LastModifiedVersion, LocalFileContent.kt:36 <init>, StaticContentResolution.kt:89 resourceClasspathResource, StaticContentResolution.kt:65 resolveResource$lambda$3, StaticContentResolution.kt:67 resolveResource, StaticContentResolution.kt:52 resolveResource$default, PreCompressed.kt:237 respondStaticResource, PreCompressed.kt:195 respondStaticResource$default, StaticContent.kt:907 respondStaticResource, StaticContent.kt:1 access$respondStaticResource, StaticContent.kt:325 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, StaticContent.kt:699 invokeSuspend, StaticContent.kt:-1 invoke, StaticContent.kt:-1 invoke, RoutingNode.kt:127 invokeSuspend",
         "totalCount": 1,
         "totalSize": 40
     },
@@ -1892,18 +1778,6 @@
     {
         "name": "io.ktor.util.DelegatingMutableSet",
         "stackTrace": "CaseInsensitiveMap.kt:38 getKeys, CaseInsensitiveMap.kt:12 keySet, StringValues.kt:238 names, CIOApplicationResponse.kt:99 sendResponseMessage, CIOApplicationResponse.kt:46 responseChannel, BaseApplicationResponse.kt:220 respondFromChannel$suspendImpl, BaseApplicationResponse.kt:-1 respondFromChannel, BaseApplicationResponse.kt:152 respondOutgoingContent$suspendImpl, BaseApplicationResponse.kt:-1 respondOutgoingContent, CIOApplicationResponse.kt:86 respondOutgoingContent, BaseApplicationResponse.kt:341 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:99 proceedWith, DefaultTransform.kt:31 invokeSuspend, DefaultTransform.kt:-1 invoke, DefaultTransform.kt:-1 invoke",
-        "totalCount": 1,
-        "totalSize": 32
-    },
-    {
-        "name": "kotlin.text.DelimitedRangesSequence",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, ServerPipeline.kt:88 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 1,
-        "totalSize": 32
-    },
-    {
-        "name": "kotlin.text.DelimitedRangesSequence",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, CIOApplicationEngine.kt:267 invokeSuspend",
         "totalCount": 1,
         "totalSize": 32
     },
@@ -2804,42 +2678,6 @@
     {
         "name": "java.util.LinkedHashMap$LinkedKeySet",
         "stackTrace": "CaseInsensitiveMap.kt:39 getKeys, CaseInsensitiveMap.kt:12 keySet, StringValues.kt:238 names, CIOApplicationResponse.kt:99 sendResponseMessage, CIOApplicationResponse.kt:46 responseChannel, BaseApplicationResponse.kt:220 respondFromChannel$suspendImpl, BaseApplicationResponse.kt:-1 respondFromChannel, BaseApplicationResponse.kt:152 respondOutgoingContent$suspendImpl, BaseApplicationResponse.kt:-1 respondOutgoingContent, CIOApplicationResponse.kt:86 respondOutgoingContent, BaseApplicationResponse.kt:341 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:99 proceedWith, DefaultTransform.kt:31 invokeSuspend, DefaultTransform.kt:-1 invoke, DefaultTransform.kt:-1 invoke",
-        "totalCount": 1,
-        "totalSize": 24
-    },
-    {
-        "name": "[Ljava.lang.String;",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, ServerPipeline.kt:88 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 1,
-        "totalSize": 24
-    },
-    {
-        "name": "[Ljava.lang.String;",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, CIOApplicationEngine.kt:267 invokeSuspend",
-        "totalCount": 1,
-        "totalSize": 24
-    },
-    {
-        "name": "java.util.Arrays$ArrayList",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, ServerPipeline.kt:88 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 1,
-        "totalSize": 24
-    },
-    {
-        "name": "java.util.Arrays$ArrayList",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, CIOApplicationEngine.kt:267 invokeSuspend",
-        "totalCount": 1,
-        "totalSize": 24
-    },
-    {
-        "name": "java.util.ArrayList",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, ServerPipeline.kt:88 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 1,
-        "totalSize": 24
-    },
-    {
-        "name": "java.util.ArrayList",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, CIOApplicationEngine.kt:267 invokeSuspend",
         "totalCount": 1,
         "totalSize": 24
     },
@@ -3878,18 +3716,6 @@
     {
         "name": "java.io.RandomAccessFile$1",
         "stackTrace": "FileChannels.kt:40 invokeSuspend, FileChannels.kt:-1 invoke, FileChannels.kt:-1 invoke, ByteWriteChannelOperations.kt:185 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 1,
-        "totalSize": 16
-    },
-    {
-        "name": "kotlin.sequences.SequencesKt___SequencesKt$asIterable$$inlined$Iterable$1",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, ServerPipeline.kt:88 invokeSuspend, ContinuationImpl.kt:34 resumeWith, DispatchedTask.kt:100 run, LimitedDispatcher.kt:124 run, Tasks.kt:89 run, CoroutineScheduler.kt:586 runSafely, CoroutineScheduler.kt:820 executeTask, CoroutineScheduler.kt:717 runWorker, CoroutineScheduler.kt:704 run",
-        "totalCount": 1,
-        "totalSize": 16
-    },
-    {
-        "name": "kotlin.sequences.SequencesKt___SequencesKt$asIterable$$inlined$Iterable$1",
-        "stackTrace": "HttpProtocolVersion.kt:83 parse, DefaultEnginePipeline.kt:50 invokeSuspend, DefaultEnginePipeline.kt:-1 invoke, DefaultEnginePipeline.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, BaseApplicationResponse.kt:349 invokeSuspend, BaseApplicationResponse.kt:-1 invoke, BaseApplicationResponse.kt:-1 invoke, PipelineJvm.kt:15 pipelineStartCoroutineUninterceptedOrReturn, SuspendFunctionGun.kt:131 loop, SuspendFunctionGun.kt:89 proceed, SuspendFunctionGun.kt:109 execute$ktor_utils, Pipeline.kt:92 execute, Pipeline.kt:510 invokeSuspend, Pipeline.kt:-1 invoke, Pipeline.kt:-1 invoke, ContextUtils.kt:19 initContextInDebugMode, CIOApplicationEngine.kt:267 invokeSuspend",
         "totalCount": 1,
         "totalSize": 16
     },
