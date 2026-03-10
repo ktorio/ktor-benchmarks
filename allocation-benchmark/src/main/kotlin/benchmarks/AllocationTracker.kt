@@ -2,9 +2,8 @@ package benchmarks
 
 import com.google.monitoring.runtime.instrumentation.AllocationRecorder
 import com.google.monitoring.runtime.instrumentation.Sampler
-import kotlin.streams.*
 
-private val IGNORED_DESCRIPTORS = mutableListOf<String>(
+private val IGNORED_DESCRIPTORS = listOf(
     "com/google",
     "benchmarks"
 )
@@ -43,18 +42,19 @@ object AllocationTracker : Sampler {
     override fun sampleAllocation(count: Int, descriptor: String, instance: Any, size: Long) {
         val type = instance::class.java
 
-        if (IGNORED_DESCRIPTORS.any { descriptor.startsWith(it) }) return
+        if (IGNORED_DESCRIPTORS.any(descriptor::startsWith)) return
 
-        val frames = walker.walk { frames ->
-            frames.toList()
-        }.takeIf { stack -> stack.any { it.isKtor() } } ?: return
+        val frames = walker.walk { frames -> frames.toList() }
+        if (frames.none { it.isKtor() }) return
 
-        val firstKtorClass = (frames.indexOfFirst { it.isKtor() }).coerceAtLeast(0)
-        val firstCoroutineResume = (firstKtorClass..<frames.size).firstOrNull { i -> frames[i].isCoroutine() }
-        val frame = frames[firstKtorClass]
+        val firstKtorFrame = (frames.indexOfFirst { it.isKtor() }).coerceAtLeast(0)
+        val lastKtorFrame = frames.indexOfLast { it.isKtor() }
+        val cutPoint = ((lastKtorFrame + 1)..<frames.size)
+            .firstOrNull { i -> frames[i].isCutPoint() }
+        val frame = frames[firstKtorFrame]
         val stackTrace = frames.subList(
-            (firstKtorClass - EXTERNAL_FRAMES_DOWN).coerceAtLeast(0),
-            firstCoroutineResume ?: frames.size
+            (firstKtorFrame - EXTERNAL_FRAMES_DOWN).coerceAtLeast(0),
+            cutPoint ?: frames.size,
         ).asSequence().take(MAX_FRAMES).map { it.format() }.toList()
         val fileName = frame.fileName
         val packageData = data.add(fileName) { LocationInfo(fileName) }
@@ -64,9 +64,13 @@ object AllocationTracker : Sampler {
     private fun StackWalker.StackFrame.isKtor() =
         toStackTraceElement().className.startsWith("io.ktor")
 
-    private fun StackWalker.StackFrame.isCoroutine() =
-        toStackTraceElement().className.matches(Regex("^(?:Coroutine|Continuation).*"))
+    private val CUT_FRAME_REGEX = Regex("^(?:kotlinx?\\.coroutines\\.|benchmarks\\.).*")
 
-    private fun StackWalker.StackFrame.format() =
-        "$fileName:$lineNumber ${methodName ?: ""}"
+    private fun StackWalker.StackFrame.isCutPoint() =
+        toStackTraceElement().className.matches(CUT_FRAME_REGEX)
+
+    private fun StackWalker.StackFrame.format(): String {
+        val lineNumber = if (isKtor()) lineNumber.toString() else "*"
+        return "$fileName:$lineNumber ${methodName.orEmpty()}"
+    }
 }
