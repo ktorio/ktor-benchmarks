@@ -7,8 +7,8 @@ private val IGNORED_DESCRIPTORS = listOf(
     "com/google",
     "benchmarks"
 )
-private val MAX_FRAMES = 20
-private val EXTERNAL_FRAMES_DOWN = 0
+private const val MAX_FRAMES = 20
+private const val EXTERNAL_FRAMES_DOWN = 0
 
 object AllocationTracker : Sampler {
     private val walker = StackWalker.getInstance()
@@ -44,33 +44,51 @@ object AllocationTracker : Sampler {
 
         if (IGNORED_DESCRIPTORS.any(descriptor::startsWith)) return
 
-        val frames = walker.walk { frames -> frames.toList() }
-        if (frames.none { it.isKtor() }) return
+        var firstKtor = -1
+        var lastKtor = -1
+        val frames = ArrayList<StackWalker.StackFrame>(MAX_FRAMES)
+        walker.walk { stream ->
+            for (frame in stream) {
+                if (frame.isKtor()) {
+                    if (firstKtor == -1) firstKtor = frames.size
+                    lastKtor = frames.size
+                }
+                frames.add(frame)
+                if (firstKtor != -1 && frames.size - firstKtor >= MAX_FRAMES) break
+            }
+        }
 
-        val firstKtorFrame = (frames.indexOfFirst { it.isKtor() }).coerceAtLeast(0)
-        val lastKtorFrame = frames.indexOfLast { it.isKtor() }
-        val cutPoint = ((lastKtorFrame + 1)..<frames.size)
-            .firstOrNull { i -> frames[i].isCutPoint() }
-        val frame = frames[firstKtorFrame]
-        val stackTrace = frames.subList(
-            (firstKtorFrame - EXTERNAL_FRAMES_DOWN).coerceAtLeast(0),
-            cutPoint ?: frames.size,
-        ).asSequence().take(MAX_FRAMES).map { it.format() }.toList()
+        if (firstKtor == -1) return
+
+        val startFrame = (firstKtor - EXTERNAL_FRAMES_DOWN).coerceAtLeast(0)
+        val maxFrame = (startFrame + MAX_FRAMES).coerceAtMost(frames.size)
+        val endFrame = ((lastKtor + 1)..<maxFrame)
+            .find { frames[it].isCutPoint() } ?: maxFrame
+
+        val frame = frames[firstKtor]
+        val stackTrace = frames.subList(startFrame, endFrame).map { it.format() }
         val fileName = frame.fileName
         val packageData = data.add(fileName) { LocationInfo(fileName) }
         packageData.add(type, size, stackTrace)
     }
 
     private fun StackWalker.StackFrame.isKtor() =
-        toStackTraceElement().className.startsWith("io.ktor")
+        className.startsWith("io.ktor")
 
     private val CUT_FRAME_REGEX = Regex("^(?:kotlinx?\\.coroutines\\.|benchmarks\\.).*")
 
     private fun StackWalker.StackFrame.isCutPoint() =
-        toStackTraceElement().className.matches(CUT_FRAME_REGEX)
+        className.matches(CUT_FRAME_REGEX)
+
+    private val formatCache = ThreadLocal.withInitial<HashMap<Long, String>> { HashMap() }
 
     private fun StackWalker.StackFrame.format(): String {
-        val lineNumber = if (isKtor()) lineNumber.toString() else "*"
-        return "$fileName:$lineNumber ${methodName.orEmpty()}"
+        val method = methodName.orEmpty()
+        val key = (className.hashCode().toLong() shl 32) or ((lineNumber xor method.hashCode()).toLong() and 0xFFFFFFFFL)
+        // Reduce allocations on hot path
+        return formatCache.get().getOrPut(key) {
+            val lineStr = if (isKtor()) lineNumber.toString() else "*"
+            "$fileName:$lineStr $method"
+        }
     }
 }
