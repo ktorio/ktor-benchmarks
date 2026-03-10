@@ -20,3 +20,5 @@ gradle-app.setting
 # Kotlin
 .kotlin
 
+# Python
+__pycache__

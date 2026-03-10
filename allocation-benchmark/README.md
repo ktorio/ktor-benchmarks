@@ -72,6 +72,14 @@ Then open your browser to the displayed URL. The report server provides two view
 
 ## Baseline Management
 
+### Version tags
+
+Each released Ktor version has a corresponding git tag in this repository using the same `vX.Y.Z` format as the Ktor repo (e.g. `v3.4.1`).
+Tags point to the commit that committed the allocation baseline for that release.
+Use them to compare baselines between versions.
+
+### Baseline files
+
 Baselines are stored as JSON files in `allocations/`:
 - `helloWorld[EngineName].json` - Server hello world endpoint allocations
 - `fileResponse[EngineName].json` - Server file response allocations
