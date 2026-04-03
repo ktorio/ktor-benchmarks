@@ -29,23 +29,30 @@ class GitSource:
             return []
         return [f for f in out.splitlines() if f.endswith(".json") and "_sites" not in f]
 
+    def _show(self, path):
+        """Return file content at this ref, resolving LFS pointers if needed."""
+        raw = subprocess.check_output(
+            ["git", "show", f"{self.ref}:{path}"], cwd=REPO
+        )
+        return subprocess.check_output(["git", "lfs", "smudge"], input=raw, cwd=REPO)
+
     def load(self, subdir, fname):
         git_dir = f"{ALLOC_GIT_ROOT}/{subdir}".rstrip("/")
-        raw = subprocess.check_output(
-            ["git", "show", f"{self.ref}:{git_dir}/{fname}"], cwd=REPO
-        )
-        return json.loads(raw)
+        return json.loads(self._show(f"{git_dir}/{fname}"))
 
     def load_sites(self, scenario, required=True):
         path = f"{ALLOC_GIT_ROOT}/{scenario}_sites.json"
-        result = subprocess.run(
-            ["git", "show", f"{self.ref}:{path}"], cwd=REPO, capture_output=True
-        )
-        if result.returncode != 0 or not result.stdout.strip():
+        try:
+            raw = self._show(path)
+        except subprocess.CalledProcessError:
+            if required:
+                raise FileNotFoundError(f"{path} not found at {self.ref!r}") from None
+            return []
+        if not raw.strip():
             if required:
                 raise FileNotFoundError(f"{path} not found at {self.ref!r}")
             return []
-        return json.loads(result.stdout)
+        return json.loads(raw)
 
 
 class LocalSource:
