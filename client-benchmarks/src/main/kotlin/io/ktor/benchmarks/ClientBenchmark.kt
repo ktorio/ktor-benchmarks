@@ -5,7 +5,7 @@ package io.ktor.benchmarks
 
 import io.ktor.client.*
 import io.ktor.client.engine.*
-import io.ktor.client.engine.apache.*
+import io.ktor.client.engine.apache5.*
 import io.ktor.client.engine.cio.*
 import io.ktor.client.engine.java.*
 import io.ktor.client.engine.okhttp.*
@@ -170,7 +170,7 @@ suspend fun main(args: Array<String>) {
 
     val engines = listOf(
 //        CIO to "CIO",
-        Apache to "Apache",
+        Apache5 to "Apache",
         Java to "Java",
         io.ktor.client.engine.okhttp.OkHttp.config {
             config {

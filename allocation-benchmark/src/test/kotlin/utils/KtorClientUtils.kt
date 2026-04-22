@@ -2,7 +2,7 @@ package benchmarks.utils
 
 import io.ktor.client.*
 import io.ktor.client.engine.*
-import io.ktor.client.engine.apache.*
+import io.ktor.client.engine.apache5.*
 import io.ktor.client.engine.cio.*
 import io.ktor.client.engine.java.*
 import io.ktor.client.engine.okhttp.*
@@ -20,7 +20,7 @@ private const val TEST_SERVER_PORT = 8081
 fun client(engine: String): HttpClient {
     val engineFactory: HttpClientEngineFactory<*> = when (engine.lowercase()) {
         "cio" -> CIO
-        "apache" -> Apache
+        "apache" -> Apache5
         "okhttp" -> OkHttp
         "java" -> Java
         else -> error("Unknown engine: $engine")
