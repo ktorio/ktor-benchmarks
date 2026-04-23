@@ -44,7 +44,7 @@ Resolve each item below **at the point it is first needed** — not upfront. Eac
 Check memory for a saved ktor repo path. If found, verify it is still valid (`ls KTOR_REPO_PATH/VERSION`). If missing or invalid, ask the user where the ktor repo is cloned (offer to clone to `/tmp/ktor` if needed). Save the resolved path to memory.
 
 **TC CLI**
-Run `tc auth status`. If not found or not authenticated, use the `teamcity-cli:teamcity-cli` skill for setup before proceeding.
+Run `teamcity auth status`. If not found or not authenticated, use the `teamcity-cli:teamcity-cli` skill for setup before proceeding.
 
 **gh CLI**
 Run `gh auth status`. If not authenticated, run `gh auth login` before proceeding.

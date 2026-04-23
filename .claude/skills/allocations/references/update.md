@@ -48,7 +48,7 @@ https://ktor.teamcity.com/buildConfiguration/Ktor_AllocationTests/413598
 Download and extract the new dumps:
 
 ```bash
-tc run download BUILD_ID --artifact "new_allocations.zip" --dir /tmp/tc-alloc/
+teamcity run download BUILD_ID --artifact "new_allocations.zip" -o /tmp/tc-alloc/
 unzip -o /tmp/tc-alloc/new_allocations.zip -d allocation-benchmark/build/allocations/
 ```
 
@@ -60,7 +60,7 @@ Save the TC build URL — you will include it in `pending.md` so readers can ins
 
 ## Step 2 — Compute diff
 
-Both options place new dumps in `build/allocations/`, so always run:
+Both options place new dumps in `build/allocations/`, so always run from the ktor-benchmarks root:
 
 ```bash
 python3 ${CLAUDE_SKILL_DIR}/scripts/compute_diff.py --local
@@ -78,8 +78,9 @@ If the user provided no hints, ask for them before proceeding — PR numbers or 
 
 If the user provided PR numbers or task IDs, cross-reference them against the diff:
 
-- **Expected change present?** Confirm that files touched by each hinted PR show a delta.
-- **Unexpected changes?** For any significant change not explained by the hints, run `check_sites.py` (see `investigate-diff.md`) to determine the cause **before** presenting findings to the user. Only mark a change as "cause under investigation" if the call sites are also inconclusive.
+- **Expected change present?** Confirm that files touched by each hinted PR show a delta. Then run `check_sites.py` on those files (see `investigate-diff.md`) to verify the call site data matches what the PR actually changed — matching file names is not sufficient.
+- **Engine-specific PRs:** Before attributing a change to an engine-specific PR (e.g. `ktor-client-apache5`), verify that the benchmark actually uses that engine variant (check `libs.versions.toml` and the test source imports).
+- **Unexpected changes?** For any significant change not explained by the hints, run `check_sites.py` to determine the cause **before** presenting findings to the user. Only mark a change as "cause under investigation" if the call sites are also inconclusive.
 - **Expected change missing?** Warn the user — the benchmark may not cover that code path, or the change may not affect allocations.
 
 Summarise findings — confirmed, missing, unexplained — and wait for the user to confirm before proceeding.
