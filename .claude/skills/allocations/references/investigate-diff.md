@@ -12,7 +12,11 @@ From `compute_diff.py` output, identify:
 
 ## Quick investigation — inspecting call sites
 
-For any change that is unclear, use `check_sites.py` to see added/removed/changed stack traces for a specific source file. Run from the ktor-benchmarks root.
+Use `check_sites.py` to see added/removed/changed stack traces for a specific source file. Run from the ktor-benchmarks root.
+
+Run it for **every significant change** — including ones already explained by a hint. Matching file names between a PR and the diff is not sufficient verification; the call site data is the authoritative confirmation.
+
+**Mode selection:** Use `--local` only when the new dumps are in `build/allocations/` and have not yet been committed as the baseline. Once the baseline is committed, use git mode instead — `--local` will produce a zero diff.
 
 The `SCENARIO[ENGINE]` argument is the path relative to the allocations root without the `_sites.json` suffix — e.g. `helloWorld[CIO]` or `client/streamingResponse[CIO]`. The square brackets and engine name are literal.
 
