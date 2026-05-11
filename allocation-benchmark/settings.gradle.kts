@@ -3,7 +3,15 @@
 pluginManagement {
     repositories {
         mavenCentral()
+        gradlePluginPortal()
     }
+    includeBuild("../build-settings-logic")
+}
+
+plugins {
+    // Build optimizations
+    id("ktorsettings.develocity")
+    id("ktorsettings.cache-redirector")
 }
 
 dependencyResolutionManagement {
