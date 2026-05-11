@@ -3,3 +3,10 @@
  */
 
 rootProject.name = "build-settings-logic"
+
+@Suppress("UnstableApiUsage")
+dependencyResolutionManagement {
+    repositories {
+        gradlePluginPortal()
+    }
+}
