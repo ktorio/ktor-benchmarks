@@ -7,6 +7,8 @@ plugins {
     id("com.gradle.develocity") version "4.3.2"
 }
 
+apply(from = "src/main/kotlin/ktorsettings.cache-redirector.settings.gradle.kts")
+
 @Suppress("UnstableApiUsage")
 dependencyResolutionManagement {
     versionCatalogs {
