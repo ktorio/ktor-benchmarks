@@ -10,7 +10,6 @@ pluginManagement {
 
 plugins {
     // Build optimizations
-    id("ktorsettings.develocity")
     id("ktorsettings.cache-redirector")
 }
 
