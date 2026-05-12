@@ -9,6 +9,10 @@ version = "0.0.1"
 
 val instrumenter by configurations.creating
 
+kotlin {
+    jvmToolchain(21)
+}
+
 dependencies {
     implementation(libs.ktor.server.core)
     implementation(libs.ktor.server.netty)
