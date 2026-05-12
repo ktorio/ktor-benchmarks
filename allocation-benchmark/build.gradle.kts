@@ -44,6 +44,8 @@ tasks.test {
 
 tasks.register<Test>("serverTests") {
     group = "verification"
+    testClassesDirs = sourceSets["test"].output.classesDirs
+    classpath = sourceSets["test"].runtimeClasspath
     systemProperty("kotlinx.coroutines.debug", "off")
     jvmArgs = listOf("-javaagent:$agentPath")
     useJUnitPlatform()
@@ -54,6 +56,8 @@ tasks.register<Test>("serverTests") {
 
 tasks.register<Test>("dumpAllocations") {
     group = "verification"
+    testClassesDirs = sourceSets["test"].output.classesDirs
+    classpath = sourceSets["test"].runtimeClasspath
     systemProperty("SAVE_REPORT", "true")
     systemProperty("kotlinx.coroutines.debug", "off")
     jvmArgs = listOf("-javaagent:$agentPath")
