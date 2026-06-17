@@ -1,21 +1,21 @@
 [versions]
 
-kotlin = "2.2.21"
+kotlin = "2.4.0"
 ktor = "3.5.0"
-kotlinx-serialization = "1.8.1"
-kotlinx-atomicfu = "0.27.0"
-kotlinx-io = "0.8.2"
+kotlinx-serialization = "1.11.0"
+kotlinx-atomicfu = "0.33.0"
+kotlinx-io = "0.9.0"
 okhttp = "4.12.0"
 apache-httpclient = "4.5.14"
-logback = "1.5.21"
+logback = "1.5.34"
 
 develocity = "4.3.2" # Should be compatible with our server: ge.jetbrains.com
 develocity-commonCustomUserData = "2.6.0"
 
-instrumenter = "3.3.4"
+instrumenter = "3.3.5"
 jmh-plugin = "0.7.3"
 
-junit = "6.0.1"
+junit = "6.1.0"
 junit4 = "4.13.2"
 
 [libraries]
