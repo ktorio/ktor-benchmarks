@@ -26,7 +26,7 @@ dependencyResolutionManagement {
         create("libs") {
             from(files("../libs.versions.toml"))
 
-            val ktorVersion: String? by settings.extra
+            val ktorVersion = settings.providers.gradleProperty("ktorVersion").orNull
             ktorVersion?.let { version("ktor", it) }
         }
     }

@@ -7,7 +7,7 @@ plugins {
 group = "io.ktor"
 version = "0.0.1"
 
-val instrumenter by configurations.creating
+val instrumenter = configurations.create("instrumenter")
 
 kotlin {
     jvmToolchain(21)
