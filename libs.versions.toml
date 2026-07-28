@@ -7,7 +7,7 @@ kotlinx-atomicfu = "0.33.0"
 kotlinx-io = "0.9.1"
 okhttp = "5.4.0"
 apache-httpclient = "4.5.14"
-logback = "1.5.34"
+logback = "1.6.1"
 
 develocity = "4.3.2" # Should be compatible with our server: ge.jetbrains.com
 develocity-commonCustomUserData = "2.8.0"
