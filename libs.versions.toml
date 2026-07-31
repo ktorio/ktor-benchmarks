@@ -10,7 +10,7 @@ apache-httpclient = "4.5.14"
 logback = "1.5.34"
 
 develocity = "4.3.2" # Should be compatible with our server: ge.jetbrains.com
-develocity-commonCustomUserData = "2.6.0"
+develocity-commonCustomUserData = "2.8.0"
 
 instrumenter = "3.3.5"
 jmh-plugin = "0.7.3"
