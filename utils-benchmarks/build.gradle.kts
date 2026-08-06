@@ -13,7 +13,7 @@ allOpen {
 group = "org.example"
 version = "1.0-SNAPSHOT"
 
-val instrumenter by configurations.creating
+val instrumenter = configurations.create("instrumenter")
 
 dependencies {
     implementation(kotlin("stdlib"))
