@@ -20,6 +20,8 @@ git log --oneline -1 -- allocation-benchmark/allocations/
 
 If the most recent commit touching `allocations/` is the same commit as `vOLD_VERSION` (i.e. no new dumps have been committed since the last release), follow Steps 1–4 from `references/update.md` to obtain and commit fresh dumps before continuing.
 
+Before promoting the report, verify that the user has seen and explicitly approved the verification packet required by Step 3 of `references/update.md` for these exact dumps. If not, run the diff against `vOLD_VERSION..HEAD`, investigate significant and correlated location changes, present the complete per-test evidence, and wait for explicit confirmation. A committed baseline or passing tolerance check does not replace this approval.
+
 ---
 
 ## Step 2 — Promote pending.md to a versioned report

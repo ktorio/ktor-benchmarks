@@ -10,13 +10,13 @@ From `compute_diff.py` output, identify:
 
 **Large outliers** — a single-file change that is 10× larger than the rest deserves individual explanation.
 
-**Correlated files** — files that always move together probably share a root cause; group them.
+**Correlated files** — files that always move together probably share a root cause; group them. Inspect repeated or offsetting location changes even when their report total remains within tolerance. A tolerance pass does not establish that the underlying changes are measurement noise.
 
 ## Quick investigation — inspecting call sites
 
 Use `check_sites.py` to see added/removed/changed stack traces for a specific source file. Run from the ktor-benchmarks root.
 
-Run it for **every significant change** — including ones already explained by a hint. Matching file names between a PR and the diff is not sufficient verification; the call site data is the authoritative confirmation.
+Run it for **every significant change** — including ones already explained by a hint and correlated location movements hidden by a small net report delta. Matching file names between a PR and the diff is not sufficient verification; the call site data is the authoritative confirmation. Treat a repeated pattern across scenarios or runs as significant even if each report remains within the default tolerance.
 
 **Mode selection:** Use `--local` only when the new dumps are in `build/allocations/` and have not yet been committed as the baseline. Once the baseline is committed, use git mode instead — `--local` will produce a zero diff.
 

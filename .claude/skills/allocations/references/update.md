@@ -66,13 +66,15 @@ Both options place new dumps in `build/allocations/`, so always run from the kto
 python3 ${CLAUDE_SKILL_DIR}/scripts/compute_diff.py --local
 ```
 
-Collect per-scenario totals and per-file deltas.
+Capture complete results for every scenario and engine, including old/new totals, raw deltas, relevant location deltas, default-tolerance information, and known-variance annotations. These may be reformatted for readability, but do not reduce them to only failures or changes outside tolerance.
 
 ---
 
 ## Step 3 — Verify against hints and update pending.md
 
 Read `${CLAUDE_SKILL_DIR}/references/investigate-diff.md` for how to analyse the diff output.
+
+Default and known tolerances are assertion policy, not permission to skip investigation. Review correlated or offsetting per-location changes even when the report total is within tolerance, especially when the same pattern appears across scenarios.
 
 If the user provided no hints, ask for them before proceeding — PR numbers or YouTrack IDs let you skip the slow deep investigation. If they cannot provide any, proceed with the deep investigation from `investigate-diff.md` using range `v{PREV_VERSION}..HEAD` in the ktor repo, where `PREV_VERSION` is the current `ktor` version from `libs.versions.toml`.
 
@@ -83,7 +85,15 @@ If the user provided PR numbers or task IDs, cross-reference them against the di
 - **Unexpected changes?** For any significant change not explained by the hints, run `check_sites.py` to determine the cause **before** presenting findings to the user. Only mark a change as "cause under investigation" if the call sites are also inconclusive.
 - **Expected change missing?** Warn the user — the benchmark may not cover that code path, or the change may not affect allocations.
 
-Summarise findings — confirmed, missing, unexplained — and wait for the user to confirm before proceeding.
+Before changing the baseline, present a verification packet to the user containing:
+
+- a human-readable table or report listing every scenario and engine with old total, new total, and raw delta; the raw `compute_diff.py` output is optional;
+- every applied default tolerance or known variance, without hiding the raw change;
+- significant correlated or offsetting location changes, including those whose report total remains within tolerance;
+- confirmed, missing, and unexplained attributions; and
+- the benchmark test outcome, including any failed scenarios.
+
+Prioritize readable tables and grouped findings over dumping verbose command output. Do not replace the complete per-test evidence with only a prose conclusion. Wait for explicit user confirmation after presenting it, then update `allocation-benchmark/pending.md`.
 
 Once the user confirms, update `allocation-benchmark/pending.md`:
 
