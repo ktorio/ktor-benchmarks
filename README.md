@@ -4,8 +4,7 @@ This repository contains benchmark tests for various Ktor performance metrics in
 
 ## Prerequisites
 
-- JDK 17 or higher
-- Gradle (wrapper included)
+- JDK 21 or higher
 
 ## Project Structure
 
