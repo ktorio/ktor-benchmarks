@@ -68,7 +68,7 @@ Then open your browser to the displayed URL. The report server provides two view
 1. The Java agent (`instrumenter`) intercepts all object allocations during test execution
 2. Tests perform multiple warmup requests, then measure allocations over 300 requests
 3. Results are compared against baseline JSON files in the `allocations/` directory
-4. Tests fail if allocations deviate more than 12% from baseline
+4. Tests fail when an allocation increase exceeds the configured tolerance
 
 ## Baseline Management
 
@@ -86,6 +86,8 @@ Baselines are stored as JSON files in `allocations/`:
 - `plainText[EngineName].json` - Client plain text request allocations
 - `json[EngineName].json` - Client JSON request allocations
 
+`allocations/tolerances.json` defines the default allowed increase and bounded, report-specific known variances. Known variances must include a reason so tests and analysis tools can distinguish documented measurement artifacts from regressions. Raw allocation dumps and diffs are never adjusted.
+
 **When to update baselines:**
 - After intentional changes that affect memory usage
 - When CI consistently fails with allocation differences
@@ -101,7 +103,7 @@ Baselines are stored as JSON files in `allocations/`:
 Key parameters in tests:
 - `TEST_SIZE = 300L` - Number of requests measured per test
 - `WARMUP_SIZE = 20` - Number of warmup requests before measurement
-- `ALLOWED_MEMORY_DIFFERENCE_RATIO = 0.12` - 12% tolerance for allocation differences
+- `allocations/tolerances.json` - Default increase tolerance and report/location-specific known variance metadata
 
 ## TeamCity Integration
 
