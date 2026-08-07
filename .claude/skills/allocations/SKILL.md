@@ -5,7 +5,7 @@ description: Use when working with Ktor memory allocation benchmarks — showing
 
 ## Overview
 
-Manages Ktor allocation benchmark data: diffing two versions, updating the committed baseline after PRs merge, and finalizing release reports.
+Manages Ktor allocation benchmark data: diffing two versions, updating the committed baseline after PRs merge, and finalizing release reports. Diff analysis honors documented bounds in `allocation-benchmark/allocations/tolerances.json` while always reporting raw changes.
 
 ## Commands
 

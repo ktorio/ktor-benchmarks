@@ -1,12 +1,75 @@
 """Shared allocation data sources for compute_diff.py and check_sites.py."""
 
 import json
+import math
 import os
 import subprocess
 
 REPO = os.getcwd()
 ALLOC_GIT_ROOT = "allocation-benchmark/allocations"
 ALLOC_LOCAL_ROOT = "allocation-benchmark/build/allocations"
+TOLERANCES_FILE = "tolerances.json"
+
+
+def validate_tolerances(metadata):
+    if not isinstance(metadata, dict):
+        raise ValueError("Tolerance metadata must be a JSON object")
+
+    allowed_root_keys = {"defaultAllowedIncreaseRatio", "reports"}
+    unknown_root_keys = set(metadata) - allowed_root_keys
+    if unknown_root_keys:
+        raise ValueError(f"Unknown tolerance metadata keys: {sorted(unknown_root_keys)}")
+
+    ratio = metadata.get("defaultAllowedIncreaseRatio")
+    if (
+        isinstance(ratio, bool)
+        or not isinstance(ratio, (int, float))
+        or not math.isfinite(ratio)
+        or ratio < 0
+    ):
+        raise ValueError("defaultAllowedIncreaseRatio must be a non-negative number")
+
+    reports = metadata.get("reports", {})
+    if not isinstance(reports, dict):
+        raise ValueError("reports must be a JSON object")
+    for report_name, report in reports.items():
+        if not isinstance(report, dict) or set(report) - {"locations"}:
+            raise ValueError(f"Invalid tolerance metadata for report {report_name!r}")
+        locations = report.get("locations", {})
+        if not isinstance(locations, dict):
+            raise ValueError(f"locations must be a JSON object for report {report_name!r}")
+        for source_file, variance in locations.items():
+            if not isinstance(variance, dict):
+                raise ValueError(f"Invalid known variance for {report_name!r} / {source_file!r}")
+            unknown_variance_keys = set(variance) - {"knownVarianceBytes", "reason", "reference"}
+            if unknown_variance_keys:
+                raise ValueError(
+                    f"Unknown known-variance keys for {report_name!r} / {source_file!r}: "
+                    f"{sorted(unknown_variance_keys)}"
+                )
+            variance_bytes = variance.get("knownVarianceBytes")
+            if isinstance(variance_bytes, bool) or not isinstance(variance_bytes, int) or variance_bytes < 0:
+                raise ValueError(
+                    f"knownVarianceBytes must be a non-negative integer for "
+                    f"{report_name!r} / {source_file!r}"
+                )
+            reason = variance.get("reason")
+            if not isinstance(reason, str) or not reason.strip():
+                raise ValueError(f"reason must not be blank for {report_name!r} / {source_file!r}")
+            reference = variance.get("reference")
+            if reference is not None and not isinstance(reference, str):
+                raise ValueError(f"reference must be a string for {report_name!r} / {source_file!r}")
+
+    return metadata
+
+
+def known_location_variance(metadata, report_name, source_file):
+    return (
+        metadata.get("reports", {})
+        .get(report_name, {})
+        .get("locations", {})
+        .get(source_file)
+    )
 
 
 class GitSource:
@@ -29,6 +92,14 @@ class GitSource:
             return []
         return [f for f in out.splitlines() if f.endswith(".json") and "_sites" not in f]
 
+    def _exists(self, path):
+        output = subprocess.check_output(
+            ["git", "ls-tree", "--name-only", self.ref, "--", path],
+            cwd=REPO,
+            stderr=subprocess.DEVNULL,
+        )
+        return bool(output.strip())
+
     def _show(self, path):
         """Return file content at this ref, resolving LFS pointers if needed."""
         raw = subprocess.check_output(
@@ -39,6 +110,12 @@ class GitSource:
     def load(self, subdir, fname):
         git_dir = f"{ALLOC_GIT_ROOT}/{subdir}".rstrip("/")
         return json.loads(self._show(f"{git_dir}/{fname}"))
+
+    def load_tolerances(self):
+        path = f"{ALLOC_GIT_ROOT}/{TOLERANCES_FILE}"
+        if not self._exists(path):
+            return {}
+        return validate_tolerances(json.loads(self._show(path)))
 
     def load_sites(self, scenario, required=True):
         path = f"{ALLOC_GIT_ROOT}/{scenario}_sites.json"
@@ -71,6 +148,13 @@ class LocalSource:
         local_dir = os.path.join(self.root, subdir) if subdir else self.root
         with open(os.path.join(local_dir, fname)) as f:
             return json.load(f)
+
+    def load_tolerances(self):
+        path = os.path.join(self.root, TOLERANCES_FILE)
+        if not os.path.exists(path):
+            return {}
+        with open(path) as f:
+            return validate_tolerances(json.load(f))
 
     def load_sites(self, scenario, required=True):
         path = os.path.join(self.root, f"{scenario}_sites.json")

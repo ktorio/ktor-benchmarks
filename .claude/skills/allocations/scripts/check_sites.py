@@ -18,7 +18,7 @@ Run from the ktor-benchmarks repository root.
 
 import sys
 
-from sources import git_sources, local_sources
+from sources import git_sources, known_location_variance, local_sources
 
 
 # ---------------------------------------------------------------------------
@@ -32,15 +32,23 @@ if len(sys.argv) >= 2 and sys.argv[1] == "--local":
     scenario = sys.argv[2]
     source_file = sys.argv[3]
     old_source, new_source = local_sources()
+    tolerance_source = old_source
     mode = "--local"
 else:
     if len(sys.argv) < 4:
         print(__doc__)
         sys.exit(1)
     old_source, new_source = git_sources(sys.argv[1])
+    tolerance_source = new_source
     scenario = sys.argv[2]
     source_file = sys.argv[3]
     mode = f"{old_source.ref}..{new_source.ref}"
+
+variance = known_location_variance(
+    tolerance_source.load_tolerances(),
+    scenario,
+    source_file,
+)
 
 
 # ---------------------------------------------------------------------------
@@ -148,6 +156,11 @@ if not added and not removed and not changed:
     sys.exit(0)
 
 print(f"\n{scenario} / {source_file}  {mode}")
+if variance:
+    print(f"  Known variance: up to {variance['knownVarianceBytes']:,} bytes")
+    print(f"  Reason: {variance['reason']}")
+    if variance.get("reference"):
+        print(f"  See: {variance['reference']}")
 
 entries = []
 

@@ -4,6 +4,8 @@
 
 From `compute_diff.py` output, identify:
 
+**Known variances** — `allocation-benchmark/allocations/tolerances.json` documents bounded measurement artifacts. When a known variance is relevant to a comparison, the scripts print its configured bound, reason, and reference beside the matching location. Never hide the raw delta. Treat a change as known variance only when it remains within the bound and `check_sites.py` confirms the call sites still match the documented reason. Investigate excess or mismatched changes normally.
+
 **Consistent changes** — files that moved by a similar amount across *multiple* engines/scenarios point to a shared cause.
 
 **Large outliers** — a single-file change that is 10× larger than the rest deserves individual explanation.
@@ -34,7 +36,7 @@ python3 ${CLAUDE_SKILL_DIR}/scripts/check_sites.py vOLD_VERSION[..vNEW_VERSION] 
   FileName.kt
 ```
 
-The class names and stack frames in the output are authoritative: they confirm exactly what is being allocated and from which call path.
+The class names and stack frames in the output are authoritative: they confirm exactly what is being allocated and from which call path. When the script prints known-variance metadata, verify these frames against its reason before accepting the exclusion.
 
 ## Deep investigation — attributing changes to PRs
 
