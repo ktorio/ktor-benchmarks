@@ -8,18 +8,12 @@ import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.ValueSource
-import utils.benchmarks.loadReport
-import utils.benchmarks.saveReport
-import utils.benchmarks.saveSiteStatistics
+import utils.benchmarks.*
 import kotlin.math.absoluteValue
-import kotlin.math.roundToLong
 
 const val TEST_SIZE = 300L
 const val WARMUP_SIZE = 20
 const val KB = 1024L
-
-// TODO investigate why TC has higher memory usage.
-const val ALLOWED_MEMORY_DIFFERENCE_RATIO = 0.12
 
 class ServerCallAllocationTest : BaseAllocationTest() {
 
@@ -89,37 +83,61 @@ abstract class BaseAllocationTest {
         val previousSnapshot = loadReport(reportName)
         val consumedMemory = snapshot.totalSize()
         val expectedMemory = previousSnapshot.totalSize()
+        val comparison = compareAllocations(
+            previous = previousSnapshot,
+            current = snapshot,
+            tolerance = loadAllocationTolerance(reportName),
+        )
 
-        val difference = consumedMemory - expectedMemory
-
-        val allowedDifference = (ALLOWED_MEMORY_DIFFERENCE_RATIO * expectedMemory).roundToLong()
-        val increase = maxOf(difference - allowedDifference, 0)
-        val success = increase == 0L
-        val message = """
-            Request consumes ${consumedMemory.kb}, expected ${expectedMemory.kb}. 
-              Difference: $difference ${if (success) "<" else ">"} $allowedDifference (allowed)
-              Consumed ${consumedMemory.kb} on request
-              Expected ${expectedMemory.kb} on request
-              ${if (difference > 0L) "Extra   " else "Saved   "} ${difference.absoluteValue.padEnd(3)} bytes on request
-            (See stdout + build/allocations/* files for details)
-        """.trimIndent().also(::println)
+        val difference = comparison.totalDifference
+        val success = comparison.unexpectedIncrease == 0L
+        val message = buildString {
+            appendLine("Request consumes ${consumedMemory.kb}, expected ${expectedMemory.kb}.")
+            if (comparison.consumedKnownVariance == 0L) {
+                appendLine(
+                    "  Difference: ${difference.withSign} " +
+                            "${if (success) "<=" else ">"} ${comparison.allowedDifference} (allowed)"
+                )
+            } else {
+                appendLine("  Raw difference: ${difference.withSign}")
+                appendLine(
+                    "  Difference after known variance: ${comparison.adjustedDifference.withSign} " +
+                            "${if (success) "<=" else ">"} ${comparison.allowedDifference} (allowed)"
+                )
+            }
+            appendLine(
+                "  ${if (difference > 0L) "Extra" else "Saved"} " +
+                        "${difference.absoluteValue} bytes on request"
+            )
+            append("(See stdout + build/allocations/* files for details)")
+        }.also(::println)
 
         if (SAVE_REPORT) {
             println("Report updated: $reportName")
             return
         }
 
-        val diffs = previousSnapshot diff snapshot
+        val diffs = comparison.locationDifferences
+        val consumedVariances = comparison.consumedLocationVariances.associateBy { it.locationName }
 
         println("\nIncreased locations:")
         diffs.filter { it.difference > 0 }
             .sortedByDescending { it.difference }.forEach { diff ->
+                val variance = consumedVariances[diff.locationName]
+                val varianceDescription = variance
+                    ?.let { "  [known variance up to ${it.configuredVariance.knownVarianceBytes} bytes]" }
+                    .orEmpty()
                 println(
                     "\t" +
                             diff.locationName.padEnd(40) +
-                            diff.difference.toString().padStart(10) +
-                            "    (${diff.previousSize.padEnd(12)} --> ${diff.currentSize.padStart(12)})"
+                            diff.difference.withSign.padStart(10) +
+                            "    (${diff.previousSize.padEnd(12)} --> ${diff.currentSize.padStart(12)})" +
+                            varianceDescription
                 )
+                if (variance != null) {
+                    println("\t    ${variance.configuredVariance.reason}")
+                    variance.configuredVariance.reference?.let { println("\t    See: $it") }
+                }
             }
 
         println("\nDecreased locations:")
@@ -133,7 +151,7 @@ abstract class BaseAllocationTest {
                 )
             }
 
-        assertEquals(0L, increase, message)
+        assertEquals(0L, comparison.unexpectedIncrease, message)
     }
 
     protected abstract suspend fun measureEngineRequest(
@@ -142,30 +160,8 @@ abstract class BaseAllocationTest {
         block: suspend () -> Unit,
     ): AllocationData
 
-    private infix fun AllocationData.diff(other: AllocationData): List<LocationDifference> {
-        val locations = this.packages.map { it.name }.toSet() + other.packages.map { it.name }.toSet()
-        return locations.map { location ->
-            LocationDifference(
-                previous = this[location],
-                current = other[location],
-            )
-        }
-    }
-
-    /**
-     * Represents a difference between two location infos.
-     */
-    private class LocationDifference(
-        val previous: LocationInfo?,
-        val current: LocationInfo?,
-    ) {
-        val previousSize = previous?.locationSize ?: 0L
-        val currentSize = current?.locationSize ?: 0L
-        val locationName = current?.name ?: previous?.name ?: "unknown"
-        val difference = currentSize - previousSize
-    }
-
     private val Long.kb get() = "%.2f KB".format(toDouble() / KB.toDouble())
+    private val Long.withSign get() = if (this > 0L) "+$this" else toString()
     private fun Long.padStart(padding: Int) = toString().padStart(padding)
     private fun Long.padEnd(padding: Int) = toString().padEnd(padding)
 }
