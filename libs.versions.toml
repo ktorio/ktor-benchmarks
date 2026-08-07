@@ -15,7 +15,7 @@ develocity-commonCustomUserData = "2.8.0"
 instrumenter = "3.3.5"
 jmh-plugin = "0.7.3"
 
-junit = "6.1.0"
+junit = "6.1.3"
 junit4 = "4.13.2"
 
 [libraries]
