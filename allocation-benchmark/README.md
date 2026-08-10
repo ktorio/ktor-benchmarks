@@ -92,6 +92,8 @@ Baselines are stored as JSON files in `allocations/`:
 
 `allocations/tolerances.json` defines the default allowed increase and bounded, report-specific known variances. Known variances must include a reason so tests and analysis tools can distinguish documented measurement artifacts from regressions. Raw allocation dumps and diffs are never adjusted.
 
+[`known-variations.md`](known-variations.md) documents recurring measurement artifacts and the allocation call-site patterns required to identify them. A matching total or source-file name alone is not sufficient.
+
 **When to update baselines:**
 - After intentional changes that affect memory usage
 - When CI consistently fails with allocation differences

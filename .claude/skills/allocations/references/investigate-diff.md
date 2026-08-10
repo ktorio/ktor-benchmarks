@@ -1,10 +1,12 @@
 # Investigating allocation diffs
 
+Before classifying any movement as measurement noise, read `allocation-benchmark/known-variations.md`. Its call-site patterns are required identification criteria, not a whitelist based on scenario totals or source-file names. If a pattern does not match completely, investigate the change normally.
+
 ## Reading the diff output
 
 From `compute_diff.py` output, identify:
 
-**Known variances** — `allocation-benchmark/allocations/tolerances.json` documents bounded measurement artifacts. When a known variance is relevant to a comparison, the scripts print its configured bound, reason, and reference beside the matching location. Never hide the raw delta. Treat a change as known variance only when it remains within the bound and `check_sites.py` confirms the call sites still match the documented reason. Investigate excess or mismatched changes normally.
+**Known variances** — `allocation-benchmark/allocations/tolerances.json` documents bounded measurement artifacts. When a known variance is relevant to a comparison, the scripts print its configured bound, reason, and reference beside the matching location. Never hide the raw delta. Treat a change as known variance only when it remains within the bound and `check_sites.py` confirms the call sites match the corresponding pattern in `allocation-benchmark/known-variations.md`. Investigate excess, new call sites or allocation types, and incomplete pattern matches normally.
 
 **Consistent changes** — files that moved by a similar amount across *multiple* engines/scenarios point to a shared cause.
 
