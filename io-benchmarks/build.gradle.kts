@@ -14,6 +14,7 @@ version = "1.0-SNAPSHOT"
 
 dependencies {
     jmh(kotlin("stdlib"))
+    jmh(libs.ktor.http)
     jmh(libs.ktor.io)
     jmh(libs.ktor.utils)
     jmh(libs.ktor.network)
