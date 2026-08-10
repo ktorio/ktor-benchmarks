@@ -4,6 +4,7 @@ import benchmarks.AllocationData
 import benchmarks.LocationInfo
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertTrue
 
 class AllocationToleranceTest {
     @Test
@@ -110,6 +111,65 @@ class AllocationToleranceTest {
         assertEquals(10L, comparison.adjustedDifference)
         assertEquals(10L, comparison.allowedDifference)
         assertEquals(0L, comparison.unexpectedIncrease)
+        assertTrue(comparison.exceedsDefaultTolerance)
+    }
+
+    @Test
+    fun `does not retry successful allocation measurement`() {
+        var measurementCount = 0
+
+        val attempts = collectAllocationAttempts(
+            measure = {
+                measurementCount++
+                allocations("Source.kt" to 100L)
+            },
+            shouldRetry = { false },
+        )
+
+        assertEquals(1, measurementCount)
+        assertEquals(1, attempts.size)
+    }
+
+    @Test
+    fun `collects three attempts while allocation measurements keep failing`() {
+        val measurements = listOf(300L, 200L, 100L).iterator()
+
+        val attempts = collectAllocationAttempts(
+            measure = { allocations("Source.kt" to measurements.next()) },
+            shouldRetry = { true },
+        )
+
+        assertEquals(3, attempts.size)
+        assertEquals(100L, selectLowestAllocationAttempt(attempts).totalSize())
+    }
+
+    @Test
+    fun `stops retrying after successful allocation measurement`() {
+        val measurements = listOf(300L, 100L, 200L).iterator()
+
+        val attempts = collectAllocationAttempts(
+            measure = { allocations("Source.kt" to measurements.next()) },
+            shouldRetry = { it.totalSize() > 100L },
+        )
+
+        assertEquals(2, attempts.size)
+        assertEquals(100L, selectLowestAllocationAttempt(attempts).totalSize())
+    }
+
+    @Test
+    fun `collects three attempts when retry is always requested`() {
+        var measurementCount = 0
+
+        val attempts = collectAllocationAttempts(
+            measure = {
+                measurementCount++
+                allocations("Source.kt" to measurementCount.toLong())
+            },
+            shouldRetry = { true },
+        )
+
+        assertEquals(3, measurementCount)
+        assertEquals(3, attempts.size)
     }
 
     private fun allocations(vararg locations: Pair<String, Long>) = AllocationData(

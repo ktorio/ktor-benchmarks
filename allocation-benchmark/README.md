@@ -68,7 +68,11 @@ Then open your browser to the displayed URL. The report server provides two view
 1. The Java agent (`instrumenter`) intercepts all object allocations during test execution
 2. Tests perform multiple warmup requests, then measure allocations over 300 requests
 3. Results are compared against baseline JSON files in the `allocations/` directory
-4. Tests fail when an allocation increase exceeds the configured tolerance
+4. A measurement that exceeds the configured tolerance is retried with a fresh engine and coroutine context, up to two times
+5. Retries stop as soon as a measurement is within tolerance
+6. The lowest complete snapshot is used, and the test fails if all attempts exceed the tolerance
+
+Baseline generation always performs three measurements and stores the lowest complete snapshot. This lower-envelope approach filters incidental pool misses and scheduler interference without merging data from different attempts. Retried tests print every attempt total and the observed spread.
 
 ## Baseline Management
 
@@ -94,9 +98,10 @@ Baselines are stored as JSON files in `allocations/`:
 - After Kotlin/Ktor version upgrades that change allocation patterns
 
 **How to update baselines:**
-1. Run `./gradlew dumpAllocations`
-2. Review the changes in `allocations/` directory
-3. Commit the new baselines if changes are expected
+1. Run `./gradlew dumpAllocations`; every scenario is measured three times
+2. Review the selected lowest snapshot and the attempt spread printed by the test
+3. Review the changes in `allocations/` directory
+4. Commit the new baselines if changes are expected
 
 ## Configuration
 

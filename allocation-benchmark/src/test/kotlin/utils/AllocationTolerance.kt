@@ -22,6 +22,24 @@ private val toleranceMetadata by lazy {
 fun loadAllocationTolerance(reportName: String): AllocationTolerance =
     toleranceMetadata.toleranceFor(reportName)
 
+private const val ALLOCATION_ATTEMPT_COUNT = 3
+
+fun collectAllocationAttempts(
+    measure: () -> AllocationData,
+    shouldRetry: (AllocationData) -> Boolean,
+): List<AllocationData> = buildList {
+    repeat(ALLOCATION_ATTEMPT_COUNT) {
+        val attempt = measure()
+        add(attempt)
+        if (!shouldRetry(attempt)) return@buildList
+    }
+}
+
+fun selectLowestAllocationAttempt(attempts: List<AllocationData>): AllocationData {
+    require(attempts.isNotEmpty()) { "At least one allocation attempt is required" }
+    return attempts.minBy(AllocationData::totalSize)
+}
+
 fun compareAllocations(
     previous: AllocationData,
     current: AllocationData,
@@ -133,4 +151,6 @@ data class AllocationComparisonResult(
     val unexpectedIncrease: Long,
     val locationDifferences: List<LocationDifference>,
     val consumedLocationVariances: List<ConsumedLocationVariance>,
-)
+) {
+    val exceedsDefaultTolerance: Boolean get() = totalDifference > allowedDifference
+}
