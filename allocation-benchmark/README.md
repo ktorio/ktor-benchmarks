@@ -33,8 +33,10 @@ Tests memory allocations for Ktor client engines making requests.
 - Java
 
 **Test scenarios:**
-- Plain text responses
-- JSON responses
+- Small text response
+- File response
+- 2 MB streaming response
+- 2 MB gzip response
 
 ## Running Tests
 
@@ -63,14 +65,16 @@ Then open your browser to the displayed URL. The report server provides two view
 - **previewClasses.html** - Shows the largest memory consumers by allocated type
 - **previewSites.html** - Shows the code sites (stack traces) that allocate the most memory
 
+Both views support server and client benchmarks and can display the Main, Release 3.x, or Local snapshot. Local reports are read from `build/allocations/` and are produced by regular test runs.
+
 ## How It Works
 
 1. The Java agent (`instrumenter`) intercepts all object allocations during test execution
 2. Tests perform multiple warmup requests, then measure allocations over 300 requests
-3. Results are compared against baseline JSON files in the `allocations/` directory
-4. A measurement that exceeds the configured tolerance is retried with a fresh engine and coroutine context, up to two times
-5. Retries stop as soon as a measurement is within tolerance
-6. The lowest complete snapshot is used, and the test fails if all attempts exceed the tolerance
+3. Results are compared against branch-specific baseline JSON files in `allocations/main/` or `allocations/release-MAJOR.x/`
+4. A measurement that exceeds the default tolerance is retried with a fresh engine and coroutine context, up to two times
+5. Retries stop as soon as a measurement is within the default tolerance
+6. The lowest complete snapshot is evaluated using the full tolerance policy, including configured known variances
 
 Baseline generation always performs three measurements and stores the lowest complete snapshot. This lower-envelope approach filters incidental pool misses and scheduler interference without merging data from different attempts. Retried tests print every attempt total and the observed spread.
 
@@ -84,13 +88,23 @@ Use them to compare baselines between versions.
 
 ### Baseline files
 
-Baselines are stored as JSON files in `allocations/`:
-- `helloWorld[EngineName].json` - Server hello world endpoint allocations
-- `fileResponse[EngineName].json` - Server file response allocations
-- `plainText[EngineName].json` - Client plain text request allocations
-- `json[EngineName].json` - Client JSON request allocations
+Baselines are stored in branch-specific directories: `allocations/<branch-name>/`
 
-`allocations/tolerances.json` defines the default allowed increase and bounded, report-specific known variances. Known variances must include a reason so tests and analysis tools can distinguish documented measurement artifacts from regressions. Raw allocation dumps and diffs are never adjusted.
+Each directory contains files such as:
+
+- `helloWorld[EngineName].json` — server hello world endpoint allocations
+- `fileResponse[EngineName].json` — server file response allocations
+- `client/helloWorld[EngineName].json` — client small-response allocations
+
+On TeamCity, pull-request builds select the baseline from `teamcity.pullRequest.target.branch`; direct builds fall back to `teamcity.build.branch`. A `release/MAJOR.x` branch maps to `release-MAJOR.x`. Locally, a Ktor version with a non-zero patch component selects the release baseline derived from its major version. A zero patch component is ambiguous and requires an explicit baseline. Explicit selection always takes precedence. Release branch names such as `release/3.x` are normalized to baseline directory names such as `release-3.x`:
+
+```bash
+./gradlew test -PallocationBaseline=main
+./gradlew test -PallocationBaseline=release/3.x
+./gradlew dumpAllocations -PallocationBaseline=release/3.x
+```
+
+`allocations/tolerances.json` is shared by both baselines and defines the default allowed increase and bounded, report-specific known variances. Each known variance must include a reason, which is shown when the allowance is used. Raw allocation dumps and diffs are never adjusted.
 
 [`known-variations.md`](known-variations.md) documents recurring measurement artifacts and the allocation call-site patterns required to identify them. A matching total or source-file name alone is not sufficient.
 
@@ -100,16 +114,18 @@ Baselines are stored as JSON files in `allocations/`:
 - After Kotlin/Ktor version upgrades that change allocation patterns
 
 **How to update baselines:**
-1. Run `./gradlew dumpAllocations`; every scenario is measured three times
-2. Review the selected lowest snapshot and the attempt spread printed by the test
-3. Review the changes in `allocations/` directory
-4. Commit the new baselines if changes are expected
+1. Select the target baseline explicitly with `-PallocationBaseline=main` or `-PallocationBaseline=release/MAJOR.x` when automatic selection would be ambiguous
+2. Run `./gradlew dumpAllocations`; every scenario is measured three times
+3. Review the selected lowest snapshot and the attempt spread printed by the test
+4. Review changes only in the selected baseline directory
+5. Commit the new baselines if changes are expected
 
 ## Configuration
 
 Key parameters in tests:
 - `TEST_SIZE = 300L` - Number of requests measured per test
 - `WARMUP_SIZE = 20` - Number of warmup requests before measurement
+- `allocationBaseline` — optional Gradle property selecting `main` or `release/MAJOR.x`
 - `allocations/tolerances.json` - Default increase tolerance and report/location-specific known variance metadata
 
 ## TeamCity Integration
@@ -125,5 +141,5 @@ Automated tests run on every PR:
 3. If acceptable, update baseline: `./gradlew dumpAllocations`
 
 **"Instrumentation agent is not found" error:**
-- The instrumenter dependency is not configured correctly
-- Run `./gradlew clean build` to refresh dependencies
+- Verify that the `instrumenter` configuration resolves exactly one agent JAR
+- Run `./gradlew dependencies --configuration instrumenter --refresh-dependencies`; if resolution still fails, check the instrumenter repository and dependency configuration

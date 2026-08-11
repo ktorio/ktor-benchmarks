@@ -1,3 +1,5 @@
+import allocations.resolveAllocationBaseline
+
 plugins {
     alias(libs.plugins.kotlin.jvm)
     alias(libs.plugins.kotlin.serialization)
@@ -40,9 +42,10 @@ dependencies {
 val agentPath = instrumenter.singleOrNull()?.path
 check(agentPath != null) { "Instrumentation agent is not found. Please check the configuration" }
 
-tasks.test {
+tasks.withType<Test>().configureEach {
     jvmArgs = listOf("-javaagent:$agentPath")
     systemProperty("kotlinx.coroutines.debug", "off")
+    systemProperty("allocation.baseline", resolveAllocationBaseline(libs.versions.ktor.get()))
     useJUnitPlatform()
 }
 
@@ -50,9 +53,6 @@ tasks.register<Test>("serverTests") {
     group = "verification"
     testClassesDirs = sourceSets["test"].output.classesDirs
     classpath = sourceSets["test"].runtimeClasspath
-    systemProperty("kotlinx.coroutines.debug", "off")
-    jvmArgs = listOf("-javaagent:$agentPath")
-    useJUnitPlatform()
     filter {
         include("**/ServerCallAllocationTest*")
     }
@@ -63,9 +63,6 @@ tasks.register<Test>("dumpAllocations") {
     testClassesDirs = sourceSets["test"].output.classesDirs
     classpath = sourceSets["test"].runtimeClasspath
     systemProperty("SAVE_REPORT", "true")
-    systemProperty("kotlinx.coroutines.debug", "off")
-    jvmArgs = listOf("-javaagent:$agentPath")
-    useJUnitPlatform()
 }
 
 tasks.register<JavaExec>("reportServer") {

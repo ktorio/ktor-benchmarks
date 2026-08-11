@@ -13,7 +13,7 @@ private val serializer = Json {
 
 fun saveReport(name: String, report: AllocationData, replace: Boolean = true) {
     val file = if (replace)
-        File("allocations/$name.json")
+        allocationBaselineDirectory.resolve("$name.json")
     else
         File("build/allocations/$name.json")
 
@@ -39,13 +39,15 @@ data class SiteWithName(
 
 fun saveSiteStatistics(name: String, report: AllocationData, replace: Boolean) {
     val file = if (replace)
-        File("allocations/${name}_sites.json")
+        allocationBaselineDirectory.resolve("${name}_sites.json")
     else
         File("build/allocations/${name}_sites.json")
 
-    if (!file.exists()) {
+    if (!file.parentFile.exists())
+        file.parentFile.mkdirs()
+
+    if (!file.exists())
         file.createNewFile()
-    }
 
     val sites: List<SiteWithName> =
         report.packages
@@ -63,8 +65,8 @@ fun saveSiteStatistics(name: String, report: AllocationData, replace: Boolean) {
 }
 
 fun loadReport(name: String): AllocationData {
-    val file = File("allocations/$name.json")
-    check(file.exists()) { "No report found: $name" }
+    val file = allocationBaselineDirectory.resolve("$name.json")
+    check(file.exists()) { "No report found in '$allocationBaseline': $name" }
     val content = file.readText()
     return serializer.decodeFromString(content)
 }
