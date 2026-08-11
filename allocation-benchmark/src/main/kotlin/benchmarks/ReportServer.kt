@@ -10,8 +10,9 @@ fun main() {
     val port = 8082
     embeddedServer(Netty, port = port) {
         routing {
-            staticFiles("/", File("allocations"))
-            staticFiles("/test_output", File("build/allocations"))
+            staticFiles("/", File("report"))
+            staticFiles("/allocations", File("allocations"))
+            staticFiles("/build/allocations", File("build/allocations"))
         }
 
         println("""

@@ -30,14 +30,46 @@ export function displaySite(sites, item) {
     })
 }
 
+function selectBenchmarkOptions(name, benchmark) {
+    const options = Array.from(document.querySelectorAll(`input[name='${name}']`))
+    options.forEach(option => {
+        const visible = option.dataset.benchmarks.split(" ").includes(benchmark)
+        option.hidden = !visible
+        document.querySelector(`label[for='${option.id}']`).hidden = !visible
+    })
+
+    if (!options.some(option => option.checked && !option.hidden)) {
+        options.find(option => !option.hidden).checked = true
+    }
+}
+
+function normalizeAllocationData(data) {
+    Object.values(data).forEach(location => {
+        location.locationSize ??= 0
+        Object.values(location.instanceIndex).forEach(instance => {
+            instance.totalSize ??= 0
+            Object.values(instance.sites).forEach(site => {
+                site.totalCount ??= 0
+                site.totalSize ??= 0
+            })
+        })
+    })
+    return data
+}
+
 export function setupRenderControls(drawAllocations) {
     const render = () => {
+        const benchmark = document.querySelector("input[name='benchmark']:checked").value
+        selectBenchmarkOptions("test", benchmark)
+        selectBenchmarkOptions("engine", benchmark)
+
         const testName = document.querySelector("input[name='test']:checked").value
         const engineName = document.querySelector("input[name='engine']:checked").value
         const snapshotDir = document.querySelector("input[name='snapshot']:checked").value
-        const reportPath = `${snapshotDir}/${testName}[${engineName}].json`;
+        const benchmarkDir = benchmark === "client" ? `${snapshotDir}/client` : snapshotDir
+        const reportPath = `${benchmarkDir}/${testName}[${engineName}].json`;
         d3.json(reportPath).then(result => {
-            drawAllocations(result.data)
+            drawAllocations(normalizeAllocationData(result.data))
             document.getElementById("info").innerText = ""
         }, () => {
             drawAllocations({})

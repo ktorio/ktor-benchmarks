@@ -13,39 +13,60 @@
 <body>
 <header>
     <div>
-        <h1>Allocations by Class</h1>
-        <a href="previewSites.html">view by site</a>
+        <h1>Allocations by Site</h1>
+        <a href="previewClasses.html">view by class</a>
     </div>
 </header>
 <div class="controls">
     <div>
+        <h3>Select Benchmark:</h3>
+        <div>
+            <input type="radio" name="benchmark" id="server" value="server" checked />
+            <label for="server">Server</label>
+            <input type="radio" name="benchmark" id="client" value="client" />
+            <label for="client">Client</label>
+        </div>
+    </div>
+    <div>
         <h3>Select Testcase:</h3>
         <div>
-            <input type="radio" name="test" id="fileResponse" value="fileResponse" checked/>
+            <input type="radio" name="test" id="fileResponse" value="fileResponse" data-benchmarks="server client" checked />
             <label for="fileResponse">Files</label>
-            <input type="radio" name="test" id="helloWorld" value="helloWorld" checked/>
+            <input type="radio" name="test" id="helloWorld" value="helloWorld" data-benchmarks="server client" />
             <label for="helloWorld">Hello</label>
+            <input type="radio" name="test" id="gzipResponse" value="gzipResponse" data-benchmarks="client" />
+            <label for="gzipResponse">Gzip</label>
+            <input type="radio" name="test" id="streamingResponse" value="streamingResponse" data-benchmarks="client" />
+            <label for="streamingResponse">Streaming</label>
         </div>
     </div>
     <div>
         <h3>Select Engine:</h3>
         <div>
-            <input type="radio" name="engine" id="cio" value="CIO" checked/>
+            <input type="radio" name="engine" id="cio" value="CIO" data-benchmarks="server client" checked />
             <label for="cio">CIO</label>
-            <input type="radio" name="engine" id="netty" value="Netty"/>
+            <input type="radio" name="engine" id="netty" value="Netty" data-benchmarks="server" />
             <label for="netty">Netty</label>
-            <input type="radio" name="engine" id="jetty" value="Jetty"/>
+            <input type="radio" name="engine" id="jetty" value="Jetty" data-benchmarks="server" />
             <label for="jetty">Jetty</label>
-            <input type="radio" name="engine" id="tomcat" value="Tomcat"/>
+            <input type="radio" name="engine" id="tomcat" value="Tomcat" data-benchmarks="server" />
             <label for="tomcat">Tomcat</label>
+            <input type="radio" name="engine" id="apache" value="Apache" data-benchmarks="client" />
+            <label for="apache">Apache</label>
+            <input type="radio" name="engine" id="java" value="Java" data-benchmarks="client" />
+            <label for="java">Java</label>
+            <input type="radio" name="engine" id="okHttp" value="OkHttp" data-benchmarks="client" />
+            <label for="okHttp">OkHttp</label>
         </div>
     </div>
     <div>
         <h3>Select Snapshot:</h3>
-        <input type="radio" name="snapshot" id="current-snapshot" value="" checked/>
-        <label for="current-snapshot">Current</label>
-        <input type="radio" name="snapshot" id="test-snapshot" value="test_output"/>
-        <label for="test-snapshot">Test</label>
+        <input type="radio" name="snapshot" id="main-snapshot" value="../allocations/main" checked />
+        <label for="main-snapshot">Main</label>
+        <input type="radio" name="snapshot" id="release-snapshot" value="../allocations/release-3.x" />
+        <label for="release-snapshot">Release 3.x</label>
+        <input type="radio" name="snapshot" id="local-snapshot" value="../build/allocations" />
+        <label for="local-snapshot">Local</label>
     </div>
 </div>
 <main>
@@ -60,18 +81,23 @@
     const width = 800
     const height = 900
 
-    const displaySites = (name, index) => {
+    const displaySites = (index) => {
         const info = d3.select("#info")
         info.html("")
 
-        info.append("h3")
-            .text(name)
-
-        const sites = info.append("div")
-            .attr("class", "sites")
-
         index.sort((first, second) => second.totalSize - first.totalSize)
-        index.forEach(item => displaySite(sites, item))
+        index.forEach(item => {
+            info.append("h3")
+                .text(item.name)
+
+            const sites = info.append("div")
+                .attr("class", "sites")
+
+            const sitesArray = Object.values(item.sites)
+            sitesArray.sort((first, second) => second.totalSize - first.totalSize)
+
+            sitesArray.forEach(siteInfo => displaySite(sites, siteInfo))
+        })
     }
 
     const chart = (data) => {
@@ -80,7 +106,7 @@
         const height = Math.ceil((data.length + 0.1) * barHeight) + margin.top + margin.bottom
 
         const x = d3.scaleLinear()
-            .domain([0, d3.max(data, d => d.totalSize)])
+            .domain([0, d3.max(data, d => d.locationSize)])
             .range([margin.left, width - margin.right])
 
         const y = d3.scaleBand()
@@ -103,7 +129,7 @@
             .join("rect")
             .attr("x", x(0))
             .attr("y", (d, i) => y(i))
-            .attr("width", d => x(d.totalSize) - x(0))
+            .attr("width", d => x(d.locationSize) - x(0))
             .attr("height", y.bandwidth())
             .on("mouseover", function (d) {
                 d3.select(this)
@@ -114,7 +140,7 @@
                     .attr("fill", "steelblue")
             })
             .on("click", function (d, i) {
-                displaySites(d.name, Object.values(d.sites))
+                displaySites(Object.values(d.instanceIndex))
             })
 
         svg.append("g")
@@ -125,11 +151,11 @@
             .selectAll("text")
             .data(data)
             .join("text")
-            .attr("x", d => x(d.totalSize))
+            .attr("x", d => x(d.locationSize))
             .attr("y", (d, i) => y(i) + y.bandwidth() / 2)
             .attr("dy", "0.35em")
             .attr("dx", +4)
-            .text(d => d.totalSize)
+            .text(d => d.locationSize)
 
         svg.append("g")
             .call(yAxis);
@@ -137,33 +163,11 @@
         return svg
     }
 
-    const mergeIndexes = (indexes) => {
-        const result = {}
-
-        indexes.forEach(index => {
-            Object.values(index).forEach(instance => {
-                if (result[instance.name] === undefined) {
-                    result[instance.name] = instance
-                } else {
-                    result[instance.name].totalSize += instance.totalSize
-
-                    Object.values(instance.sites).forEach(site => {
-                        result[instance.name].sites[site.stackTrace] = site
-                    })
-                }
-            })
-        })
-
-        return result
-    }
-
     function drawAllocations(data) {
-        const indexes = Object.values(Object.values(data).map(site => site.instanceIndex))
-        const globalIndex = mergeIndexes(indexes)
-        const source = Object.values(globalIndex)
+        const values = Object.values(data)
 
-        source.sort((first, second) => second.totalSize - first.totalSize)
-        chart(source)
+        values.sort((first, second) => second.locationSize - first.locationSize)
+        chart(values)
     }
 
     setupRenderControls(drawAllocations)
