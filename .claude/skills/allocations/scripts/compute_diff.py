@@ -7,13 +7,17 @@ Modes:
       NEW_COMMIT defaults to HEAD if omitted.
 
   python compute_diff.py --local
-      Compare local build/allocations/ against local allocations/.
+      Compare local build/allocations/ against the inferred local baseline.
 
 Options:
-  --threshold N   Hide per-file entries with |delta| < N bytes (default: 50).
+  --baseline NAME     Compare one baseline family on both sides.
+  --old-baseline NAME Select the old baseline for a cross-family comparison.
+  --new-baseline NAME Select the new baseline for a cross-family comparison.
+  --threshold N       Hide per-file entries with |delta| < N bytes (default: 50).
                   Use --threshold 0 to show all entries.
                   Affects only changed sites, added and removed sites are always shown.
 
+Without baseline options, version tags and branch refs must identify the same baseline family.
 Run from the ktor-benchmarks repository root.
 """
 
@@ -22,7 +26,13 @@ import re
 import subprocess
 import sys
 
-from sources import git_sources, known_location_variance, local_sources
+from sources import (
+    git_sources,
+    infer_local_baseline,
+    known_location_variance,
+    local_sources,
+    parse_baseline_arguments,
+)
 
 SUBDIRS = {"server": "", "client": "client"}
 
@@ -31,7 +41,11 @@ SUBDIRS = {"server": "", "client": "client"}
 # Argument parsing
 # ---------------------------------------------------------------------------
 
-args = sys.argv[1:]
+try:
+    args, old_baseline, new_baseline = parse_baseline_arguments(sys.argv[1:])
+except ValueError as error:
+    print(f"ERROR: {error}", file=sys.stderr)
+    sys.exit(1)
 
 threshold = 50
 if "--threshold" in args:
@@ -46,21 +60,41 @@ if "--threshold" in args:
         sys.exit(1)
     args = args[:i] + args[i + 2:]
 
-if args and args[0] == "--local":
-    old_source, new_source = local_sources()
-    tolerance_source = old_source
-    mode = "--local"
-else:
-    if not args:
-        print(__doc__)
-        sys.exit(1)
-    old_source, new_source = git_sources(args[0])
-    tolerance_source = new_source
-    mode = f"{old_source.ref}..{new_source.ref}"
+try:
+    if args and args[0] == "--local":
+        if old_baseline != new_baseline:
+            raise ValueError("local comparisons require one baseline family")
+        baseline = old_baseline or infer_local_baseline()
+        old_source, new_source = local_sources(baseline)
+        tolerance_source = old_source
+        baseline_description = baseline
+        mode = "--local"
+    else:
+        if not args:
+            print(__doc__)
+            sys.exit(1)
+        old_source, new_source = git_sources(
+            args[0],
+            old_baseline=old_baseline,
+            new_baseline=new_baseline,
+        )
+        tolerance_source = new_source
+        baseline_description = (
+            old_source.baseline
+            if old_source.baseline == new_source.baseline
+            else f"{old_source.baseline} -> {new_source.baseline}"
+        )
+        mode = f"{old_source.ref}..{new_source.ref}"
+except (FileNotFoundError, ValueError) as error:
+    print(f"ERROR: {error}", file=sys.stderr)
+    sys.exit(1)
 
 tolerances = tolerance_source.load_tolerances()
 allowed_ratio = tolerances.get("defaultAllowedIncreaseRatio", 0.0)
-print(f"{mode}  --threshold={threshold}  --allowed-increase={allowed_ratio:.2%}")
+print(
+    f"{mode}  baseline={baseline_description}  --threshold={threshold}  "
+    f"--allowed-increase={allowed_ratio:.2%}"
+)
 
 
 # ---------------------------------------------------------------------------

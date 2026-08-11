@@ -7,9 +7,16 @@ Modes:
       NEW_COMMIT defaults to HEAD if omitted.
 
   python check_sites.py --local SCENARIO SOURCE_FILE
-      Compare local build/allocations/ against local allocations/.
+      Compare local build/allocations/ against the inferred local baseline.
 
-SCENARIO: path to _sites.json relative to the allocations root, without extension
+Options:
+  --baseline NAME     Compare one baseline family on both sides.
+  --old-baseline NAME Select the old baseline for a cross-family comparison.
+  --new-baseline NAME Select the new baseline for a cross-family comparison.
+
+Without baseline options, version tags and branch refs must identify the same baseline family.
+
+SCENARIO: path to _sites.json relative to the selected baseline, without extension
           e.g. helloWorld[CIO]  or  client/streamingResponse[CIO]
 SOURCE_FILE: source file name to inspect, e.g. ByteChannel.kt
 
@@ -18,31 +25,60 @@ Run from the ktor-benchmarks repository root.
 
 import sys
 
-from sources import git_sources, known_location_variance, local_sources
+from sources import (
+    git_sources,
+    infer_local_baseline,
+    known_location_variance,
+    local_sources,
+    parse_baseline_arguments,
+)
 
 
 # ---------------------------------------------------------------------------
 # Mode selection
 # ---------------------------------------------------------------------------
 
-if len(sys.argv) >= 2 and sys.argv[1] == "--local":
-    if len(sys.argv) < 4:
-        print(__doc__)
-        sys.exit(1)
-    scenario = sys.argv[2]
-    source_file = sys.argv[3]
-    old_source, new_source = local_sources()
-    tolerance_source = old_source
-    mode = "--local"
-else:
-    if len(sys.argv) < 4:
-        print(__doc__)
-        sys.exit(1)
-    old_source, new_source = git_sources(sys.argv[1])
-    tolerance_source = new_source
-    scenario = sys.argv[2]
-    source_file = sys.argv[3]
-    mode = f"{old_source.ref}..{new_source.ref}"
+try:
+    args, old_baseline, new_baseline = parse_baseline_arguments(sys.argv[1:])
+except ValueError as error:
+    print(f"ERROR: {error}", file=sys.stderr)
+    sys.exit(1)
+
+try:
+    if args and args[0] == "--local":
+        if len(args) < 3:
+            print(__doc__)
+            sys.exit(1)
+        if old_baseline != new_baseline:
+            raise ValueError("local comparisons require one baseline family")
+        baseline = old_baseline or infer_local_baseline()
+        scenario = args[1]
+        source_file = args[2]
+        old_source, new_source = local_sources(baseline)
+        tolerance_source = old_source
+        baseline_description = baseline
+        mode = "--local"
+    else:
+        if len(args) < 3:
+            print(__doc__)
+            sys.exit(1)
+        old_source, new_source = git_sources(
+            args[0],
+            old_baseline=old_baseline,
+            new_baseline=new_baseline,
+        )
+        tolerance_source = new_source
+        baseline_description = (
+            old_source.baseline
+            if old_source.baseline == new_source.baseline
+            else f"{old_source.baseline} -> {new_source.baseline}"
+        )
+        scenario = args[1]
+        source_file = args[2]
+        mode = f"{old_source.ref}..{new_source.ref}"
+except (FileNotFoundError, ValueError) as error:
+    print(f"ERROR: {error}", file=sys.stderr)
+    sys.exit(1)
 
 variance = known_location_variance(
     tolerance_source.load_tolerances(),
@@ -155,7 +191,7 @@ changed = {
 if not added and not removed and not changed:
     sys.exit(0)
 
-print(f"\n{scenario} / {source_file}  {mode}")
+print(f"\n{scenario} / {source_file}  {mode}  baseline={baseline_description}")
 if variance:
     print(f"  Known variance: up to {variance['knownVarianceBytes']:,} bytes")
     print(f"  Reason: {variance['reason']}")

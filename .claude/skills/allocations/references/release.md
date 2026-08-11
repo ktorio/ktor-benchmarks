@@ -13,14 +13,14 @@ git show vOLD_VERSION --no-patch
 
 If the tag is missing, stop and ask the user to create it before proceeding.
 
-Check whether new dumps are committed on HEAD:
+Derive `BASELINE` as `release/MAJOR.x` and `BASELINE_DIR` as `release-MAJOR.x` from `OLD_VERSION`, then check whether new release dumps are committed on HEAD:
 ```bash
-git log --oneline -1 -- allocation-benchmark/allocations/
+git log --oneline -1 -- allocation-benchmark/allocations/BASELINE_DIR/
 ```
 
 If the most recent commit touching `allocations/` is the same commit as `vOLD_VERSION` (i.e. no new dumps have been committed since the last release), follow Steps 1–4 from `references/update.md` to obtain and commit fresh dumps before continuing.
 
-Before promoting the report, verify that the user has seen and explicitly approved the verification packet required by Step 3 of `references/update.md` for these exact dumps. If not, run the diff against `vOLD_VERSION..HEAD`, investigate significant and correlated location changes, present the complete per-test evidence, and wait for explicit confirmation. A committed baseline or passing tolerance check does not replace this approval.
+Before promoting the report, verify that the user has seen and explicitly approved the verification packet required by Step 3 of `references/update.md` for these exact dumps. If not, run the diff against `vOLD_VERSION..HEAD` with `--baseline BASELINE`, investigate significant and correlated location changes, present the complete per-test evidence, and wait for explicit confirmation. A committed baseline or passing tolerance check does not replace this approval.
 
 ---
 

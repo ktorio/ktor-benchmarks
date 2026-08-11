@@ -13,7 +13,7 @@ Choose the approach based on what the user provided — only ask if neither appl
 
 ### Option A — Run locally
 
-Use when you want to benchmark a specific local Ktor build (e.g. an unreleased change).
+Use when you want to benchmark a specific local Ktor build (e.g. an unreleased change). A Ktor version with a non-zero patch component selects the release baseline derived from its major version; a zero patch component is ambiguous, so ask for `main` or the applicable `release/MAJOR.x` explicitly.
 
 First, if testing against a locally-built Ktor version, publish it to Maven Local from the ktor repository. Resolve the ktor repo path — see **Ktor repo path** in Prerequisites (SKILL.md).
 
@@ -54,16 +54,16 @@ unzip -o /tmp/tc-alloc/new_allocations.zip -d allocation-benchmark/build/allocat
 
 The zip preserves the `client/` subdirectory structure.
 
-Save the TC build URL — you will include it in `pending.md` so readers can inspect the raw results manually.
+Save the TC build URL and target Ktor branch. For pull requests use `teamcity.pullRequest.target.branch`; for direct builds use `teamcity.build.branch`. Select baseline `main` for Ktor `main`, or use the Ktor branch name `release/MAJOR.x`; the tooling normalizes it to the baseline directory name. You will include the build URL in `pending.md` so readers can inspect the raw results manually.
 
 ---
 
 ## Step 2 — Compute diff
 
-Both options place new dumps in `build/allocations/`, so always run from the ktor-benchmarks root:
+Both options place new dumps in `build/allocations/`, so always run from the ktor-benchmarks root. Set `BASELINE` to `main` or the applicable `release/MAJOR.x` from Step 1:
 
 ```bash
-python3 ${CLAUDE_SKILL_DIR}/scripts/compute_diff.py --local
+python3 ${CLAUDE_SKILL_DIR}/scripts/compute_diff.py --baseline BASELINE --local
 ```
 
 Capture complete results for every scenario and engine, including old/new totals, raw deltas, relevant location deltas, default-tolerance information, and known-variance annotations. These may be reformatted for readability, but do not reduce them to only failures or changes outside tolerance.
@@ -117,11 +117,11 @@ If dumps were fetched via Option B (TeamCity), append the following line at the 
 
 ## Step 4 — Commit the updated baseline
 
-Copy the new dumps into the baseline, then commit:
+Copy the new dumps into the selected baseline, then commit:
 
 ```bash
-cp -r allocation-benchmark/build/allocations/. allocation-benchmark/allocations/
-git add allocation-benchmark/allocations/ allocation-benchmark/pending.md
+cp -r allocation-benchmark/build/allocations/. allocation-benchmark/allocations/BASELINE/
+git add allocation-benchmark/allocations/BASELINE/ allocation-benchmark/pending.md
 git commit -m "Update allocation baselines
 
 Reflects changes from: PR #X, PR #Y (KTOR-NNNN)"

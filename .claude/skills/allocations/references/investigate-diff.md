@@ -24,16 +24,19 @@ Run it for **every significant change** — including ones already explained by 
 
 The `SCENARIO[ENGINE]` argument is the path relative to the allocations root without the `_sites.json` suffix — e.g. `helloWorld[CIO]` or `client/streamingResponse[CIO]`. The square brackets and engine name are literal.
 
+Set `BASELINE` to `main` or the applicable `release/MAJOR.x` for the Ktor branch being investigated.
+
 **Local mode** (new dumps in `build/allocations/`):
 ```bash
-python3 ${CLAUDE_SKILL_DIR}/scripts/check_sites.py --local \
+python3 ${CLAUDE_SKILL_DIR}/scripts/check_sites.py --baseline BASELINE --local \
   "SCENARIO[ENGINE]" \
   FileName.kt
 ```
 
 **Git mode** (comparing two commits). For a release use `vOLD..vNEW`; for an in-progress update where the new tag doesn't exist yet, omit `..vNEW` — it defaults to `HEAD`:
 ```bash
-python3 ${CLAUDE_SKILL_DIR}/scripts/check_sites.py vOLD_VERSION[..vNEW_VERSION] \
+python3 ${CLAUDE_SKILL_DIR}/scripts/check_sites.py --baseline BASELINE \
+  vOLD_VERSION[..vNEW_VERSION] \
   "SCENARIO[ENGINE]" \
   FileName.kt
 ```

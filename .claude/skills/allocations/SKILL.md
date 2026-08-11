@@ -30,9 +30,17 @@ Infer the command from `$ARGUMENTS` and the surrounding conversation:
 
 **`diff`** — Run from the ktor-benchmarks root and print the output:
 ```bash
+# Same main baseline family across benchmark commits
+python3 ${CLAUDE_SKILL_DIR}/scripts/compute_diff.py --baseline main OLD_COMMIT..NEW_COMMIT
+
+# Release tags infer release/MAJOR.x automatically
 python3 ${CLAUDE_SKILL_DIR}/scripts/compute_diff.py vOLD..vNEW
+
+# Explicit cross-family comparison
+python3 ${CLAUDE_SKILL_DIR}/scripts/compute_diff.py \
+  --old-baseline release/MAJOR.x --new-baseline main OLD_COMMIT..NEW_COMMIT
 ```
-For `NEW = main`, use `main` as the git ref. Version tags follow the `vX.Y.Z` convention.
+Version tags follow the `vX.Y.Z` convention. Revisions created before branch-specific baseline directories use the legacy root layout automatically. If two refs imply different or unknown baseline families, select one family with `--baseline` or both sides with `--old-baseline` and `--new-baseline`.
 
 ---
 
