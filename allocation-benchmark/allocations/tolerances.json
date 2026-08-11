@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8beb915b0b6b3ad2470f34654fb71a9304fd97d454c4d92e7cc053a8cbee94be
-size 458
+{
+  "defaultAllowedIncreaseRatio": 0.005,
+  "reports": {
+    "client/helloWorld[OkHttp]": {
+      "locations": {
+        "OkHttpEngine.kt": {
+          "knownVarianceBytes": 4096,
+          "reason": "Scheduler timing changes Okio segment-pool hit rate while OkHttp parses the request URL.",
+          "reference": "allocation-benchmark/known-variations.md#okhttp-segment-pool-hit-rate"
+        }
+      }
+    },
+    "client/streamingResponse[OkHttp]": {
+      "locations": {
+        "OkHttpEngine.kt": {
+          "knownVarianceBytes": 278528,
+          "reason": "Scheduler timing changes segment-pool hit rate, producing up to 34 additional 8 KiB arrays under OkHttpEngine.toChannel.",
+          "reference": "allocation-benchmark/known-variations.md#okhttp-segment-pool-hit-rate"
+        }
+      }
+    }
+  }
+}

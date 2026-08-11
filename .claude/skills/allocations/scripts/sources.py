@@ -12,6 +12,7 @@ ALLOC_LOCAL_ROOT = "allocation-benchmark/build/allocations"
 RELEASE_BASELINE_PATTERN = re.compile(r"^release-(\d+)\.x$")
 RELEASE_BRANCH_PATTERN = re.compile(r"^(?:refs/heads/)?release/(\d+)\.x$")
 TOLERANCES_FILE = "tolerances.json"
+LFS_POINTER_HEADER = b"version https://git-lfs.github.com/spec/v1\n"
 
 
 def parse_baseline_arguments(args):
@@ -215,6 +216,8 @@ class GitSource:
         raw = subprocess.check_output(
             ["git", "show", f"{self.ref}:{path}"], cwd=REPO
         )
+        if not raw.startswith(LFS_POINTER_HEADER):
+            return raw
         return subprocess.check_output(["git", "lfs", "smudge"], input=raw, cwd=REPO)
 
     def load(self, subdir, fname):

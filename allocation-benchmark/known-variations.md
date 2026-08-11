@@ -18,9 +18,11 @@ Keep the raw delta in reports even when it matches a known artifact. Investigate
 
 ## OkHttp segment-pool hit rate
 
-**Usually visible in:** `client/streamingResponse[OkHttp]`, occasionally other OkHttp response scenarios.
+**Usually visible in:** `client/streamingResponse[OkHttp]` and `client/helloWorld[OkHttp]`, occasionally other OkHttp scenarios.
 
-**Cause:** scheduler timing changes whether Okio/Ktor body-copy buffers are reused or newly allocated.
+**Cause:** scheduler timing changes whether Okio segments and their backing arrays are reused or newly allocated. This appears in both response-body copying and request URL parsing.
+
+### Response-body copying
 
 **Observable call-site pattern:**
 
@@ -29,16 +31,34 @@ Keep the raw delta in reports even when it matches a known artifact. Investigate
 - The same body-copy stack exists on both sides; only its count changes.
 - Smaller `ByteChannel.kt` suspension-count movements may offset part of the array delta.
 
-**Classify as this artifact only when:**
+**Classify response-body changes as this artifact only when:**
 
 1. `check_sites.py` points to the existing `OkHttpEngine.toChannel` body-copy stack.
 2. Raw `_sites.json` confirms that the dominant type is `[B` and that the count changed.
 3. No new buffer-allocation stack was introduced by the compared source range.
 4. Any deterministic OkHttp changes at other sites are accounted for separately.
 
-Investigate as a regression when the increase comes from another stack, includes new allocation types, or is not explained by the changed array count.
+### Request URL parsing
 
-The configured bound for `client/streamingResponse[OkHttp] / OkHttpEngine.kt` is stored in `allocations/tolerances.json`. The bound is assertion policy, not permission to skip the call-site checks.
+**Observable call-site pattern:**
+
+- `OkHttpEngine.kt` gains or loses `[B` allocations under `convertToOkHttpRequest`, at the `url(url.toString())` call.
+- `okio.Segment` allocations at the same stack move in the same direction. The entry may appear or disappear when a small movement rounds to or from zero after per-request normalization.
+- The same URL-conversion stack exists on both sides, and the `[B` allocated size changes without a production-source change on this path.
+- The normalized per-request delta need not be a whole 8 KiB multiple because occasional pool misses across the full measurement are divided by the request count.
+- Movements in other OkHttp scenarios at the same stack may offset part of the delta.
+
+**Classify request URL changes as this artifact only when:**
+
+1. `check_sites.py` points to the existing `OkHttpEngine.convertToOkHttpRequest` URL-conversion stack.
+2. Raw `_sites.json` confirms that `[B` dominates the delta and `okio.Segment` is present at the same stack.
+3. No new allocation stack or type other than the paired `okio.Segment` movement was introduced by the compared source range.
+4. The compared production source did not change the URL-conversion path.
+5. Any deterministic OkHttp changes at other sites are accounted for separately.
+
+Investigate as a regression when the increase comes from another stack, includes new allocation types, or does not satisfy the applicable pattern above.
+
+The configured bounds for `client/streamingResponse[OkHttp] / OkHttpEngine.kt` and `client/helloWorld[OkHttp] / OkHttpEngine.kt` are stored in `allocations/tolerances.json`. The bounds are assertion policy, not permission to skip the call-site checks.
 
 ## `ByteChannel` suspension-path redistribution
 

@@ -144,17 +144,16 @@ def stable_key(stack_trace):
 
 
 def build_map(sites):
-    """Build {stable_key: site} merging entries that share the same stable stack trace.
+    """Build {(allocation type, stable stack trace): site}.
 
-    When two raw entries share a stable key (caller line numbers differed), their
-    totalSize values are summed. All other fields (name, stackTrace, …) are kept
-    from the first occurrence. This is safe because stable_key preserves the top
-    frame's line number, so two sites that allocate *different types* at *different
-    lines* in the inspected file always produce distinct keys and are never merged.
+    When two raw entries have the same allocation type and stable stack trace,
+    their totalSize values are summed. All other fields are kept from the first
+    occurrence. Including the allocation type keeps different classes allocated
+    at the same source line separate.
     """
     result = {}
     for s in sites:
-        key = stable_key(s["stackTrace"])
+        key = (s["name"], stable_key(s["stackTrace"]))
         if key in result:
             result[key] = dict(result[key], totalSize=result[key]["totalSize"] + s["totalSize"])
         else:
