@@ -1,21 +1,26 @@
 package allocations
 
+import java.io.File
+import java.util.Properties
+import kotlin.io.path.createTempDirectory
 import kotlin.test.Test
 import kotlin.test.assertEquals
-import kotlin.io.path.createTempFile
 import kotlin.test.assertFailsWith
 import kotlin.test.assertNull
 
 class AllocationBaselineTest {
     @Test
-    fun `reads TeamCity property from build properties file`() {
-        val buildPropertiesFile = createTempFile().toFile()
+    fun `reads TeamCity system and configuration properties`() {
+        val directory = createTempDirectory().toFile()
+        val configurationPropertiesFile = directory.resolve("teamcity.config.parameters")
+        val buildPropertiesFile = directory.resolve("teamcity.build.parameters")
         try {
-            buildPropertiesFile.writeText(
-                """
-                teamcity.build.branch=pull/5806
-                teamcity.pullRequest.target.branch=release/3.x
-                """.trimIndent(),
+            configurationPropertiesFile.writeProperties(
+                "teamcity.pullRequest.target.branch" to "release/3.x",
+            )
+            buildPropertiesFile.writeProperties(
+                "teamcity.configuration.properties.file" to configurationPropertiesFile.absolutePath,
+                "teamcity.build.branch" to "pull/5806",
             )
 
             assertEquals(
@@ -28,7 +33,7 @@ class AllocationBaselineTest {
             )
             assertNull(readTeamCityProperty(buildPropertiesFile, "teamcity.unknown"))
         } finally {
-            buildPropertiesFile.delete()
+            directory.deleteRecursively()
         }
     }
 
@@ -132,5 +137,13 @@ class AllocationBaselineTest {
         assertFailsWith<IllegalArgumentException> {
             resolveAllocationBaseline("unknown", null, "3.5.2")
         }
+    }
+}
+
+private fun File.writeProperties(vararg properties: Pair<String, String>) {
+    outputStream().use { output ->
+        Properties().apply {
+            properties.forEach { (name, value) -> setProperty(name, value) }
+        }.store(output, null)
     }
 }

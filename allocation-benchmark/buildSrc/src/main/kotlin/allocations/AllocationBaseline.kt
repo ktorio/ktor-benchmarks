@@ -113,11 +113,22 @@ private fun Project.teamCityProperty(buildPropertiesFile: File, propertyName: St
     }.orNull
 
 internal fun readTeamCityProperty(buildPropertiesFile: File, propertyName: String): String? {
-    if (!buildPropertiesFile.isFile) return null
+    val buildProperties = buildPropertiesFile.loadProperties() ?: return null
+    buildProperties.getProperty(propertyName)?.let { return it }
 
-    val properties = Properties()
-    buildPropertiesFile.inputStream().use(properties::load)
-    return properties.getProperty(propertyName)
+    val configurationPropertiesFile = buildProperties
+        .getProperty("teamcity.configuration.properties.file")
+        ?.let(::File)
+        ?: return null
+    return configurationPropertiesFile.loadProperties()?.getProperty(propertyName)
+}
+
+private fun File.loadProperties(): Properties? {
+    if (!isFile) return null
+
+    return Properties().also { properties ->
+        inputStream().use(properties::load)
+    }
 }
 
 private fun Map<*, *>.value(name: String): String? =
