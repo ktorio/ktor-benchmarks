@@ -1,42 +1,10 @@
 package allocations
 
-import java.io.File
-import java.util.Properties
-import kotlin.io.path.createTempDirectory
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFailsWith
-import kotlin.test.assertNull
 
 class AllocationBaselineTest {
-    @Test
-    fun `reads TeamCity system and configuration properties`() {
-        val directory = createTempDirectory().toFile()
-        val configurationPropertiesFile = directory.resolve("teamcity.config.parameters")
-        val buildPropertiesFile = directory.resolve("teamcity.build.parameters")
-        try {
-            configurationPropertiesFile.writeProperties(
-                "teamcity.pullRequest.target.branch" to "release/3.x",
-            )
-            buildPropertiesFile.writeProperties(
-                "teamcity.configuration.properties.file" to configurationPropertiesFile.absolutePath,
-                "teamcity.build.branch" to "pull/5806",
-            )
-
-            assertEquals(
-                "release/3.x",
-                readTeamCityProperty(buildPropertiesFile, "teamcity.pullRequest.target.branch"),
-            )
-            assertEquals(
-                "pull/5806",
-                readTeamCityProperty(buildPropertiesFile, "teamcity.build.branch"),
-            )
-            assertNull(readTeamCityProperty(buildPropertiesFile, "teamcity.unknown"))
-        } finally {
-            directory.deleteRecursively()
-        }
-    }
-
     @Test
     fun `selects baseline from TeamCity pull request target branch`() {
         assertEquals(
@@ -137,13 +105,5 @@ class AllocationBaselineTest {
         assertFailsWith<IllegalArgumentException> {
             resolveAllocationBaseline("unknown", null, "3.5.2")
         }
-    }
-}
-
-private fun File.writeProperties(vararg properties: Pair<String, String>) {
-    outputStream().use { output ->
-        Properties().apply {
-            properties.forEach { (name, value) -> setProperty(name, value) }
-        }.store(output, null)
     }
 }

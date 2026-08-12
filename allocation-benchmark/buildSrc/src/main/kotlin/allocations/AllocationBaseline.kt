@@ -1,26 +1,27 @@
 package allocations
 
 import org.gradle.api.Project
-import org.gradle.api.file.RegularFileProperty
 import org.gradle.api.provider.Property
 import org.gradle.api.provider.ValueSource
 import org.gradle.api.provider.ValueSourceParameters
 import java.io.File
 import java.util.Properties
 
-private const val TEAMCITY_BUILD_PROPERTIES_FILE = "TEAMCITY_BUILD_PROPERTIES_FILE"
+private const val TEAMCITY_CONFIGURATION_PROPERTIES_FILE_PROPERTY = "teamcity.configuration.properties.file"
 
-abstract class TeamCityPropertyValueSource :
-    ValueSource<String, TeamCityPropertyValueSource.Parameters> {
-    interface Parameters : ValueSourceParameters {
-        val buildPropertiesFile: RegularFileProperty
-        val propertyName: Property<String>
+abstract class TeamCityPropertyValueSource : ValueSource<String, TeamCityPropertyValueSource.Parameters> {
+
+    private val configurationPropertiesFile: File?
+        get() = System.getProperty(TEAMCITY_CONFIGURATION_PROPERTIES_FILE_PROPERTY)?.let(::File)
+
+    override fun obtain(): String? {
+        val propertyName = parameters.propertyName.get()
+        return configurationPropertiesFile?.loadProperties()?.getProperty(propertyName)
     }
 
-    override fun obtain(): String? = readTeamCityProperty(
-        parameters.buildPropertiesFile.asFile.get(),
-        parameters.propertyName.get(),
-    )
+    interface Parameters : ValueSourceParameters {
+        val propertyName: Property<String>
+    }
 }
 
 internal data class TeamCityProperties(
@@ -29,24 +30,10 @@ internal data class TeamCityProperties(
 )
 
 fun Project.resolveAllocationBaseline(ktorVersion: String): String {
-    val extraProperties = extensions.extraProperties
-    val parameters = if (extraProperties.has("teamcity")) {
-        extraProperties["teamcity"] as Map<*, *>
-    } else {
-        null
-    }
-    val buildPropertiesFile = providers.environmentVariable(TEAMCITY_BUILD_PROPERTIES_FILE)
-        .orNull
-        ?.let(::File)
-    val teamCityProperties = if (parameters != null || buildPropertiesFile != null) {
-        TeamCityProperties(
-            pullRequestTargetBranch = buildPropertiesFile
-                ?.let { teamCityProperty(it, "teamcity.pullRequest.target.branch") }
-                ?: parameters?.value("pullRequest.target.branch"),
-            buildBranch = buildPropertiesFile
-                ?.let { teamCityProperty(it, "teamcity.build.branch") }
-                ?: parameters?.value("build.branch"),
-        )
+    val pullRequestTargetBranch = teamCityProperty("teamcity.pullRequest.target.branch")
+    val buildBranch = teamCityProperty("teamcity.build.branch")
+    val teamCityProperties = if (pullRequestTargetBranch != null || buildBranch != null) {
+        TeamCityProperties(pullRequestTargetBranch, buildBranch)
     } else {
         null
     }
@@ -106,22 +93,10 @@ private fun normalizeAllocationBaseline(baseline: String): String {
     return normalizedBaseline
 }
 
-private fun Project.teamCityProperty(buildPropertiesFile: File, propertyName: String): String? =
+private fun Project.teamCityProperty(propertyName: String): String? =
     providers.of(TeamCityPropertyValueSource::class.java) {
-        parameters.buildPropertiesFile.fileValue(buildPropertiesFile)
         parameters.propertyName.set(propertyName)
     }.orNull
-
-internal fun readTeamCityProperty(buildPropertiesFile: File, propertyName: String): String? {
-    val buildProperties = buildPropertiesFile.loadProperties() ?: return null
-    buildProperties.getProperty(propertyName)?.let { return it }
-
-    val configurationPropertiesFile = buildProperties
-        .getProperty("teamcity.configuration.properties.file")
-        ?.let(::File)
-        ?: return null
-    return configurationPropertiesFile.loadProperties()?.getProperty(propertyName)
-}
 
 private fun File.loadProperties(): Properties? {
     if (!isFile) return null
@@ -130,6 +105,3 @@ private fun File.loadProperties(): Properties? {
         inputStream().use(properties::load)
     }
 }
-
-private fun Map<*, *>.value(name: String): String? =
-    (get(name) ?: get("teamcity.$name"))?.toString()
