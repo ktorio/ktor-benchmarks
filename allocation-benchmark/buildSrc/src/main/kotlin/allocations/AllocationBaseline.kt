@@ -1,6 +1,27 @@
 package allocations
 
 import org.gradle.api.Project
+import org.gradle.api.file.RegularFileProperty
+import org.gradle.api.provider.Property
+import org.gradle.api.provider.ValueSource
+import org.gradle.api.provider.ValueSourceParameters
+import java.io.File
+import java.util.Properties
+
+private const val TEAMCITY_BUILD_PROPERTIES_FILE = "TEAMCITY_BUILD_PROPERTIES_FILE"
+
+abstract class TeamCityPropertyValueSource :
+    ValueSource<String, TeamCityPropertyValueSource.Parameters> {
+    interface Parameters : ValueSourceParameters {
+        val buildPropertiesFile: RegularFileProperty
+        val propertyName: Property<String>
+    }
+
+    override fun obtain(): String? = readTeamCityProperty(
+        parameters.buildPropertiesFile.asFile.get(),
+        parameters.propertyName.get(),
+    )
+}
 
 internal data class TeamCityProperties(
     val pullRequestTargetBranch: String?,
@@ -9,11 +30,22 @@ internal data class TeamCityProperties(
 
 fun Project.resolveAllocationBaseline(ktorVersion: String): String {
     val extraProperties = extensions.extraProperties
-    val teamCityProperties = if (extraProperties.has("teamcity")) {
-        val parameters = extraProperties["teamcity"] as Map<*, *>
+    val parameters = if (extraProperties.has("teamcity")) {
+        extraProperties["teamcity"] as Map<*, *>
+    } else {
+        null
+    }
+    val buildPropertiesFile = providers.environmentVariable(TEAMCITY_BUILD_PROPERTIES_FILE)
+        .orNull
+        ?.let(::File)
+    val teamCityProperties = if (parameters != null || buildPropertiesFile != null) {
         TeamCityProperties(
-            pullRequestTargetBranch = parameters.value("pullRequest.target.branch"),
-            buildBranch = parameters.value("build.branch"),
+            pullRequestTargetBranch = buildPropertiesFile
+                ?.let { teamCityProperty(it, "teamcity.pullRequest.target.branch") }
+                ?: parameters?.value("pullRequest.target.branch"),
+            buildBranch = buildPropertiesFile
+                ?.let { teamCityProperty(it, "teamcity.build.branch") }
+                ?: parameters?.value("build.branch"),
         )
     } else {
         null
@@ -72,6 +104,20 @@ private fun normalizeAllocationBaseline(baseline: String): String {
         "Unsupported allocation baseline '$baseline'. Expected 'main', 'release/MAJOR.x', or 'release-MAJOR.x'."
     }
     return normalizedBaseline
+}
+
+private fun Project.teamCityProperty(buildPropertiesFile: File, propertyName: String): String? =
+    providers.of(TeamCityPropertyValueSource::class.java) {
+        parameters.buildPropertiesFile.fileValue(buildPropertiesFile)
+        parameters.propertyName.set(propertyName)
+    }.orNull
+
+internal fun readTeamCityProperty(buildPropertiesFile: File, propertyName: String): String? {
+    if (!buildPropertiesFile.isFile) return null
+
+    val properties = Properties()
+    buildPropertiesFile.inputStream().use(properties::load)
+    return properties.getProperty(propertyName)
 }
 
 private fun Map<*, *>.value(name: String): String? =

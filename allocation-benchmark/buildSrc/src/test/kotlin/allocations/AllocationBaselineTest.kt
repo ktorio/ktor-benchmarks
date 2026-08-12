@@ -2,9 +2,36 @@ package allocations
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.io.path.createTempFile
 import kotlin.test.assertFailsWith
+import kotlin.test.assertNull
 
 class AllocationBaselineTest {
+    @Test
+    fun `reads TeamCity property from build properties file`() {
+        val buildPropertiesFile = createTempFile().toFile()
+        try {
+            buildPropertiesFile.writeText(
+                """
+                teamcity.build.branch=pull/5806
+                teamcity.pullRequest.target.branch=release/3.x
+                """.trimIndent(),
+            )
+
+            assertEquals(
+                "release/3.x",
+                readTeamCityProperty(buildPropertiesFile, "teamcity.pullRequest.target.branch"),
+            )
+            assertEquals(
+                "pull/5806",
+                readTeamCityProperty(buildPropertiesFile, "teamcity.build.branch"),
+            )
+            assertNull(readTeamCityProperty(buildPropertiesFile, "teamcity.unknown"))
+        } finally {
+            buildPropertiesFile.delete()
+        }
+    }
+
     @Test
     fun `selects baseline from TeamCity pull request target branch`() {
         assertEquals(
