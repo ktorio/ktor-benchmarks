@@ -96,7 +96,7 @@ Each directory contains files such as:
 - `fileResponse[EngineName].json` — server file response allocations
 - `client/helloWorld[EngineName].json` — client small-response allocations
 
-On TeamCity, pull-request builds select the baseline from `teamcity.pullRequest.target.branch`; direct builds fall back to `teamcity.build.branch`. A `release/MAJOR.x` branch maps to `release-MAJOR.x`. Locally, a Ktor version with a non-zero patch component selects the release baseline derived from its major version. A zero patch component is ambiguous and requires an explicit baseline. Explicit selection always takes precedence. Release branch names such as `release/3.x` are normalized to baseline directory names such as `release-3.x`:
+CI selects the baseline explicitly. Locally, a Ktor version with a non-zero patch component selects the release baseline derived from its major version. A zero patch component is ambiguous and requires an explicit baseline. Explicit selection always takes precedence. Release branch names such as `release/3.x` are normalized to baseline directory names such as `release-3.x`:
 
 ```bash
 ./gradlew test -PallocationBaseline=main
@@ -125,7 +125,7 @@ On TeamCity, pull-request builds select the baseline from `teamcity.pullRequest.
 Key parameters in tests:
 - `TEST_SIZE = 300L` - Number of requests measured per test
 - `WARMUP_SIZE = 20` - Number of warmup requests before measurement
-- `allocationBaseline` — optional Gradle property selecting `main` or `release/MAJOR.x`
+- `allocationBaseline` — Gradle property selecting `main` or `release/MAJOR.x`; CI sets it explicitly and local builds may infer it from the Ktor version
 - `allocations/tolerances.json` - Default increase tolerance and report/location-specific known variance metadata
 
 ## TeamCity Integration

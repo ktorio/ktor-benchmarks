@@ -1,64 +1,18 @@
 package allocations
 
 import org.gradle.api.Project
-import org.gradle.api.provider.Property
-import org.gradle.api.provider.ValueSource
-import org.gradle.api.provider.ValueSourceParameters
-import java.io.File
-import java.util.Properties
 
-private const val TEAMCITY_CONFIGURATION_PROPERTIES_FILE_PROPERTY = "teamcity.configuration.properties.file"
-
-abstract class TeamCityPropertyValueSource : ValueSource<String, TeamCityPropertyValueSource.Parameters> {
-
-    private val configurationPropertiesFile: File?
-        get() = System.getProperty(TEAMCITY_CONFIGURATION_PROPERTIES_FILE_PROPERTY)?.let(::File)
-
-    override fun obtain(): String? {
-        val propertyName = parameters.propertyName.get()
-        return configurationPropertiesFile?.loadProperties()?.getProperty(propertyName)
-    }
-
-    interface Parameters : ValueSourceParameters {
-        val propertyName: Property<String>
-    }
-}
-
-internal data class TeamCityProperties(
-    val pullRequestTargetBranch: String?,
-    val buildBranch: String?,
-)
-
-fun Project.resolveAllocationBaseline(ktorVersion: String): String {
-    val pullRequestTargetBranch = teamCityProperty("teamcity.pullRequest.target.branch")
-    val buildBranch = teamCityProperty("teamcity.build.branch")
-    val teamCityProperties = if (pullRequestTargetBranch != null || buildBranch != null) {
-        TeamCityProperties(pullRequestTargetBranch, buildBranch)
-    } else {
-        null
-    }
-
-    return resolveAllocationBaseline(
+fun Project.resolveAllocationBaseline(ktorVersion: String): String =
+    resolveAllocationBaseline(
         explicitBaseline = providers.gradleProperty("allocationBaseline").orNull,
-        teamCityProperties = teamCityProperties,
         ktorVersion = ktorVersion,
     )
-}
 
 internal fun resolveAllocationBaseline(
     explicitBaseline: String?,
-    teamCityProperties: TeamCityProperties?,
     ktorVersion: String,
 ): String {
     explicitBaseline?.let { return normalizeAllocationBaseline(it) }
-
-    if (teamCityProperties != null) {
-        val branch = teamCityProperties.pullRequestTargetBranch ?: teamCityProperties.buildBranch
-        return checkNotNull(baselineForBranch(branch)) {
-            "Cannot select an allocation baseline for TeamCity branch '$branch'. " +
-                    "Set the allocationBaseline Gradle property explicitly."
-        }
-    }
 
     val version = Regex("^(\\d+)\\.\\d+\\.(\\d+)").find(ktorVersion)
     val majorVersion = version?.groupValues?.get(1)?.toInt()
@@ -91,17 +45,4 @@ private fun normalizeAllocationBaseline(baseline: String): String {
         "Unsupported allocation baseline '$baseline'. Expected 'main', 'release/MAJOR.x', or 'release-MAJOR.x'."
     }
     return normalizedBaseline
-}
-
-private fun Project.teamCityProperty(propertyName: String): String? =
-    providers.of(TeamCityPropertyValueSource::class.java) {
-        parameters.propertyName.set(propertyName)
-    }.orNull
-
-private fun File.loadProperties(): Properties? {
-    if (!isFile) return null
-
-    return Properties().also { properties ->
-        inputStream().use(properties::load)
-    }
 }
