@@ -9,7 +9,7 @@ okhttp = "5.4.0"
 apache-httpclient = "4.5.14"
 logback = "1.6.3"
 
-develocity = "4.3.3" # Should be compatible with our server: ge.jetbrains.com
+develocity = "4.5.0" # Should be compatible with our server: ge.jetbrains.com
 develocity-commonCustomUserData = "2.8.0"
 
 instrumenter = "3.3.5"
