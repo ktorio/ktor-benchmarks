@@ -13,6 +13,7 @@ Options:
   --baseline NAME     Compare one baseline family on both sides.
   --old-baseline NAME Select the old baseline for a cross-family comparison.
   --new-baseline NAME Select the new baseline for a cross-family comparison.
+  --json              Output structured JSON instead of human-readable text.
 
 Without baseline options, version tags and branch refs must identify the same baseline family.
 
@@ -23,8 +24,11 @@ SOURCE_FILE: source file name to inspect, e.g. ByteChannel.kt
 Run from the ktor-benchmarks repository root.
 """
 
+import argparse
+import json
 import sys
 
+from site_analysis import analyze_grouped_sites, format_frames, group_by_file
 from sources import (
     git_sources,
     infer_local_baseline,
@@ -38,43 +42,64 @@ from sources import (
 # Mode selection
 # ---------------------------------------------------------------------------
 
+parser = argparse.ArgumentParser(
+    description=__doc__,
+    formatter_class=argparse.RawDescriptionHelpFormatter,
+)
+parser.add_argument("items", nargs="*", help="comparison, scenario, and source file")
+parser.add_argument("--local", action="store_true", help="compare local dumps against the baseline")
+parser.add_argument("--baseline")
+parser.add_argument("--old-baseline")
+parser.add_argument("--new-baseline")
+parser.add_argument("--json", action="store_true", help="output structured JSON")
+arguments = parser.parse_args()
+
+baseline_options = []
+for option in ("baseline", "old_baseline", "new_baseline"):
+    value = getattr(arguments, option)
+    if value:
+        baseline_options.extend((f"--{option.replace('_', '-')}", value))
 try:
-    args, old_baseline, new_baseline = parse_baseline_arguments(sys.argv[1:])
+    _, old_baseline, new_baseline = parse_baseline_arguments(baseline_options)
 except ValueError as error:
-    print(f"ERROR: {error}", file=sys.stderr)
-    sys.exit(1)
+    parser.error(str(error))
+
+expected_items = 2 if arguments.local else 3
+if len(arguments.items) != expected_items:
+    parser.error(
+        "--local requires SCENARIO SOURCE_FILE"
+        if arguments.local
+        else "git mode requires OLD_COMMIT[..NEW_COMMIT] SCENARIO SOURCE_FILE"
+    )
+
+json_output = arguments.json
 
 try:
-    if args and args[0] == "--local":
-        if len(args) < 3:
-            print(__doc__)
-            sys.exit(1)
+    if arguments.local:
         if old_baseline != new_baseline:
             raise ValueError("local comparisons require one baseline family")
         baseline = old_baseline or infer_local_baseline()
-        scenario = args[1]
-        source_file = args[2]
+        scenario, source_file = arguments.items
         old_source, new_source = local_sources(baseline)
         tolerance_source = old_source
+        old_baseline_name = new_baseline_name = baseline
         baseline_description = baseline
         mode = "--local"
     else:
-        if len(args) < 3:
-            print(__doc__)
-            sys.exit(1)
+        comparison, scenario, source_file = arguments.items
         old_source, new_source = git_sources(
-            args[0],
+            comparison,
             old_baseline=old_baseline,
             new_baseline=new_baseline,
         )
         tolerance_source = new_source
+        old_baseline_name = old_source.baseline
+        new_baseline_name = new_source.baseline
         baseline_description = (
             old_source.baseline
             if old_source.baseline == new_source.baseline
             else f"{old_source.baseline} -> {new_source.baseline}"
         )
-        scenario = args[1]
-        source_file = args[2]
         mode = f"{old_source.ref}..{new_source.ref}"
 except (FileNotFoundError, ValueError) as error:
     print(f"ERROR: {error}", file=sys.stderr)
@@ -91,76 +116,6 @@ variance = known_location_variance(
 # Analysis
 # ---------------------------------------------------------------------------
 
-def top_frame(s):
-    return s["stackTrace"].split(", ")[0].split(":")[0]
-
-
-def group_by_file(sites):
-    by_file = {}
-    for s in sites:
-        by_file.setdefault(top_frame(s), []).append(s)
-    return by_file
-
-
-def format_frames(stack_trace):
-    """Format up to 4 frames from a raw stackTrace string, collapsing consecutive
-    frames from the same file into a single token with multiple line numbers.
-
-    Frame separator is ' <- ' (call direction: allocating site on the left).
-    Consecutive same-file frames are collapsed: 'File.kt:21:52' means lines 21
-    and 52 of File.kt appeared as adjacent frames.
-    """
-    frames = stack_trace.split(", ")[:4]
-    result = []
-    i = 0
-    while i < len(frames):
-        file = frames[i].split(":")[0]
-        lines = []
-        while i < len(frames) and frames[i].split(":")[0] == file:
-            parts = frames[i].split(":")
-            if len(parts) > 1:
-                lines.append(parts[1])
-            i += 1
-        token = file + (":" + ":".join(lines) if lines else "")
-        result.append(token)
-    return " <- ".join(result)
-
-
-def stable_key(stack_trace):
-    """
-    Normalize caller line numbers so traces differing only in caller shifts match.
-
-    Keeps the top (allocating) frame line number intact so two distinct call sites
-    in the inspected file are never merged. Strips line numbers only from caller
-    frames, which loses the exact caller line in CHANGED output but avoids spurious
-    ADDED/REMOVED pairs when unrelated Ktor code insertions shift caller lines.
-
-    Output format: 'file:line' for frame 0, bare 'file' for frames 1+.
-    Used only for grouping — display uses the original stackTrace.
-    """
-    frames = stack_trace.split(", ")
-    normalized = [frames[0]] + [f.split(":")[0] for f in frames[1:]]
-    return ", ".join(normalized)
-
-
-def build_map(sites):
-    """Build {(allocation type, stable stack trace): site}.
-
-    When two raw entries have the same allocation type and stable stack trace,
-    their totalSize values are summed. All other fields are kept from the first
-    occurrence. Including the allocation type keeps different classes allocated
-    at the same source line separate.
-    """
-    result = {}
-    for s in sites:
-        key = (s["name"], stable_key(s["stackTrace"]))
-        if key in result:
-            result[key] = dict(result[key], totalSize=result[key]["totalSize"] + s["totalSize"])
-        else:
-            result[key] = s
-    return result
-
-
 try:
     new_sites = new_source.load_sites(scenario, required=True)
 except FileNotFoundError as e:
@@ -171,45 +126,66 @@ old_sites = old_source.load_sites(scenario, required=False)
 old_by_file = group_by_file(old_sites)
 new_by_file = group_by_file(new_sites)
 
-if source_file not in old_by_file and source_file not in new_by_file:
-    print(f"ERROR: '{source_file}' not found in either snapshot — check spelling", file=sys.stderr)
-    print(f"Known files: {', '.join(sorted(set(old_by_file) | set(new_by_file))[:20])}", file=sys.stderr)
+try:
+    changes = analyze_grouped_sites(old_by_file, new_by_file, source_file)
+except ValueError as error:
+    print(f"ERROR: {error}", file=sys.stderr)
     sys.exit(1)
 
-o_map = build_map(old_by_file.get(source_file, []))
-n_map = build_map(new_by_file.get(source_file, []))
-
-added = {k: v for k, v in n_map.items() if k not in o_map}
-removed = {k: v for k, v in o_map.items() if k not in n_map}
-changed = {
-    k: (o_map[k], n_map[k])
-    for k in o_map
-    if k in n_map and o_map[k]["totalSize"] != n_map[k]["totalSize"]
+analysis = {
+    "schemaVersion": 1,
+    "comparison": {
+        "mode": "local" if mode == "--local" else "git",
+        "oldBaseline": old_baseline_name,
+        "newBaseline": new_baseline_name,
+        "oldRevision": getattr(old_source, "ref", None),
+        "newRevision": getattr(new_source, "ref", None),
+    },
+    "scenario": scenario,
+    "sourceFile": source_file,
+    "knownVariance": {
+        "boundBytes": variance["knownVarianceBytes"],
+        "reason": variance["reason"],
+        "reference": variance.get("reference"),
+    } if variance else None,
+    "changes": changes,
 }
 
-if not added and not removed and not changed:
-    sys.exit(0)
 
-print(f"\n{scenario} / {source_file}  {mode}  baseline={baseline_description}")
-if variance:
-    print(f"  Known variance: up to {variance['knownVarianceBytes']:,} bytes")
-    print(f"  Reason: {variance['reason']}")
-    if variance.get("reference"):
-        print(f"  See: {variance['reference']}")
+def render_json():
+    json.dump(analysis, sys.stdout, indent=2)
+    print()
 
-entries = []
 
-for _, s in added.items():
-    n = s["totalSize"]
-    entries.append((n, f"  +{n:,}  [{s['name']}]  {format_frames(s['stackTrace'])}"))
+def render_text():
+    if not changes:
+        return
 
-for _, s in removed.items():
-    o = s["totalSize"]
-    entries.append((-o, f"  -{o:,}  [{s['name']}]  {format_frames(s['stackTrace'])}"))
+    print(f"\n{scenario} / {source_file}  {mode}  baseline={baseline_description}")
+    if variance:
+        print(f"  Known variance: up to {variance['knownVarianceBytes']:,} bytes")
+        print(f"  Reason: {variance['reason']}")
+        if variance.get("reference"):
+            print(f"  See: {variance['reference']}")
 
-for _, (old_s, new_s) in changed.items():
-    delta = new_s["totalSize"] - old_s["totalSize"]
-    entries.append((delta, f"  {delta:+,} ({old_s['totalSize']:,} → {new_s['totalSize']:,})  [{new_s['name']}]  {format_frames(new_s['stackTrace'])}"))
+    for change in changes:
+        delta = change["rawDelta"]
+        allocation_type = change["allocationType"]
+        if change["kind"] == "added":
+            frames = format_frames(change["newStackTrace"])
+            print(f"  +{change['newSize']:,}  [{allocation_type}]  {frames}")
+        elif change["kind"] == "removed":
+            frames = format_frames(change["oldStackTrace"])
+            print(f"  -{change['oldSize']:,}  [{allocation_type}]  {frames}")
+        else:
+            frames = format_frames(change["newStackTrace"])
+            print(
+                f"  {delta:+,} ({change['oldSize']:,} → {change['newSize']:,})  "
+                f"[{allocation_type}]  {frames}"
+            )
 
-for _, line in sorted(entries, key=lambda x: (int(x[0] < 0), -abs(x[0]))):
-    print(line)
+
+if json_output:
+    render_json()
+else:
+    render_text()

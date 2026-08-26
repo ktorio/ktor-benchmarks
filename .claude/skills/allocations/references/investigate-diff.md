@@ -6,7 +6,7 @@ Before classifying any movement as measurement noise, read `allocation-benchmark
 
 From `compute_diff.py` output, identify:
 
-**Known variances** — `allocation-benchmark/allocations/tolerances.json` documents bounded measurement artifacts. When a known variance is relevant to a comparison, the scripts print its configured bound, reason, and reference beside the matching location. Never hide the raw delta. Treat a change as known variance only when it remains within the bound and `check_sites.py` confirms the call sites match the corresponding pattern in `allocation-benchmark/known-variations.md`. Investigate excess, new call sites or allocation types, and incomplete pattern matches normally.
+**Known variances** — `allocation-benchmark/allocations/tolerances.json` documents bounded measurement artifacts. When a known variance is relevant to a comparison, the scripts report its configured bound, reason, and reference for the matching location. Never hide the raw delta. Treat a change as known variance only when it remains within the bound and `check_sites.py` confirms the call sites match the corresponding pattern in `allocation-benchmark/known-variations.md`. Investigate excess, new call sites or allocation types, and incomplete pattern matches normally.
 
 **Consistent changes** — files that moved by a similar amount across *multiple* engines/scenarios point to a shared cause.
 
@@ -30,7 +30,8 @@ Set `BASELINE` to `main` or the applicable `release/MAJOR.x` for the Ktor branch
 ```bash
 python3 ${CLAUDE_SKILL_DIR}/scripts/check_sites.py --baseline BASELINE --local \
   "SCENARIO[ENGINE]" \
-  FileName.kt
+  FileName.kt \
+  --json
 ```
 
 **Git mode** (comparing two commits). For a release use `vOLD..vNEW`; for an in-progress update where the new tag doesn't exist yet, omit `..vNEW` — it defaults to `HEAD`:
@@ -38,10 +39,11 @@ python3 ${CLAUDE_SKILL_DIR}/scripts/check_sites.py --baseline BASELINE --local \
 python3 ${CLAUDE_SKILL_DIR}/scripts/check_sites.py --baseline BASELINE \
   vOLD_VERSION[..vNEW_VERSION] \
   "SCENARIO[ENGINE]" \
-  FileName.kt
+  FileName.kt \
+  --json
 ```
 
-The class names and stack frames in the output are authoritative: they confirm exactly what is being allocated and from which call path. When the script prints known-variance metadata, verify these frames against its reason before accepting the exclusion.
+The allocation types and stack frames in the structured output are authoritative: they confirm exactly what is being allocated and from which call path. When the script reports known-variance metadata, verify these frames against its reason before accepting the exclusion.
 
 ## Deep investigation — attributing changes to PRs
 
