@@ -16,11 +16,14 @@ Options:
   --threshold N       Hide per-file entries with |delta| < N bytes (default: 50).
                   Use --threshold 0 to show all entries.
                   Affects only changed sites, added and removed sites are always shown.
+  --json              Output structured JSON instead of human-readable text.
 
 Without baseline options, version tags and branch refs must identify the same baseline family.
 Run from the ktor-benchmarks repository root.
 """
 
+import argparse
+import json
 import math
 import re
 import subprocess
@@ -41,44 +44,66 @@ SUBDIRS = {"server": "", "client": "client"}
 # Argument parsing
 # ---------------------------------------------------------------------------
 
-try:
-    args, old_baseline, new_baseline = parse_baseline_arguments(sys.argv[1:])
-except ValueError as error:
-    print(f"ERROR: {error}", file=sys.stderr)
-    sys.exit(1)
-
-threshold = 50
-if "--threshold" in args:
-    i = args.index("--threshold")
+def non_negative_integer(value):
     try:
-        threshold = int(args[i + 1])
-    except (IndexError, ValueError):
-        print("ERROR: --threshold requires a non-negative integer argument", file=sys.stderr)
-        sys.exit(1)
-    if threshold < 0:
-        print("ERROR: --threshold must be non-negative", file=sys.stderr)
-        sys.exit(1)
-    args = args[:i] + args[i + 2:]
+        result = int(value)
+    except ValueError:
+        raise argparse.ArgumentTypeError("must be a non-negative integer") from None
+    if result < 0:
+        raise argparse.ArgumentTypeError("must be non-negative")
+    return result
+
+
+parser = argparse.ArgumentParser(
+    description=__doc__,
+    formatter_class=argparse.RawDescriptionHelpFormatter,
+)
+parser.add_argument("comparison", nargs="?", help="OLD_COMMIT[..NEW_COMMIT]")
+parser.add_argument("--local", action="store_true", help="compare local dumps against the baseline")
+parser.add_argument("--baseline")
+parser.add_argument("--old-baseline")
+parser.add_argument("--new-baseline")
+parser.add_argument("--threshold", type=non_negative_integer, default=50, metavar="N")
+parser.add_argument("--json", action="store_true", help="output structured JSON")
+arguments = parser.parse_args()
+
+baseline_options = []
+for option in ("baseline", "old_baseline", "new_baseline"):
+    value = getattr(arguments, option)
+    if value:
+        baseline_options.extend((f"--{option.replace('_', '-')}", value))
+try:
+    _, old_baseline, new_baseline = parse_baseline_arguments(baseline_options)
+except ValueError as error:
+    parser.error(str(error))
+
+if arguments.local and arguments.comparison:
+    parser.error("comparison cannot be combined with --local")
+if not arguments.local and not arguments.comparison:
+    parser.error("comparison or --local is required")
+
+json_output = arguments.json
+threshold = arguments.threshold
 
 try:
-    if args and args[0] == "--local":
+    if arguments.local:
         if old_baseline != new_baseline:
             raise ValueError("local comparisons require one baseline family")
         baseline = old_baseline or infer_local_baseline()
         old_source, new_source = local_sources(baseline)
         tolerance_source = old_source
+        old_baseline_name = new_baseline_name = baseline
         baseline_description = baseline
         mode = "--local"
     else:
-        if not args:
-            print(__doc__)
-            sys.exit(1)
         old_source, new_source = git_sources(
-            args[0],
+            arguments.comparison,
             old_baseline=old_baseline,
             new_baseline=new_baseline,
         )
         tolerance_source = new_source
+        old_baseline_name = old_source.baseline
+        new_baseline_name = new_source.baseline
         baseline_description = (
             old_source.baseline
             if old_source.baseline == new_source.baseline
@@ -91,10 +116,6 @@ except (FileNotFoundError, ValueError) as error:
 
 tolerances = tolerance_source.load_tolerances()
 allowed_ratio = tolerances.get("defaultAllowedIncreaseRatio", 0.0)
-print(
-    f"{mode}  baseline={baseline_description}  --threshold={threshold}  "
-    f"--allowed-increase={allowed_ratio:.2%}"
-)
 
 
 # ---------------------------------------------------------------------------
@@ -110,6 +131,54 @@ def try_load(source, subdir, fname):
         return extract(source.load(subdir, fname))
     except (FileNotFoundError, subprocess.CalledProcessError):
         return None
+
+
+def analyze_report(section, engine, data):
+    suite, scenario = section.split("/", 1)
+    default_tolerance = math.floor(data["old_total"] * allowed_ratio + 0.5)
+    apply_known_variance = data["delta"] > default_tolerance
+    known_variance_consumed = 0
+    locations = []
+    for delta, source_file, old_size, new_size in data["diffs"]:
+        variance = known_location_variance(tolerances, data["report_name"], source_file)
+        relevant_variance = bool(variance and (delta < 0 or apply_known_variance))
+        consumed_bytes = 0
+        if relevant_variance and delta > 0:
+            consumed_bytes = min(delta, variance["knownVarianceBytes"])
+            known_variance_consumed += consumed_bytes
+        location = {
+            "sourceFile": source_file,
+            "oldSize": old_size,
+            "newSize": new_size,
+            "rawDelta": delta,
+        }
+        if variance:
+            location["knownVariance"] = {
+                "boundBytes": variance["knownVarianceBytes"],
+                "reason": variance["reason"],
+                "reference": variance.get("reference"),
+                "relevant": relevant_variance,
+                "consumedBytes": consumed_bytes,
+                "exceedsBound": abs(delta) > variance["knownVarianceBytes"],
+            }
+        locations.append(location)
+    effective_delta = data["delta"] - known_variance_consumed
+    unexpected_increase = max(effective_delta - default_tolerance, 0)
+    return {
+        "name": data["report_name"],
+        "suite": suite,
+        "scenario": scenario,
+        "engine": engine,
+        "oldTotal": data["old_total"],
+        "newTotal": data["new_total"],
+        "rawDelta": data["delta"],
+        "defaultTolerance": default_tolerance,
+        "knownVarianceConsumed": known_variance_consumed,
+        "effectiveDelta": effective_delta,
+        "unexpectedIncrease": unexpected_increase,
+        "passed": unexpected_increase == 0,
+        "locations": locations,
+    }
 
 
 results = {}
@@ -144,61 +213,99 @@ for side, subdir in SUBDIRS.items():
             "diffs": diffs,  # list of (delta, filename, old, new)
         }
 
-for scenario, engines in results.items():
-    print(f"\n{scenario}")
-    for engine, data in engines.items():
-        delta = data["delta"]
-        old_kb = data["old_total"] / 1024
-        new_kb = data["new_total"] / 1024
-        print(f"  {engine}: {old_kb:.2f} KB → {new_kb:.2f} KB  ({delta:+,})")
+reports = [
+    analyze_report(section, engine, data)
+    for section, engines in results.items()
+    for engine, data in engines.items()
+]
+comparison = {
+    "mode": "local" if mode == "--local" else "git",
+    "oldBaseline": old_baseline_name,
+    "newBaseline": new_baseline_name,
+    "oldRevision": getattr(old_source, "ref", None),
+    "newRevision": getattr(new_source, "ref", None),
+    "defaultAllowedIncreaseRatio": allowed_ratio,
+}
+
+
+def render_json():
+    json.dump(
+        {"schemaVersion": 1, "comparison": comparison, "reports": reports},
+        sys.stdout,
+        separators=(",", ":"),
+    )
+    print()
+
+
+def render_text():
+    print(
+        f"{mode}  baseline={baseline_description}  --threshold={threshold}  "
+        f"--allowed-increase={allowed_ratio:.2%}"
+    )
+    current_section = None
+    for report in reports:
+        section = f"{report['suite']}/{report['scenario']}"
+        if section != current_section:
+            print(f"\n{section}")
+            current_section = section
+
+        delta = report["rawDelta"]
+        old_kb = report["oldTotal"] / 1024
+        new_kb = report["newTotal"] / 1024
+        print(f"  {report['engine']}: {old_kb:.2f} KB → {new_kb:.2f} KB  ({delta:+,})")
         hidden_count = 0
         hidden_sum = 0
-        consumed_known_variance = 0
-        allowed_difference = math.floor(data["old_total"] * allowed_ratio + 0.5)
-        apply_known_variance = delta > allowed_difference
-        for d, fname, o, n in data["diffs"]:
-            variance = known_location_variance(tolerances, data["report_name"], fname)
-            show_known_variance = variance and (d < 0 or apply_known_variance)
+        for location in report["locations"]:
+            source_file = location["sourceFile"]
+            old_size = location["oldSize"]
+            new_size = location["newSize"]
+            location_delta = location["rawDelta"]
+            variance = location.get("knownVariance")
+            show_known_variance = bool(variance and variance["relevant"])
             if show_known_variance:
-                variance_bytes = variance["knownVarianceBytes"]
-                if d > 0:
-                    consumed_known_variance += min(d, variance_bytes)
-                observed_variance = abs(d)
+                variance_bytes = variance["boundBytes"]
                 annotation = f"  [known variance up to {variance_bytes:,} bytes"
-                if observed_variance > variance_bytes:
-                    annotation += f"; exceeds bound by {observed_variance - variance_bytes:,}"
+                if variance["exceedsBound"]:
+                    annotation += f"; exceeds bound by {abs(location_delta) - variance_bytes:,}"
                 annotation += "]"
             else:
                 annotation = ""
 
-            if o == 0:
-                print(f"    +{n:,}  {fname}{annotation}")
-            elif n == 0:
-                print(f"    -{o:,}  {fname}{annotation}")
-            elif abs(d) < threshold and not show_known_variance:
+            if old_size == 0:
+                print(f"    +{new_size:,}  {source_file}{annotation}")
+            elif new_size == 0:
+                print(f"    -{old_size:,}  {source_file}{annotation}")
+            elif abs(location_delta) < threshold and not show_known_variance:
                 hidden_count += 1
-                hidden_sum += d
+                hidden_sum += location_delta
             else:
-                print(f"    {d:+,} ({o:,} → {n:,})  {fname}{annotation}")
+                print(
+                    f"    {location_delta:+,} ({old_size:,} → {new_size:,})  "
+                    f"{source_file}{annotation}"
+                )
 
             if show_known_variance:
                 print(f"      {variance['reason']}")
-                if variance.get("reference"):
+                if variance["reference"]:
                     print(f"      See: {variance['reference']}")
 
         if hidden_count:
             print(f"    ({hidden_count} below threshold, net {hidden_sum:+,})")
-        effective_delta = delta - consumed_known_variance
-        unexpected_increase = max(effective_delta - allowed_difference, 0)
-        if consumed_known_variance:
+        if report["knownVarianceConsumed"]:
             print(
-                f"    Known variance consumed: {consumed_known_variance:,} bytes; "
-                f"effective delta: {effective_delta:+,}; "
-                f"default tolerance: {allowed_difference:,}; "
-                f"unexpected increase: {unexpected_increase:,}"
+                f"    Known variance consumed: {report['knownVarianceConsumed']:,} bytes; "
+                f"effective delta: {report['effectiveDelta']:+,}; "
+                f"default tolerance: {report['defaultTolerance']:,}; "
+                f"unexpected increase: {report['unexpectedIncrease']:,}"
             )
-        elif unexpected_increase:
+        elif report["unexpectedIncrease"]:
             print(
-                f"    Default tolerance: {allowed_difference:,} bytes; "
-                f"unexpected increase: {unexpected_increase:,}"
+                f"    Default tolerance: {report['defaultTolerance']:,} bytes; "
+                f"unexpected increase: {report['unexpectedIncrease']:,}"
             )
+
+
+if json_output:
+    render_json()
+else:
+    render_text()

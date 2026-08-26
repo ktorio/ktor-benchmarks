@@ -62,10 +62,10 @@ Use the returned build URL, target branch, allocation baseline, revisions, test 
 Both options place new dumps in `build/allocations/`, so always run from the ktor-benchmarks root. Set `BASELINE` to `main` or the applicable `release/MAJOR.x` from Step 1:
 
 ```bash
-python3 ${CLAUDE_SKILL_DIR}/scripts/compute_diff.py --baseline BASELINE --local
+python3 ${CLAUDE_SKILL_DIR}/scripts/compute_diff.py --baseline BASELINE --local --json
 ```
 
-Capture complete results for every scenario and engine, including old/new totals, raw deltas, relevant location deltas, default-tolerance information, and known-variance annotations. These may be reformatted for readability, but do not reduce them to only failures or changes outside tolerance.
+Use the structured result to capture every scenario and engine, including exact old/new totals, raw deltas, all location deltas, default-tolerance information, and known-variance annotations. Reformat it for readability, but do not reduce it to only failures or changes outside tolerance.
 
 ---
 
