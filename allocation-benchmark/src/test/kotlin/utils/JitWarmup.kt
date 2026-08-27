@@ -1,6 +1,8 @@
 package benchmarks.utils
 
 import java.lang.management.ManagementFactory
+import kotlin.time.Duration
+import kotlin.time.Duration.Companion.milliseconds
 import kotlin.time.Duration.Companion.seconds
 import kotlin.time.TimeSource
 
@@ -11,8 +13,8 @@ private val MAXIMUM_JIT_WARMUP_DURATION = 60.seconds
 
 internal data class JitWarmupResult(
     val requestCount: Int,
-    val elapsedMilliseconds: Long,
-    val compilationTimeDeltaMilliseconds: Long,
+    val elapsed: Duration,
+    val compilationTimeDelta: Duration,
 )
 
 internal inline fun warmupUntilJitStabilized(
@@ -47,15 +49,15 @@ internal inline fun warmupUntilJitStabilized(
 
     return JitWarmupResult(
         requestCount = requestCount,
-        elapsedMilliseconds = startedAt.elapsedNow().inWholeMilliseconds,
-        compilationTimeDeltaMilliseconds = previousCompilationTime - initialCompilationTime,
+        elapsed = startedAt.elapsedNow(),
+        compilationTimeDelta = (previousCompilationTime - initialCompilationTime).milliseconds,
     ).reported()
 }
 
 private fun JitWarmupResult.reported(): JitWarmupResult {
     println(
-        "JIT warmup: $requestCount requests in ${elapsedMilliseconds}ms; " +
-                "compilation time +${compilationTimeDeltaMilliseconds}ms; stabilized"
+        "JIT warmup: $requestCount requests in ${elapsed}; " +
+                "compilation time +${compilationTimeDelta}; stabilized"
     )
     return this
 }

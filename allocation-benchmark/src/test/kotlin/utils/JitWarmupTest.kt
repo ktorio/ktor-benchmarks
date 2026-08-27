@@ -3,6 +3,7 @@ package benchmarks.utils
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFailsWith
+import kotlin.time.Duration.Companion.milliseconds
 import kotlin.time.Duration.Companion.seconds
 import kotlin.time.TestTimeSource
 
@@ -24,7 +25,7 @@ class JitWarmupTest {
 
         assertEquals(450, result.requestCount)
         assertEquals(450, requestCount)
-        assertEquals(6, result.compilationTimeDeltaMilliseconds)
+        assertEquals(6.milliseconds, result.compilationTimeDelta)
     }
 
     @Test
