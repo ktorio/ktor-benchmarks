@@ -62,10 +62,17 @@ Use the returned build URL, target branch, allocation baseline, revisions, test 
 Both options place new dumps in `build/allocations/`, so always run from the ktor-benchmarks root. Set `BASELINE` to `main` or the applicable `release/MAJOR.x` from Step 1:
 
 ```bash
-python3 ${CLAUDE_SKILL_DIR}/scripts/compute_diff.py --baseline BASELINE --local --json
+ANALYSIS_DIR=allocation-benchmark/build/allocation-analysis
+mkdir -p "$ANALYSIS_DIR"
+python3 ${CLAUDE_SKILL_DIR}/scripts/compute_diff.py \
+  --baseline BASELINE --local --json \
+  > "$ANALYSIS_DIR/diff.json"
+python3 ${CLAUDE_SKILL_DIR}/scripts/check_diff_sites.py \
+  "$ANALYSIS_DIR/diff.json" --json \
+  > "$ANALYSIS_DIR/sites.json"
 ```
 
-Use the structured result to capture every scenario and engine, including exact old/new totals, raw deltas, all location deltas, default-tolerance information, and known-variance annotations. Reformat it for readability, but do not reduce it to only failures or changes outside tolerance.
+Keep the complete structured results in these build-local files instead of printing them into the conversation. Use `allocation-benchmark/build/allocation-analysis/diff.json` to capture every scenario and engine, including exact old/new totals, raw deltas, all location deltas, default-tolerance information, and known-variance annotations. Use `allocation-benchmark/build/allocation-analysis/sites.json` for the corresponding allocation types, sizes, and old/new stack traces. Query and reformat the files for readability, but do not reduce the verification packet to only failures or changes outside tolerance.
 
 ---
 
