@@ -45,16 +45,15 @@ https://ktor.teamcity.com/buildConfiguration/Ktor_AllocationTests/413598
                                                                    ^^^^^^ build ID
 ```
 
-Download and extract the new dumps:
+Fetch the build metadata and new dumps:
 
 ```bash
-teamcity run download BUILD_ID --artifact "new_allocations.zip" -o /tmp/tc-alloc/
-unzip -o /tmp/tc-alloc/new_allocations.zip -d allocation-benchmark/build/allocations/
+python3 ${CLAUDE_SKILL_DIR}/scripts/fetch_teamcity_build.py BUILD_ID --json
 ```
 
-The zip preserves the `client/` subdirectory structure.
+The command accepts either the numeric build ID or the complete build URL. It downloads `new_allocations.zip`, validates its summary and call-site files against the allocation tests reported by TeamCity, and atomically installs them into `allocation-benchmark/build/allocations/`. If that directory already exists, it is retained as a timestamped sibling such as `allocation-benchmark/build/allocations.backup-20260820-102433`. Downloaded TeamCity metadata and the archive are stored under `allocation-benchmark/build/teamcity/BUILD_ID/`.
 
-Save the TC build URL and target Ktor branch. For pull requests use `teamcity.pullRequest.target.branch`; for direct builds use `teamcity.build.branch`. Select baseline `main` for Ktor `main`, or use the Ktor branch name `release/MAJOR.x`; the tooling normalizes it to the baseline directory name. You will include the build URL in `pending.md` so readers can inspect the raw results manually.
+Use the returned build URL, target branch, allocation baseline, revisions, test counts, and failed allocation reports in the subsequent investigation. For pull requests the target branch determines the baseline; direct builds use the build branch. The command reports the canonical baseline selected by TeamCity, such as `main` or `release-3.x`. Include the build URL in `pending.md` so readers can inspect the raw results manually.
 
 ---
 
@@ -63,10 +62,17 @@ Save the TC build URL and target Ktor branch. For pull requests use `teamcity.pu
 Both options place new dumps in `build/allocations/`, so always run from the ktor-benchmarks root. Set `BASELINE` to `main` or the applicable `release/MAJOR.x` from Step 1:
 
 ```bash
-python3 ${CLAUDE_SKILL_DIR}/scripts/compute_diff.py --baseline BASELINE --local
+ANALYSIS_DIR=allocation-benchmark/build/allocation-analysis
+mkdir -p "$ANALYSIS_DIR"
+python3 ${CLAUDE_SKILL_DIR}/scripts/compute_diff.py \
+  --baseline BASELINE --local --json \
+  > "$ANALYSIS_DIR/diff.json"
+python3 ${CLAUDE_SKILL_DIR}/scripts/check_diff_sites.py \
+  "$ANALYSIS_DIR/diff.json" --json \
+  > "$ANALYSIS_DIR/sites.json"
 ```
 
-Capture complete results for every scenario and engine, including old/new totals, raw deltas, relevant location deltas, default-tolerance information, and known-variance annotations. These may be reformatted for readability, but do not reduce them to only failures or changes outside tolerance.
+Keep the complete structured results in these build-local files instead of printing them into the conversation. Use `allocation-benchmark/build/allocation-analysis/diff.json` to capture every scenario and engine, including exact old/new totals, raw deltas, all location deltas, default-tolerance information, and known-variance annotations. Use `allocation-benchmark/build/allocation-analysis/sites.json` for the corresponding allocation types, sizes, and old/new stack traces. Query and reformat the files for readability, but do not reduce the verification packet to only failures or changes outside tolerance.
 
 ---
 
