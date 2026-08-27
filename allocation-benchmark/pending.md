@@ -28,12 +28,12 @@
 
 **Measurement and baseline artifacts**
 
-- `client/streamingResponse[OkHttp]` has a raw **+45,111-byte** report delta. `OkHttpEngine.kt` is +48,041 bytes, dominated by changing `[B` and paired `okio.Segment` counts at the existing `toChannel` response-copy stack. This matches [OkHttp segment-pool hit-rate variation](known-variations.md#okhttp-segment-pool-hit-rate), remains within the configured 278,528-byte bound, and leaves an effective delta of **−2,930 bytes** after the allowance.
-- `client/helloWorld[OkHttp]` includes approximately +3.35 KiB of `[B`/`okio.Segment` movement at the existing request URL-conversion stack, also matching [OkHttp segment-pool hit-rate variation](known-variations.md#okhttp-segment-pool-hit-rate). No allowance is consumed because the raw report total still decreases by 497 bytes.
-- `ByteChannel.kt` moves by −873 bytes in `client/gzipResponse[CIO]` and by +337/+692/+1,013 bytes in Apache/CIO/OkHttp streaming responses. Comparison with the immediately preceding `main` dump shows only count redistribution among existing `awaitContent`, `readBuffer`, and flush stacks, matching [`ByteChannel` suspension-path redistribution](known-variations.md#bytechannel-suspension-path-redistribution) and [CIO socket-read and selector cadence](known-variations.md#cio-socket-read-and-selector-cadence); no new allocation caller or type appears.
-- The +70-byte CIO and +80-byte Netty `PipelinePhase[]` movements restore the constructor vararg arrays already present in the release baseline. The old `main` dumps omitted these arrays; the new call sites match the stable paired send/receive pipeline allocations rather than a production-code change.
-- The +88-byte Tomcat `KtorServlet.kt` movement likewise restores the same async-context allocation set present in the release baseline. The additional 85 bytes under `ServletWriter.kt` in `fileResponse` are one-time Tomcat/JDK class-loading and locale-resource allocations triggered by `setWriteListener`, not steady-state request processing.
-- [KTOR-9704 / #5743](https://github.com/ktorio/ktor/pull/5743) is already represented by the previous baseline and has no independent allocation delta in this comparison. The new `Strings.kt` entries are calls introduced by KTOR-9778.
+- The baseline was regenerated locally from Ktor `main` revision [`349d5a1`](https://github.com/ktorio/ktor/commit/349d5a14591c118e10adf203ead08f77193f1ac7) after changing the benchmark to warm each attempt until JVM compilation time remains stable for three request batches. All 72 allocation attempts stabilized before measurement. The allocation agent still reports instrumented allocation sites rather than objects surviving HotSpot escape analysis.
+- `client/streamingResponse[OkHttp]` has a raw **+50,674-byte** report delta. `OkHttpEngine.kt` is +56,121 bytes across the existing response-copy and request URL-conversion stacks. This matches [OkHttp segment-pool hit-rate variation](known-variations.md#okhttp-segment-pool-hit-rate), remains within the configured 278,528-byte location bound, and leaves an effective delta of **−5,447 bytes** after the allowance.
+- The stabilized `client/helloWorld[OkHttp]` snapshot reverses the previous URL-conversion pool miss: `[B` falls by 3,338 bytes and the paired `okio.Segment` by 16 bytes at the existing stack. The cumulative report now improves by 3,853 bytes.
+- Client `ByteChannel.kt` movements of up to approximately 3.7 KiB remain count redistributions among existing `awaitContent`, `readBuffer`, and flush stacks, matching [`ByteChannel` suspension-path redistribution](known-variations.md#bytechannel-suspension-path-redistribution) and [CIO socket-read and selector cadence](known-variations.md#cio-socket-read-and-selector-cadence); no new allocation caller or type appears.
+- Stabilized `helloWorld` snapshots omit 70 bytes of CIO and 80 bytes of Jetty/Netty/Tomcat `PipelinePhase[]` constructor arrays. The pipeline source is unchanged, so this is recorded as a baseline-methodology correction rather than a production-code improvement.
+- The +88-byte Tomcat `KtorServlet.kt` movement in the earlier production build restored the same async-context allocation set present in the release baseline. The additional 85 bytes under `ServletWriter.kt` in `fileResponse` were one-time Tomcat/JDK class-loading and locale-resource allocations triggered by `setWriteListener`, not steady-state request processing.
 
 ---
 
@@ -46,37 +46,37 @@
 
 | Engine | Consumed (pending) | Baseline (3.5.2) | Δ |
 |--------|-------------------:|-----------------:|--:|
-| CIO | 39.65 KB | 43.98 KB | **−4,432 bytes (−9.84%)** |
-| Apache | 28.30 KB | 32.70 KB | **−4,496 bytes (−13.43%)** |
-| OkHttp | 25.23 KB | 25.72 KB | **−497 bytes** |
-| Java | 23.99 KB | 28.44 KB | **−4,552 bytes (−15.63%)** |
+| CIO | 39.64 KB | 43.98 KB | **−4,438 bytes (−9.86%)** |
+| Apache | 28.20 KB | 32.70 KB | **−4,600 bytes (−13.74%)** |
+| OkHttp | 21.95 KB | 25.72 KB | **−3,853 bytes (−14.63%)** |
+| Java | 23.72 KB | 28.44 KB | **−4,828 bytes (−16.58%)** |
 
 #### `fileResponse` — buffered file download
 
 | Engine | Consumed (pending) | Baseline (3.5.2) | Δ |
 |--------|-------------------:|-----------------:|--:|
-| CIO | 2360.14 KB | 2364.77 KB | **−4,740 bytes** |
-| Apache | 2563.37 KB | 2567.76 KB | **−4,498 bytes** |
-| OkHttp | 2341.89 KB | 2345.55 KB | **−3,744 bytes** |
-| Java | 2343.94 KB | 2348.33 KB | **−4,491 bytes** |
+| CIO | 2358.22 KB | 2364.77 KB | **−6,707 bytes** |
+| Apache | 2563.05 KB | 2567.76 KB | **−4,821 bytes** |
+| OkHttp | 2341.45 KB | 2345.55 KB | **−4,202 bytes** |
+| Java | 2343.82 KB | 2348.33 KB | **−4,615 bytes** |
 
 #### `gzipResponse` — compressed response
 
 | Engine | Consumed (pending) | Baseline (3.5.2) | Δ |
 |--------|-------------------:|-----------------:|--:|
-| CIO | 6404.99 KB | 6409.86 KB | **−4,982 bytes** |
-| Apache | 8347.23 KB | 8351.57 KB | **−4,444 bytes** |
-| OkHttp | 6238.98 KB | 6242.59 KB | **−3,690 bytes** |
-| Java | 6305.33 KB | 6309.77 KB | **−4,549 bytes** |
+| CIO | 6405.49 KB | 6409.86 KB | **−4,479 bytes** |
+| Apache | 8347.02 KB | 8351.57 KB | **−4,666 bytes** |
+| OkHttp | 6241.33 KB | 6242.59 KB | **−1,289 bytes** |
+| Java | 6301.68 KB | 6309.77 KB | **−8,293 bytes** |
 
 #### `streamingResponse` — streamed response
 
 | Engine | Consumed (pending) | Baseline (3.5.2) | Δ |
 |--------|-------------------:|-----------------:|--:|
-| CIO | 2307.81 KB | 2311.34 KB | **−3,623 bytes** |
-| Apache | 4249.95 KB | 4253.85 KB | **−3,996 bytes** |
-| OkHttp | 3275.88 KB | 3231.83 KB | **+45,111 bytes** |
-| Java | 2208.38 KB | 2212.79 KB | **−4,517 bytes** |
+| CIO | 2308.29 KB | 2311.34 KB | **−3,129 bytes** |
+| Apache | 4249.73 KB | 4253.85 KB | **−4,217 bytes** |
+| OkHttp | 3281.31 KB | 3231.83 KB | **+50,674 bytes** |
+| Java | 2204.71 KB | 2212.79 KB | **−8,270 bytes** |
 
 </details>
 
@@ -91,19 +91,19 @@
 
 | Engine | Consumed (pending) | Baseline (3.5.2) | Δ |
 |--------|-------------------:|-----------------:|--:|
-| Jetty | 6.96 KB | 7.54 KB | **−600 bytes (−7.77%)** |
-| Tomcat | 14.13 KB | 14.62 KB | **−503 bytes** |
-| Netty | 7.30 KB | 7.81 KB | **−520 bytes (−6.51%)** |
-| CIO | 15.26 KB | 15.60 KB | **−345 bytes** |
+| Jetty | 6.88 KB | 7.54 KB | **−675 bytes (−8.74%)** |
+| Tomcat | 13.98 KB | 14.62 KB | **−660 bytes** |
+| Netty | 7.22 KB | 7.81 KB | **−600 bytes (−7.51%)** |
+| CIO | 15.19 KB | 15.60 KB | **−416 bytes** |
 
 #### `fileResponse` — static file response
 
 | Engine | Consumed (pending) | Baseline (3.5.2) | Δ |
 |--------|-------------------:|-----------------:|--:|
-| Jetty | 39.12 KB | 39.69 KB | **−581 bytes** |
-| Tomcat | 42.66 KB | 43.04 KB | **−395 bytes** |
-| Netty | 34.06 KB | 34.56 KB | **−519 bytes** |
-| CIO | 38.39 KB | 38.74 KB | **−360 bytes** |
+| Jetty | 39.04 KB | 39.69 KB | **−665 bytes** |
+| Tomcat | 42.47 KB | 43.04 KB | **−582 bytes** |
+| Netty | 33.85 KB | 34.56 KB | **−727 bytes** |
+| CIO | 38.15 KB | 38.74 KB | **−609 bytes** |
 
 </details>
 
@@ -114,4 +114,6 @@
 > python3 .claude/skills/allocations/scripts/compute_diff.py --baseline main v3.5.2..main
 > ```
 
-> Source: [TeamCity build](https://ktor.teamcity.com/buildConfiguration/Ktor_AllocationTests/443553)
+> Production-change source: [TeamCity build](https://ktor.teamcity.com/buildConfiguration/Ktor_AllocationTests/443553)
+>
+> Stabilized baseline source: local Ktor `main` revision [`349d5a1`](https://github.com/ktorio/ktor/commit/349d5a14591c118e10adf203ead08f77193f1ac7)

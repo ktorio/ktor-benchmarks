@@ -12,7 +12,6 @@ import utils.benchmarks.*
 import kotlin.math.absoluteValue
 
 const val TEST_SIZE = 300L
-const val WARMUP_SIZE = 20
 const val KB = 1024L
 
 class ServerCallAllocationTest : BaseAllocationTest() {
