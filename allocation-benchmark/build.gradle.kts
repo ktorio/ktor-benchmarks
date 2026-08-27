@@ -3,6 +3,7 @@ import allocations.resolveAllocationBaseline
 plugins {
     alias(libs.plugins.kotlin.jvm)
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.jmh)
     id("test-server")
 }
 
@@ -13,6 +14,20 @@ val instrumenter = configurations.create("instrumenter")
 
 kotlin {
     jvmToolchain(21)
+}
+
+val jettyVersion = providers.gradleProperty("jettyVersion").orNull ?: "12.1.12"
+val jmhBenchmark = providers.gradleProperty("jmhBenchmark").orElse("JettyServerBenchmark")
+configurations.matching { it.name.startsWith("jmh", ignoreCase = true) }.configureEach {
+    resolutionStrategy.eachDependency {
+        if (
+            requested.group.startsWith("org.eclipse.jetty") &&
+            requested.group != "org.eclipse.jetty.alpn"
+        ) {
+            useVersion(jettyVersion)
+            because("Benchmark Jetty $jettyVersion")
+        }
+    }
 }
 
 dependencies {
@@ -37,6 +52,26 @@ dependencies {
     implementation(libs.instrumenter)
 
     implementation(libs.kotlinx.serialization.json)
+
+    jmh("org.eclipse.jetty:jetty-io:$jettyVersion")
+}
+
+sourceSets.named("jmh") {
+    if (jettyVersion.startsWith("12.0.")) {
+        java.exclude("**/DynamicCapacityBenchmark.java")
+    }
+}
+
+jmh {
+    benchmarkMode.set(listOf("avgt"))
+    fork.set(3)
+    profilers.set(listOf("gc"))
+    includes.set(listOf(jmhBenchmark.get()))
+    resultFormat.set("json")
+
+    if (providers.gradleProperty("disableEscapeAnalysis").isPresent) {
+        jvmArgsAppend.set(listOf("-XX:-DoEscapeAnalysis"))
+    }
 }
 
 val agentPath = instrumenter.singleOrNull()?.path
