@@ -103,8 +103,8 @@ Each directory contains files such as:
 CI selects the baseline explicitly. Locally, a Ktor version with a non-zero patch component selects the release baseline derived from its major version. A zero patch component is ambiguous and requires an explicit baseline. Explicit selection always takes precedence. Release branch names such as `release/3.x` are normalized to baseline directory names such as `release-3.x`:
 
 ```bash
-./gradlew test -PallocationBaseline=main
-./gradlew test -PallocationBaseline=release/3.x
+./gradlew allocationTests -PallocationBaseline=main
+./gradlew allocationTests -PallocationBaseline=release/3.x
 ./gradlew allocationTests -PsaveReports=true -PallocationBaseline=release/3.x
 ```
 
