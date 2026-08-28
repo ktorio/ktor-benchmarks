@@ -41,14 +41,18 @@ Tests memory allocations for Ktor client engines making requests.
 ## Running Tests
 
 ```bash
-# Run all allocation tests
+# Run utility tests
 ./gradlew test
 
-# Run only server allocation tests
+# Run all allocation tests
+./gradlew allocationTests
+
+# Run only server or client allocation tests
 ./gradlew serverTests
+./gradlew clientTests
 
 # Generate new allocation baselines (when intentional changes are made)
-./gradlew dumpAllocations
+./gradlew allocationTests -PsaveReports=true
 ```
 
 ## Viewing Allocation Reports
@@ -101,7 +105,7 @@ CI selects the baseline explicitly. Locally, a Ktor version with a non-zero patc
 ```bash
 ./gradlew test -PallocationBaseline=main
 ./gradlew test -PallocationBaseline=release/3.x
-./gradlew dumpAllocations -PallocationBaseline=release/3.x
+./gradlew allocationTests -PsaveReports=true -PallocationBaseline=release/3.x
 ```
 
 `allocations/tolerances.json` is shared by both baselines and defines the default allowed increase and bounded, report-specific known variances. Each known variance must include a reason, which is shown when the allowance is used. Raw allocation dumps and diffs are never adjusted.
@@ -115,7 +119,7 @@ CI selects the baseline explicitly. Locally, a Ktor version with a non-zero patc
 
 **How to update baselines:**
 1. Select the target baseline explicitly with `-PallocationBaseline=main` or `-PallocationBaseline=release/MAJOR.x` when automatic selection would be ambiguous
-2. Run `./gradlew dumpAllocations`; every scenario is measured three times
+2. Run `./gradlew allocationTests -PsaveReports=true`; every scenario is measured three times
 3. Review the selected lowest snapshot and the attempt spread printed by the test
 4. Review changes only in the selected baseline directory
 5. Commit the new baselines if changes are expected
@@ -126,6 +130,7 @@ Key parameters in tests:
 - `TEST_SIZE = 300L` - Number of requests measured per test
 - JIT warmup runs untracked requests in batches of 50 and checks for stabilization after 300 requests. After compilation time remains unchanged for three consecutive batches, 50 tracked requests warm the allocation sampler before its data is discarded and measurement starts. The test fails if JIT stabilization does not happen within 60 seconds.
 - `allocationBaseline` — Gradle property selecting `main` or `release/MAJOR.x`; CI sets it explicitly and local builds may infer it from the Ktor version
+- `saveReports` — when `true`, always performs three measurements and replaces the selected allocation baseline instead of validating it
 - `allocations/tolerances.json` - Default increase tolerance and report/location-specific known variance metadata
 
 ## TeamCity Integration
@@ -138,7 +143,7 @@ Automated tests run on every PR:
 **Test fails with allocation difference:**
 1. Check if the change is expected (e.g., new feature, dependency update)
 2. View the allocation report to identify what changed: `./gradlew reportServer`
-3. If acceptable, update baseline: `./gradlew dumpAllocations`
+3. If acceptable, update the baseline: `./gradlew allocationTests -PsaveReports=true`
 
 **"Instrumentation agent is not found" error:**
 - Verify that the `instrumenter` configuration resolves exactly one agent JAR

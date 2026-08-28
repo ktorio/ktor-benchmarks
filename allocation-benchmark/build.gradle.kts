@@ -1,3 +1,4 @@
+import allocations.createJavaAgentProvider
 import allocations.resolveAllocationBaseline
 
 plugins {
@@ -8,8 +9,6 @@ plugins {
 
 group = "io.ktor"
 version = "0.0.1"
-
-val instrumenter = configurations.create("instrumenter")
 
 kotlin {
     jvmToolchain(21)
@@ -33,36 +32,57 @@ dependencies {
     testImplementation(libs.junit.jupiter)
     testImplementation(libs.junit.jupiter.params)
 
-    instrumenter(libs.instrumenter)
     implementation(libs.instrumenter)
 
     implementation(libs.kotlinx.serialization.json)
 }
 
-val agentPath = instrumenter.singleOrNull()?.path
-check(agentPath != null) { "Instrumentation agent is not found. Please check the configuration" }
-
-tasks.withType<Test>().configureEach {
-    jvmArgs = listOf("-javaagent:$agentPath")
-    systemProperty("kotlinx.coroutines.debug", "off")
-    systemProperty("allocation.baseline", resolveAllocationBaseline(libs.versions.ktor.get()))
-    useJUnitPlatform()
-}
-
-tasks.register<Test>("serverTests") {
-    group = "verification"
-    testClassesDirs = sourceSets["test"].output.classesDirs
-    classpath = sourceSets["test"].runtimeClasspath
+tasks.test {
     filter {
-        include("**/ServerCallAllocationTest*")
+        exclude("**/ServerCallAllocationTest*")
+        exclude("**/ClientCallAllocationTest*")
     }
 }
 
-tasks.register<Test>("dumpAllocations") {
+tasks.withType<Test>().configureEach {
+    useJUnitPlatform()
+    systemProperty("allocation.baseline", resolveAllocationBaseline(libs.versions.ktor.get()))
+}
+
+
+val instrumenterAgentProvider = createJavaAgentProvider("instrumenter", libs.instrumenter)
+val saveReports = providers.gradleProperty("saveReports")
+    .map { it.toBooleanStrict() }
+    .orElse(false)
+
+fun Project.registerAllocationTestTask(target: String): TaskProvider<Test> {
+    return tasks.register<Test>("${target}Tests") {
+        group = "verification"
+        description = "Run $target allocation tests."
+        testClassesDirs = sourceSets["test"].output.classesDirs
+        classpath = sourceSets["test"].runtimeClasspath
+        jvmArgumentProviders.add(instrumenterAgentProvider)
+        systemProperty("kotlinx.coroutines.debug", "off")
+        systemProperty("SAVE_REPORT", saveReports.get())
+
+        filter {
+            val capitalizedTarget = target.replaceFirstChar { it.uppercase() }
+            include("**/${capitalizedTarget}CallAllocationTest*")
+        }
+    }
+}
+
+val serverTests = registerAllocationTestTask("server")
+val clientTests = registerAllocationTestTask("client")
+
+val allocationTests = tasks.register("allocationTests") {
     group = "verification"
-    testClassesDirs = sourceSets["test"].output.classesDirs
-    classpath = sourceSets["test"].runtimeClasspath
-    systemProperty("SAVE_REPORT", "true")
+    description = "Run all allocation tests."
+    dependsOn(serverTests, clientTests)
+}
+
+tasks.check {
+    dependsOn(allocationTests)
 }
 
 tasks.register<JavaExec>("reportServer") {
