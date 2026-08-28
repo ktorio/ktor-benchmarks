@@ -19,9 +19,11 @@ Tests memory allocation on a given request to ensure Ktor maintains a low memory
 **Running Tests:**
 ```bash
 cd allocation-benchmark
-./gradlew test                # Run all allocation tests
+./gradlew test                # Run allocation utility tests
+./gradlew allocationTests     # Run all allocation tests
 ./gradlew serverTests         # Run only server allocation tests
-./gradlew dumpAllocations     # Generate new allocation baselines
+./gradlew clientTests         # Run only client allocation tests
+./gradlew allocationTests -PsaveReports=true  # Generate new allocation baselines
 ./gradlew reportServer        # Start web server to view allocation reports
 ```
 
@@ -98,7 +100,7 @@ To run all benchmarks:
 
 ```bash
 # Allocation tests
-cd allocation-benchmark && ./gradlew test && cd ..
+cd allocation-benchmark && ./gradlew allocationTests && cd ..
 
 # Server benchmarks
 cd server-benchmarks && ./gradlew jmh && cd ..
