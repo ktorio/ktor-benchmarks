@@ -124,7 +124,7 @@ CI selects the baseline explicitly. Locally, a Ktor version with a non-zero patc
 
 Key parameters in tests:
 - `TEST_SIZE = 300L` - Number of requests measured per test
-- JIT warmup runs requests in batches of 50 and checks for stabilization after 300 requests. Measurement starts after compilation time remains unchanged for three consecutive batches; the test fails if this does not happen within 60 seconds.
+- JIT warmup runs untracked requests in batches of 50 and checks for stabilization after 300 requests. After compilation time remains unchanged for three consecutive batches, 50 tracked requests warm the allocation sampler before its data is discarded and measurement starts. The test fails if JIT stabilization does not happen within 60 seconds.
 - `allocationBaseline` — Gradle property selecting `main` or `release/MAJOR.x`; CI sets it explicitly and local builds may infer it from the Ktor version
 - `allocations/tolerances.json` - Default increase tolerance and report/location-specific known variance metadata
 
