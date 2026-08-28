@@ -64,10 +64,21 @@ sourceSets.named("jmh") {
 
 jmh {
     benchmarkMode.set(listOf("avgt"))
-    fork.set(3)
-    profilers.set(listOf("gc"))
+    profilers.set(
+        buildList {
+            add("gc")
+            if (jmhBenchmark.get().contains("JettyServerBenchmark")) {
+                add("benchmarks.ServerAllocationProfiler")
+            }
+        }
+    )
     includes.set(listOf(jmhBenchmark.get()))
     resultFormat.set("json")
+
+    providers.gradleProperty("jmhForks").orNull?.let { fork.set(it.toInt()) }
+    providers.gradleProperty("jmhResultName").orNull?.let {
+        resultsFile.set(layout.buildDirectory.file("results/jmh/$it.json"))
+    }
 
     if (providers.gradleProperty("disableEscapeAnalysis").isPresent) {
         jvmArgsAppend.set(listOf("-XX:-DoEscapeAnalysis"))

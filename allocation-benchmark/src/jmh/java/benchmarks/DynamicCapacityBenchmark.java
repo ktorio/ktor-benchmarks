@@ -3,6 +3,7 @@ package benchmarks;
 import org.eclipse.jetty.io.ByteBufferPool;
 import org.eclipse.jetty.io.RetainableByteBuffer;
 import org.openjdk.jmh.annotations.Benchmark;
+import org.openjdk.jmh.annotations.Fork;
 import org.openjdk.jmh.annotations.Level;
 import org.openjdk.jmh.annotations.Measurement;
 import org.openjdk.jmh.annotations.OutputTimeUnit;
@@ -16,6 +17,7 @@ import java.nio.ByteBuffer;
 import java.util.concurrent.TimeUnit;
 
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
+@Fork(3)
 @Warmup(iterations = 5, time = 1)
 @Measurement(iterations = 10, time = 1)
 public class DynamicCapacityBenchmark {

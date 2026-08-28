@@ -2,6 +2,7 @@ package benchmarks;
 
 import io.ktor.server.engine.EmbeddedServer;
 import org.openjdk.jmh.annotations.Benchmark;
+import org.openjdk.jmh.annotations.Fork;
 import org.openjdk.jmh.annotations.Level;
 import org.openjdk.jmh.annotations.Measurement;
 import org.openjdk.jmh.annotations.OutputTimeUnit;
@@ -22,8 +23,9 @@ import java.util.concurrent.locks.LockSupport;
 
 @State(Scope.Benchmark)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
-@Warmup(iterations = 5, time = 5)
-@Measurement(iterations = 5, time = 5)
+@Fork(10)
+@Warmup(iterations = 2, time = 2)
+@Measurement(iterations = 3, time = 3)
 public class JettyServerBenchmark {
     private EmbeddedServer<?, ?> server;
     private HttpClient client;
