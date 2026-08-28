@@ -2,6 +2,7 @@ package benchmarks.utils
 
 import benchmarks.AllocationData
 import benchmarks.AllocationTracker
+import benchmarks.TRACKED_WARMUP_SIZE
 import benchmarks.server
 import utils.benchmarks.normalized
 
@@ -20,9 +21,12 @@ internal inline fun AllocationTracker.measureAllocations(
 
         clear()
         start()
+        repeat(TRACKED_WARMUP_SIZE) { block() }
+
+        clear()
         repeat(count.toInt()) { block() }
-        stop()
     } finally {
+        stop()
         cleanup()
     }
 
