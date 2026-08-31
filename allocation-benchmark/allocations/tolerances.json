@@ -1,5 +1,6 @@
 {
   "defaultAllowedIncreaseRatio": 0.005,
+  "defaultMinimumAllowedIncreaseBytes": 64,
   "reports": {
     "client/helloWorld[OkHttp]": {
       "locations": {

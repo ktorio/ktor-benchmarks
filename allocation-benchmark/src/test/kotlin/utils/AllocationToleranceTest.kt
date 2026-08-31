@@ -11,6 +11,7 @@ class AllocationToleranceTest {
     fun `resolves report tolerance from metadata`() {
         val metadata = AllocationToleranceMetadata(
             defaultAllowedIncreaseRatio = 0.01,
+            defaultMinimumAllowedIncreaseBytes = 64L,
             reports = mapOf(
                 "scenario[Engine]" to ReportTolerance(
                     locations = mapOf(
@@ -26,7 +27,42 @@ class AllocationToleranceTest {
         val tolerance = metadata.toleranceFor("scenario[Engine]")
 
         assertEquals(0.01, tolerance.allowedIncreaseRatio)
+        assertEquals(64L, tolerance.minimumAllowedIncreaseBytes)
         assertEquals(1_024L, tolerance.locations.getValue("Source.kt").knownVarianceBytes)
+    }
+
+    @Test
+    fun `applies minimum allowed increase when ratio allowance is smaller`() {
+        val comparison = compareAllocations(
+            previous = allocations("Source.kt" to 7_400L),
+            current = allocations("Source.kt" to 7_444L),
+            tolerance = AllocationTolerance(
+                allowedIncreaseRatio = 0.005,
+                locations = emptyMap(),
+                minimumAllowedIncreaseBytes = 64L,
+            ),
+        )
+
+        assertEquals(44L, comparison.totalDifference)
+        assertEquals(64L, comparison.allowedDifference)
+        assertEquals(0L, comparison.unexpectedIncrease)
+    }
+
+    @Test
+    fun `applies ratio allowance when it is greater than minimum`() {
+        val comparison = compareAllocations(
+            previous = allocations("Source.kt" to 10_000L),
+            current = allocations("Source.kt" to 10_101L),
+            tolerance = AllocationTolerance(
+                allowedIncreaseRatio = 0.01,
+                locations = emptyMap(),
+                minimumAllowedIncreaseBytes = 64L,
+            ),
+        )
+
+        assertEquals(101L, comparison.totalDifference)
+        assertEquals(100L, comparison.allowedDifference)
+        assertEquals(1L, comparison.unexpectedIncrease)
     }
 
     @Test

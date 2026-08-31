@@ -54,7 +54,9 @@ fun compareAllocations(
         )
     }
     val totalDifference = current.totalSize() - previous.totalSize()
-    val allowedDifference = (tolerance.allowedIncreaseRatio * previous.totalSize()).roundToLong()
+    val allowedDifference = (tolerance.allowedIncreaseRatio * previous.totalSize())
+        .roundToLong()
+        .coerceAtLeast(tolerance.minimumAllowedIncreaseBytes)
     val consumedLocationVariances = if (totalDifference > allowedDifference) {
         locationDifferences.mapNotNull { difference -> tolerance.tryConsumeVariance(difference) }
     } else {
@@ -80,17 +82,22 @@ fun compareAllocations(
 @Serializable
 data class AllocationToleranceMetadata(
     val defaultAllowedIncreaseRatio: Double,
+    val defaultMinimumAllowedIncreaseBytes: Long = 0L,
     val reports: Map<String, ReportTolerance> = emptyMap(),
 ) {
     init {
         require(defaultAllowedIncreaseRatio >= 0.0) {
             "defaultAllowedIncreaseRatio must not be negative"
         }
+        require(defaultMinimumAllowedIncreaseBytes >= 0L) {
+            "defaultMinimumAllowedIncreaseBytes must not be negative"
+        }
     }
 
     fun toleranceFor(reportName: String): AllocationTolerance = AllocationTolerance(
         allowedIncreaseRatio = defaultAllowedIncreaseRatio,
         locations = reports[reportName]?.locations.orEmpty(),
+        minimumAllowedIncreaseBytes = defaultMinimumAllowedIncreaseBytes,
     )
 }
 
@@ -123,6 +130,7 @@ data class KnownLocationVariance(
 data class AllocationTolerance(
     val allowedIncreaseRatio: Double,
     val locations: Map<String, KnownLocationVariance>,
+    val minimumAllowedIncreaseBytes: Long = 0L,
 ) {
 
     fun tryConsumeVariance(difference: LocationDifference): ConsumedLocationVariance? =
