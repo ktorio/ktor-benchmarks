@@ -37,6 +37,7 @@
 - Client `ByteChannel.kt` movements of up to approximately 3.7 KiB remain count redistributions among existing `awaitContent`, `readBuffer`, and flush stacks, matching [`ByteChannel` suspension-path redistribution](known-variations.md#bytechannel-suspension-path-redistribution) and [CIO socket-read and selector cadence](known-variations.md#cio-socket-read-and-selector-cadence); no new allocation caller or type appears.
 - `client/helloWorld[Java]` returns to 24,567 bytes, exactly matching the pre-stabilization TeamCity baseline. The +276-byte movement from the locally generated baseline consists of existing `ByteChannel.awaitContent` suspension objects (+200 bytes) and a +76-byte redistribution between `JavaHttpResponseBodyHandler.onComplete` and its consumer coroutine. PR #5153 does not modify these paths, so this is recorded as response-completion scheduling variation rather than a Jetty regression.
 - Stabilized `helloWorld` snapshots omit 70 bytes of CIO and 80 bytes of Jetty/Netty/Tomcat `PipelinePhase[]` constructor arrays. The pipeline source is unchanged, so this is recorded as a baseline-methodology correction rather than a production-code improvement.
+- After adding the discarded 50-request tracked warmup, `fileResponse[Netty]` consistently measures 461 bytes above the previous baseline. The selected attempt was 35,128 bytes with a 63-byte spread across three attempts. `ByteChannel.kt` contributes +503 bytes from additional suspensions on existing static-file copy and Netty big-body paths, partially offset elsewhere. [KTOR-5577 / #5831](https://github.com/ktorio/ktor/pull/5831) does not modify these paths, so the baseline now records this as a benchmark-methodology correction rather than a production regression.
 - The +88-byte Tomcat `KtorServlet.kt` movement in the earlier production build restored the same async-context allocation set present in the release baseline. The additional 85 bytes under `ServletWriter.kt` in `fileResponse` were one-time Tomcat/JDK class-loading and locale-resource allocations triggered by `setWriteListener`, not steady-state request processing.
 
 ---
@@ -106,7 +107,7 @@
 |--------|-------------------:|-----------------:|--:|
 | Jetty | 47.39 KB | 39.35 KB | **+8,238 bytes (+20.45%)** |
 | Tomcat | 42.47 KB | 43.04 KB | **−582 bytes** |
-| Netty | 33.85 KB | 34.56 KB | **−727 bytes** |
+| Netty | 34.30 KB | 34.56 KB | **−266 bytes** |
 | CIO | 38.15 KB | 38.74 KB | **−609 bytes** |
 
 </details>
@@ -123,3 +124,5 @@
 > Stabilized baseline source: local Ktor `main` revision [`349d5a1`](https://github.com/ktorio/ktor/commit/349d5a14591c118e10adf203ead08f77193f1ac7)
 >
 > Jetty 12.1 and Java client update source: [TeamCity build 443924](https://ktor.teamcity.com/buildConfiguration/Ktor_AllocationTests/443924)
+>
+> Netty tracked-warmup baseline source: [TeamCity build 444129](https://ktor.teamcity.com/buildConfiguration/Ktor_AllocationTests/444129)
