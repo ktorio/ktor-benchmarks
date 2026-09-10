@@ -5,7 +5,7 @@ ktor = "3.5.2"
 kotlinx-serialization = "1.11.0"
 kotlinx-atomicfu = "0.33.0"
 kotlinx-io = "0.9.1"
-okhttp = "5.4.0"
+okhttp = "5.5.0"
 apache-httpclient = "4.5.14"
 logback = "1.6.3"
 
