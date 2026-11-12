@@ -28,6 +28,15 @@
         </div>
     </div>
     <div>
+        <h3>Select Protocol:</h3>
+        <div>
+            <input type="radio" name="protocol" id="http1-protocol" value="http1" checked/>
+            <label for="http1-protocol">HTTP/1.1</label>
+            <input type="radio" name="protocol" id="http2-protocol" value="http2"/>
+            <label for="http2-protocol">HTTP/2</label>
+        </div>
+    </div>
+    <div>
         <h3>Select Testcase:</h3>
         <div>
             <input type="radio" name="test" id="fileResponse" value="fileResponse" data-benchmarks="server client" checked/>
@@ -43,7 +52,7 @@
     <div>
         <h3>Select Engine:</h3>
         <div>
-            <input type="radio" name="engine" id="cio" value="CIO" data-benchmarks="server client" checked/>
+            <input type="radio" name="engine" id="cio" value="CIO" data-benchmarks="server client" data-protocols="http1" checked/>
             <label for="cio">CIO</label>
             <input type="radio" name="engine" id="netty" value="Netty" data-benchmarks="server"/>
             <label for="netty">Netty</label>

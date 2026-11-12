@@ -3,7 +3,7 @@
  */
 
 tasks.withType<AbstractTestTask>().configureEach {
-    val testServerService = TestServerService.registerIfAbsent(project, port = 8081)
+    val testServerService = TestServerService.registerIfAbsent(project, port = 8081, http2Port = 8444)
     usesService(testServerService)
     // Trigger server starting if it is not started yet
     doFirst("start test server") { testServerService.get() }

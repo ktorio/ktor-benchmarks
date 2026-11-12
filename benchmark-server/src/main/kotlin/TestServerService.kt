@@ -15,28 +15,32 @@ abstract class TestServerService : BuildService<TestServerService.Parameters>, A
 
     private val logger = Logging.getLogger("TestServerService")
     private val server: EmbeddedServer<*, *>
+    private val http2Server: EmbeddedServer<*, *>
 
     init {
         logger.lifecycle("Starting test server...")
-        val port = parameters.port.get()
-        server = startServer(port, wait = false)
+        server = startServer(parameters.port.get(), wait = false)
+        http2Server = startHttp2Server(parameters.http2Port.get(), wait = false)
         logger.lifecycle("Test server started.")
     }
 
     override fun close() {
         logger.lifecycle("Stopping test server...")
         server.stop()
+        http2Server.stop()
         logger.lifecycle("Test server stopped.")
     }
 
     interface Parameters : BuildServiceParameters {
         val port: Property<Int>
+        val http2Port: Property<Int>
     }
 
     internal companion object {
-        fun registerIfAbsent(project: Project, port: Int): Provider<TestServerService> {
+        fun registerIfAbsent(project: Project, port: Int, http2Port: Int): Provider<TestServerService> {
             return project.gradle.sharedServices.registerIfAbsent("testServer", TestServerService::class) {
                 parameters.port.set(port)
+                parameters.http2Port.set(http2Port)
             }
         }
     }
