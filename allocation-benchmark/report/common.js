@@ -30,10 +30,12 @@ export function displaySite(sites, item) {
     })
 }
 
-function selectBenchmarkOptions(name, benchmark) {
+function selectBenchmarkOptions(name, benchmark, protocol) {
     const options = Array.from(document.querySelectorAll(`input[name='${name}']`))
     options.forEach(option => {
-        const visible = option.dataset.benchmarks.split(" ").includes(benchmark)
+        const supportsBenchmark = option.dataset.benchmarks.split(" ").includes(benchmark)
+        const supportsProtocol = !option.dataset.protocols || option.dataset.protocols.split(" ").includes(protocol)
+        const visible = supportsBenchmark && supportsProtocol
         option.hidden = !visible
         document.querySelector(`label[for='${option.id}']`).hidden = !visible
     })
@@ -60,13 +62,14 @@ function normalizeAllocationData(data) {
 export function setupRenderControls(drawAllocations) {
     const render = () => {
         const benchmark = document.querySelector("input[name='benchmark']:checked").value
-        selectBenchmarkOptions("test", benchmark)
-        selectBenchmarkOptions("engine", benchmark)
+        const protocol = document.querySelector("input[name='protocol']:checked").value
+        selectBenchmarkOptions("test", benchmark, protocol)
+        selectBenchmarkOptions("engine", benchmark, protocol)
 
         const testName = document.querySelector("input[name='test']:checked").value
         const engineName = document.querySelector("input[name='engine']:checked").value
         const snapshotDir = document.querySelector("input[name='snapshot']:checked").value
-        const benchmarkDir = benchmark === "client" ? `${snapshotDir}/client` : snapshotDir
+        const benchmarkDir = `${snapshotDir}${benchmark === "client" ? "/client" : ""}${protocol === "http2" ? "/http2" : ""}`
         const reportPath = `${benchmarkDir}/${testName}[${engineName}].json`;
         d3.json(reportPath).then(result => {
             drawAllocations(normalizeAllocationData(result.data))

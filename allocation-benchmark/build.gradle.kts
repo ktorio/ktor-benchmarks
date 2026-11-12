@@ -20,6 +20,7 @@ dependencies {
     implementation(libs.ktor.server.jetty.jakarta)
     implementation(libs.ktor.server.cio)
     implementation(libs.ktor.server.tomcat.jakarta)
+    implementation(libs.ktor.network.tls.certificates)
     implementation(libs.logback.classic)
 
     testImplementation(libs.ktor.client.core)
@@ -39,8 +40,8 @@ dependencies {
 
 tasks.test {
     filter {
-        exclude("**/ServerCallAllocationTest*")
-        exclude("**/ClientCallAllocationTest*")
+        exclude("**/*ServerCallAllocationTest*")
+        exclude("**/*ClientCallAllocationTest*")
     }
 }
 
@@ -67,7 +68,8 @@ fun Project.registerAllocationTestTask(target: String): TaskProvider<Test> {
 
         filter {
             val capitalizedTarget = target.replaceFirstChar { it.uppercase() }
-            include("**/${capitalizedTarget}CallAllocationTest*")
+            // HTTP/1.1 and HTTP/2 variants, e.g. ServerCallAllocationTest and Http2ServerCallAllocationTest
+            include("**/*${capitalizedTarget}CallAllocationTest*")
         }
     }
 }
