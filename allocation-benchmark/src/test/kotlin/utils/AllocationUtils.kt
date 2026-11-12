@@ -3,6 +3,7 @@ package benchmarks.utils
 import benchmarks.AllocationData
 import benchmarks.AllocationTracker
 import benchmarks.TRACKED_WARMUP_SIZE
+import benchmarks.http2Server
 import benchmarks.server
 import utils.benchmarks.normalized
 
@@ -34,3 +35,5 @@ internal inline fun AllocationTracker.measureAllocations(
 }
 
 fun startServer(engine: String) = server(engine)
+
+fun startHttp2Server(engine: String) = http2Server(engine)

@@ -38,6 +38,16 @@ Tests memory allocations for Ktor client engines making requests.
 - 2 MB streaming response
 - 2 MB gzip response
 
+### Http2ServerCallAllocationTest / Http2ClientCallAllocationTest
+
+The same endpoints and scenarios as above, but over HTTP/2 with TLS (ALPN `h2`) using a self-signed certificate generated at startup. `ServerCallAllocationTest` and `ClientCallAllocationTest` are pinned to HTTP/1.1.
+
+- Server engines: Jetty, Tomcat, Netty (CIO has no server-side TLS or HTTP/2 support); servers listen on port `8443`
+- Client engines: Apache, OkHttp, Java (CIO client has no HTTP/2 support); the shared Netty test server listens on port `8444`
+- Each request checks that HTTP/2 was actually negotiated
+
+They run as part of `serverTests` and `clientTests`.
+
 ## Running Tests
 
 ```bash
@@ -70,6 +80,7 @@ Then open your browser to the displayed URL. The report server provides two view
 - **previewSites.html** - Shows the code sites (stack traces) that allocate the most memory
 
 Both views support server and client benchmarks and can display the Main, Release 3.x, or Local snapshot. Local reports are read from `build/allocations/` and are produced by regular test runs.
+Use the protocol selector to view HTTP/1.1 or HTTP/2 reports; engines without HTTP/2 allocation tests, such as CIO, are hidden when HTTP/2 is selected.
 
 ## How It Works
 
@@ -99,6 +110,7 @@ Each directory contains files such as:
 - `helloWorld[EngineName].json` — server hello world endpoint allocations
 - `fileResponse[EngineName].json` — server file response allocations
 - `client/helloWorld[EngineName].json` — client small-response allocations
+- `http2/...` and `client/http2/...` — the same reports over HTTP/2
 
 CI selects the baseline explicitly. Locally, a Ktor version with a non-zero patch component selects the release baseline derived from its major version. A zero patch component is ambiguous and requires an explicit baseline. Explicit selection always takes precedence. Release branch names such as `release/3.x` are normalized to baseline directory names such as `release-3.x`:
 
