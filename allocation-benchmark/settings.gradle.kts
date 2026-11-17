@@ -11,9 +11,9 @@ plugins {
 
 dependencyResolutionManagement {
     repositories {
-        maven("https://maven.pkg.jetbrains.space/public/p/ktor/eap") {
-            content { includeGroupAndSubgroups("io.ktor") }
-        }
+//        maven("https://maven.pkg.jetbrains.space/public/p/ktor/eap") {
+//            content { includeGroupAndSubgroups("io.ktor") }
+//        }
         mavenCentral()
         mavenLocal()
     }
