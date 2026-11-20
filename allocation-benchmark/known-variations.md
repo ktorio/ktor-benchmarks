@@ -150,6 +150,28 @@ Do not attribute a CIO delta to this artifact merely because several CIO files c
 
 This artifact is deterministic for a given classpath rather than scheduler volatility, but it describes benchmark-runtime growth rather than per-engine request processing.
 
+## Jetty HTTP/2 write-path iteration
+
+**Usually visible in:** `http2/fileResponse[Jetty]`.
+
+**Cause:** Jetty's internal HTTP/2 write path (flow-control and write-queue handling) runs a different number of iterations and wraps buffers in different retainable types depending on timing. The Ktor code on the path is unchanged.
+
+**Observable call-site pattern:**
+
+- Allocations are under `JettyResponseBodyWriter.kt` `invokeSuspend`, and may appear at line 43 in one run and line 50 in another, with or without a deeper `invoke` / `ByteReadChannelOperations.kt` stack.
+- `java.util.ArrayList$Itr` count rises (observed 54 to 247, +6176 bytes).
+- `java.nio.ByteBuffer[]`, `AtomicInteger`, `RetainableByteBuffer$FixedCapacity`, `Callback$8` and `Retainable$ReferenceCounter` rise together by about 27 per group, while `NonRetainableByteBuffer` falls by the same count.
+- The `[B`, `[J`, `HeapByteBuffer`, and `GCTR`/`GCM` crypto allocations keep the same counts and only change stack depth.
+- Observed on CI build 460217 and a local run: `JettyResponseBodyWriter.kt` 48048 to 56602 bytes (+8554), with spread between attempts of only 76 bytes.
+
+**Classify as this artifact only when:**
+
+1. `check_sites.py` or raw `_sites.json` shows the increase confined to `JettyResponseBodyWriter.kt` stacks.
+2. The growth is limited to the iterator, buffer-wrapper and callback types listed above, with the `[B` count unchanged.
+3. No new Ktor caller or new allocation type from Ktor code appears in the compared source range.
+
+Other files in the report (for example `StaticContentResolution.kt` and `RoutingResolveContext.kt`) are checked against the default tolerance. The configured bound is in `allocations/tolerances.json`.
+
 ## Adding a known artifact
 
 Add an entry only after the pattern has recurred or a same-revision rerun has reversed/reproduced it. Document:

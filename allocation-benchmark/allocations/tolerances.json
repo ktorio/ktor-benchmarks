@@ -2,6 +2,15 @@
   "defaultAllowedIncreaseRatio": 0.015,
   "defaultMinimumAllowedIncreaseBytes": 64,
   "reports": {
+    "http2/fileResponse[Jetty]": {
+      "locations": {
+        "JettyResponseBodyWriter.kt": {
+          "knownVarianceBytes": 9216,
+          "reason": "Jetty's internal HTTP/2 write path varies in how many write-queue iterations and buffer wrapper objects it allocates under JettyResponseBodyWriter.writeBody; observed up to +8554 bytes over the baseline.",
+          "reference": "allocation-benchmark/known-variations.md#jetty-http2-write-path-iteration"
+        }
+      }
+    },
     "client/helloWorld[OkHttp]": {
       "locations": {
         "OkHttpEngine.kt": {
